@@ -7,6 +7,5 @@ var class_c_s_e_1_1_s_object =
     [ "Destroy", "d8/d5e/class_c_s_e_1_1_s_object.html#a79597091d81bc144cfc7d6be4ff7e173", null ],
     [ "Exterminate", "d8/d5e/class_c_s_e_1_1_s_object.html#acdc5df7ab26b59be105c3d70d07fe8e2", null ],
     [ "SetUndestroyable", "d8/d5e/class_c_s_e_1_1_s_object.html#a164a1c9551773e7caad8c79eff19fc56", null ],
-    [ "MemoryMgr", "d8/d5e/class_c_s_e_1_1_s_object.html#a699c3d5ef3d64322011483a12b59a92e", null ],
-    [ "isUndestroyable", "d8/d5e/class_c_s_e_1_1_s_object.html#a78e0e1db622a77892e2394ecb7fbc60b", null ]
+    [ "MemoryMgr", "d8/d5e/class_c_s_e_1_1_s_object.html#a699c3d5ef3d64322011483a12b59a92e", null ]
 ];

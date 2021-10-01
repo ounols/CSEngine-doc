@@ -85,18 +85,18 @@ $(document).ready(function(){initNavTree('d5/db3/_macro_def_8h_source.html','../
 <div class="title">MacroDef.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d5/db3/_macro_def_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//#define SINGLETONE(x) static inline x* getInstance() { static x t; return &amp;t; }</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// ���� ���� ��ũ��</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../d5/db3/_macro_def_8h.html#ae8cdad17b3a0e7c7b23fa84f05b3d761">    6</a></span>&#160;<span class="preprocessor">#define MAKE_NO_COPY(CLASSNAME)                                             \</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define MAKE_NO_COPY(CLASSNAME)                                             \</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">        private:                                                            \</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">               CLASSNAME(const CLASSNAME&amp;);                                 \</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">               CLASSNAME&amp; operator=(const CLASSNAME&amp;);</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// ��Ŭ�� ���� ���� ��ũ��</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d5/db3/_macro_def_8h.html#a37c477405f0558e4b1b6bf0cdcc3c31b">   12</a></span>&#160;<span class="preprocessor">#define DECLARE_SINGLETONE(CLASSNAME)                                       \</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define DECLARE_SINGLETONE(CLASSNAME)                                       \</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">        MAKE_NO_COPY(CLASSNAME)                                             \</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">        private:                                                            \</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">               explicit CLASSNAME();                                               \</span></div>
@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('d5/db3/_macro_def_8h_source.html','../
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">               static void delInstance();</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// �̱��� ���� ���� ��ũ��</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d5/db3/_macro_def_8h.html#a27a2ec109f7264210d9c43433d1c8b61">   22</a></span>&#160;<span class="preprocessor">#define IMPLEMENT_SINGLETON(CLASSNAME)                              \</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define IMPLEMENT_SINGLETON(CLASSNAME)                              \</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">               CLASSNAME* CLASSNAME::sInstance= nullptr;               \</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">                                                                    \</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">               CLASSNAME* CLASSNAME::getInstance() {                \</span></div>
@@ -120,21 +120,21 @@ $(document).ready(function(){initNavTree('d5/db3/_macro_def_8h_source.html','../
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">               }</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d5/db3/_macro_def_8h.html#ac7b5226adbee56498bbf2339dc08a8cd">   36</a></span>&#160;<span class="preprocessor">#define NULLPTR(p) { (p) = nullptr; }</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d5/db3/_macro_def_8h.html#a9bbcd82e77c41df827c09759def05c9a">   37</a></span>&#160;<span class="preprocessor">#define SAFE_DELETE(p) { if(p) delete (p); NULLPTR(p); }</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d5/db3/_macro_def_8h.html#a6a1cda9361d9afd5b8e2d3d0c7c7332f">   38</a></span>&#160;<span class="preprocessor">#define SAFE_DELETE_SOBJECT(p) {if(p) MemoryMgr::getInstance()-&gt;ReleaseObject(p);}</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d5/db3/_macro_def_8h.html#a966d0271f408403c82abe57f85688cb7">   39</a></span>&#160;<span class="preprocessor">#define SAFE_DELETE_SGAMEOBJECT(p) {if(p) GameObjectMgr::getInstance()-&gt;DeleteGameObject(p);}</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d5/db3/_macro_def_8h.html#a506b3685b3eb05aac751f9e14cbed93b">   40</a></span>&#160;<span class="preprocessor">#define SAFE_DELETE_ARRAY(p) { if(p) delete[] (p); NULLPTR(p); }</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d5/db3/_macro_def_8h.html#a8fec617b8766eb3a0366bc02a8408d74">   41</a></span>&#160;<span class="preprocessor">#define SAFE_DESTROY(p) { if(p) (p)-&gt;Destroy(); NULLPTR(p); }</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d5/db3/_macro_def_8h.html#a6038f7bdb274c2e159988a57dedbf93d">   42</a></span>&#160;<span class="preprocessor">#define SAFE_RELEASE(p) { if(p) (p)-&gt;Release(); }</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define NULLPTR(p) { (p) = nullptr; }</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define SAFE_DELETE(p) { if(p) delete (p); NULLPTR(p); }</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define SAFE_DELETE_SOBJECT(p) {if(p) MemoryMgr::getInstance()-&gt;ReleaseObject(p);}</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define SAFE_DELETE_SGAMEOBJECT(p) {if(p) GameObjectMgr::getInstance()-&gt;DeleteGameObject(p);}</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define SAFE_DELETE_ARRAY(p) { if(p) delete[] (p); NULLPTR(p); }</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define SAFE_DESTROY(p) { if(p) (p)-&gt;Destroy(); NULLPTR(p); }</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define SAFE_RELEASE(p) { if(p) (p)-&gt;Release(); }</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../d5/db3/_macro_def_8h.html">MacroDef.h</a></li>
-    <li class="footer">Generated on Fri Oct 1 2021 17:13:15 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="navelem"><b>MacroDef.h</b></li>
+    <li class="footer">Generated on Fri Oct 1 2021 17:21:16 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

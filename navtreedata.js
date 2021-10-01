@@ -25,34 +25,30 @@
 var NAVTREE =
 [
   [ "CSEngine", "index.html", [
-    [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
-    ] ],
+    [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
+        [ "Functions", "functions_func.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
-        [ "Macros", "globals_defs.html", null ]
-      ] ]
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"d3/d42/structtdefl__compressor.html#aa790d06026f9cd65e5ab373c46447694",
+"d6/d6b/structzip__entry__t.html#a28e5cc79882ca7b963d7bd39aa393266",
+"d8/dfb/class_c_s_e_1_1_joint_component.html#a043f946e3333c720ef914db7c888836e",
+"dc/d47/class_c_s_e_1_1_s_game_object.html#a67c67ff3775e19119d9e58f7cf6e527c",
+"de/db3/class_c_s_e_1_1_res_mgr.html#adbca1026383372a306b783724c5e2c35"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

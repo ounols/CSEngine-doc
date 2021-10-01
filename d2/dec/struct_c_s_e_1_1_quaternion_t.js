@@ -1,0 +1,28 @@
+var struct_c_s_e_1_1_quaternion_t =
+[
+    [ "QuaternionT", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a9567ce25b847af17e554dafcec995fae", null ],
+    [ "QuaternionT", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a4d7b69cd656cb3915e5fea6dff329c5a", null ],
+    [ "AngleAxis", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a85b61c986a2b2d3bcfae489c3362117c", null ],
+    [ "Conjugate", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a013c0401dd750d4b080afa982cbec1ea", null ],
+    [ "CreateFromVectors", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a4bb041459ccefd1ec9f98c96d7ee287e", null ],
+    [ "Dot", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#aca7fe5177d3de6f8cdd0c86af4244e5a", null ],
+    [ "Multiplied", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a8ca34d4655cf825486f2de4ef3b9a40c", null ],
+    [ "Normalize", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a71d535d8b63467f6416e9b66b2c2706a", null ],
+    [ "operator!=", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a9b17dd637aab63f90209ce4b7da7a68a", null ],
+    [ "operator+", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a5897523ebf0c6ced3ce703bcb85109b3", null ],
+    [ "operator-", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a58a71f245509041435326d67a279dbad", null ],
+    [ "operator==", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#af98be66cee15c2c554625a776c76d42e", null ],
+    [ "Rotate", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#ac804a78d45b1894340caa26577ba0705", null ],
+    [ "Rotated", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a337c1011095850c7fec0aa3dfdd63a41", null ],
+    [ "Scaled", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#ae23aa4f4c50309e3b92d904cb2a6de5e", null ],
+    [ "Slerp", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a7697e1d2d0397352021282635119058c", null ],
+    [ "ToEulerAngle", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a1ad531e727a6941e29deddfb66a9db4e", null ],
+    [ "ToMatrix3", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#ada1049e61a3fd7a0f31c81c9027c8773", null ],
+    [ "ToMatrix4", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a01480d10e57ecd1ad03e68deafd10a36", null ],
+    [ "ToQuaternion", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a3f67676ab7c7d8a8d9791b19c555588a", null ],
+    [ "ToVector", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a88041a8b88242dcd49e3bc76bbfd3e75", null ],
+    [ "w", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a2020fad7b0bcc6be691842f0728afe3a", null ],
+    [ "x", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a4f0cc8085c22e5cfb95b642a1bb0c995", null ],
+    [ "y", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#ad0910789cee93ad6721f1cdc9021c1d9", null ],
+    [ "z", "d2/dec/struct_c_s_e_1_1_quaternion_t.html#a6f01f5d1255ae1d02ebdf04dac9cfd9a", null ]
+];

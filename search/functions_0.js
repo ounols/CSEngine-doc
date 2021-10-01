@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5f_5fforce_5fdestroy_5f_5f_31',['__FORCE_DESTROY__',['../d8/d5e/class_c_s_e_1_1_s_object.html#a68e90e273de3920f22e77b3948bb7ca8',1,'CSE::SObject']]]
+  ['addcomponent_259',['AddComponent',['../dc/d47/class_c_s_e_1_1_s_game_object.html#a562a0ff8e7277d89e06e65f9f92ed172',1,'CSE::SGameObject']]]
 ];
