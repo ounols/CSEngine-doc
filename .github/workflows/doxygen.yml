@@ -31,7 +31,7 @@ jobs:
         with:
           path: doc
           
-      - run: ls
+      - run: ls doc
       
       - uses: mattnotmitt/doxygen-action@v1
         with:
