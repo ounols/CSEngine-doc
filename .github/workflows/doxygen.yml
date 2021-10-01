@@ -26,8 +26,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: ounols/CSEngine
+      - run: mkdir docs
       
       - uses: mattnotmitt/doxygen-action@v1
         with:
             working-directory: 'src/'
-            doxyfile-path: 'docs/Doxygen'
+            doxyfile-path: 'docs/'
