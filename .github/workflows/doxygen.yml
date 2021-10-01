@@ -29,12 +29,13 @@ jobs:
           repository: ounols/CSEngine
           path: engine
           
-      - run: ls
+      - run: sudo apt-get install tree
       - run: mv Doxyfile engine/src/
       
       - uses: mattnotmitt/doxygen-action@v1
         with:
             working-directory: 'engine/src/'
+      - run: tree engine
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
