@@ -36,4 +36,4 @@ jobs:
       - uses: mattnotmitt/doxygen-action@v1
         with:
             working-directory: 'engine/src/'
-            doxyfile-path: '/home/runner/work/CSEngine-doc/CSEngine-doc/doc/Doxyfile'
+            doxyfile-path: 'doc/'
