@@ -5,8 +5,7 @@
 
 ## 💡 Programming and Scripting Reference
 
-* [`C++ API Reference`](cpp-api.md)</p>
-[<img src="https://bitbucket.org/MSnack/csengine/downloads/cppapiref.png" width="30%">](cpp-api.md)<br/>
+* [C++ API Reference](cpp-api.md)</p>
 Contains a reference to CSEngine's C++ API.
 
 * [`Script API Reference`](https://github.com/ounols/CSEngine/wiki/script-api)</p>
