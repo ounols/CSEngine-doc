@@ -25,30 +25,27 @@
 var NAVTREE =
 [
   [ "CSEngine", "index.html", [
-    [ "Example Page", "d0/db1/page1.html", [
-      [ "An example section", "d0/db1/page1.html#sec", [
-        [ "The first subsection", "d0/db1/page1.html#subsection1", null ],
-        [ "The second subsection", "d0/db1/page1.html#subsection2", null ]
-      ] ]
+    [ "Welcome to the CSEngine wiki", "d7/dfa/md_csengine_docs_docs_main.html", [
+      [ "💡 Programming and Scripting Reference", "d7/dfa/md_csengine_docs_docs_main.html#autotoc_md1", null ]
     ] ],
     [ "Doxygen Awesome", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html", [
-      [ "Motivation", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md6", null ],
-      [ "Features", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md7", null ],
-      [ "Installation", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md8", [
-        [ "Variants", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md9", null ],
-        [ "Dark Mode Toggle (Experimental)", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md10", null ]
+      [ "Motivation", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md8", null ],
+      [ "Features", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md9", null ],
+      [ "Installation", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md10", [
+        [ "Variants", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md11", null ],
+        [ "Dark Mode Toggle (Experimental)", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md12", null ]
       ] ],
-      [ "Examples", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md11", null ],
-      [ "Configuration", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md12", [
-        [ "CSS Variables", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md13", null ],
-        [ "Doxygen generator", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md14", null ]
+      [ "Examples", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md13", null ],
+      [ "Configuration", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md14", [
+        [ "CSS Variables", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md15", null ],
+        [ "Doxygen generator", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md16", null ]
       ] ],
-      [ "Browser support", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md15", null ],
-      [ "Tips & Tricks", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md16", [
-        [ "Class Diagrams with Graphviz", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md17", null ],
-        [ "Share your own theme customizations", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md18", null ]
+      [ "Browser support", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md17", null ],
+      [ "Tips & Tricks", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md18", [
+        [ "Class Diagrams with Graphviz", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md19", null ],
+        [ "Share your own theme customizations", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md20", null ]
       ] ],
-      [ "Credits", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md19", null ]
+      [ "Credits", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md21", null ]
     ] ],
     [ "Bug List", "de/da5/bug.html", null ],
     [ "Deprecated List", "da/d58/deprecated.html", null ],
@@ -71,11 +68,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/d42/structtdefl__compressor.html#a9450656373de691c1e2606b272d4d6f6",
-"d6/d26/class_c_s_e_1_1_vector4.html#a7a32671be0bafa94b9db65e513497311",
-"d8/dc3/class_x_attrib.html#a223d16f8f453eb00d5e0ec2e9dbfee01",
-"db/de3/_s_script_object_8h_source.html",
-"de/d51/class_c_s_e_1_1_s_material.html#ade5657e954cef0c4a64f89c33447d5b0"
+"d3/d42/structtdefl__compressor.html#aa790d06026f9cd65e5ab373c46447694",
+"d6/d26/class_c_s_e_1_1_vector4.html#a998e42c72c4c50e5962b9e9f2bb6a8df",
+"d8/dc3/class_x_attrib.html#a9a2b2bbbf4c8e9608c9405ac06f25ed7",
+"dc/d1c/_mesh_surface_8h_source.html",
+"de/d51/class_c_s_e_1_1_s_material.html#aeedc007f15e1d8de0df817eb4354e2c2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

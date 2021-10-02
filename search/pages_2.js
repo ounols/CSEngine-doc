@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['example_20page_303',['Example Page',['../d0/db1/page1.html',1,'']]]
+  ['welcome_20to_20the_20csengine_20wiki_303',['Welcome to the CSEngine wiki',['../d7/dfa/md_csengine_docs_docs_main.html',1,'']]]
 ];
