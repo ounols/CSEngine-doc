@@ -27,9 +27,6 @@ var hierarchy =
     [ "CSE::DAELoader", "da/d85/class_c_s_e_1_1_d_a_e_loader.html", null ],
     [ "CSE::GLProgramHandle::Element", "da/d85/struct_c_s_e_1_1_g_l_program_handle_1_1_element.html", null ],
     [ "CSE::EngineCore", "dd/d93/class_c_s_e_1_1_engine_core.html", null ],
-    [ "MyLibrary::Example", "d4/d17/class_my_library_1_1_example.html", [
-      [ "MyLibrary::SubclassExample", "d7/d0a/class_my_library_1_1_subclass_example.html", null ]
-    ] ],
     [ "CSE::GLAttributeHandles", "d8/d67/struct_c_s_e_1_1_g_l_attribute_handles.html", null ],
     [ "CSE::GLMeshID", "dd/daa/struct_c_s_e_1_1_g_l_mesh_i_d.html", null ],
     [ "CSE::GLUniformHandles", "d5/d0c/struct_c_s_e_1_1_g_l_uniform_handles.html", null ],

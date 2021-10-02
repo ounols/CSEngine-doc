@@ -28,27 +28,6 @@ var NAVTREE =
     [ "Welcome to the CSEngine wiki", "d7/dfa/md_csengine_docs_docs_main.html", [
       [ "💡 Programming and Scripting Reference", "d7/dfa/md_csengine_docs_docs_main.html#autotoc_md1", null ]
     ] ],
-    [ "Doxygen Awesome", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html", [
-      [ "Motivation", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md8", null ],
-      [ "Features", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md9", null ],
-      [ "Installation", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md10", [
-        [ "Variants", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md11", null ],
-        [ "Dark Mode Toggle (Experimental)", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md12", null ]
-      ] ],
-      [ "Examples", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md13", null ],
-      [ "Configuration", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md14", [
-        [ "CSS Variables", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md15", null ],
-        [ "Doxygen generator", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md16", null ]
-      ] ],
-      [ "Browser support", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md17", null ],
-      [ "Tips & Tricks", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md18", [
-        [ "Class Diagrams with Graphviz", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md19", null ],
-        [ "Share your own theme customizations", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md20", null ]
-      ] ],
-      [ "Credits", "d5/d2d/md_csengine_docs__r_e_a_d_m_e.html#autotoc_md21", null ]
-    ] ],
-    [ "Bug List", "de/da5/bug.html", null ],
-    [ "Deprecated List", "da/d58/deprecated.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -69,10 +48,10 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d3/d42/structtdefl__compressor.html#aa790d06026f9cd65e5ab373c46447694",
-"d6/d26/class_c_s_e_1_1_vector4.html#a998e42c72c4c50e5962b9e9f2bb6a8df",
-"d8/dc3/class_x_attrib.html#a9a2b2bbbf4c8e9608c9405ac06f25ed7",
-"dc/d1c/_mesh_surface_8h_source.html",
-"de/d51/class_c_s_e_1_1_s_material.html#aeedc007f15e1d8de0df817eb4354e2c2"
+"d6/d6b/structzip__entry__t.html#a28e5cc79882ca7b963d7bd39aa393266",
+"d8/df9/class_c_s_e_1_1_render_container.html#aac64f7a0d30e8116620f8b888ede3a8f",
+"dc/d47/class_c_s_e_1_1_s_game_object.html#a5bb825c3c1da9972ab27a361ea4d110b",
+"de/db3/class_c_s_e_1_1_res_mgr.html#acb26423c44e967faafcaa4aa7ba48a39"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

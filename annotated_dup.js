@@ -82,10 +82,6 @@ var annotated_dup =
       [ "Vector3", "d2/d4a/class_c_s_e_1_1_vector3.html", "d2/d4a/class_c_s_e_1_1_vector3" ],
       [ "Vector4", "d6/d26/class_c_s_e_1_1_vector4.html", "d6/d26/class_c_s_e_1_1_vector4" ]
     ] ],
-    [ "MyLibrary", null, [
-      [ "Example", "d4/d17/class_my_library_1_1_example.html", "d4/d17/class_my_library_1_1_example" ],
-      [ "SubclassExample", "d7/d0a/class_my_library_1_1_subclass_example.html", "d7/d0a/class_my_library_1_1_subclass_example" ]
-    ] ],
     [ "FirstDemoScene", "df/d0c/class_first_demo_scene.html", "df/d0c/class_first_demo_scene" ],
     [ "inflate_state", "d4/d4e/structinflate__state.html", "d4/d4e/structinflate__state" ],
     [ "mz_stream_s", "dd/d1e/structmz__stream__s.html", "dd/d1e/structmz__stream__s" ],
