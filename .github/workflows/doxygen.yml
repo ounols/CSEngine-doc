@@ -28,6 +28,10 @@ jobs:
         with:
           repository: ounols/CSEngine
           path: engine
+      - uses: actions/checkout@v2
+        with:
+          repository: jothepro/doxygen-awesome-css
+          path: engine/src/csengine_docs
 
       - run: mv Doxyfile engine/src/
       
