@@ -34,6 +34,7 @@ jobs:
           path: engine/src/csengine_docs
 
       - run: mv Doxyfile engine/src/
+      - run: tree engine/src
       
       - uses: mattnotmitt/doxygen-action@v1
         with:
