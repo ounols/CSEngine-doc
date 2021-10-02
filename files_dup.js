@@ -1,6 +1,7 @@
 var files_dup =
 [
     [ "Component", "dir_e2995b532e4735c0240376112d6b0bb7.html", "dir_e2995b532e4735c0240376112d6b0bb7" ],
+    [ "csengine_docs", "dir_df4226c51f0cbaeddfd5741c0bc68ff8.html", "dir_df4226c51f0cbaeddfd5741c0bc68ff8" ],
     [ "Manager", "dir_0d0ed8c9b19e6818cf5af4bd559a697b.html", "dir_0d0ed8c9b19e6818cf5af4bd559a697b" ],
     [ "Object", "dir_9b71b51ee2ceb0a2c9c6f0f5e933ad2c.html", "dir_9b71b51ee2ceb0a2c9c6f0f5e933ad2c" ],
     [ "Sample", "dir_8f7f72226bf217e57890a767dfa82dfa.html", "dir_8f7f72226bf217e57890a767dfa82dfa" ],
