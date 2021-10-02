@@ -25,8 +25,14 @@
 var NAVTREE =
 [
   [ "CSEngine", "index.html", [
+    [ "C++ API Reference", "db/d2f/md_csengine_docs_docs_cpp_api.html", [
+      [ "Components", "db/d2f/md_csengine_docs_docs_cpp_api.html#autotoc_md1", null ],
+      [ "Managers", "db/d2f/md_csengine_docs_docs_cpp_api.html#autotoc_md2", null ],
+      [ "Objects", "db/d2f/md_csengine_docs_docs_cpp_api.html#autotoc_md3", null ],
+      [ "Resources", "db/d2f/md_csengine_docs_docs_cpp_api.html#autotoc_md4", null ]
+    ] ],
     [ "Welcome to the CSEngine documentation", "d7/dfa/md_csengine_docs_docs_main.html", [
-      [ "💡 Programming and Scripting Reference", "d7/dfa/md_csengine_docs_docs_main.html#autotoc_md1", null ]
+      [ "💡 Programming and Scripting Reference", "d7/dfa/md_csengine_docs_docs_main.html#autotoc_md6", null ]
     ] ],
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [
@@ -50,8 +56,8 @@ var NAVTREEINDEX =
 "d3/d42/structtdefl__compressor.html#aa790d06026f9cd65e5ab373c46447694",
 "d6/d6b/structzip__entry__t.html#a28e5cc79882ca7b963d7bd39aa393266",
 "d8/df9/class_c_s_e_1_1_render_container.html#aac64f7a0d30e8116620f8b888ede3a8f",
-"dc/d47/class_c_s_e_1_1_s_game_object.html#a5bb825c3c1da9972ab27a361ea4d110b",
-"de/db3/class_c_s_e_1_1_res_mgr.html#acb26423c44e967faafcaa4aa7ba48a39"
+"dc/d47/class_c_s_e_1_1_s_game_object.html#a4e96167310804320afc8157166bf8ad2",
+"de/db3/class_c_s_e_1_1_res_mgr.html#a77b96461bd9017cefcc49d75518a5cef"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
