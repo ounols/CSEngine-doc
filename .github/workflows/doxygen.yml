@@ -34,7 +34,12 @@ jobs:
           path: engine/src/csengine_docs
 
       - run: mv Doxyfile engine/src/
-      - run: rm -rf engine/src/csengine_docs/docs
+      
+      - run: | 
+          rm -rf engine/src/csengine_docs/docs
+          rm -f engine/src/csengine_docs/README.md
+          rm -rf engine/src/csengine_docs/include
+          
       - run: mv docs engine/src/csengine_docs
       
       - uses: mattnotmitt/doxygen-action@v1
