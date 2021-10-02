@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "CSEngine", "index.html", [
-    [ "Welcome to the CSEngine wiki", "d7/dfa/md_csengine_docs_docs_main.html", [
+    [ "Welcome to the CSEngine documentation", "d7/dfa/md_csengine_docs_docs_main.html", [
       [ "💡 Programming and Scripting Reference", "d7/dfa/md_csengine_docs_docs_main.html#autotoc_md1", null ]
     ] ],
     [ "Modules", "modules.html", "modules" ],
