@@ -84,8 +84,9 @@ $(document).ready(function(){initNavTree('d8/df9/class_c_s_e_1_1_render_containe
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../de/d18/class_c_s_e_1_1_render_container-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -102,36 +103,60 @@ Inheritance diagram for CSE::RenderContainer:</div>
   </map>
 </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a3d430ae28eb3a3e5444481ffcfc30fd1"><td class="memItemLeft" align="right" valign="top"><a id="a3d430ae28eb3a3e5444481ffcfc30fd1"></a>
-typedef std::vector&lt; <a class="el" href="../../d5/de6/class_c_s_e_1_1_s_i_render.html">SIRender</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>RenderInterfaces</b></td></tr>
-<tr class="separator:a3d430ae28eb3a3e5444481ffcfc30fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b79b663019d576ce8ace7f7310b8a68"><td class="memItemLeft" align="right" valign="top"><a id="a2b79b663019d576ce8ace7f7310b8a68"></a>
-typedef std::map&lt; <a class="el" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a> *, RenderInterfaces &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ProgramRenderLayer</b></td></tr>
-<tr class="separator:a2b79b663019d576ce8ace7f7310b8a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c8c8901575ca86e0cfbdecd7a9628b0"><td class="memItemLeft" align="right" valign="top"><a id="a9c8c8901575ca86e0cfbdecd7a9628b0"></a>
-typedef std::map&lt; short, ProgramRenderLayer &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OrderRenderLayer</b></td></tr>
-<tr class="separator:a9c8c8901575ca86e0cfbdecd7a9628b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5536f7d02420f1aed2cd16c49857965d"><td class="memItemLeft" align="right" valign="top"><a id="a5536f7d02420f1aed2cd16c49857965d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Register</b> (<a class="el" href="../../d5/de6/class_c_s_e_1_1_s_i_render.html">SIRender</a> *object)</td></tr>
 <tr class="separator:a5536f7d02420f1aed2cd16c49857965d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d06eb3c8d8607cc124763c76105a3c7"><td class="memItemLeft" align="right" valign="top"><a id="a0d06eb3c8d8607cc124763c76105a3c7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterDeferred</b> (<a class="el" href="../../d5/de6/class_c_s_e_1_1_s_i_render.html">SIRender</a> *object, const <a class="el" href="../../de/d51/class_c_s_e_1_1_s_material.html">SMaterial</a> *material)</td></tr>
+<tr class="separator:a0d06eb3c8d8607cc124763c76105a3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fdfaa0b63591e0e8909fb7ea1de15be"><td class="memItemLeft" align="right" valign="top"><a id="a3fdfaa0b63591e0e8909fb7ea1de15be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Remove</b> (<a class="el" href="../../d5/de6/class_c_s_e_1_1_s_i_render.html">SIRender</a> *object)</td></tr>
 <tr class="separator:a3fdfaa0b63591e0e8909fb7ea1de15be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a29295c8db8d74d5035ae1504e5446"><td class="memItemLeft" align="right" valign="top"><a id="a79a29295c8db8d74d5035ae1504e5446"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveDeferred</b> (<a class="el" href="../../d5/de6/class_c_s_e_1_1_s_i_render.html">SIRender</a> *object, const <a class="el" href="../../de/d51/class_c_s_e_1_1_s_material.html">SMaterial</a> *material)</td></tr>
+<tr class="separator:a79a29295c8db8d74d5035ae1504e5446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:a3d430ae28eb3a3e5444481ffcfc30fd1"><td class="memItemLeft" align="right" valign="top"><a id="a3d430ae28eb3a3e5444481ffcfc30fd1"></a>
+typedef std::vector&lt; <a class="el" href="../../d5/de6/class_c_s_e_1_1_s_i_render.html">SIRender</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>RenderInterfaces</b></td></tr>
+<tr class="separator:a3d430ae28eb3a3e5444481ffcfc30fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77efe1857fe7834754f6f6feb03e2af5"><td class="memItemLeft" align="right" valign="top"><a id="a77efe1857fe7834754f6f6feb03e2af5"></a>
+typedef std::unordered_map&lt; <a class="el" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a> *, <a class="el" href="../../d0/dc0/class_c_s_e_1_1_s_g_buffer.html">SGBuffer</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GBufferLayer</b></td></tr>
+<tr class="separator:a77efe1857fe7834754f6f6feb03e2af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9fe770bb6e017ec6b75b8fe7b43b1dd"><td class="memItemLeft" align="right" valign="top"><a id="ae9fe770bb6e017ec6b75b8fe7b43b1dd"></a>
+typedef std::unordered_map&lt; <a class="el" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a> *, RenderInterfaces &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ProgramRenderLayer</b></td></tr>
+<tr class="separator:ae9fe770bb6e017ec6b75b8fe7b43b1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a941497099055dcf087b11fab0cf99e"><td class="memItemLeft" align="right" valign="top"><a id="a5a941497099055dcf087b11fab0cf99e"></a>
+typedef std::unordered_map&lt; short, ProgramRenderLayer &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OrderRenderLayer</b></td></tr>
+<tr class="separator:a5a941497099055dcf087b11fab0cf99e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a587b9991f29c35f424953e91efb7a2df"><td class="memItemLeft" align="right" valign="top"><a id="a587b9991f29c35f424953e91efb7a2df"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Exterminate</b> ()</td></tr>
+<tr class="separator:a587b9991f29c35f424953e91efb7a2df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aac64f7a0d30e8116620f8b888ede3a8f"><td class="memItemLeft" align="right" valign="top"><a id="aac64f7a0d30e8116620f8b888ede3a8f"></a>
 OrderRenderLayer&#160;</td><td class="memItemRight" valign="bottom"><b>m_rendersLayer</b></td></tr>
 <tr class="separator:aac64f7a0d30e8116620f8b888ede3a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a14ba45ad8da7a50005653552f9ca3"><td class="memItemLeft" align="right" valign="top"><a id="a85a14ba45ad8da7a50005653552f9ca3"></a>
+GBufferLayer&#160;</td><td class="memItemRight" valign="bottom"><b>m_gbufferLayer</b></td></tr>
+<tr class="separator:a85a14ba45ad8da7a50005653552f9ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd535dad19a1d1c40af99701c07d8455"><td class="memItemLeft" align="right" valign="top"><a id="abd535dad19a1d1c40af99701c07d8455"></a>
+unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><b>m_width</b> = nullptr</td></tr>
+<tr class="separator:abd535dad19a1d1c40af99701c07d8455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a794f85430df686fd7d8ee6531b575633"><td class="memItemLeft" align="right" valign="top"><a id="a794f85430df686fd7d8ee6531b575633"></a>
+unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><b>m_height</b> = nullptr</td></tr>
+<tr class="separator:a794f85430df686fd7d8ee6531b575633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../dc/da3/_render_container_8h_source.html#l00011">11</a> of file <a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/da3/_render_container_8h_source.html#l00013">13</a> of file <a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>Manager/<a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a></li>
 <li>Manager/<a class="el" href="../../d8/df0/_render_container_8cpp_source.html">RenderContainer.cpp</a></li>
@@ -142,7 +167,7 @@ OrderRenderLayer&#160;</td><td class="memItemRight" valign="bottom"><b>m_renders
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../d8/df9/class_c_s_e_1_1_render_container.html">RenderContainer</a></li>
-    <li class="footer">Generated on Tue Oct 12 2021 00:28:21 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Oct 12 2021 16:38:29 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -2,7 +2,6 @@ var class_c_s_e_1_1_res_mgr =
 [
     [ "ResMgr", "de/db3/class_c_s_e_1_1_res_mgr.html#a0eb38f099630c593f9b1b0809192386d", null ],
     [ "~ResMgr", "de/db3/class_c_s_e_1_1_res_mgr.html#ab05dd4896c67e93062833404f11fe032", null ],
-    [ "Create", "de/db3/class_c_s_e_1_1_res_mgr.html#a76a7c8e5a542cca586d144d401c3d051", null ],
     [ "Exterminate", "de/db3/class_c_s_e_1_1_res_mgr.html#a322a4e2bb92193fca1e4ed2cb4d060a6", null ],
     [ "GetAssetReference", "de/db3/class_c_s_e_1_1_res_mgr.html#af22c1004c6de4b0774feb80ae42c0246", null ],
     [ "GetAssetReferences", "de/db3/class_c_s_e_1_1_res_mgr.html#a77b96461bd9017cefcc49d75518a5cef", null ],

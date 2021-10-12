@@ -2,18 +2,20 @@ var class_c_s_e_1_1_s_material =
 [
     [ "SMaterialMode", "de/d51/class_c_s_e_1_1_s_material.html#a23c908bbda0e98b1d0dcfdbcb294337f", [
       [ "NORMAL", "de/d51/class_c_s_e_1_1_s_material.html#a23c908bbda0e98b1d0dcfdbcb294337fad98320d3dc8d98680365b27c904745ee", null ],
-      [ "CUTOUT", "de/d51/class_c_s_e_1_1_s_material.html#a23c908bbda0e98b1d0dcfdbcb294337fa2e454728992e6c3901f67bba920b8d26", null ]
+      [ "DEFERRED", "de/d51/class_c_s_e_1_1_s_material.html#a23c908bbda0e98b1d0dcfdbcb294337fa026f560a15aca4a044b8652a80d51b2d", null ]
     ] ],
     [ "SMaterial", "de/d51/class_c_s_e_1_1_s_material.html#acca0292c5010294662b852a80724e4bd", null ],
     [ "SMaterial", "de/d51/class_c_s_e_1_1_s_material.html#ac291c02c8ce30d99cfafda381f6d89da", null ],
     [ "~SMaterial", "de/d51/class_c_s_e_1_1_s_material.html#aeedc007f15e1d8de0df817eb4354e2c2", null ],
     [ "AttachElement", "de/d51/class_c_s_e_1_1_s_material.html#ac8e9e32c72538d4137a7ec91ffe2a784", null ],
     [ "Exterminate", "de/d51/class_c_s_e_1_1_s_material.html#aa903c035537b333a0f03bee28ee5e30f", null ],
+    [ "GenerateMaterial", "de/d51/class_c_s_e_1_1_s_material.html#a94ed7cefbafc12f28309c6ab0c9675d5", null ],
     [ "GetHandle", "de/d51/class_c_s_e_1_1_s_material.html#ae92e79f59e7372047b12ad4158bd94ae", null ],
+    [ "GetLightPassHandle", "de/d51/class_c_s_e_1_1_s_material.html#addad47f2532011dce81486d8a2e140c8", null ],
     [ "GetMode", "de/d51/class_c_s_e_1_1_s_material.html#aaee5ece43e595405161bc7a6910f099b", null ],
     [ "GetOrderLayer", "de/d51/class_c_s_e_1_1_s_material.html#a92cf43727245b4b87d8c1d579eed5f79", null ],
     [ "Init", "de/d51/class_c_s_e_1_1_s_material.html#a795126111e8496a4ca78486c9acb2cb7", null ],
-    [ "InitElements", "de/d51/class_c_s_e_1_1_s_material.html#aa8fd9033127be1497cdb5bc0087e20ac", null ],
+    [ "InitElements", "de/d51/class_c_s_e_1_1_s_material.html#a8b1feeaeadc15cc4e14d0479f61aff0e", null ],
     [ "SetAttribute", "de/d51/class_c_s_e_1_1_s_material.html#ade5657e954cef0c4a64f89c33447d5b0", null ],
     [ "SetFloat", "de/d51/class_c_s_e_1_1_s_material.html#abe80c72bbfd572de5309475029d93dd7", null ],
     [ "SetHandle", "de/d51/class_c_s_e_1_1_s_material.html#a52d5be732c8cfa4525a6f29ebdd6c458", null ],

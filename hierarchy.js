@@ -60,6 +60,8 @@ var hierarchy =
     [ "SafeLog", "df/d46/class_safe_log.html", null ],
     [ "CSE::SCloneFactory", "d3/d33/class_c_s_e_1_1_s_clone_factory.html", null ],
     [ "CSE::SEnvironmentMgr", "d1/d87/class_c_s_e_1_1_s_environment_mgr.html", null ],
+    [ "CSE::Settings", "d9/da6/class_c_s_e_1_1_settings.html", null ],
+    [ "CSE::SGBuffer", "d0/dc0/class_c_s_e_1_1_s_g_buffer.html", null ],
     [ "CSE::ShaderUtil", "df/d5e/class_c_s_e_1_1_shader_util.html", null ],
     [ "CSE::SIContainer", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
       [ "CSE::SContainer< Sqrat::Object * >", "d5/d1e/class_c_s_e_1_1_s_container.html", [

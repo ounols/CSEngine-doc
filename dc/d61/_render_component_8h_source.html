@@ -91,15 +91,15 @@ $(document).ready(function(){initNavTree('dc/d61/_render_component_8h_source.htm
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;SComponent.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../Util/Render/RenderInterfaces.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../Util/Render/SMaterial.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;CameraComponent.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>CSE {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">class </span>DrawableStaticMeshComponent;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">class </span>DrawableSkinnedMeshComponent;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">class </span>LightMgr;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">class </span>RenderMgr;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;CameraComponent.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>CSE {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">class </span>DrawableStaticMeshComponent;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">class </span>DrawableSkinnedMeshComponent;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">class </span>LightMgr;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">class </span>RenderMgr;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">class </span>SMaterial;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../df/d04/class_c_s_e_1_1_render_component.html">   15</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../df/d04/class_c_s_e_1_1_render_component.html">RenderComponent</a> : <span class="keyword">public</span> <a class="code" href="../../db/d1a/class_c_s_e_1_1_s_component.html">SComponent</a>, <span class="keyword">public</span> <a class="code" href="../../d5/de6/class_c_s_e_1_1_s_i_render.html">SIRender</a> {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
@@ -129,30 +129,28 @@ $(document).ready(function(){initNavTree('dc/d61/_render_component_8h_source.htm
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> SetMaterial(<a class="code" href="../../de/d51/class_c_s_e_1_1_s_material.html">SMaterial</a>* material);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">void</span> AttachMaterials() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">void</span> SetJointMatrix(<span class="keyword">const</span> <a class="code" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>* handle) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">void</span> SetJointMatrix(<span class="keyword">const</span> <a class="code" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>* handle) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="../../d9/d1d/class_c_s_e_1_1_light_mgr.html">LightMgr</a>* m_lightMgr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="../../d4/daa/class_c_s_e_1_1_render_mgr.html">RenderMgr</a>* m_renderMgr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="../../d8/dbb/class_c_s_e_1_1_drawable_static_mesh_component.html">DrawableStaticMeshComponent</a>* m_mesh = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="../../d3/d75/class_c_s_e_1_1_drawable_skinned_mesh_component.html">DrawableSkinnedMeshComponent</a>* m_skinningMesh = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="../../de/d51/class_c_s_e_1_1_s_material.html">SMaterial</a>* m_material_clone = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">// SMaterial* material (Override)</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">bool</span> m_disableShadow = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    };</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="../../d9/d1d/class_c_s_e_1_1_light_mgr.html">LightMgr</a>* m_lightMgr = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../d4/daa/class_c_s_e_1_1_render_mgr.html">RenderMgr</a>* m_renderMgr = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="../../d8/dbb/class_c_s_e_1_1_drawable_static_mesh_component.html">DrawableStaticMeshComponent</a>* m_mesh = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="../../d3/d75/class_c_s_e_1_1_drawable_skinned_mesh_component.html">DrawableSkinnedMeshComponent</a>* m_skinningMesh = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="../../de/d51/class_c_s_e_1_1_s_material.html">SMaterial</a>* m_material_clone = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">// SMaterial* material (Override)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">bool</span> m_disableShadow = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_drawable_skinned_mesh_component_html"><div class="ttname"><a href="../../d3/d75/class_c_s_e_1_1_drawable_skinned_mesh_component.html">CSE::DrawableSkinnedMeshComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/_drawable_skinned_mesh_component_8h_source.html#l00008">DrawableSkinnedMeshComponent.h:8</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_drawable_static_mesh_component_html"><div class="ttname"><a href="../../d8/dbb/class_c_s_e_1_1_drawable_static_mesh_component.html">CSE::DrawableStaticMeshComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd5/_drawable_static_mesh_component_8h_source.html#l00008">DrawableStaticMeshComponent.h:8</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_g_l_program_handle_html"><div class="ttname"><a href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">CSE::GLProgramHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00043">GLProgramHandle.h:43</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_light_mgr_html"><div class="ttname"><a href="../../d9/d1d/class_c_s_e_1_1_light_mgr.html">CSE::LightMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d40/_light_mgr_8h_source.html#l00011">LightMgr.h:11</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_g_l_program_handle_html"><div class="ttname"><a href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">CSE::GLProgramHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00048">GLProgramHandle.h:48</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_light_mgr_html"><div class="ttname"><a href="../../d9/d1d/class_c_s_e_1_1_light_mgr.html">CSE::LightMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d40/_light_mgr_8h_source.html#l00013">LightMgr.h:13</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_render_component_html"><div class="ttname"><a href="../../df/d04/class_c_s_e_1_1_render_component.html">CSE::RenderComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d61/_render_component_8h_source.html#l00015">RenderComponent.h:15</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_render_mgr_html"><div class="ttname"><a href="../../d4/daa/class_c_s_e_1_1_render_mgr.html">CSE::RenderMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df6/_render_mgr_8h_source.html#l00012">RenderMgr.h:12</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_component_html"><div class="ttname"><a href="../../db/d1a/class_c_s_e_1_1_s_component.html">CSE::SComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d37/_s_component_8h_source.html#l00016">SComponent.h:16</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_game_object_html"><div class="ttname"><a href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">CSE::SGameObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d05/_s_game_object_8h_source.html#l00016">SGameObject.h:16</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_i_render_html"><div class="ttname"><a href="../../d5/de6/class_c_s_e_1_1_s_i_render.html">CSE::SIRender</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d43/_render_interfaces_8h_source.html#l00039">RenderInterfaces.h:39</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_material_html"><div class="ttname"><a href="../../de/d51/class_c_s_e_1_1_s_material.html">CSE::SMaterial</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d71/_s_material_8h_source.html#l00019">SMaterial.h:19</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_i_render_html"><div class="ttname"><a href="../../d5/de6/class_c_s_e_1_1_s_i_render.html">CSE::SIRender</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d43/_render_interfaces_8h_source.html#l00038">RenderInterfaces.h:38</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_material_html"><div class="ttname"><a href="../../de/d51/class_c_s_e_1_1_s_material.html">CSE::SMaterial</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d71/_s_material_8h_source.html#l00015">SMaterial.h:15</a></div></div>
 <div class="ttc" id="astruct_c_s_e_1_1_camera_matrix_struct_html"><div class="ttname"><a href="../../d3/d00/struct_c_s_e_1_1_camera_matrix_struct.html">CSE::CameraMatrixStruct</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd2/_camera_component_8h_source.html#l00010">CameraComponent.h:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -160,7 +158,7 @@ $(document).ready(function(){initNavTree('dc/d61/_render_component_8h_source.htm
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_e2995b532e4735c0240376112d6b0bb7.html">Component</a></li><li class="navelem"><b>RenderComponent.h</b></li>
-    <li class="footer">Generated on Tue Oct 12 2021 00:28:20 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Oct 12 2021 16:38:27 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

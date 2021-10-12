@@ -95,53 +95,51 @@ $(document).ready(function(){initNavTree('d9/df6/_render_mgr_8h_source.html','..
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>CSE {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">class </span>SEnvironmentMgr;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">class </span>CameraBase;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">class </span>CameraBase;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">class </span>SGBuffer;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d4/daa/class_c_s_e_1_1_render_mgr.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d4/daa/class_c_s_e_1_1_render_mgr.html">RenderMgr</a> : <span class="keyword">public</span> <a class="code" href="../../d8/df9/class_c_s_e_1_1_render_container.html">RenderContainer</a>, <span class="keyword">public</span> <a class="code" href="../../dc/d25/class_c_s_e_1_1_core_base.html">CoreBase</a>, <span class="keyword">public</span> <a class="code" href="../../d2/db7/class_c_s_e_1_1_render_core_base.html">RenderCoreBase</a> {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../d4/daa/class_c_s_e_1_1_render_mgr.html">RenderMgr</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        ~<a class="code" href="../../d4/daa/class_c_s_e_1_1_render_mgr.html">RenderMgr</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        ~<a class="code" href="../../d4/daa/class_c_s_e_1_1_render_mgr.html">RenderMgr</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">void</span> Init() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> SetViewport(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">void</span> SetViewport();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> Render() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> Render() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> Exterminate() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> RenderInstance(<span class="keyword">const</span> <a class="code" href="../../df/d36/class_c_s_e_1_1_camera_base.html">CameraBase</a>&amp; camera, <span class="keyword">const</span> <a class="code" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>* custom_handler = <span class="keyword">nullptr</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> RenderShadowInstance(<span class="keyword">const</span> <a class="code" href="../../df/d36/class_c_s_e_1_1_camera_base.html">CameraBase</a>&amp; camera, <span class="keyword">const</span> <a class="code" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>&amp; custom_handler,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                  <span class="keyword">const</span> std::list&lt;SIRender*&gt;&amp; render_objects = std::list&lt;SIRender*&gt;()) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">void</span> Exterminate();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> ResetBuffer(<span class="keyword">const</span> <a class="code" href="../../df/d36/class_c_s_e_1_1_camera_base.html">CameraBase</a>&amp; camera) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> RenderGbuffer(<span class="keyword">const</span> <a class="code" href="../../df/d36/class_c_s_e_1_1_camera_base.html">CameraBase</a>&amp; camera, <span class="keyword">const</span> <a class="code" href="../../d0/dc0/class_c_s_e_1_1_s_g_buffer.html">SGBuffer</a>&amp; gbuffer) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">void</span> RenderGbuffers(<span class="keyword">const</span> <a class="code" href="../../df/d36/class_c_s_e_1_1_camera_base.html">CameraBase</a>&amp; camera) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> RenderInstances(<span class="keyword">const</span> <a class="code" href="../../df/d36/class_c_s_e_1_1_camera_base.html">CameraBase</a>&amp; camera, <span class="keyword">const</span> <a class="code" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>* custom_handler = <span class="keyword">nullptr</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> RenderShadowInstance(<span class="keyword">const</span> <a class="code" href="../../df/d36/class_c_s_e_1_1_camera_base.html">CameraBase</a>&amp; camera, <span class="keyword">const</span> <a class="code" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>&amp; custom_handler,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                  <span class="keyword">const</span> std::list&lt;SIRender*&gt;&amp; render_objects = std::list&lt;SIRender*&gt;()) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">mat4</a> m_NoneCamera;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">int</span> m_width = 1;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">int</span> m_height = 1;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="../../d1/d87/class_c_s_e_1_1_s_environment_mgr.html">SEnvironmentMgr</a>* m_environmentMgr = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    };</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a>* m_mainBuffer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>* m_mainProgramHandle = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>* m_geometryHandle = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    };</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_camera_base_html"><div class="ttname"><a href="../../df/d36/class_c_s_e_1_1_camera_base.html">CSE::CameraBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/db8/_camera_base_8h_source.html#l00008">CameraBase.h:8</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_core_base_html"><div class="ttname"><a href="../../dc/d25/class_c_s_e_1_1_core_base.html">CSE::CoreBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d00/_core_base_8h_source.html#l00009">CoreBase.h:9</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_g_l_program_handle_html"><div class="ttname"><a href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">CSE::GLProgramHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00043">GLProgramHandle.h:43</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_matrix4_html"><div class="ttname"><a href="../../d2/de6/class_c_s_e_1_1_matrix4.html">CSE::Matrix4&lt; float &gt;</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_render_container_html"><div class="ttname"><a href="../../d8/df9/class_c_s_e_1_1_render_container.html">CSE::RenderContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/da3/_render_container_8h_source.html#l00011">RenderContainer.h:11</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_g_l_program_handle_html"><div class="ttname"><a href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">CSE::GLProgramHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00048">GLProgramHandle.h:48</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_render_container_html"><div class="ttname"><a href="../../d8/df9/class_c_s_e_1_1_render_container.html">CSE::RenderContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/da3/_render_container_8h_source.html#l00013">RenderContainer.h:13</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_render_core_base_html"><div class="ttname"><a href="../../d2/db7/class_c_s_e_1_1_render_core_base.html">CSE::RenderCoreBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d5c/_render_core_base_8h_source.html#l00009">RenderCoreBase.h:9</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_render_mgr_html"><div class="ttname"><a href="../../d4/daa/class_c_s_e_1_1_render_mgr.html">CSE::RenderMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/df6/_render_mgr_8h_source.html#l00012">RenderMgr.h:12</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_environment_mgr_html"><div class="ttname"><a href="../../d1/d87/class_c_s_e_1_1_s_environment_mgr.html">CSE::SEnvironmentMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d1f/_s_environment_mgr_8h_source.html#l00011">SEnvironmentMgr.h:11</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">CSE::SFrameBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d82/_s_frame_buffer_8h_source.html#l00028">SFrameBuffer.h:28</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_g_buffer_html"><div class="ttname"><a href="../../d0/dc0/class_c_s_e_1_1_s_g_buffer.html">CSE::SGBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d75/_s_g_buffer_8h_source.html#l00012">SGBuffer.h:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_0d0ed8c9b19e6818cf5af4bd559a697b.html">Manager</a></li><li class="navelem"><b>RenderMgr.h</b></li>
-    <li class="footer">Generated on Tue Oct 12 2021 00:28:20 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Oct 12 2021 16:38:28 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

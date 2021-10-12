@@ -1,6 +1,7 @@
 var class_c_s_e_1_1_x_m_l_parser =
 [
     [ "GetType", "d2/d2e/class_c_s_e_1_1_x_m_l_parser.html#a803bd0b6fee26bc208364c537bf65b3f", null ],
+    [ "GetType", "d2/d2e/class_c_s_e_1_1_x_m_l_parser.html#ab22e2c5f98a779d1613154998fe22e7f", null ],
     [ "parse", "d2/d2e/class_c_s_e_1_1_x_m_l_parser.html#a6bef38adcdacf26835d97d51a74ec053", null ],
     [ "parseBool", "d2/d2e/class_c_s_e_1_1_x_m_l_parser.html#a9638bcf682c6c28af7e5d1e42b4f001f", null ],
     [ "parseComponent", "d2/d2e/class_c_s_e_1_1_x_m_l_parser.html#aa61535fb151a3f022709ae07a2b76751", null ],

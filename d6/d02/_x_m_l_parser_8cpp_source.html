@@ -184,10 +184,30 @@ $(document).ready(function(){initNavTree('d6/d02/_x_m_l_parser_8cpp_source.html'
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> SType::UNKNOWN;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;SType XMLParser::GetType(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> type) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (type == GL_BOOL) <span class="keywordflow">return</span> SType::BOOL;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> (type == GL_FLOAT) <span class="keywordflow">return</span> SType::FLOAT;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (type == GL_INT) <span class="keywordflow">return</span> SType::INT;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">//    if(type == &quot;arr&quot;) dst = (void*)parseInt(values[0].c_str());</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">if</span> (type == GL_SAMPLER_2D) <span class="keywordflow">return</span> SType::TEXTURE;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> (type == GL_FLOAT_VEC2) <span class="keywordflow">return</span> SType::VEC2;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">if</span> (type == GL_FLOAT_VEC3) <span class="keywordflow">return</span> SType::VEC3;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">if</span> (type == GL_FLOAT_VEC4) <span class="keywordflow">return</span> SType::VEC4;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (type == GL_FLOAT_MAT2) <span class="keywordflow">return</span> SType::MAT2;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span> (type == GL_FLOAT_MAT3) <span class="keywordflow">return</span> SType::MAT3;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">if</span> (type == GL_FLOAT_MAT4) <span class="keywordflow">return</span> SType::MAT4;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> SType::UNKNOWN;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_game_object_mgr_html"><div class="ttname"><a href="../../d5/db0/class_c_s_e_1_1_game_object_mgr.html">CSE::GameObjectMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/ddd/_game_object_mgr_8h_source.html#l00010">GameObjectMgr.h:10</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_component_html"><div class="ttname"><a href="../../db/d1a/class_c_s_e_1_1_s_component.html">CSE::SComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d37/_s_component_8h_source.html#l00016">SComponent.h:16</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_game_object_html"><div class="ttname"><a href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">CSE::SGameObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d05/_s_game_object_8h_source.html#l00016">SGameObject.h:16</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_material_html"><div class="ttname"><a href="../../de/d51/class_c_s_e_1_1_s_material.html">CSE::SMaterial</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d71/_s_material_8h_source.html#l00019">SMaterial.h:19</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_material_html"><div class="ttname"><a href="../../de/d51/class_c_s_e_1_1_s_material.html">CSE::SMaterial</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d71/_s_material_8h_source.html#l00015">SMaterial.h:15</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_texture_html"><div class="ttname"><a href="../../da/df0/class_c_s_e_1_1_s_texture.html">CSE::STexture</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d33/_s_texture_8h_source.html#l00014">STexture.h:14</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_vector2_html"><div class="ttname"><a href="../../d6/d75/class_c_s_e_1_1_vector2.html">CSE::Vector2&lt; float &gt;</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_vector3_html"><div class="ttname"><a href="../../d2/d4a/class_c_s_e_1_1_vector3.html">CSE::Vector3&lt; float &gt;</a></div></div>
@@ -198,7 +218,7 @@ $(document).ready(function(){initNavTree('d6/d02/_x_m_l_parser_8cpp_source.html'
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><a class="el" href="../../dir_05df2928d52705236faf027df5262a05.html">Loader</a></li><li class="navelem"><a class="el" href="../../dir_33b49832b5423cab2ec9adf0678b4a99.html">XML</a></li><li class="navelem"><b>XMLParser.cpp</b></li>
-    <li class="footer">Generated on Tue Oct 12 2021 00:28:20 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Oct 12 2021 16:38:28 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

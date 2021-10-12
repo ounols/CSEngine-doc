@@ -3,7 +3,7 @@ var class_c_s_e_1_1_s_resource =
     [ "SResource", "dd/d6c/class_c_s_e_1_1_s_resource.html#af1e7251e1882c92870d1a255de756f0a", null ],
     [ "SResource", "dd/d6c/class_c_s_e_1_1_s_resource.html#aebfb7cbabcd045e67c8a7fce225d4f99", null ],
     [ "SResource", "dd/d6c/class_c_s_e_1_1_s_resource.html#ae6a6e214aa0ea1937301f0458e69751d", null ],
-    [ "~SResource", "dd/d6c/class_c_s_e_1_1_s_resource.html#a899694e1cafb166d9f91f23551e9f9be", null ],
+    [ "~SResource", "dd/d6c/class_c_s_e_1_1_s_resource.html#a3dbe2a64ebd8d935dab6627e015a8428", null ],
     [ "Create", "dd/d6c/class_c_s_e_1_1_s_resource.html#ace6c9dc6966303d63491c98c90034267", null ],
     [ "Create", "dd/d6c/class_c_s_e_1_1_s_resource.html#adb1a6088b22b3ed6867508399f78d60e", null ],
     [ "Get", "dd/d6c/class_c_s_e_1_1_s_resource.html#adae259b01e253742d37a8618c546b1b0", null ],

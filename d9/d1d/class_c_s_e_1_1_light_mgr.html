@@ -109,6 +109,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7152bbd87f8bfda2e9c19f47a27118a8"><td class="memItemLeft" align="right" valign="top"><a id="a7152bbd87f8bfda2e9c19f47a27118a8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>AttachLightToShader</b> (const <a class="el" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a> *handle) const</td></tr>
 <tr class="separator:a7152bbd87f8bfda2e9c19f47a27118a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3afc1545360db64030466cddbaa5b738"><td class="memItemLeft" align="right" valign="top"><a id="a3afc1545360db64030466cddbaa5b738"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AttachLightMapToShader</b> (const <a class="el" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a> *handle, int textureLayout) const</td></tr>
+<tr class="separator:a3afc1545360db64030466cddbaa5b738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11c059eacd34b6a35eb245160213af14"><td class="memItemLeft" align="right" valign="top"><a id="a11c059eacd34b6a35eb245160213af14"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> () override</td></tr>
 <tr class="separator:a11c059eacd34b6a35eb245160213af14"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,12 +124,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveShadowObject</b
 <tr class="memitem:a25044bf2ce18a6159ab19b6122c1ebcb"><td class="memItemLeft" align="right" valign="top"><a id="a25044bf2ce18a6159ab19b6122c1ebcb"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>GetShadowCount</b> () const</td></tr>
 <tr class="separator:a25044bf2ce18a6159ab19b6122c1ebcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c7fe66c03f78f01c547f6a092000cbf"><td class="memItemLeft" align="right" valign="top"><a id="a8c7fe66c03f78f01c547f6a092000cbf"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetLightMapCount</b> () const</td></tr>
+<tr class="separator:a8c7fe66c03f78f01c547f6a092000cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28a67034b1eac34923cb766aecff665e"><td class="memItemLeft" align="right" valign="top"><a id="a28a67034b1eac34923cb766aecff665e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RefreshShadowCount</b> (int shadowCount=-1) const</td></tr>
 <tr class="separator:a28a67034b1eac34923cb766aecff665e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb4e795fd2eb6bda6298187673bb6975"><td class="memItemLeft" align="right" valign="top"><a id="afb4e795fd2eb6bda6298187673bb6975"></a>
 const std::list&lt; <a class="el" href="../../d5/de6/class_c_s_e_1_1_s_i_render.html">SIRender</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetShadowObject</b> () const</td></tr>
 <tr class="separator:afb4e795fd2eb6bda6298187673bb6975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6276753f9061bc75604ca36ef79f1d8"><td class="memItemLeft" align="right" valign="top"><a id="ac6276753f9061bc75604ca36ef79f1d8"></a>
+<a class="el" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetShadowHandle</b> () const</td></tr>
+<tr class="separator:ac6276753f9061bc75604ca36ef79f1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_s_e_1_1_s_container"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_s_e_1_1_s_container')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d5/d1e/class_c_s_e_1_1_s_container.html">CSE::SContainer&lt; LightComponent * &gt;</a></td></tr>
 <tr class="memitem:ac1098850e90d75f3d79144c6489d91f7 inherit pub_methods_class_c_s_e_1_1_s_container"><td class="memItemLeft" align="right" valign="top"><a id="ac1098850e90d75f3d79144c6489d91f7"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Register</b> (<a class="el" href="../../d6/d94/class_c_s_e_1_1_light_component.html">LightComponent</a> * object)</td></tr>
@@ -182,7 +191,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>m_size</b></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../df/d40/_light_mgr_8h_source.html#l00011">11</a> of file <a class="el" href="../../df/d40/_light_mgr_8h_source.html">LightMgr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d40/_light_mgr_8h_source.html#l00013">13</a> of file <a class="el" href="../../df/d40/_light_mgr_8h_source.html">LightMgr.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>Manager/<a class="el" href="../../df/d40/_light_mgr_8h_source.html">LightMgr.h</a></li>
 <li>Manager/<a class="el" href="../../d1/de1/_light_mgr_8cpp_source.html">LightMgr.cpp</a></li>
@@ -193,7 +202,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>m_size</b></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../d9/d1d/class_c_s_e_1_1_light_mgr.html">LightMgr</a></li>
-    <li class="footer">Generated on Tue Oct 12 2021 00:28:21 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Oct 12 2021 16:38:29 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

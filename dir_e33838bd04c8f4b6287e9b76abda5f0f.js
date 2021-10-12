@@ -10,6 +10,8 @@ var dir_e33838bd04c8f4b6287e9b76abda5f0f =
     [ "SEnvironmentMgr.h", "da/d1f/_s_environment_mgr_8h_source.html", null ],
     [ "SFrameBuffer.cpp", "db/d98/_s_frame_buffer_8cpp_source.html", null ],
     [ "SFrameBuffer.h", "d3/d82/_s_frame_buffer_8h_source.html", null ],
+    [ "SGBuffer.cpp", "dc/d69/_s_g_buffer_8cpp_source.html", null ],
+    [ "SGBuffer.h", "d5/d75/_s_g_buffer_8h_source.html", null ],
     [ "ShaderUtil.cpp", "d0/da6/_shader_util_8cpp_source.html", null ],
     [ "ShaderUtil.h", "d1/daf/_shader_util_8h_source.html", null ],
     [ "SkyboxUtil.h", "d6/d44/_skybox_util_8h_source.html", null ],

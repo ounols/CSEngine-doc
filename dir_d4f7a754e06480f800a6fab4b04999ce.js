@@ -19,6 +19,8 @@ var dir_d4f7a754e06480f800a6fab4b04999ce =
     [ "SafeLog.cpp", "d7/db3/_safe_log_8cpp_source.html", null ],
     [ "SafeLog.h", "d6/d55/_safe_log_8h_source.html", null ],
     [ "ScriptDef.h", "d6/d48/_script_def_8h_source.html", null ],
+    [ "Settings.cpp", "d6/dcd/_settings_8cpp_source.html", null ],
+    [ "Settings.h", "d4/d4a/_settings_8h_source.html", null ],
     [ "STypeDef.h", "dd/dd0/_s_type_def_8h_source.html", null ],
     [ "VariableBinder.h", "d6/dc0/_variable_binder_8h_source.html", null ],
     [ "Vector.h", "d4/d7f/_vector_8h_source.html", null ]
