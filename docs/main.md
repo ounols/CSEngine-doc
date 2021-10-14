@@ -1,3 +1,4 @@
+\mainpage
 # Welcome to the CSEngine documentation
 ![intro-image](https://github.com/ounols/CSEngine/raw/master/intro_image.png)This documentation is a guide and reference document for CSEngine.
 
