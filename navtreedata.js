@@ -25,14 +25,14 @@
 var NAVTREE =
 [
   [ "CSEngine", "index.html", [
+    [ "Welcome to the CSEngine documentation", "index.html#autotoc_md5", [
+      [ "💡 Programming and Scripting Reference", "index.html#autotoc_md6", null ]
+    ] ],
     [ "C++ API Reference", "db/d2f/md_csengine_docs_docs_cpp_api.html", [
       [ "Components", "db/d2f/md_csengine_docs_docs_cpp_api.html#autotoc_md1", null ],
       [ "Managers", "db/d2f/md_csengine_docs_docs_cpp_api.html#autotoc_md2", null ],
       [ "Objects", "db/d2f/md_csengine_docs_docs_cpp_api.html#autotoc_md3", null ],
       [ "Resources", "db/d2f/md_csengine_docs_docs_cpp_api.html#autotoc_md4", null ]
-    ] ],
-    [ "Welcome to the CSEngine documentation", "d7/dfa/md_csengine_docs_docs_main.html", [
-      [ "💡 Programming and Scripting Reference", "d7/dfa/md_csengine_docs_docs_main.html#autotoc_md6", null ]
     ] ],
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [
@@ -55,9 +55,9 @@ var NAVTREEINDEX =
 "annotated.html",
 "d3/d00/struct_c_s_e_1_1_camera_matrix_struct.html#aa355d2daf853df39640cded0e33331d9",
 "d6/d0a/class_c_s_e_1_1_scene_mgr.html",
-"d8/dbb/class_c_s_e_1_1_drawable_static_mesh_component.html#a461b7bfc59865a5645ffa895dd901b3d",
-"db/d3d/class_c_s_e_1_1_asset_mgr.html#a42081fead7fbb154b6d97adf85c2c515a5d39b8f346743f2a350e4ba7fb8b5c24",
-"dd/ddc/structmz__zip__archive__file__stat.html#afb0f2b80d59f134f6fee4c8728649119"
+"d8/dbb/class_c_s_e_1_1_drawable_static_mesh_component.html#a4dfaafa4dacff753748dcf79a9db2eb0",
+"db/d3d/class_c_s_e_1_1_asset_mgr.html#a42081fead7fbb154b6d97adf85c2c515a7c3df264a27d3027164e53b38b44a11a",
+"dd/dfe/class_c_s_e_1_1_skinning_data.html#a2d47e8d72ffd4db4a972f6419d182d53"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
