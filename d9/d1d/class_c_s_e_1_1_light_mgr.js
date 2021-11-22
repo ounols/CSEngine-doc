@@ -1,7 +1,7 @@
 var class_c_s_e_1_1_light_mgr =
 [
     [ "LightMgr", "d9/d1d/class_c_s_e_1_1_light_mgr.html#a565a19f54b111fb4af64070d95426eab", null ],
-    [ "~LightMgr", "d9/d1d/class_c_s_e_1_1_light_mgr.html#adb31b0235690b5e277c24c151c8afc1b", null ],
+    [ "~LightMgr", "d9/d1d/class_c_s_e_1_1_light_mgr.html#a75cfcc19ae5e3ffc581a490891a7b94f", null ],
     [ "AttachLightMapToShader", "d9/d1d/class_c_s_e_1_1_light_mgr.html#a3afc1545360db64030466cddbaa5b738", null ],
     [ "AttachLightToShader", "d9/d1d/class_c_s_e_1_1_light_mgr.html#a7152bbd87f8bfda2e9c19f47a27118a8", null ],
     [ "GetLightMapCount", "d9/d1d/class_c_s_e_1_1_light_mgr.html#a8c7fe66c03f78f01c547f6a092000cbf", null ],

@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('dd/d1f/_g_l_program_handle_8h_source.h
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>CSE {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../d5/d0c/struct_c_s_e_1_1_g_l_uniform_handles.html">   16</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="../../d5/d0c/struct_c_s_e_1_1_g_l_uniform_handles.html">GLUniformHandles</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        GLint Modelview = HANDLE_NULL;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        GLint ModelView = HANDLE_NULL;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        GLint ModelNoCameraMatrix = HANDLE_NULL;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        GLint Projection = HANDLE_NULL;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        GLint CameraPosition = HANDLE_NULL;</div>
@@ -146,7 +146,7 @@ $(document).ready(function(){initNavTree('dd/d1f/_g_l_program_handle_8h_source.h
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        ~<a class="code" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        ~<a class="code" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">void</span> Exterminate() <span class="keyword">override</span>;</div>
@@ -208,7 +208,7 @@ $(document).ready(function(){initNavTree('dd/d1f/_g_l_program_handle_8h_source.h
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    };</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_g_l_program_handle_html"><div class="ttname"><a href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">CSE::GLProgramHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00048">GLProgramHandle.h:48</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_resource_html"><div class="ttname"><a href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1f/_s_resource_8h_source.html#l00013">SResource.h:13</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_resource_html"><div class="ttname"><a href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1f/_s_resource_8h_source.html#l00014">SResource.h:14</a></div></div>
 <div class="ttc" id="astruct_c_s_e_1_1_g_l_attribute_handles_html"><div class="ttname"><a href="../../d8/d67/struct_c_s_e_1_1_g_l_attribute_handles.html">CSE::GLAttributeHandles</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00038">GLProgramHandle.h:38</a></div></div>
 <div class="ttc" id="astruct_c_s_e_1_1_g_l_program_handle_1_1_element_html"><div class="ttname"><a href="../../da/d85/struct_c_s_e_1_1_g_l_program_handle_1_1_element.html">CSE::GLProgramHandle::Element</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00050">GLProgramHandle.h:50</a></div></div>
 <div class="ttc" id="astruct_c_s_e_1_1_g_l_uniform_handles_html"><div class="ttname"><a href="../../d5/d0c/struct_c_s_e_1_1_g_l_uniform_handles.html">CSE::GLUniformHandles</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00016">GLProgramHandle.h:16</a></div></div>
@@ -218,7 +218,7 @@ $(document).ready(function(){initNavTree('dd/d1f/_g_l_program_handle_8h_source.h
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><b>GLProgramHandle.h</b></li>
-    <li class="footer">Generated on Mon Nov 15 2021 05:53:06 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Nov 22 2021 00:39:41 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

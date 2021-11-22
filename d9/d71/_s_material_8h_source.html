@@ -132,13 +132,13 @@ $(document).ready(function(){initNavTree('d9/d71/_s_material_8h_source.html','..
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordtype">void</span> SetAttribute(<span class="keyword">const</span> <a class="code" href="../../dd/daa/struct_c_s_e_1_1_g_l_mesh_i_d.html">GLMeshID</a>&amp; meshId) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordtype">void</span> SetInt(std::string name, <span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordtype">void</span> SetInt(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">int</span> value);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordtype">void</span> SetFloat(std::string name, <span class="keywordtype">float</span> value);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordtype">void</span> SetFloat(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">float</span> value);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordtype">void</span> SetVec3(std::string name, <a class="code" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a> value);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordtype">void</span> SetVec3(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>&amp; value);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordtype">void</span> SetTexture(std::string name, <a class="code" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">SResource</a>* texture);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordtype">void</span> SetTexture(<span class="keyword">const</span> std::string&amp; name, <a class="code" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">SResource</a>* texture);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">short</span> GetOrderLayer() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
@@ -160,7 +160,7 @@ $(document).ready(function(){initNavTree('d9/d71/_s_material_8h_source.html','..
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">void</span> ReleaseElements();</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="keywordtype">void</span> SetBindFuncByType(Element* element, <span class="keywordtype">bool</span> isUniform);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="keywordtype">void</span> SetBindFuncByType(Element* element);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> SetIntFunc(Element* element, <span class="keywordtype">int</span> value);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> SetFloatFunc(Element* element, <span class="keywordtype">float</span> value);</div>
@@ -193,7 +193,7 @@ $(document).ready(function(){initNavTree('d9/d71/_s_material_8h_source.html','..
 <div class="ttc" id="aclass_c_s_e_1_1_matrix3_html"><div class="ttname"><a href="../../df/d4c/class_c_s_e_1_1_matrix3.html">CSE::Matrix3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d45/_matrix_8h_source.html#l00037">Matrix.h:37</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_matrix4_html"><div class="ttname"><a href="../../d2/de6/class_c_s_e_1_1_matrix4.html">CSE::Matrix4&lt; float &gt;</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_material_html"><div class="ttname"><a href="../../de/d51/class_c_s_e_1_1_s_material.html">CSE::SMaterial</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d71/_s_material_8h_source.html#l00015">SMaterial.h:15</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_resource_html"><div class="ttname"><a href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1f/_s_resource_8h_source.html#l00013">SResource.h:13</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_resource_html"><div class="ttname"><a href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1f/_s_resource_8h_source.html#l00014">SResource.h:14</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_vector2_html"><div class="ttname"><a href="../../d6/d75/class_c_s_e_1_1_vector2.html">CSE::Vector2&lt; float &gt;</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_vector3_html"><div class="ttname"><a href="../../d2/d4a/class_c_s_e_1_1_vector3.html">CSE::Vector3&lt; float &gt;</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_vector4_html"><div class="ttname"><a href="../../d6/d26/class_c_s_e_1_1_vector4.html">CSE::Vector4&lt; float &gt;</a></div></div>
@@ -205,7 +205,7 @@ $(document).ready(function(){initNavTree('d9/d71/_s_material_8h_source.html','..
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><a class="el" href="../../dir_e33838bd04c8f4b6287e9b76abda5f0f.html">Render</a></li><li class="navelem"><b>SMaterial.h</b></li>
-    <li class="footer">Generated on Mon Nov 15 2021 05:53:06 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Nov 22 2021 00:39:42 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

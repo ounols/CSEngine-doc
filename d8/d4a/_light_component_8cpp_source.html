@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('d8/d4a/_light_component_8cpp_source.ht
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;LightComponent::~LightComponent() {}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;LightComponent::~LightComponent() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> LightComponent::Exterminate() {</div>
@@ -163,7 +163,7 @@ $(document).ready(function(){initNavTree('d8/d4a/_light_component_8cpp_source.ht
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">void</span> LightComponent::SetDirection(<a class="code" href="../../d6/d26/class_c_s_e_1_1_vector4.html">vec4</a> direction)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">void</span> LightComponent::SetDirection(<span class="keyword">const</span> <a class="code" href="../../d6/d26/class_c_s_e_1_1_vector4.html">vec4</a>&amp; direction)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">switch</span> (m_type) {</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
@@ -180,7 +180,7 @@ $(document).ready(function(){initNavTree('d8/d4a/_light_component_8cpp_source.ht
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> LightComponent::SetColor(<a class="code" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a> color)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> LightComponent::SetColor(<span class="keyword">const</span> <a class="code" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>&amp; color)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    m_light-&gt;color = color;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
@@ -190,7 +190,7 @@ $(document).ready(function(){initNavTree('d8/d4a/_light_component_8cpp_source.ht
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">void</span> LightComponent::SetAttenuationFactor(<a class="code" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a> att)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">void</span> LightComponent::SetAttenuationFactor(<span class="keyword">const</span> <a class="code" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>&amp; att)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    m_light-&gt;att = att;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
@@ -234,7 +234,7 @@ $(document).ready(function(){initNavTree('d8/d4a/_light_component_8cpp_source.ht
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">return</span> m_type;</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<a class="code" href="../../d6/d26/class_c_s_e_1_1_vector4.html">vec4</a> LightComponent::GetDirection(<a class="code" href="../../d6/d26/class_c_s_e_1_1_vector4.html">vec4</a> direction)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<a class="code" href="../../d6/d26/class_c_s_e_1_1_vector4.html">vec4</a> LightComponent::GetDirection(<span class="keyword">const</span> <a class="code" href="../../d6/d26/class_c_s_e_1_1_vector4.html">vec4</a>&amp; direction)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">return</span> m_light-&gt;direction;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
@@ -295,7 +295,7 @@ $(document).ready(function(){initNavTree('d8/d4a/_light_component_8cpp_source.ht
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<a class="code" href="../../d3/d00/struct_c_s_e_1_1_camera_matrix_struct.html">CameraMatrixStruct</a> LightComponent::GetCameraMatrixStruct()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; position = gameObject-&gt;GetTransform();</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../d3/d00/struct_c_s_e_1_1_camera_matrix_struct.html">CameraMatrixStruct</a>(m_lightViewMatrix, m_lightProjectionMatrix, position-&gt;m_position);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">return</span> { m_lightViewMatrix, m_lightProjectionMatrix, position-&gt;m_position };</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a>* LightComponent::GetFrameBuffer()<span class="keyword"> const </span>{</div>
@@ -320,7 +320,7 @@ $(document).ready(function(){initNavTree('d8/d4a/_light_component_8cpp_source.ht
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_e2995b532e4735c0240376112d6b0bb7.html">Component</a></li><li class="navelem"><b>LightComponent.cpp</b></li>
-    <li class="footer">Generated on Mon Nov 15 2021 05:53:05 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Nov 22 2021 00:39:41 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

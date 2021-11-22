@@ -97,85 +97,84 @@ $(document).ready(function(){initNavTree('d6/d6b/_vertex_skin_data_8h_source.htm
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../df/d0d/class_c_s_e_1_1_vertex_skin_data.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../df/d0d/class_c_s_e_1_1_vertex_skin_data.html">VertexSkinData</a> {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="../../df/d0d/class_c_s_e_1_1_vertex_skin_data.html">VertexSkinData</a>() {}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="../../df/d0d/class_c_s_e_1_1_vertex_skin_data.html">VertexSkinData</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        ~<a class="code" href="../../df/d0d/class_c_s_e_1_1_vertex_skin_data.html">VertexSkinData</a>() {}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        ~<a class="code" href="../../df/d0d/class_c_s_e_1_1_vertex_skin_data.html">VertexSkinData</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">void</span> addJointEffect(<span class="keywordtype">int</span> jointId, <span class="keywordtype">float</span> weight) {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">auto</span> index = 0;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">auto</span> jointID_it = m_jointIDs.begin();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keyword">auto</span> weight_it = m_weights.begin();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; weight_object : m_weights) {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <span class="keywordflow">if</span> (weight &gt; weight_object) {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                    m_jointIDs.insert(jointID_it++, jointId);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                    m_weights.insert(weight_it++, weight);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            m_jointIDs.push_back(jointId);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            m_weights.push_back(weight);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">void</span> limitJointNumber(<span class="keywordtype">int</span> max) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span> (m_jointIDs.size() &gt; max) {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                std::vector&lt;float&gt; topWeights;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                topWeights.resize(max);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordtype">float</span> total = saveTopWeights(topWeights);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                refillWeightList(topWeights, total);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                removeExcessJointIds(max);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (m_jointIDs.size() &lt; max) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                fillEmptyWeights(max);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">auto</span> jointID_it = m_jointIDs.begin();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">auto</span> weight_it = m_weights.begin();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; weight_object : m_weights) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                <span class="keywordflow">if</span> (weight &gt; weight_object) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                    m_jointIDs.insert(jointID_it++, jointId);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                    m_weights.insert(weight_it++, weight);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            m_jointIDs.push_back(jointId);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            m_weights.push_back(weight);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> limitJointNumber(<span class="keywordtype">int</span> max) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> (m_jointIDs.size() &gt; max) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                std::vector&lt;float&gt; topWeights;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                topWeights.resize(max);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keywordtype">float</span> total = saveTopWeights(topWeights);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                refillWeightList(topWeights, total);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                removeExcessJointIds(max);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (m_jointIDs.size() &lt; max) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                fillEmptyWeights(max);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">const</span> std::vector&lt;int&gt;&amp; getJointIDs()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> m_jointIDs;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">const</span> std::vector&lt;float&gt;&amp; getWeights()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span> m_weights;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> fillEmptyWeights(<span class="keywordtype">int</span> max) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            m_jointIDs.reserve(max);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            m_weights.reserve(max);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">while</span> (m_jointIDs.size() &lt; max) {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                m_jointIDs.push_back(0);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                m_weights.push_back(0);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">float</span> saveTopWeights(std::vector&lt;float&gt;&amp; topWeightsArray) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordtype">float</span> total = 0;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keyword">auto</span> size = topWeightsArray.size();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size; ++i) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                topWeightsArray[i] = m_weights[i];</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                total += topWeightsArray[i];</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span> total;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> refillWeightList(std::vector&lt;float&gt; topWeights, <span class="keywordtype">float</span> total) {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            m_weights.clear();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            m_weights.reserve(topWeights.size());</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; topWeight : topWeights) {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                m_weights.push_back(std::fmin(topWeight / total, 1));</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">void</span> removeExcessJointIds(<span class="keywordtype">int</span> max) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">while</span> (m_jointIDs.size() &gt; max) {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                m_jointIDs.erase(m_jointIDs.begin() + m_jointIDs.size() - 1);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        std::vector&lt;int&gt; m_jointIDs;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        std::vector&lt;float&gt; m_weights;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    };</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">const</span> std::vector&lt;int&gt;&amp; getJointIDs()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">return</span> m_jointIDs;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">const</span> std::vector&lt;float&gt;&amp; getWeights()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">return</span> m_weights;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> fillEmptyWeights(<span class="keywordtype">int</span> max) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            m_jointIDs.reserve(max);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            m_weights.reserve(max);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">while</span> (m_jointIDs.size() &lt; max) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                m_jointIDs.push_back(0);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                m_weights.push_back(0);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">float</span> saveTopWeights(std::vector&lt;float&gt;&amp; topWeightsArray) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordtype">float</span> total = 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keyword">auto</span> size = topWeightsArray.size();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size; ++i) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                topWeightsArray[i] = m_weights[i];</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                total += topWeightsArray[i];</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> total;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> refillWeightList(<span class="keyword">const</span> std::vector&lt;float&gt;&amp; topWeights, <span class="keywordtype">float</span> total) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            m_weights.clear();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            m_weights.reserve(topWeights.size());</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; topWeight : topWeights) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                m_weights.push_back(std::fmin(topWeight / total, 1));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> removeExcessJointIds(<span class="keywordtype">int</span> max) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">while</span> (m_jointIDs.size() &gt; max) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                m_jointIDs.erase(m_jointIDs.begin() + m_jointIDs.size() - 1);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        std::vector&lt;int&gt; m_jointIDs;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        std::vector&lt;float&gt; m_weights;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    };</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_vertex_skin_data_html"><div class="ttname"><a href="../../df/d0d/class_c_s_e_1_1_vertex_skin_data.html">CSE::VertexSkinData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6b/_vertex_skin_data_8h_source.html#l00009">VertexSkinData.h:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -183,7 +182,7 @@ $(document).ready(function(){initNavTree('d6/d6b/_vertex_skin_data_8h_source.htm
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><a class="el" href="../../dir_05df2928d52705236faf027df5262a05.html">Loader</a></li><li class="navelem"><a class="el" href="../../dir_69af17f82e4848f8cafb0e90ae3d4b3b.html">DAE</a></li><li class="navelem"><a class="el" href="../../dir_8de12d0b35d3c7b957dd5782641b5fdd.html">DAEUtil</a></li><li class="navelem"><b>VertexSkinData.h</b></li>
-    <li class="footer">Generated on Mon Nov 15 2021 05:53:06 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Nov 22 2021 00:39:41 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

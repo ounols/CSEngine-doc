@@ -1,5 +1,11 @@
 var class_c_s_e_1_1_s_game_object =
 [
+    [ "STATUS", "dc/d47/class_c_s_e_1_1_s_game_object.html#a26ee078c09fa6ce25eb70558d5acc8ff", [
+      [ "IDLE", "dc/d47/class_c_s_e_1_1_s_game_object.html#a26ee078c09fa6ce25eb70558d5acc8ffa1866dc6cf70739492b7b386a35a5b0c2", null ],
+      [ "INIT", "dc/d47/class_c_s_e_1_1_s_game_object.html#a26ee078c09fa6ce25eb70558d5acc8ffa041690aaf556a019a7703432261e1e21", null ],
+      [ "DESTROY", "dc/d47/class_c_s_e_1_1_s_game_object.html#a26ee078c09fa6ce25eb70558d5acc8ffa44c34d41117fdbd738dd6d5a1791763d", null ],
+      [ "UNKOWN", "dc/d47/class_c_s_e_1_1_s_game_object.html#a26ee078c09fa6ce25eb70558d5acc8ffa47b2337472d307c36149f13430f02cdc", null ]
+    ] ],
     [ "SGameObject", "dc/d47/class_c_s_e_1_1_s_game_object.html#a65ce37ffa8be0bbe1c3e2e2c08200fd4", null ],
     [ "SGameObject", "dc/d47/class_c_s_e_1_1_s_game_object.html#acd2adee30ac755f1a4d179ea1b620fe5", null ],
     [ "SGameObject", "dc/d47/class_c_s_e_1_1_s_game_object.html#a206ad0e72f2e3e2cfe38d5214eb81e1f", null ],
@@ -23,7 +29,8 @@ var class_c_s_e_1_1_s_game_object =
     [ "GetName", "dc/d47/class_c_s_e_1_1_s_game_object.html#afabdf3bceecd93cfd046e91da533e310", null ],
     [ "GetParent", "dc/d47/class_c_s_e_1_1_s_game_object.html#aec1685f9e93469e2d0d40993528738f5", null ],
     [ "GetResourceID", "dc/d47/class_c_s_e_1_1_s_game_object.html#a32a3db15551913663d1606c9d5a2f906", null ],
-    [ "GetSComponentByID", "dc/d47/class_c_s_e_1_1_s_game_object.html#ac1493d19f48f90e778975d3ab903abe4", null ],
+    [ "GetSComponentByID", "dc/d47/class_c_s_e_1_1_s_game_object.html#a3b7915d386ee1d77b53a6945272c27d1", null ],
+    [ "GetStatus", "dc/d47/class_c_s_e_1_1_s_game_object.html#a0f4d7d98a8bb3789ceb2b252619fe442", null ],
     [ "GetTransform", "dc/d47/class_c_s_e_1_1_s_game_object.html#a55a0d1474734855fb6dcd45dc0324be8", null ],
     [ "Init", "dc/d47/class_c_s_e_1_1_s_game_object.html#af9791261d3351020db254dfbd8a91871", null ],
     [ "isPrefab", "dc/d47/class_c_s_e_1_1_s_game_object.html#a03538cf3a9d4978310ff7d437414f9dc", null ],
@@ -34,7 +41,7 @@ var class_c_s_e_1_1_s_game_object =
     [ "SetIsPrefab", "dc/d47/class_c_s_e_1_1_s_game_object.html#ab29de3bddff10f952629a0a5f6c40560", null ],
     [ "SetName", "dc/d47/class_c_s_e_1_1_s_game_object.html#a968411f96aff345bcce9e6a91cd9a8bc", null ],
     [ "SetParent", "dc/d47/class_c_s_e_1_1_s_game_object.html#ab4206c3b3632f7cb737eb97d1673b5e5", null ],
-    [ "SetResourceID", "dc/d47/class_c_s_e_1_1_s_game_object.html#a1c3838424450dc7979dd0bd93f0a333e", null ],
+    [ "SetResourceID", "dc/d47/class_c_s_e_1_1_s_game_object.html#a8ff3858537a5ecc73c53e6f7e247f05f", null ],
     [ "SetUndestroyable", "dc/d47/class_c_s_e_1_1_s_game_object.html#a9e7b9d5a2e9a6d7c93da04de942e877d", null ],
     [ "Tick", "dc/d47/class_c_s_e_1_1_s_game_object.html#a5bacb8a7761459dfb682960dde3efe08", null ]
 ];

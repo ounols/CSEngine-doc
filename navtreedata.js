@@ -57,7 +57,7 @@ var NAVTREEINDEX =
 "d6/d0a/class_c_s_e_1_1_scene_mgr.html",
 "d8/dbb/class_c_s_e_1_1_drawable_static_mesh_component.html#a4dfaafa4dacff753748dcf79a9db2eb0",
 "db/d3d/class_c_s_e_1_1_asset_mgr.html#a42081fead7fbb154b6d97adf85c2c515a7c3df264a27d3027164e53b38b44a11a",
-"dd/dfe/class_c_s_e_1_1_skinning_data.html#a2d47e8d72ffd4db4a972f6419d182d53"
+"dd/ddc/structmz__zip__archive__file__stat.html#ae1a9a8fbc09a4c3c14b04667d0f2d189"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

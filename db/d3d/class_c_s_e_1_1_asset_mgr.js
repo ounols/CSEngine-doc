@@ -21,6 +21,6 @@ var class_c_s_e_1_1_asset_mgr =
     [ "Exterminate", "db/d3d/class_c_s_e_1_1_asset_mgr.html#a371a67578100fddf08177aa5b81ec31c", null ],
     [ "GetAsset", "db/d3d/class_c_s_e_1_1_asset_mgr.html#a86aece808559154ec9f485dfdddca50b", null ],
     [ "GetAssets", "db/d3d/class_c_s_e_1_1_asset_mgr.html#a87ba147396cc4549b2dc1c7679dfb8b1", null ],
-    [ "LoadAssetFile", "db/d3d/class_c_s_e_1_1_asset_mgr.html#afe63e4804a4cb25656723b97d7d33b9f", null ],
+    [ "LoadAssetFile", "db/d3d/class_c_s_e_1_1_asset_mgr.html#a4e911b3f1ec4a20e6a63db4a377815d5", null ],
     [ "LoadAssets", "db/d3d/class_c_s_e_1_1_asset_mgr.html#af1ff46669afecd5bc46e231bcbd49cd5", null ]
 ];

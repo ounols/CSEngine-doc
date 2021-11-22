@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('d0/de4/_asset_mgr_8h_source.html','../
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::vector&lt;AssetReference*&gt; GetAssets(TYPE type) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">static</span> std::string LoadAssetFile(std::string path);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">static</span> std::string LoadAssetFile(<span class="keyword">const</span> std::string&amp; path);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#ifdef __ANDROID__</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> SetAssetManager(AAssetManager* obj);</div>
@@ -141,14 +141,14 @@ $(document).ready(function(){initNavTree('d0/de4/_asset_mgr_8h_source.html','../
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> ReadDirectory(std::string path);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> ReadPackage(std::string path);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> ReadDirectory(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> ReadPackage(<span class="keyword">const</span> std::string&amp; path);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetReference</a>* CreateAsset(std::string path, std::string name_full, std::string name = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetReference</a>* CreateAsset(<span class="keyword">const</span> std::string&amp; path, <span class="keyword">const</span> std::string&amp; name_full, std::string name = <span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> SetType();</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetReference</a>* AppendSubName(<a class="code" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetReference</a>* asset, std::string sub_name);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetReference</a>* AppendSubName(<a class="code" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetReference</a>* asset, <span class="keyword">const</span> std::string&amp; sub_name);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        std::vector&lt;AssetReference*&gt; m_assets;</div>
@@ -170,7 +170,7 @@ $(document).ready(function(){initNavTree('d0/de4/_asset_mgr_8h_source.html','../
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_0d0ed8c9b19e6818cf5af4bd559a697b.html">Manager</a></li><li class="navelem"><b>AssetMgr.h</b></li>
-    <li class="footer">Generated on Mon Nov 15 2021 05:53:05 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Nov 22 2021 00:39:41 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

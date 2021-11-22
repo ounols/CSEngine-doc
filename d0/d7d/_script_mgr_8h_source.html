@@ -99,19 +99,19 @@ $(document).ready(function(){initNavTree('d0/d7d/_script_mgr_8h_source.html','..
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="../../d0/dc6/class_c_s_e_1_1_script_mgr.html">ScriptMgr</a>();</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        ~<a class="code" href="../../d0/dc6/class_c_s_e_1_1_script_mgr.html">ScriptMgr</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        ~<a class="code" href="../../d0/dc6/class_c_s_e_1_1_script_mgr.html">ScriptMgr</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">void</span> Init() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> RegisterScript(std::string script);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> RegisterScript(<span class="keyword">const</span> std::string&amp; script);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">void</span> DefineClasses(HSQUIRRELVM vm = Sqrat::DefaultVM::Get());</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> ReleaseSqratObject();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> ReadScriptList() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> ReadScriptList() ;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        Sqrat::Class&lt;T&gt;&amp; SQRClassDef(std::string className, HSQUIRRELVM vm = Sqrat::DefaultVM::Get());</div>
@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('d0/d7d/_script_mgr_8h_source.html','..
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_core_base_html"><div class="ttname"><a href="../../dc/d25/class_c_s_e_1_1_core_base.html">CSE::CoreBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d00/_core_base_8h_source.html#l00009">CoreBase.h:9</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_container_html"><div class="ttname"><a href="../../d5/d1e/class_c_s_e_1_1_s_container.html">CSE::SContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d9d/_s_container_8h_source.html#l00016">SContainer.h:16</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_container_html"><div class="ttname"><a href="../../d5/d1e/class_c_s_e_1_1_s_container.html">CSE::SContainer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d9d/_s_container_8h_source.html#l00015">SContainer.h:15</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_script_mgr_html"><div class="ttname"><a href="../../d0/dc6/class_c_s_e_1_1_script_mgr.html">CSE::ScriptMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d7d/_script_mgr_8h_source.html#l00009">ScriptMgr.h:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -162,7 +162,7 @@ $(document).ready(function(){initNavTree('d0/d7d/_script_mgr_8h_source.html','..
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_0d0ed8c9b19e6818cf5af4bd559a697b.html">Manager</a></li><li class="navelem"><b>ScriptMgr.h</b></li>
-    <li class="footer">Generated on Mon Nov 15 2021 05:53:06 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Nov 22 2021 00:39:41 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

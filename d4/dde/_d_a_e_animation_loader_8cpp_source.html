@@ -94,103 +94,103 @@ $(document).ready(function(){initNavTree('d4/dde/_d_a_e_animation_loader_8cpp_so
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../../../MacroDef.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;DAEAnimationLoader.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../../MoreString.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../../../Manager/ResMgr.h&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../../../Manager/EngineCore.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span>CSE;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../../MoreString.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../../../Manager/ResMgr.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../../../Manager/EngineCore.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">const</span> <a class="code" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">mat4</a> CORRECTION = <span class="comment">/*mat4::RotateX(90)*/</span> mat4::Identity();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span>CSE;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;DAEAnimationLoader::DAEAnimationLoader() {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;DAEAnimationLoader::~DAEAnimationLoader() {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    SAFE_DELETE(m_root);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span>(m_animationData == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> frame : m_animationData-&gt;keyFrames) {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> joint : frame-&gt;jointTransforms) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            SAFE_DELETE(joint);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        frame-&gt;jointTransforms.clear();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        SAFE_DELETE(frame);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    m_animationData-&gt;keyFrames.clear();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    SAFE_DELETE(m_animationData);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> DAEAnimationLoader::Load(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, std::string name) {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    m_name = name;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    m_root = <a class="code" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a>(path).getRoot();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../dd/d83/class_x_node.html">XNode</a> collada = m_root-&gt;getChild(<span class="stringliteral">&quot;COLLADA&quot;</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    m_animation = collada.getChild(<span class="stringliteral">&quot;library_animations&quot;</span>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    m_joint = collada.getChild(<span class="stringliteral">&quot;library_visual_scenes&quot;</span>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    LoadAnimation();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> DAEAnimationLoader::LoadAnimation() {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::string rootNode = findRootJointName();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::vector&lt;float&gt; times = getKeyTimes();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">float</span> duration = times[times.size() - 1];</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    std::vector&lt;KeyFrameData*&gt; keyFrames = initKeyFrames(times);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::vector&lt;XNode&gt; animationNodes = m_animation.children;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="../../dd/d83/class_x_node.html">XNode</a> jointNode : animationNodes) {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> (jointNode.name != <span class="stringliteral">&quot;animation&quot;</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        loadJointTransforms(keyFrames, jointNode, rootNode);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    m_animationData = <span class="keyword">new</span> <a class="code" href="../../da/dfa/struct_c_s_e_1_1_animation_data.html">AnimationData</a>(duration, keyFrames);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;std::string DAEAnimationLoader::findRootJointName() {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../dd/d83/class_x_node.html">XNode</a> skeleton = m_joint.getChild(<span class="stringliteral">&quot;visual_scene&quot;</span>).getNodeByAttribute(<span class="stringliteral">&quot;node&quot;</span>, <span class="stringliteral">&quot;id&quot;</span>, <span class="stringliteral">&quot;Armature&quot;</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> skeleton.getChild(<span class="stringliteral">&quot;node&quot;</span>).getAttribute(<span class="stringliteral">&quot;id&quot;</span>).value;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;std::vector&lt;float&gt; DAEAnimationLoader::getKeyTimes() {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="../../dd/d83/class_x_node.html">XNode</a> timeData = m_animation.getChild(<span class="stringliteral">&quot;animation&quot;</span>).getChild(<span class="stringliteral">&quot;source&quot;</span>).getChild(<span class="stringliteral">&quot;float_array&quot;</span>);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> timeData.value.toFloatVector();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;std::vector&lt;KeyFrameData*&gt; DAEAnimationLoader::initKeyFrames(std::vector&lt;float&gt; times) {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    std::vector&lt;KeyFrameData*&gt; frames;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; times.size(); i++) {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        frames.push_back(<span class="keyword">new</span> <a class="code" href="../../d7/d1f/struct_c_s_e_1_1_key_frame_data.html">KeyFrameData</a>(times[i]));</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> frames;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">void</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;DAEAnimationLoader::loadJointTransforms(std::vector&lt;KeyFrameData*&gt; frames, <a class="code" href="../../dd/d83/class_x_node.html">XNode</a> jointData, std::string rootNodeId) {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::string jointNameId = getJointName(jointData);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::string dataId = getDataId(jointData);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="../../dd/d83/class_x_node.html">XNode</a> transformData = jointData.getNodeByAttribute(<span class="stringliteral">&quot;source&quot;</span>, <span class="stringliteral">&quot;id&quot;</span>, dataId.c_str());</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::vector&lt;float&gt; rawData = transformData.getChild(<span class="stringliteral">&quot;float_array&quot;</span>).value.toFloatVector();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    processTransforms(jointNameId, rawData, frames, jointNameId == rootNodeId);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">const</span> <a class="code" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">mat4</a> CORRECTION = <span class="comment">/*mat4::RotateX(90)*/</span> mat4::Identity();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;DAEAnimationLoader::DAEAnimationLoader() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;DAEAnimationLoader::~DAEAnimationLoader() {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    SAFE_DELETE(m_root);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span>(m_animationData == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> frame : m_animationData-&gt;keyFrames) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> joint : frame-&gt;jointTransforms) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            SAFE_DELETE(joint);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        frame-&gt;jointTransforms.clear();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        SAFE_DELETE(frame);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    m_animationData-&gt;keyFrames.clear();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    SAFE_DELETE(m_animationData);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> DAEAnimationLoader::Load(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, std::string name) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    m_name = std::move(name);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    m_root = <a class="code" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a>(path).getRoot();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../dd/d83/class_x_node.html">XNode</a> collada = m_root-&gt;getChild(<span class="stringliteral">&quot;COLLADA&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    m_animation = collada.getChild(<span class="stringliteral">&quot;library_animations&quot;</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    m_joint = collada.getChild(<span class="stringliteral">&quot;library_visual_scenes&quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    LoadAnimation();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> DAEAnimationLoader::LoadAnimation() {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::string rootNode = findRootJointName();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    std::vector&lt;float&gt; times = getKeyTimes();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">float</span> duration = times[times.size() - 1];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::vector&lt;KeyFrameData*&gt; keyFrames = initKeyFrames(times);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    std::vector&lt;XNode&gt; animationNodes = m_animation.children;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>&amp; jointNode : animationNodes) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> (jointNode.name != <span class="stringliteral">&quot;animation&quot;</span>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        loadJointTransforms(keyFrames, jointNode, rootNode);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    m_animationData = <span class="keyword">new</span> <a class="code" href="../../da/dfa/struct_c_s_e_1_1_animation_data.html">AnimationData</a>(duration, keyFrames);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;std::string DAEAnimationLoader::findRootJointName() {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../dd/d83/class_x_node.html">XNode</a> skeleton = m_joint.getChild(<span class="stringliteral">&quot;visual_scene&quot;</span>).getNodeByAttribute(<span class="stringliteral">&quot;node&quot;</span>, <span class="stringliteral">&quot;id&quot;</span>, <span class="stringliteral">&quot;Armature&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> skeleton.getChild(<span class="stringliteral">&quot;node&quot;</span>).getAttribute(<span class="stringliteral">&quot;id&quot;</span>).value;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;std::vector&lt;float&gt; DAEAnimationLoader::getKeyTimes() {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../dd/d83/class_x_node.html">XNode</a> timeData = m_animation.getChild(<span class="stringliteral">&quot;animation&quot;</span>).getChild(<span class="stringliteral">&quot;source&quot;</span>).getChild(<span class="stringliteral">&quot;float_array&quot;</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> timeData.value.toFloatVector();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;std::vector&lt;KeyFrameData*&gt; DAEAnimationLoader::initKeyFrames(std::vector&lt;float&gt; times) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    std::vector&lt;KeyFrameData*&gt; frames;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    frames.reserve(times.size());</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; times.size(); ++i) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        frames.push_back(<span class="keyword">new</span> <a class="code" href="../../d7/d1f/struct_c_s_e_1_1_key_frame_data.html">KeyFrameData</a>(times[i]));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> frames;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">void</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;DAEAnimationLoader::loadJointTransforms(std::vector&lt;KeyFrameData*&gt; frames, <span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>&amp; jointData, std::string rootNodeId) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::string jointNameId = getJointName(jointData);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::string dataId = getDataId(jointData);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>&amp; transformData = jointData.getNodeByAttribute(<span class="stringliteral">&quot;source&quot;</span>, <span class="stringliteral">&quot;id&quot;</span>, dataId.c_str());</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::vector&lt;float&gt; rawData = transformData.getChild(<span class="stringliteral">&quot;float_array&quot;</span>).value.toFloatVector();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    processTransforms(jointNameId, rawData, std::move(frames), jointNameId == rootNodeId);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;std::string DAEAnimationLoader::getJointName(<a class="code" href="../../dd/d83/class_x_node.html">XNode</a> jointData) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="../../dd/d83/class_x_node.html">XNode</a> channelNode = jointData.getChild(<span class="stringliteral">&quot;channel&quot;</span>);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    std::string data = channelNode.getAttribute(<span class="stringliteral">&quot;target&quot;</span>).value;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> split(data, <span class="charliteral">&#39;/&#39;</span>)[0];</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;std::string DAEAnimationLoader::getDataId(<a class="code" href="../../dd/d83/class_x_node.html">XNode</a> jointData) {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="../../dd/d83/class_x_node.html">XNode</a> node = jointData.getChild(<span class="stringliteral">&quot;sampler&quot;</span>).getNodeByAttribute(<span class="stringliteral">&quot;input&quot;</span>, <span class="stringliteral">&quot;semantic&quot;</span>, <span class="stringliteral">&quot;OUTPUT&quot;</span>);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> node.getAttribute(<span class="stringliteral">&quot;source&quot;</span>).value.substr(1);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">void</span> DAEAnimationLoader::processTransforms(std::string jointName,</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                           std::vector&lt;float&gt; rawData, std::vector&lt;KeyFrameData*&gt; keyFrames, <span class="keywordtype">bool</span> root) {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; keyFrames.size(); i++) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;std::string DAEAnimationLoader::getJointName(<span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>&amp; jointData) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>&amp; channelNode = jointData.getChild(<span class="stringliteral">&quot;channel&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    std::string data = channelNode.getAttribute(<span class="stringliteral">&quot;target&quot;</span>).value;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> split(data, <span class="charliteral">&#39;/&#39;</span>)[0];</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;std::string DAEAnimationLoader::getDataId(<span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>&amp; jointData) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="../../dd/d83/class_x_node.html">XNode</a> node = jointData.getChild(<span class="stringliteral">&quot;sampler&quot;</span>).getNodeByAttribute(<span class="stringliteral">&quot;input&quot;</span>, <span class="stringliteral">&quot;semantic&quot;</span>, <span class="stringliteral">&quot;OUTPUT&quot;</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> node.getAttribute(<span class="stringliteral">&quot;source&quot;</span>).value.substr(1);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">void</span> DAEAnimationLoader::processTransforms(<span class="keyword">const</span> std::string&amp; jointName,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                           std::vector&lt;float&gt; rawData, std::vector&lt;KeyFrameData*&gt; keyFrames, <span class="keywordtype">bool</span> root) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; keyFrames.size(); i++) {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        std::vector&lt;float&gt; matrixData;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        matrixData.reserve(16);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 16; j++) {</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            matrixData.push_back(rawData[i * 16 + j]);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
@@ -206,22 +206,21 @@ $(document).ready(function(){initNavTree('d4/dde/_d_a_e_animation_loader_8cpp_so
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        keyFrames[i]-&gt;jointTransforms.push_back(</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="keyword">new</span> <a class="code" href="../../d1/d9a/struct_c_s_e_1_1_joint_transform_data.html">JointTransformData</a>(CORE-&gt;GetCore(<a class="code" href="../../de/db3/class_c_s_e_1_1_res_mgr.html">ResMgr</a>)-&gt;GetStringHash(jointName), jointName, transform));</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_matrix4_html"><div class="ttname"><a href="../../d2/de6/class_c_s_e_1_1_matrix4.html">CSE::Matrix4&lt; float &gt;</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_res_mgr_html"><div class="ttname"><a href="../../de/db3/class_c_s_e_1_1_res_mgr.html">CSE::ResMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/_res_mgr_8h_source.html#l00022">ResMgr.h:22</a></div></div>
 <div class="ttc" id="aclass_x_f_i_l_e_html"><div class="ttname"><a href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/_x_m_l_8h_source.html#l00072">XML.h:72</a></div></div>
 <div class="ttc" id="aclass_x_node_html"><div class="ttname"><a href="../../dd/d83/class_x_node.html">XNode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/_x_m_l_8h_source.html#l00043">XML.h:43</a></div></div>
-<div class="ttc" id="astruct_c_s_e_1_1_animation_data_html"><div class="ttname"><a href="../../da/dfa/struct_c_s_e_1_1_animation_data.html">CSE::AnimationData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d73/_d_a_e_animation_loader_8h_source.html#l00033">DAEAnimationLoader.h:33</a></div></div>
-<div class="ttc" id="astruct_c_s_e_1_1_joint_transform_data_html"><div class="ttname"><a href="../../d1/d9a/struct_c_s_e_1_1_joint_transform_data.html">CSE::JointTransformData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d73/_d_a_e_animation_loader_8h_source.html#l00013">DAEAnimationLoader.h:13</a></div></div>
-<div class="ttc" id="astruct_c_s_e_1_1_key_frame_data_html"><div class="ttname"><a href="../../d7/d1f/struct_c_s_e_1_1_key_frame_data.html">CSE::KeyFrameData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d73/_d_a_e_animation_loader_8h_source.html#l00025">DAEAnimationLoader.h:25</a></div></div>
+<div class="ttc" id="astruct_c_s_e_1_1_animation_data_html"><div class="ttname"><a href="../../da/dfa/struct_c_s_e_1_1_animation_data.html">CSE::AnimationData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d73/_d_a_e_animation_loader_8h_source.html#l00035">DAEAnimationLoader.h:35</a></div></div>
+<div class="ttc" id="astruct_c_s_e_1_1_joint_transform_data_html"><div class="ttname"><a href="../../d1/d9a/struct_c_s_e_1_1_joint_transform_data.html">CSE::JointTransformData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d73/_d_a_e_animation_loader_8h_source.html#l00015">DAEAnimationLoader.h:15</a></div></div>
+<div class="ttc" id="astruct_c_s_e_1_1_key_frame_data_html"><div class="ttname"><a href="../../d7/d1f/struct_c_s_e_1_1_key_frame_data.html">CSE::KeyFrameData</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d73/_d_a_e_animation_loader_8h_source.html#l00027">DAEAnimationLoader.h:27</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><a class="el" href="../../dir_05df2928d52705236faf027df5262a05.html">Loader</a></li><li class="navelem"><a class="el" href="../../dir_69af17f82e4848f8cafb0e90ae3d4b3b.html">DAE</a></li><li class="navelem"><b>DAEAnimationLoader.cpp</b></li>
-    <li class="footer">Generated on Mon Nov 15 2021 05:53:06 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Nov 22 2021 00:39:41 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

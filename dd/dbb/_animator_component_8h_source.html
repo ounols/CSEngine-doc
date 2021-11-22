@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('dd/dbb/_animator_component_8h_source.h
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="../../d0/d79/class_c_s_e_1_1_animator_component.html">AnimatorComponent</a>();</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        ~<a class="code" href="../../d0/d79/class_c_s_e_1_1_animator_component.html">AnimatorComponent</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        ~<a class="code" href="../../d0/d79/class_c_s_e_1_1_animator_component.html">AnimatorComponent</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">void</span> Init() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
@@ -128,7 +128,7 @@ $(document).ready(function(){initNavTree('dd/dbb/_animator_component_8h_source.h
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::map&lt;int, mat4&gt; calculateCurrentAnimationPose() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> applyPoseToJoints(std::map&lt;int, mat4&gt;&amp; currentPose, <a class="code" href="../../d8/dfb/class_c_s_e_1_1_joint_component.html">JointComponent</a>* joint, <a class="code" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">mat4</a> parentTransform);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> applyPoseToJoints(std::map&lt;int, mat4&gt;&amp; currentPose, <a class="code" href="../../d8/dfb/class_c_s_e_1_1_joint_component.html">JointComponent</a>* joint, <span class="keyword">const</span> <a class="code" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">mat4</a>&amp; parentTransform);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::vector&lt;KeyFrame*&gt; getPreviousAndNextFrames() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('dd/dbb/_animator_component_8h_source.h
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_e2995b532e4735c0240376112d6b0bb7.html">Component</a></li><li class="navelem"><a class="el" href="../../dir_93294a00d7377d42f425f4af6dd95ab0.html">Animation</a></li><li class="navelem"><b>AnimatorComponent.h</b></li>
-    <li class="footer">Generated on Mon Nov 15 2021 05:53:05 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Nov 22 2021 00:39:41 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

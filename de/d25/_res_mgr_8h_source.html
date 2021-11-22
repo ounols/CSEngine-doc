@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('de/d25/_res_mgr_8h_source.html','../..
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../de/db3/class_c_s_e_1_1_res_mgr.html">   22</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../de/db3/class_c_s_e_1_1_res_mgr.html">ResMgr</a> : <span class="keyword">public</span> <a class="code" href="../../dc/d25/class_c_s_e_1_1_core_base.html">CoreBase</a> {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="../../de/db3/class_c_s_e_1_1_res_mgr.html">ResMgr</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        ~<a class="code" href="../../de/db3/class_c_s_e_1_1_res_mgr.html">ResMgr</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        ~<a class="code" href="../../de/db3/class_c_s_e_1_1_res_mgr.html">ResMgr</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
@@ -139,7 +139,7 @@ $(document).ready(function(){initNavTree('de/d25/_res_mgr_8h_source.html','../..
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">bool</span> IsEmpty() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordtype">int</span> GetStringHash(std::string str);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordtype">int</span> GetStringHash(<span class="keyword">const</span> std::string&amp; str);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        std::string RemoveDuplicatingName(std::string name) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
@@ -191,7 +191,7 @@ $(document).ready(function(){initNavTree('de/d25/_res_mgr_8h_source.html','../..
 <div class="ttc" id="aclass_c_s_e_1_1_asset_mgr_html"><div class="ttname"><a href="../../db/d3d/class_c_s_e_1_1_asset_mgr.html">CSE::AssetMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de4/_asset_mgr_8h_source.html#l00018">AssetMgr.h:18</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_core_base_html"><div class="ttname"><a href="../../dc/d25/class_c_s_e_1_1_core_base.html">CSE::CoreBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d00/_core_base_8h_source.html#l00009">CoreBase.h:9</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_res_mgr_html"><div class="ttname"><a href="../../de/db3/class_c_s_e_1_1_res_mgr.html">CSE::ResMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/_res_mgr_8h_source.html#l00022">ResMgr.h:22</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_resource_html"><div class="ttname"><a href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1f/_s_resource_8h_source.html#l00013">SResource.h:13</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_resource_html"><div class="ttname"><a href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1f/_s_resource_8h_source.html#l00014">SResource.h:14</a></div></div>
 <div class="ttc" id="astruct_c_s_e_1_1_asset_mgr_1_1_asset_reference_html"><div class="ttname"><a href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">CSE::AssetMgr::AssetReference</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de4/_asset_mgr_8h_source.html#l00024">AssetMgr.h:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -199,7 +199,7 @@ $(document).ready(function(){initNavTree('de/d25/_res_mgr_8h_source.html','../..
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_0d0ed8c9b19e6818cf5af4bd559a697b.html">Manager</a></li><li class="navelem"><b>ResMgr.h</b></li>
-    <li class="footer">Generated on Mon Nov 15 2021 05:53:06 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Nov 22 2021 00:39:41 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

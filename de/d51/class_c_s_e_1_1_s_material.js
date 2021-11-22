@@ -17,11 +17,11 @@ var class_c_s_e_1_1_s_material =
     [ "Init", "de/d51/class_c_s_e_1_1_s_material.html#a795126111e8496a4ca78486c9acb2cb7", null ],
     [ "InitElements", "de/d51/class_c_s_e_1_1_s_material.html#a8b1feeaeadc15cc4e14d0479f61aff0e", null ],
     [ "SetAttribute", "de/d51/class_c_s_e_1_1_s_material.html#ade5657e954cef0c4a64f89c33447d5b0", null ],
-    [ "SetFloat", "de/d51/class_c_s_e_1_1_s_material.html#abe80c72bbfd572de5309475029d93dd7", null ],
+    [ "SetFloat", "de/d51/class_c_s_e_1_1_s_material.html#aa893712f533a208e29365cece3e4f2d5", null ],
     [ "SetHandle", "de/d51/class_c_s_e_1_1_s_material.html#a52d5be732c8cfa4525a6f29ebdd6c458", null ],
-    [ "SetInt", "de/d51/class_c_s_e_1_1_s_material.html#a14da6f216d83b53b1f3a662a5306bf93", null ],
+    [ "SetInt", "de/d51/class_c_s_e_1_1_s_material.html#ac603fbebd0832a5f6f3290f151faba01", null ],
     [ "SetMode", "de/d51/class_c_s_e_1_1_s_material.html#a554e04d5839aa010a49d91f83f9293b4", null ],
     [ "SetOrderLayer", "de/d51/class_c_s_e_1_1_s_material.html#a629e34aabc9b1557e57e29b48af8204b", null ],
-    [ "SetTexture", "de/d51/class_c_s_e_1_1_s_material.html#a8f448b7109a192a30cc888b80b82cf9a", null ],
-    [ "SetVec3", "de/d51/class_c_s_e_1_1_s_material.html#aa94603c308d1bf921ccf57b3a5f59d00", null ]
+    [ "SetTexture", "de/d51/class_c_s_e_1_1_s_material.html#abaa28d2359f4bfa720d1d0432b78c386", null ],
+    [ "SetVec3", "de/d51/class_c_s_e_1_1_s_material.html#a3696ea39c87a0ca8c56b77ec82c22ccc", null ]
 ];
