@@ -44,6 +44,7 @@
 * [SResource](@ref CSE::SResource)
 * [SScene](@ref CSE::SScene)
 * [SScriptObject](@ref CSE::SScriptObject)
+* [SGBuffer](@ref CSE::SGBuffer)
 
 ## Resources
 
@@ -52,3 +53,4 @@
 * [Mesh Surface](@ref CSE::MeshSurface)
 * [GL Program Handle](@ref CSE::GLProgramHandle)
 * [Animation](@ref CSE::Animation)
+* [Frame Buffer](@ref CSE::SFrameBuffer)
