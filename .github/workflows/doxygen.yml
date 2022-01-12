@@ -47,7 +47,7 @@ jobs:
       - uses: mattnotmitt/doxygen-action@v1
         with:
             working-directory: 'engine/src/'
-      - run: mv html engine/src/csengine_docs/html
+      - run: sudo mv html engine/src/csengine_docs/html
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
