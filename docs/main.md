@@ -1,9 +1,12 @@
 \mainpage
 # Welcome to the CSEngine documentation
+
 \htmlonly
+
 <center>
-<iframe width="600" height="250" src="https://ounols.github.io/CSEngine-Demo" frameborder="0" allowfullscreen>
+<iframe width="600" height="250" src="https://ounols.github.io/CSEngine-Demo" frameborder="0" scrolling="no"/>
 </center>
+
 \endhtmlonly
 
 This documentation is a guide and reference document for CSEngine.
