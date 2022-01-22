@@ -1,6 +1,7 @@
 \mainpage
 # Welcome to the CSEngine documentation
 
+<!--
 #\htmlonly
 
 #<center>
@@ -8,6 +9,7 @@
 #</center>
 
 #\endhtmlonly
+-->
 ![intro-image](https://github.com/ounols/CSEngine/raw/master/intro_image.png)
 This documentation is a guide and reference document for CSEngine.
 
