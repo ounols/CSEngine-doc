@@ -1,14 +1,14 @@
 \mainpage
 # Welcome to the CSEngine documentation
 
-\htmlonly
+#\htmlonly
 
-<center>
-<iframe width="600" height="250" src="https://ounols.github.io/CSEngine-Demo" frameborder="0" scrolling="no"/>
-</center>
+#<center>
+#<iframe width="600" height="250" src="https://ounols.github.io/CSEngine-Demo" frameborder="0" scrolling="no"/>
+#</center>
 
-\endhtmlonly
-
+#\endhtmlonly
+![intro-image](https://github.com/ounols/CSEngine/raw/master/intro_image.png)
 This documentation is a guide and reference document for CSEngine.
 
 > `💡 As it is under development, it is not yet suitable for practical use.`
