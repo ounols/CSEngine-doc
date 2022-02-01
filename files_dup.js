@@ -7,6 +7,7 @@ var files_dup =
     [ "Util", "dir_d4f7a754e06480f800a6fab4b04999ce.html", "dir_d4f7a754e06480f800a6fab4b04999ce" ],
     [ "MacroDef.h", "d5/db3/_macro_def_8h_source.html", null ],
     [ "OGLDef.h", "db/de1/_o_g_l_def_8h_source.html", null ],
+    [ "PlatformDef.h", "d2/d66/_platform_def_8h_source.html", null ],
     [ "SObject.cpp", "d7/d0d/_s_object_8cpp_source.html", null ],
     [ "SObject.h", "d4/db6/_s_object_8h_source.html", null ]
 ];

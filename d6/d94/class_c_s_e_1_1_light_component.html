@@ -159,6 +159,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSunrising</b> (boo
 <tr class="memitem:a0a2ebc0de8d0ad786a84ded1ad76015e"><td class="memItemLeft" align="right" valign="top"><a id="a0a2ebc0de8d0ad786a84ded1ad76015e"></a>
 <a class="el" href="../../db/dca/struct_c_s_e_1_1_s_light.html">SLight</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetLight</b> () const</td></tr>
 <tr class="separator:a0a2ebc0de8d0ad786a84ded1ad76015e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70b4b204375aae43f80f60aa0022f1c7"><td class="memItemLeft" align="right" valign="top"><a id="a70b4b204375aae43f80f60aa0022f1c7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetShadow</b> (bool isActive)</td></tr>
+<tr class="separator:a70b4b204375aae43f80f60aa0022f1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53b80cea5d1821a82ae2d3910d9e4655"><td class="memItemLeft" align="right" valign="top"><a id="a53b80cea5d1821a82ae2d3910d9e4655"></a>
 <a class="el" href="../../db/d1a/class_c_s_e_1_1_s_component.html">SComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Clone</b> (<a class="el" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a> *object) override</td></tr>
 <tr class="separator:a53b80cea5d1821a82ae2d3910d9e4655"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,6 +183,9 @@ const <a class="el" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">mat4</a> &a
 <tr class="memitem:a7a5cf8161dd838b8242603743da00ef8"><td class="memItemLeft" align="right" valign="top"><a id="a7a5cf8161dd838b8242603743da00ef8"></a>
 <a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetFrameBuffer</b> () const override</td></tr>
 <tr class="separator:a7a5cf8161dd838b8242603743da00ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc10ad8aed6a4cdb49b935cb3c3c8bd4"><td class="memItemLeft" align="right" valign="top"><a id="acc10ad8aed6a4cdb49b935cb3c3c8bd4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsShadow</b> () const</td></tr>
+<tr class="separator:acc10ad8aed6a4cdb49b935cb3c3c8bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a519a59e4c73320420790f0358e66e5d8"><td class="memItemLeft" align="right" valign="top"><a id="a519a59e4c73320420790f0358e66e5d8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>BindShadow</b> (const <a class="el" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a> &amp;handle, int handleIndex, int index) const</td></tr>
 <tr class="separator:a519a59e4c73320420790f0358e66e5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -243,18 +249,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a388fc2aa322b3d1a8c0a6d05c6c21c8a"><td class="memItemLeft" align="right" valign="top"><a id="a388fc2aa322b3d1a8c0a6d05c6c21c8a"></a>
 LIGHT&#160;</td><td class="memItemRight" valign="bottom"><b>m_type</b> = DIRECTIONAL</td></tr>
 <tr class="separator:a388fc2aa322b3d1a8c0a6d05c6c21c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b1626fecbd0a4a8bf1addc541a5164e"><td class="memItemLeft" align="right" valign="top"><a id="a6b1626fecbd0a4a8bf1addc541a5164e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>DisableAmbient</b> = false</td></tr>
-<tr class="separator:a6b1626fecbd0a4a8bf1addc541a5164e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a356f6adfbffc189ecaca259fe35fab49"><td class="memItemLeft" align="right" valign="top"><a id="a356f6adfbffc189ecaca259fe35fab49"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>DisableDiffuse</b> = false</td></tr>
-<tr class="separator:a356f6adfbffc189ecaca259fe35fab49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affce230de947910cdb0bdf742a82e309"><td class="memItemLeft" align="right" valign="top"><a id="affce230de947910cdb0bdf742a82e309"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>DisableSpecular</b> = true</td></tr>
-<tr class="separator:affce230de947910cdb0bdf742a82e309"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbdb46428ff264f9d001a0ccdd521c46"><td class="memItemLeft" align="right" valign="top"><a id="acbdb46428ff264f9d001a0ccdd521c46"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_disableShadow</b> = false</td></tr>
-<tr class="separator:acbdb46428ff264f9d001a0ccdd521c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -286,7 +280,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_classType</b
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../d6/d94/class_c_s_e_1_1_light_component.html">LightComponent</a></li>
-    <li class="footer">Generated on Tue Feb 1 2022 00:43:26 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Feb 1 2022 17:58:04 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

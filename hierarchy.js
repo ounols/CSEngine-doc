@@ -22,6 +22,9 @@ var hierarchy =
       [ "CSE::SceneMgr", "d6/d0a/class_c_s_e_1_1_scene_mgr.html", null ],
       [ "CSE::ScriptMgr", "d0/dc6/class_c_s_e_1_1_script_mgr.html", null ]
     ] ],
+    [ "CSE::CoreBufferContainer", "db/dd2/class_c_s_e_1_1_core_buffer_container.html", [
+      [ "CSE::RenderMgr", "d4/daa/class_c_s_e_1_1_render_mgr.html", null ]
+    ] ],
     [ "CSE::DAEAnimationLoader", "d9/d62/class_c_s_e_1_1_d_a_e_animation_loader.html", null ],
     [ "CSE::DAEConvertSGameObject", "d9/dd6/class_c_s_e_1_1_d_a_e_convert_s_game_object.html", null ],
     [ "CSE::DAELoader", "da/d85/class_c_s_e_1_1_d_a_e_loader.html", null ],
@@ -121,7 +124,8 @@ var hierarchy =
       ] ],
       [ "CSE::Scene", "dd/d4d/class_c_s_e_1_1_scene.html", [
         [ "CSE::SScene", "da/d8a/class_c_s_e_1_1_s_scene.html", null ],
-        [ "FirstDemoScene", "df/d0c/class_first_demo_scene.html", null ]
+        [ "FirstDemoScene", "df/d0c/class_first_demo_scene.html", null ],
+        [ "WebDemoScene", "dc/d99/class_web_demo_scene.html", null ]
       ] ]
     ] ],
     [ "CSE::SSceneLoader", "d5/def/class_c_s_e_1_1_s_scene_loader.html", null ],

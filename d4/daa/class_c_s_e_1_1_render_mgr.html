@@ -97,9 +97,10 @@ Inheritance diagram for CSE::RenderMgr:</div>
  <div class="center">
   <img src="../../d4/daa/class_c_s_e_1_1_render_mgr.png" usemap="#CSE::RenderMgr_map" alt=""/>
   <map id="CSE::RenderMgr_map" name="CSE::RenderMgr_map">
-<area href="../../d8/df9/class_c_s_e_1_1_render_container.html" alt="CSE::RenderContainer" shape="rect" coords="0,0,140,24"/>
-<area href="../../dc/d25/class_c_s_e_1_1_core_base.html" alt="CSE::CoreBase" shape="rect" coords="150,0,290,24"/>
-<area href="../../d2/db7/class_c_s_e_1_1_render_core_base.html" alt="CSE::RenderCoreBase" shape="rect" coords="300,0,440,24"/>
+<area href="../../d8/df9/class_c_s_e_1_1_render_container.html" alt="CSE::RenderContainer" shape="rect" coords="0,0,161,24"/>
+<area href="../../db/dd2/class_c_s_e_1_1_core_buffer_container.html" alt="CSE::CoreBufferContainer" shape="rect" coords="171,0,332,24"/>
+<area href="../../dc/d25/class_c_s_e_1_1_core_base.html" alt="CSE::CoreBase" shape="rect" coords="342,0,503,24"/>
+<area href="../../d2/db7/class_c_s_e_1_1_render_core_base.html" alt="CSE::RenderCoreBase" shape="rect" coords="513,0,674,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -108,8 +109,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0187ff4f576198bc0bd1573eaf00843e"><td class="memItemLeft" align="right" valign="top"><a id="a0187ff4f576198bc0bd1573eaf00843e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> () override</td></tr>
 <tr class="separator:a0187ff4f576198bc0bd1573eaf00843e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fc82a1e4486365d2563a505d2a8870b"><td class="memItemLeft" align="right" valign="top"><a id="a1fc82a1e4486365d2563a505d2a8870b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetViewport</b> ()</td></tr>
+<tr class="memitem:a1fc82a1e4486365d2563a505d2a8870b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/daa/class_c_s_e_1_1_render_mgr.html#a1fc82a1e4486365d2563a505d2a8870b">SetViewport</a> ()</td></tr>
 <tr class="separator:a1fc82a1e4486365d2563a505d2a8870b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace9558bd517cc71d10221072536c5715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/daa/class_c_s_e_1_1_render_mgr.html#ace9558bd517cc71d10221072536c5715">Render</a> () const override</td></tr>
 <tr class="separator:ace9558bd517cc71d10221072536c5715"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +126,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Remove</b> (<a class=
 <tr class="memitem:a79a29295c8db8d74d5035ae1504e5446 inherit pub_methods_class_c_s_e_1_1_render_container"><td class="memItemLeft" align="right" valign="top"><a id="a79a29295c8db8d74d5035ae1504e5446"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveDeferred</b> (<a class="el" href="../../d5/de6/class_c_s_e_1_1_s_i_render.html">SIRender</a> *object, const <a class="el" href="../../de/d51/class_c_s_e_1_1_s_material.html">SMaterial</a> *material)</td></tr>
 <tr class="separator:a79a29295c8db8d74d5035ae1504e5446 inherit pub_methods_class_c_s_e_1_1_render_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_c_s_e_1_1_core_buffer_container"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_s_e_1_1_core_buffer_container')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../db/dd2/class_c_s_e_1_1_core_buffer_container.html">CSE::CoreBufferContainer</a></td></tr>
+<tr class="memitem:a73938aaa4a25d0cb095bc1bb6ce6c9bc inherit pub_methods_class_c_s_e_1_1_core_buffer_container"><td class="memItemLeft" align="right" valign="top"><a id="a73938aaa4a25d0cb095bc1bb6ce6c9bc"></a>
+<a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetMainBuffer</b> () const</td></tr>
+<tr class="separator:a73938aaa4a25d0cb095bc1bb6ce6c9bc inherit pub_methods_class_c_s_e_1_1_core_buffer_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af253e5c512011f5b5784e1cbb9f3a336 inherit pub_methods_class_c_s_e_1_1_core_buffer_container"><td class="memItemLeft" align="right" valign="top"><a id="af253e5c512011f5b5784e1cbb9f3a336"></a>
+<a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetDeferredBuffer</b> () const</td></tr>
+<tr class="separator:af253e5c512011f5b5784e1cbb9f3a336 inherit pub_methods_class_c_s_e_1_1_core_buffer_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_s_e_1_1_core_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_s_e_1_1_core_base')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/d25/class_c_s_e_1_1_core_base.html">CSE::CoreBase</a></td></tr>
 <tr class="memitem:afde90036a8ce57b8faf0652bdc9a6c12 inherit pub_methods_class_c_s_e_1_1_core_base"><td class="memItemLeft" align="right" valign="top"><a id="afde90036a8ce57b8faf0652bdc9a6c12"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (float elapsedTime)</td></tr>
@@ -136,6 +143,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a510adf0e7d2e416ba328af5441bfcd6d"><td class="memItemLeft" align="right" valign="top"><a id="a510adf0e7d2e416ba328af5441bfcd6d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Exterminate</b> () override</td></tr>
 <tr class="separator:a510adf0e7d2e416ba328af5441bfcd6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_c_s_e_1_1_core_buffer_container"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_c_s_e_1_1_core_buffer_container')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../db/dd2/class_c_s_e_1_1_core_buffer_container.html">CSE::CoreBufferContainer</a></td></tr>
+<tr class="memitem:adb43030e6ec8d2e23807bce2a8dbc8eb inherit pro_methods_class_c_s_e_1_1_core_buffer_container"><td class="memItemLeft" align="right" valign="top"><a id="adb43030e6ec8d2e23807bce2a8dbc8eb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitBuffers</b> (int width, int height)</td></tr>
+<tr class="separator:adb43030e6ec8d2e23807bce2a8dbc8eb inherit pro_methods_class_c_s_e_1_1_core_buffer_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e1b341f45e180385bdbe8b4e7096eed inherit pro_methods_class_c_s_e_1_1_core_buffer_container"><td class="memItemLeft" align="right" valign="top"><a id="a6e1b341f45e180385bdbe8b4e7096eed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResizeBuffers</b> (int width, int height)</td></tr>
+<tr class="separator:a6e1b341f45e180385bdbe8b4e7096eed inherit pro_methods_class_c_s_e_1_1_core_buffer_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -168,7 +182,7 @@ unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><b>m_height</b
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d9/df6/_render_mgr_8h_source.html#l00012">12</a> of file <a class="el" href="../../d9/df6/_render_mgr_8h_source.html">RenderMgr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d9/df6/_render_mgr_8h_source.html#l00013">13</a> of file <a class="el" href="../../d9/df6/_render_mgr_8h_source.html">RenderMgr.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ace9558bd517cc71d10221072536c5715"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace9558bd517cc71d10221072536c5715">&#9670;&nbsp;</a></span>Render()</h2>
@@ -192,53 +206,79 @@ unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><b>m_height</b
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Rendering all stuffs. </p>
 <p>@Todo 포스트 프로세싱을 적용하기 위한 코드</p>
 
 <p>Implements <a class="el" href="../../d2/db7/class_c_s_e_1_1_render_core_base.html">CSE::RenderCoreBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d7/d39/_render_mgr_8cpp_source.html#l00058">58</a> of file <a class="el" href="../../d7/d39/_render_mgr_8cpp_source.html">RenderMgr.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                             {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// Render Order : Depth Buffers -&gt; Sub Render Buffers -&gt; Main Render Buffers</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// 1. Render depth buffer for shadows.</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; lightObjects = lightMgr-&gt;GetAll();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; shadowObjects = lightMgr-&gt;GetShadowObject();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; shadowHandle = lightMgr-&gt;GetShadowHandle();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; light : lightObjects) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span>(light-&gt;m_disableShadow) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        RenderShadowInstance(*light, *shadowHandle, shadowObjects);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    lightMgr-&gt;RefreshShadowCount();</div>
+<p class="definition">Definition at line <a class="el" href="../../d7/d39/_render_mgr_8cpp_source.html#l00043">43</a> of file <a class="el" href="../../d7/d39/_render_mgr_8cpp_source.html">RenderMgr.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                             {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// Render Order : Depth Buffers -&gt; Sub Render Buffers -&gt; Main Render Buffers</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// 1. Render depth buffer for shadows.</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; lightObjects = lightMgr-&gt;GetAll();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; shadowObjects = lightMgr-&gt;GetShadowObject();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; shadowHandle = lightMgr-&gt;GetShadowHandle();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; light : lightObjects) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span>(!light-&gt;IsShadow()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        RenderShadowInstance(*light, *shadowHandle, shadowObjects);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    lightMgr-&gt;RefreshShadowCount();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cameraObjects = cameraMgr-&gt;GetAll();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; mainCamera = cameraMgr-&gt;GetCurrentCamera();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// 2. Render active sub cameras.</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; camera : cameraObjects) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span>(!camera-&gt;GetIsEnable() || camera == mainCamera || camera-&gt;GetFrameBuffer() == <span class="keyword">nullptr</span>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        ResetBuffer(*camera);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        RenderGbuffers(*camera); <span class="comment">// Deferred Render</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        RenderInstances(*camera); <span class="comment">// Forward Render</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span>(mainCamera == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// 3. Main Render Buffer</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ResetBuffer(*mainCamera);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    RenderGbuffers(*mainCamera); <span class="comment">// Deferred Render</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    RenderInstances(*mainCamera); <span class="comment">// Forward Render</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; cameraObjects = cameraMgr-&gt;GetAll();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; mainCamera = cameraMgr-&gt;GetCurrentCamera();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// 2. Render active sub cameras.</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; camera : cameraObjects) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span>(!camera-&gt;GetIsEnable() || camera == mainCamera || camera-&gt;GetFrameBuffer() == <span class="keyword">nullptr</span>) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        ResetBuffer(*camera);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        RenderGbuffers(*camera); <span class="comment">// Deferred Render</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        RenderInstances(*camera); <span class="comment">// Forward Render</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>(mainCamera == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// 3. Main Render Buffer</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    ResetBuffer(*mainCamera);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    RenderGbuffers(*mainCamera); <span class="comment">// Deferred Render</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    RenderInstances(*mainCamera); <span class="comment">// Forward Render</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">//    glBindFramebuffer(GL_FRAMEBUFFER, 0);</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">//    glViewport(0, 0, (GLsizei) *m_width, (GLsizei) *m_height);</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">//    glUseProgram(m_mainProgramHandle-&gt;Program);</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">//    mainTexture-&gt;Bind(mainTextureId, 0);</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">//    ShaderUtil::BindAttributeToPlane();</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    m_mainBuffer-&gt;AttachFrameBuffer(GL_READ_FRAMEBUFFER);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    glBlitFramebuffer(0, 0, *m_width, *m_height, 0, 0, *m_width, *m_height, GL_COLOR_BUFFER_BIT, GL_NEAREST);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">//    glBindFramebuffer(GL_FRAMEBUFFER, 0);</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//    glViewport(0, 0, (GLsizei) *m_width, (GLsizei) *m_height);</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">//    glUseProgram(m_mainProgramHandle-&gt;Program);</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">//    mainTexture-&gt;Bind(mainTextureId, 0);</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//    ShaderUtil::BindAttributeToPlane();</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    GetMainBuffer()-&gt;AttachFrameBuffer(GL_READ_FRAMEBUFFER);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    glBlitFramebuffer(0, 0, *m_width, *m_height, 0, 0, *m_width, *m_height, GL_COLOR_BUFFER_BIT, GL_NEAREST);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1fc82a1e4486365d2563a505d2a8870b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fc82a1e4486365d2563a505d2a8870b">&#9670;&nbsp;</a></span>SetViewport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RenderMgr::SetViewport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section attention"><dt>Attention</dt><dd>This is a function that can have a big impact on performance.</dd></dl>
+<p>Modify the framebuffer to fit the modified screen size. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d7/d39/_render_mgr_8cpp_source.html#l00035">35</a> of file <a class="el" href="../../d7/d39/_render_mgr_8cpp_source.html">RenderMgr.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                            {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; gbufferPair : m_gbufferLayer) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; gbuffer = gbufferPair.second;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        gbuffer-&gt;ResizeGBuffer((<span class="keywordtype">int</span>)*m_width, (<span class="keywordtype">int</span>)*m_height);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ResizeBuffers((<span class="keywordtype">int</span>)*m_width, (<span class="keywordtype">int</span>)*m_height);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -252,7 +292,7 @@ unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><b>m_height</b
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../d4/daa/class_c_s_e_1_1_render_mgr.html">RenderMgr</a></li>
-    <li class="footer">Generated on Tue Feb 1 2022 00:43:26 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Feb 1 2022 17:58:04 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

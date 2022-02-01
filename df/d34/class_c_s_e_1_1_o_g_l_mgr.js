@@ -7,6 +7,5 @@ var class_c_s_e_1_1_o_g_l_mgr =
     [ "Render", "df/d34/class_c_s_e_1_1_o_g_l_mgr.html#acbaf84d6b55f2373eb9a43db56d49e95", null ],
     [ "ResizeWindow", "df/d34/class_c_s_e_1_1_o_g_l_mgr.html#a07f205864b9ad47166a1a75ae54ed707", null ],
     [ "setBuffers", "df/d34/class_c_s_e_1_1_o_g_l_mgr.html#a0dc97e8f08f84aade8cfa5502224c397", null ],
-    [ "setShaderProgram", "df/d34/class_c_s_e_1_1_o_g_l_mgr.html#ad157d4b582566badda420a7a05268819", null ],
     [ "setupEGLGraphics", "df/d34/class_c_s_e_1_1_o_g_l_mgr.html#aa7d44b04677ac522a49d3c520c2199f3", null ]
 ];

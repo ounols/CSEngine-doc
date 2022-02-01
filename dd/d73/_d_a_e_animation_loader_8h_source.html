@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('dd/d73/_d_a_e_animation_loader_8h_sour
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                ~<a class="code" href="../../d9/d62/class_c_s_e_1_1_d_a_e_animation_loader.html">DAEAnimationLoader</a>();</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordtype">void</span> Load(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, std::string name);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordtype">bool</span> Load(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, std::string name);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <a class="code" href="../../da/dfa/struct_c_s_e_1_1_animation_data.html">AnimationData</a>* GetAnimation()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        <span class="keywordflow">return</span> m_animationData;</div>
@@ -150,10 +150,10 @@ $(document).ready(function(){initNavTree('dd/d73/_d_a_e_animation_loader_8h_sour
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                std::vector&lt;float&gt; getKeyTimes();</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keyword">static</span> std::vector&lt;KeyFrameData*&gt; initKeyFrames(std::vector&lt;float&gt; times);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keyword">static</span> std::vector&lt;KeyFrameData*&gt; initKeyFrames(<span class="keyword">const</span> std::vector&lt;float&gt;&amp; times);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keyword">static</span> <span class="keywordtype">void</span> loadJointTransforms(std::vector&lt;KeyFrameData*&gt; frames, <span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>&amp; jointData,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                         std::string rootNodeId);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                         <span class="keyword">const</span> std::string&amp; rootNodeId);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keyword">static</span> std::string getJointName(<span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>&amp; jointData);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
@@ -185,7 +185,7 @@ $(document).ready(function(){initNavTree('dd/d73/_d_a_e_animation_loader_8h_sour
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><a class="el" href="../../dir_05df2928d52705236faf027df5262a05.html">Loader</a></li><li class="navelem"><a class="el" href="../../dir_69af17f82e4848f8cafb0e90ae3d4b3b.html">DAE</a></li><li class="navelem"><b>DAEAnimationLoader.h</b></li>
-    <li class="footer">Generated on Tue Feb 1 2022 00:43:25 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Feb 1 2022 17:58:03 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

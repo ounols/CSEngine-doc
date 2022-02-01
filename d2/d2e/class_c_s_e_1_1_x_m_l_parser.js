@@ -6,6 +6,7 @@ var class_c_s_e_1_1_x_m_l_parser =
     [ "parseBool", "d2/d2e/class_c_s_e_1_1_x_m_l_parser.html#a9638bcf682c6c28af7e5d1e42b4f001f", null ],
     [ "parseComponent", "d2/d2e/class_c_s_e_1_1_x_m_l_parser.html#aa61535fb151a3f022709ae07a2b76751", null ],
     [ "parseFloat", "d2/d2e/class_c_s_e_1_1_x_m_l_parser.html#a995f9aa29a1a44f0cd23a1437d60c987", null ],
+    [ "parseFrameBuffer", "d2/d2e/class_c_s_e_1_1_x_m_l_parser.html#ae87e52cc446b1ff5e397957f5a81fa8c", null ],
     [ "parseGameObject", "d2/d2e/class_c_s_e_1_1_x_m_l_parser.html#ab3e7167537d629db8c7cfcb9986cd1e7", null ],
     [ "parseInt", "d2/d2e/class_c_s_e_1_1_x_m_l_parser.html#a6ae5f1dc63ed6f892ec776c35316bd3a", null ],
     [ "parseMaterial", "d2/d2e/class_c_s_e_1_1_x_m_l_parser.html#acc7fb1fb59400d1c455c3d1cf6f78c09", null ],

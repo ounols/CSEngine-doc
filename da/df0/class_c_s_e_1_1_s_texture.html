@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('da/df0/class_c_s_e_1_1_s_texture.html'
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../d1/d29/class_c_s_e_1_1_s_texture-members.html">List of all members</a>  </div>
@@ -119,12 +120,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a62cb5b7ef90fb8b6d6159e3dc88f1941"><td class="memItemLeft" align="right" valign="top"><a id="a62cb5b7ef90fb8b6d6159e3dc88f1941"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>LoadFile</b> (const char *path)</td></tr>
 <tr class="separator:a62cb5b7ef90fb8b6d6159e3dc88f1941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9564f746d16932e786c973b64397ad74"><td class="memItemLeft" align="right" valign="top"><a id="a9564f746d16932e786c973b64397ad74"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>LoadFromMemory</b> (const unsigned char *rawData, int length)</td></tr>
+<tr class="separator:a9564f746d16932e786c973b64397ad74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a7e2c8dad5a903b701a1fbace4aa8af"><td class="memItemLeft" align="right" valign="top"><a id="a9a7e2c8dad5a903b701a1fbace4aa8af"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Load</b> (unsigned char *data)</td></tr>
 <tr class="separator:a9a7e2c8dad5a903b701a1fbace4aa8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a031941edc51b60679cc0d5064b06e3ad"><td class="memItemLeft" align="right" valign="top"><a id="a031941edc51b60679cc0d5064b06e3ad"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>LoadEmpty</b> ()</td></tr>
-<tr class="separator:a031941edc51b60679cc0d5064b06e3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8ec4329064997c1719b163e11193f11"><td class="memItemLeft" align="right" valign="top"><a id="aa8ec4329064997c1719b163e11193f11"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>ReloadFile</b> (const char *path)</td></tr>
 <tr class="separator:aa8ec4329064997c1719b163e11193f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,12 +135,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>Reload</b> (unsigned 
 <tr class="memitem:a47991a3b45d4c25ac56bf3ea86ca45c8"><td class="memItemLeft" align="right" valign="top"><a id="a47991a3b45d4c25ac56bf3ea86ca45c8"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GetTextureID</b> () const</td></tr>
 <tr class="separator:a47991a3b45d4c25ac56bf3ea86ca45c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab090097c72d0c959700acb8e1a0f2fe2"><td class="memItemLeft" align="right" valign="top"><a id="ab090097c72d0c959700acb8e1a0f2fe2"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>InitTexture</b> (int width, int height, int channel=GL_RGB, int internalFormat=GL_RGB, int glType=GL_UNSIGNED_BYTE)</td></tr>
-<tr class="separator:ab090097c72d0c959700acb8e1a0f2fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad56acaf7324a5b3528ebd7e550baeb06"><td class="memItemLeft" align="right" valign="top"><a id="ad56acaf7324a5b3528ebd7e550baeb06"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>InitTextureMipmap</b> (int width, int height, int channel=GL_RGB, int internalFormat=GL_RGB, int glType=GL_UNSIGNED_BYTE)</td></tr>
-<tr class="separator:ad56acaf7324a5b3528ebd7e550baeb06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc9ca18816ac3a55e7db872187199391"><td class="memItemLeft" align="right" valign="top"><a id="abc9ca18816ac3a55e7db872187199391"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>InitTexture</b> (int width, int height, int channel=GL_RGB, int internalFormat=GL_RGB8, int glType=GL_UNSIGNED_BYTE)</td></tr>
+<tr class="separator:abc9ca18816ac3a55e7db872187199391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5bfe84ecbaf0a357f6cd27cfd30ab44"><td class="memItemLeft" align="right" valign="top"><a id="aa5bfe84ecbaf0a357f6cd27cfd30ab44"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>InitTextureMipmap</b> (int width, int height, int channel=GL_RGB, int internalFormat=GL_RGB8, int glType=GL_UNSIGNED_BYTE)</td></tr>
+<tr class="separator:aa5bfe84ecbaf0a357f6cd27cfd30ab44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a102865ceb75817d6c85483a2eeae477e"><td class="memItemLeft" align="right" valign="top"><a id="a102865ceb75817d6c85483a2eeae477e"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetParameteri</b> (int targetName, int value) const</td></tr>
 <tr class="separator:a102865ceb75817d6c85483a2eeae477e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,6 +165,12 @@ Type&#160;</td><td class="memItemRight" valign="bottom"><b>GetType</b> () const<
 <tr class="memitem:abf59ce18d0b2b73ee9c35e7648b4e7e1"><td class="memItemLeft" align="right" valign="top"><a id="abf59ce18d0b2b73ee9c35e7648b4e7e1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetType</b> (Type type)</td></tr>
 <tr class="separator:abf59ce18d0b2b73ee9c35e7648b4e7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a268723bbf9afc9ac6fdf5175e4063d3f"><td class="memItemLeft" align="right" valign="top"><a id="a268723bbf9afc9ac6fdf5175e4063d3f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getMWidth</b> () const</td></tr>
+<tr class="separator:a268723bbf9afc9ac6fdf5175e4063d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a749b435c7fb3858433fb8e10fcae699f"><td class="memItemLeft" align="right" valign="top"><a id="a749b435c7fb3858433fb8e10fcae699f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getMHeight</b> () const</td></tr>
+<tr class="separator:a749b435c7fb3858433fb8e10fcae699f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_s_e_1_1_s_resource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_s_e_1_1_s_resource')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></td></tr>
 <tr class="memitem:aebfb7cbabcd045e67c8a7fce225d4f99 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="aebfb7cbabcd045e67c8a7fce225d4f99"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SResource</b> (bool isRegister)</td></tr>
@@ -177,12 +184,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetName</b> (std::str
 <tr class="memitem:a68967dac78835b6f938bdf165c6fb2c3 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="a68967dac78835b6f938bdf165c6fb2c3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetID</b> (std::string id)</td></tr>
 <tr class="separator:a68967dac78835b6f938bdf165c6fb2c3 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac77c494ab53da2543dcd811f2c8f6b3d inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="ac77c494ab53da2543dcd811f2c8f6b3d"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> () const</td></tr>
-<tr class="separator:ac77c494ab53da2543dcd811f2c8f6b3d inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a898901b65a1018faff071f41b78583a2 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="a898901b65a1018faff071f41b78583a2"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetID</b> () const</td></tr>
-<tr class="separator:a898901b65a1018faff071f41b78583a2 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7510a2f3bfe50b91b46a12ea553590a inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="af7510a2f3bfe50b91b46a12ea553590a"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> () const</td></tr>
+<tr class="separator:af7510a2f3bfe50b91b46a12ea553590a inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a4bb366d29801b507f1885e2315ec8d inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="a4a4bb366d29801b507f1885e2315ec8d"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetID</b> () const</td></tr>
+<tr class="separator:a4a4bb366d29801b507f1885e2315ec8d inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8be819acbe49c797df82c0a4674fd9a4 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="a8be819acbe49c797df82c0a4674fd9a4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>LinkResource</b> (<a class="el" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetMgr::AssetReference</a> *asset)</td></tr>
 <tr class="separator:a8be819acbe49c797df82c0a4674fd9a4 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,6 +209,25 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Destroy</b> (
 <tr class="memitem:a68e90e273de3920f22e77b3948bb7ca8 inherit pub_methods_class_c_s_e_1_1_s_object"><td class="memItemLeft" align="right" valign="top"><a id="a68e90e273de3920f22e77b3948bb7ca8"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>__FORCE_DESTROY__</b> ()</td></tr>
 <tr class="separator:a68e90e273de3920f22e77b3948bb7ca8 inherit pub_methods_class_c_s_e_1_1_s_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4e4cbc16873f6117277e907382ed3108"><td class="memItemLeft" align="right" valign="top"><a id="a4e4cbc16873f6117277e907382ed3108"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>BindEmpty</b> (GLint location, int layout, STexture::Type type=TEX_2D)</td></tr>
+<tr class="separator:a4e4cbc16873f6117277e907382ed3108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_c_s_e_1_1_s_resource"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_c_s_e_1_1_s_resource')"><img src="../../closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></td></tr>
+<tr class="memitem:a65a255dcfbb7c00c118720270326a146 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplParams" colspan="2"><a id="a65a255dcfbb7c00c118720270326a146"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:a65a255dcfbb7c00c118720270326a146 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplItemLeft" align="right" valign="top">static T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Create</b> (const std::string &amp;name, bool isForceCreate=false)</td></tr>
+<tr class="separator:a65a255dcfbb7c00c118720270326a146 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace6c9dc6966303d63491c98c90034267 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplParams" colspan="2"><a id="ace6c9dc6966303d63491c98c90034267"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:ace6c9dc6966303d63491c98c90034267 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplItemLeft" align="right" valign="top">static T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Create</b> (const <a class="el" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetMgr::AssetReference</a> *asset, bool isForceCreate=false)</td></tr>
+<tr class="separator:ace6c9dc6966303d63491c98c90034267 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae259b01e253742d37a8618c546b1b0 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplParams" colspan="2"><a id="adae259b01e253742d37a8618c546b1b0"></a>
+template&lt;class T &gt; </td></tr>
+<tr class="memitem:adae259b01e253742d37a8618c546b1b0 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplItemLeft" align="right" valign="top">static T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (std::string name)</td></tr>
+<tr class="separator:adae259b01e253742d37a8618c546b1b0 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -235,22 +261,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>m_glType</b> = GL_UNSI
 <tr class="memitem:a2071bdc45ae187992680171fe38cab0b"><td class="memItemLeft" align="right" valign="top"><a id="a2071bdc45ae187992680171fe38cab0b"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>m_texId</b> = 0</td></tr>
 <tr class="separator:a2071bdc45ae187992680171fe38cab0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_methods_class_c_s_e_1_1_s_resource"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_c_s_e_1_1_s_resource')"><img src="../../closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></td></tr>
-<tr class="memitem:a65a255dcfbb7c00c118720270326a146 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplParams" colspan="2"><a id="a65a255dcfbb7c00c118720270326a146"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a65a255dcfbb7c00c118720270326a146 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplItemLeft" align="right" valign="top">static T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Create</b> (const std::string &amp;name, bool isForceCreate=false)</td></tr>
-<tr class="separator:a65a255dcfbb7c00c118720270326a146 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace6c9dc6966303d63491c98c90034267 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplParams" colspan="2"><a id="ace6c9dc6966303d63491c98c90034267"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:ace6c9dc6966303d63491c98c90034267 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplItemLeft" align="right" valign="top">static T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Create</b> (const <a class="el" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetMgr::AssetReference</a> *asset, bool isForceCreate=false)</td></tr>
-<tr class="separator:ace6c9dc6966303d63491c98c90034267 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adae259b01e253742d37a8618c546b1b0 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplParams" colspan="2"><a id="adae259b01e253742d37a8618c546b1b0"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:adae259b01e253742d37a8618c546b1b0 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplItemLeft" align="right" valign="top">static T *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Get</b> (std::string name)</td></tr>
-<tr class="separator:adae259b01e253742d37a8618c546b1b0 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -265,7 +275,7 @@ template&lt;class T &gt; </td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a></li>
-    <li class="footer">Generated on Tue Feb 1 2022 00:43:26 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Feb 1 2022 17:58:04 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

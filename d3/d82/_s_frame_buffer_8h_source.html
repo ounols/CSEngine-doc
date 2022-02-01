@@ -91,11 +91,11 @@ $(document).ready(function(){initNavTree('d3/d82/_s_frame_buffer_8h_source.html'
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../../Object/SResource.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../../OGLDef.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;STexture.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>CSE {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">class </span>STexture;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>CSE {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">class </span>STexture;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">class </span>GLProgramHandle;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">   28</a></span>&#160;    <span class="keyword">class </span><a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a> : <span class="keyword">public</span> <a class="code" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">SResource</a> {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
@@ -108,59 +108,93 @@ $(document).ready(function(){initNavTree('d3/d82/_s_frame_buffer_8h_source.html'
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">enum</span> BufferStatus {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            NONE = 0, COLOR_ONLY = 1, DEPTH_ONLY = 2, MULTI = 3,</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        };</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">struct </span>BufferObject {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            BufferType type = RENDER;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> renderbufferId = 0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* texture = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordtype">int</span> format = 0;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordtype">short</span> level = 0;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        };</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        ~<a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> GenerateFramebuffer(BufferDimension dimension);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> GenerateRenderbuffer(BufferType type, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> internalFormat);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* GenerateTexturebuffer(BufferType type, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> channel,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                        <span class="keywordtype">int</span> level = 0);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> RasterizeFramebuffer();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> AttachCubeBuffer(<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> level = 0) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> AttachFrameBuffer(<span class="keywordtype">int</span> target = GL_FRAMEBUFFER) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> DetachFrameBuffer() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> ResizeFrameBuffer(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> Exterminate() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">int</span> GetWidth() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">int</span> GetHeight() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        BufferStatus GetBufferStatus() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#adfa04c3f63d140edba2f8c73507a3873">GetTexture</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a09e4ddd32ee8725074cf1f9c23dc4a8e">GetRenderbufferID</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> Init(<span class="keyword">const</span> <a class="code" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetMgr::AssetReference</a>* asset) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">int</span> GenerateAttachmentType(SFrameBuffer::BufferType type, <span class="keywordtype">bool</span> isIncreaseAttachment = <span class="keyword">true</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">int</span> GenerateInternalFormatType(<span class="keywordtype">int</span> channel) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> ReleaseBufferObject(<span class="keyword">const</span> SFrameBuffer::BufferObject* bufferObject);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">int</span> m_width = 512;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">int</span> m_height = 512;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        BufferDimension m_dimension = PLANE;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_fbo = 0;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        std::vector&lt;BufferObject*&gt; m_buffers;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keyword">mutable</span> BufferStatus m_bufferStatus = BufferStatus::NONE;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">mutable</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> m_colorAttachmentSize = 0;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    };</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">enum</span> BlitType {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            IN_ORDER = 0, REVERSE = 1,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">struct </span>BufferObject {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            BufferType type = RENDER;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> renderbufferId = 0;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* texture = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordtype">int</span> format = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordtype">short</span> level = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        };</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">struct </span>BlitObject {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>* handle = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordtype">int</span> aColor = -1;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordtype">int</span> bColor = -1;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordtype">int</span> aDepth = -1;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordtype">int</span> bDepth = -1;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        };</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        ~<a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#acfd2973abfff56cd09340ab8cb61f468">GenerateFramebuffer</a>(BufferDimension dimension, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a9d53b0b3d3f4f5ead4abdf62592a2afc">GenerateRenderbuffer</a>(BufferType type, <span class="keywordtype">int</span> internalFormat);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a388b0f896edc74d97301fee06252a912">GenerateTexturebuffer</a>(BufferType type, <span class="keywordtype">int</span> channel, <span class="keywordtype">int</span> level = 0);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#aa7012f555bbffa76fdb7a9eb705f6036">RasterizeFramebuffer</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">void</span> AttachCubeBuffer(<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> level = 0) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">void</span> AttachFrameBuffer(<span class="keywordtype">int</span> target = GL_FRAMEBUFFER) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">void</span> DetachFrameBuffer() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">void</span> ResizeFrameBuffer(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">void</span> Exterminate() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#af9fbbc09f34f7c7a3aa1082ca14fd6bc">BlitFrameBuffer</a>(<span class="keyword">const</span> <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a>&amp; dst, BlitType type = IN_ORDER);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">int</span> GetWidth() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">int</span> GetHeight() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        BufferStatus GetBufferStatus() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#adfa04c3f63d140edba2f8c73507a3873">GetTexture</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#adfa04c3f63d140edba2f8c73507a3873">GetTexture</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a09e4ddd32ee8725074cf1f9c23dc4a8e">GetRenderbufferID</a>(<span class="keywordtype">int</span> index) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a7ed0006b34a2e326455e1bbd7da49c1a">  134</a></span>&#160;        <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a7ed0006b34a2e326455e1bbd7da49c1a">GetMainColorTexture</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">if</span>(m_mainColorBuffer == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">return</span> m_mainColorBuffer-&gt;texture;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a155d7ff0019dbd186e726c05d6483cf9">  143</a></span>&#160;        <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a155d7ff0019dbd186e726c05d6483cf9">GetDepthTexture</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">if</span>(m_depthBuffer == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">return</span> m_depthBuffer-&gt;texture;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordtype">void</span> Init(<span class="keyword">const</span> <a class="code" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetMgr::AssetReference</a>* asset) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordtype">int</span> GenerateAttachmentType(SFrameBuffer::BufferType type, <span class="keywordtype">bool</span> isIncreaseAttachment = <span class="keyword">true</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordtype">int</span> GenerateInternalFormat(<span class="keywordtype">int</span> channel) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordtype">int</span> GenerateInternalType(<span class="keywordtype">int</span> channel) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordtype">void</span> ReleaseBufferObject(<span class="keyword">const</span> SFrameBuffer::BufferObject* bufferObject);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">int</span> m_width = 512;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">int</span> m_height = 512;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        BufferDimension m_dimension = PLANE;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_fbo = 0;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        std::vector&lt;BufferObject*&gt; m_buffers;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        BufferObject* m_mainColorBuffer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        BufferObject* m_depthBuffer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keyword">mutable</span> BufferStatus m_bufferStatus = BufferStatus::NONE;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keyword">mutable</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> m_colorAttachmentSize = 0;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">static</span> BlitObject m_blitObject;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    };</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
+<div class="ttc" id="aclass_c_s_e_1_1_g_l_program_handle_html"><div class="ttname"><a href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">CSE::GLProgramHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00045">GLProgramHandle.h:45</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">CSE::SFrameBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d82/_s_frame_buffer_8h_source.html#l00028">SFrameBuffer.h:28</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_a09e4ddd32ee8725074cf1f9c23dc4a8e"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a09e4ddd32ee8725074cf1f9c23dc4a8e">CSE::SFrameBuffer::GetRenderbufferID</a></div><div class="ttdeci">unsigned int GetRenderbufferID(int index) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00209">SFrameBuffer.cpp:209</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_adfa04c3f63d140edba2f8c73507a3873"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#adfa04c3f63d140edba2f8c73507a3873">CSE::SFrameBuffer::GetTexture</a></div><div class="ttdeci">STexture * GetTexture(int index) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00202">SFrameBuffer.cpp:202</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_a09e4ddd32ee8725074cf1f9c23dc4a8e"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a09e4ddd32ee8725074cf1f9c23dc4a8e">CSE::SFrameBuffer::GetRenderbufferID</a></div><div class="ttdeci">unsigned int GetRenderbufferID(int index) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00367">SFrameBuffer.cpp:367</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_a155d7ff0019dbd186e726c05d6483cf9"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a155d7ff0019dbd186e726c05d6483cf9">CSE::SFrameBuffer::GetDepthTexture</a></div><div class="ttdeci">STexture * GetDepthTexture() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d82/_s_frame_buffer_8h_source.html#l00143">SFrameBuffer.h:143</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_a388b0f896edc74d97301fee06252a912"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a388b0f896edc74d97301fee06252a912">CSE::SFrameBuffer::GenerateTexturebuffer</a></div><div class="ttdeci">STexture * GenerateTexturebuffer(BufferType type, int channel, int level=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00138">SFrameBuffer.cpp:138</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_a7ed0006b34a2e326455e1bbd7da49c1a"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a7ed0006b34a2e326455e1bbd7da49c1a">CSE::SFrameBuffer::GetMainColorTexture</a></div><div class="ttdeci">STexture * GetMainColorTexture() const</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d82/_s_frame_buffer_8h_source.html#l00134">SFrameBuffer.h:134</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_a9d53b0b3d3f4f5ead4abdf62592a2afc"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a9d53b0b3d3f4f5ead4abdf62592a2afc">CSE::SFrameBuffer::GenerateRenderbuffer</a></div><div class="ttdeci">unsigned int GenerateRenderbuffer(BufferType type, int internalFormat)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00113">SFrameBuffer.cpp:113</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_aa7012f555bbffa76fdb7a9eb705f6036"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#aa7012f555bbffa76fdb7a9eb705f6036">CSE::SFrameBuffer::RasterizeFramebuffer</a></div><div class="ttdeci">void RasterizeFramebuffer()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00169">SFrameBuffer.cpp:169</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_acfd2973abfff56cd09340ab8cb61f468"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#acfd2973abfff56cd09340ab8cb61f468">CSE::SFrameBuffer::GenerateFramebuffer</a></div><div class="ttdeci">void GenerateFramebuffer(BufferDimension dimension, int width, int height)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00104">SFrameBuffer.cpp:104</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_adfa04c3f63d140edba2f8c73507a3873"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#adfa04c3f63d140edba2f8c73507a3873">CSE::SFrameBuffer::GetTexture</a></div><div class="ttdeci">STexture * GetTexture(int index) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00349">SFrameBuffer.cpp:349</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_af9fbbc09f34f7c7a3aa1082ca14fd6bc"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#af9fbbc09f34f7c7a3aa1082ca14fd6bc">CSE::SFrameBuffer::BlitFrameBuffer</a></div><div class="ttdeci">void BlitFrameBuffer(const SFrameBuffer &amp;dst, BlitType type=IN_ORDER)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00235">SFrameBuffer.cpp:235</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_resource_html"><div class="ttname"><a href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1f/_s_resource_8h_source.html#l00014">SResource.h:14</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_texture_html"><div class="ttname"><a href="../../da/df0/class_c_s_e_1_1_s_texture.html">CSE::STexture</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d33/_s_texture_8h_source.html#l00014">STexture.h:14</a></div></div>
 <div class="ttc" id="astruct_c_s_e_1_1_asset_mgr_1_1_asset_reference_html"><div class="ttname"><a href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">CSE::AssetMgr::AssetReference</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de4/_asset_mgr_8h_source.html#l00024">AssetMgr.h:24</a></div></div>
@@ -170,7 +204,7 @@ $(document).ready(function(){initNavTree('d3/d82/_s_frame_buffer_8h_source.html'
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><a class="el" href="../../dir_e33838bd04c8f4b6287e9b76abda5f0f.html">Render</a></li><li class="navelem"><b>SFrameBuffer.h</b></li>
-    <li class="footer">Generated on Tue Feb 1 2022 00:43:26 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Feb 1 2022 17:58:04 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

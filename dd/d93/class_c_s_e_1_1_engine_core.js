@@ -13,6 +13,7 @@ var class_c_s_e_1_1_engine_core =
     [ "GET_CORE_FUNCTION", "dd/d93/class_c_s_e_1_1_engine_core.html#a27a53739e190983a8ebb39dd4c800255", null ],
     [ "GET_CORE_FUNCTION", "dd/d93/class_c_s_e_1_1_engine_core.html#ae8d014a6d19a5a6a42f4ce69bb255375", null ],
     [ "Init", "dd/d93/class_c_s_e_1_1_engine_core.html#a4ca1102e3b0d0130b7da8c4566706330", null ],
+    [ "LateUpdate", "dd/d93/class_c_s_e_1_1_engine_core.html#a087474b95d6d2bcb69556d1bde256445", null ],
     [ "Render", "dd/d93/class_c_s_e_1_1_engine_core.html#a0f7d950901617398722b1b866e33877c", null ],
     [ "ResizeWindow", "dd/d93/class_c_s_e_1_1_engine_core.html#aa2fb121f20676cdc1287eabc1cc45118", null ],
     [ "Update", "dd/d93/class_c_s_e_1_1_engine_core.html#acb780095f94829d5e4a00606bf755c32", null ]

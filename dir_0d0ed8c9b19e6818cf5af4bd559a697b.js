@@ -5,6 +5,8 @@ var dir_0d0ed8c9b19e6818cf5af4bd559a697b =
     [ "AssetMgr.h", "d0/de4/_asset_mgr_8h_source.html", null ],
     [ "CameraMgr.cpp", "d2/dab/_camera_mgr_8cpp_source.html", null ],
     [ "CameraMgr.h", "d8/d73/_camera_mgr_8h_source.html", null ],
+    [ "CoreBufferContainer.cpp", "d0/d5b/_core_buffer_container_8cpp_source.html", null ],
+    [ "CoreBufferContainer.h", "d3/d1b/_core_buffer_container_8h_source.html", null ],
     [ "EngineCore.cpp", "d0/d0b/_engine_core_8cpp_source.html", null ],
     [ "EngineCore.h", "d8/dbc/_engine_core_8h_source.html", null ],
     [ "GameObjectContainer.cpp", "d2/d83/_game_object_container_8cpp_source.html", null ],

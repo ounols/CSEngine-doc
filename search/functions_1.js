@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['destroy_268',['Destroy',['../dc/d47/class_c_s_e_1_1_s_game_object.html#a5bb825c3c1da9972ab27a361ea4d110b',1,'CSE::SGameObject']]]
+  ['blitframebuffer_280',['BlitFrameBuffer',['../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#af9fbbc09f34f7c7a3aa1082ca14fd6bc',1,'CSE::SFrameBuffer']]]
 ];

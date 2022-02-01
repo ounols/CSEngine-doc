@@ -128,7 +128,7 @@ $(document).ready(function(){initNavTree('d5/d75/_s_g_buffer_8h_source.html','..
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* m_normalTexture = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* m_albedoTexture = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* m_materialTexture = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_depthRbo = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* m_depthTexture = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>* m_lightPassHandle = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
@@ -136,15 +136,16 @@ $(document).ready(function(){initNavTree('d5/d75/_s_g_buffer_8h_source.html','..
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">int</span> m_normalTextureId = -1;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">int</span> m_albedoTextureId = -1;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">int</span> m_materialTextureId = -1;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">int</span> m_width = -1;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">int</span> m_height = -1;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
-<div class="ttc" id="aclass_c_s_e_1_1_g_l_program_handle_html"><div class="ttname"><a href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">CSE::GLProgramHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00048">GLProgramHandle.h:48</a></div></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">int</span> m_depthTextureId = -1;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">int</span> m_width = -1;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">int</span> m_height = -1;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="aclass_c_s_e_1_1_g_l_program_handle_html"><div class="ttname"><a href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">CSE::GLProgramHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00045">GLProgramHandle.h:45</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">CSE::SFrameBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d82/_s_frame_buffer_8h_source.html#l00028">SFrameBuffer.h:28</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_g_buffer_html"><div class="ttname"><a href="../../d0/dc0/class_c_s_e_1_1_s_g_buffer.html">CSE::SGBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d75/_s_g_buffer_8h_source.html#l00012">SGBuffer.h:12</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_i_render_html"><div class="ttname"><a href="../../d5/de6/class_c_s_e_1_1_s_i_render.html">CSE::SIRender</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d43/_render_interfaces_8h_source.html#l00038">RenderInterfaces.h:38</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_i_render_html"><div class="ttname"><a href="../../d5/de6/class_c_s_e_1_1_s_i_render.html">CSE::SIRender</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d43/_render_interfaces_8h_source.html#l00037">RenderInterfaces.h:37</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_texture_html"><div class="ttname"><a href="../../da/df0/class_c_s_e_1_1_s_texture.html">CSE::STexture</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d33/_s_texture_8h_source.html#l00014">STexture.h:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -152,7 +153,7 @@ $(document).ready(function(){initNavTree('d5/d75/_s_g_buffer_8h_source.html','..
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><a class="el" href="../../dir_e33838bd04c8f4b6287e9b76abda5f0f.html">Render</a></li><li class="navelem"><b>SGBuffer.h</b></li>
-    <li class="footer">Generated on Tue Feb 1 2022 00:43:26 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Feb 1 2022 17:58:04 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

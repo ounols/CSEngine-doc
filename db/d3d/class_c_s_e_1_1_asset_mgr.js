@@ -5,7 +5,7 @@ var class_c_s_e_1_1_asset_mgr =
       [ "NONE", "db/d3d/class_c_s_e_1_1_asset_mgr.html#a42081fead7fbb154b6d97adf85c2c515a8437d6871ae48c86f1c6875b9ae0a105", null ],
       [ "TEX_2D", "db/d3d/class_c_s_e_1_1_asset_mgr.html#a42081fead7fbb154b6d97adf85c2c515aa74ca084e2ca14a267ed9fad3239d669", null ],
       [ "TEX_CUBEMAP", "db/d3d/class_c_s_e_1_1_asset_mgr.html#a42081fead7fbb154b6d97adf85c2c515a9e36ff2992d206c58fd9dccef6460719", null ],
-      [ "TEX_FRAMEBUFFER", "db/d3d/class_c_s_e_1_1_asset_mgr.html#a42081fead7fbb154b6d97adf85c2c515a94127a3af28b262e19fd89a2c3a9794d", null ],
+      [ "FRAMEBUFFER", "db/d3d/class_c_s_e_1_1_asset_mgr.html#a42081fead7fbb154b6d97adf85c2c515a0a92b66a93e0bd19ca95472a6c9c7317", null ],
       [ "MATERIAL", "db/d3d/class_c_s_e_1_1_asset_mgr.html#a42081fead7fbb154b6d97adf85c2c515a84a85ceeba8aa759155a851d3f57893e", null ],
       [ "DAE", "db/d3d/class_c_s_e_1_1_asset_mgr.html#a42081fead7fbb154b6d97adf85c2c515adb68be60a788124f5042844258a3f395", null ],
       [ "PREFAB", "db/d3d/class_c_s_e_1_1_asset_mgr.html#a42081fead7fbb154b6d97adf85c2c515a7743e2e8dba089acbc4abcfe0846fde9", null ],

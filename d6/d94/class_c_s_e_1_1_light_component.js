@@ -20,6 +20,7 @@ var class_c_s_e_1_1_light_component =
     [ "GetLightViewMatrix", "d6/d94/class_c_s_e_1_1_light_component.html#a677f7a3af65ade9d8c88b33791ed32d1", null ],
     [ "GetType", "d6/d94/class_c_s_e_1_1_light_component.html#ace7a236f733d2f55303ee2160b7916bd", null ],
     [ "Init", "d6/d94/class_c_s_e_1_1_light_component.html#a0b1665343cfa0b449590f61af8430f76", null ],
+    [ "IsShadow", "d6/d94/class_c_s_e_1_1_light_component.html#acc10ad8aed6a4cdb49b935cb3c3c8bd4", null ],
     [ "PrintValue", "d6/d94/class_c_s_e_1_1_light_component.html#a5487031c5f3679c22c72faa982f26a22", null ],
     [ "SetAttenuationFactor", "d6/d94/class_c_s_e_1_1_light_component.html#a1e84e4488f49c431af961bf9d4f42c59", null ],
     [ "SetAttenuationFactor", "d6/d94/class_c_s_e_1_1_light_component.html#aa989ca0177e1ae9aeeb77a7dd2bda32d", null ],
@@ -27,12 +28,9 @@ var class_c_s_e_1_1_light_component =
     [ "SetDirection", "d6/d94/class_c_s_e_1_1_light_component.html#ae3fde3abe8b514852372daa3365bd140", null ],
     [ "SetLightRadius", "d6/d94/class_c_s_e_1_1_light_component.html#a8b16d9d16d61772245d47e81f5a8cac3", null ],
     [ "SetLightType", "d6/d94/class_c_s_e_1_1_light_component.html#a8c85424e2d604ee74bf38c00f675e365", null ],
+    [ "SetShadow", "d6/d94/class_c_s_e_1_1_light_component.html#a70b4b204375aae43f80f60aa0022f1c7", null ],
     [ "SetSunrising", "d6/d94/class_c_s_e_1_1_light_component.html#a78f8950fca979f92d26d4db4801778c3", null ],
     [ "SetValue", "d6/d94/class_c_s_e_1_1_light_component.html#a27a5b82b08a744220667465cbd8ec200", null ],
     [ "Tick", "d6/d94/class_c_s_e_1_1_light_component.html#a6709859acf9744c7a72155e252e893d7", null ],
-    [ "DisableAmbient", "d6/d94/class_c_s_e_1_1_light_component.html#a6b1626fecbd0a4a8bf1addc541a5164e", null ],
-    [ "DisableDiffuse", "d6/d94/class_c_s_e_1_1_light_component.html#a356f6adfbffc189ecaca259fe35fab49", null ],
-    [ "DisableSpecular", "d6/d94/class_c_s_e_1_1_light_component.html#affce230de947910cdb0bdf742a82e309", null ],
-    [ "m_disableShadow", "d6/d94/class_c_s_e_1_1_light_component.html#acbdb46428ff264f9d001a0ccdd521c46", null ],
     [ "m_type", "d6/d94/class_c_s_e_1_1_light_component.html#a388fc2aa322b3d1a8c0a6d05c6c21c8a", null ]
 ];

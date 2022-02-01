@@ -123,20 +123,20 @@ Public Types</h2></td></tr>
 , <b>MULTI</b> = 3
  }</td></tr>
 <tr class="separator:adae4585096db673a0ddddff96c6f504d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a715a94b454151c79b774ae5c4ac48dc6"><td class="memItemLeft" align="right" valign="top"><a id="a715a94b454151c79b774ae5c4ac48dc6"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>BlitType</b> { <b>IN_ORDER</b> = 0
+, <b>REVERSE</b> = 1
+ }</td></tr>
+<tr class="separator:a715a94b454151c79b774ae5c4ac48dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab31eab86266675151b1c2a24bfe75eba"><td class="memItemLeft" align="right" valign="top"><a id="ab31eab86266675151b1c2a24bfe75eba"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>GenerateFramebuffer</b> (BufferDimension dimension)</td></tr>
-<tr class="separator:ab31eab86266675151b1c2a24bfe75eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d6f06ca65c8d40587ee14243baf7f06"><td class="memItemLeft" align="right" valign="top"><a id="a5d6f06ca65c8d40587ee14243baf7f06"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>GenerateRenderbuffer</b> (BufferType type, int width, int height, int internalFormat)</td></tr>
-<tr class="separator:a5d6f06ca65c8d40587ee14243baf7f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88f17fcbffee1615a5749e160e78e2f3"><td class="memItemLeft" align="right" valign="top"><a id="a88f17fcbffee1615a5749e160e78e2f3"></a>
-<a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GenerateTexturebuffer</b> (BufferType type, int width, int height, int channel, int level=0)</td></tr>
-<tr class="separator:a88f17fcbffee1615a5749e160e78e2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7012f555bbffa76fdb7a9eb705f6036"><td class="memItemLeft" align="right" valign="top"><a id="aa7012f555bbffa76fdb7a9eb705f6036"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RasterizeFramebuffer</b> ()</td></tr>
+<tr class="memitem:acfd2973abfff56cd09340ab8cb61f468"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#acfd2973abfff56cd09340ab8cb61f468">GenerateFramebuffer</a> (BufferDimension dimension, int width, int height)</td></tr>
+<tr class="separator:acfd2973abfff56cd09340ab8cb61f468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d53b0b3d3f4f5ead4abdf62592a2afc"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a9d53b0b3d3f4f5ead4abdf62592a2afc">GenerateRenderbuffer</a> (BufferType type, int internalFormat)</td></tr>
+<tr class="separator:a9d53b0b3d3f4f5ead4abdf62592a2afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388b0f896edc74d97301fee06252a912"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a388b0f896edc74d97301fee06252a912">GenerateTexturebuffer</a> (BufferType type, int channel, int level=0)</td></tr>
+<tr class="separator:a388b0f896edc74d97301fee06252a912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7012f555bbffa76fdb7a9eb705f6036"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#aa7012f555bbffa76fdb7a9eb705f6036">RasterizeFramebuffer</a> ()</td></tr>
 <tr class="separator:aa7012f555bbffa76fdb7a9eb705f6036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade1c171baacd4f2ec8a075eedad7cbc0"><td class="memItemLeft" align="right" valign="top"><a id="ade1c171baacd4f2ec8a075eedad7cbc0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>AttachCubeBuffer</b> (int index, int level=0) const</td></tr>
@@ -153,6 +153,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ResizeFrameBuffer</b>
 <tr class="memitem:a1d66df3ac5732eeb3b262a09f43465ee"><td class="memItemLeft" align="right" valign="top"><a id="a1d66df3ac5732eeb3b262a09f43465ee"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Exterminate</b> () override</td></tr>
 <tr class="separator:a1d66df3ac5732eeb3b262a09f43465ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9fbbc09f34f7c7a3aa1082ca14fd6bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#af9fbbc09f34f7c7a3aa1082ca14fd6bc">BlitFrameBuffer</a> (const <a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a> &amp;dst, BlitType type=IN_ORDER)</td></tr>
+<tr class="separator:af9fbbc09f34f7c7a3aa1082ca14fd6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07ae918c214904e9aadca579de4405bc"><td class="memItemLeft" align="right" valign="top"><a id="a07ae918c214904e9aadca579de4405bc"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>GetWidth</b> () const</td></tr>
 <tr class="separator:a07ae918c214904e9aadca579de4405bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,8 +166,14 @@ BufferStatus&#160;</td><td class="memItemRight" valign="bottom"><b>GetBufferStat
 <tr class="separator:a644406f26445e5d6d091b3a5f2b95484"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfa04c3f63d140edba2f8c73507a3873"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#adfa04c3f63d140edba2f8c73507a3873">GetTexture</a> (int index) const</td></tr>
 <tr class="separator:adfa04c3f63d140edba2f8c73507a3873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2383b5b425094d34992b0ad8d6c0c9fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a2383b5b425094d34992b0ad8d6c0c9fb">GetTexture</a> (const char *id) const</td></tr>
+<tr class="separator:a2383b5b425094d34992b0ad8d6c0c9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09e4ddd32ee8725074cf1f9c23dc4a8e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a09e4ddd32ee8725074cf1f9c23dc4a8e">GetRenderbufferID</a> (int index) const</td></tr>
 <tr class="separator:a09e4ddd32ee8725074cf1f9c23dc4a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed0006b34a2e326455e1bbd7da49c1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a7ed0006b34a2e326455e1bbd7da49c1a">GetMainColorTexture</a> () const</td></tr>
+<tr class="separator:a7ed0006b34a2e326455e1bbd7da49c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a155d7ff0019dbd186e726c05d6483cf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a155d7ff0019dbd186e726c05d6483cf9">GetDepthTexture</a> () const</td></tr>
+<tr class="separator:a155d7ff0019dbd186e726c05d6483cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_s_e_1_1_s_resource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_s_e_1_1_s_resource')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></td></tr>
 <tr class="memitem:aebfb7cbabcd045e67c8a7fce225d4f99 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="aebfb7cbabcd045e67c8a7fce225d4f99"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SResource</b> (bool isRegister)</td></tr>
@@ -179,12 +187,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetName</b> (std::str
 <tr class="memitem:a68967dac78835b6f938bdf165c6fb2c3 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="a68967dac78835b6f938bdf165c6fb2c3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetID</b> (std::string id)</td></tr>
 <tr class="separator:a68967dac78835b6f938bdf165c6fb2c3 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac77c494ab53da2543dcd811f2c8f6b3d inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="ac77c494ab53da2543dcd811f2c8f6b3d"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> () const</td></tr>
-<tr class="separator:ac77c494ab53da2543dcd811f2c8f6b3d inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a898901b65a1018faff071f41b78583a2 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="a898901b65a1018faff071f41b78583a2"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetID</b> () const</td></tr>
-<tr class="separator:a898901b65a1018faff071f41b78583a2 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7510a2f3bfe50b91b46a12ea553590a inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="af7510a2f3bfe50b91b46a12ea553590a"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> () const</td></tr>
+<tr class="separator:af7510a2f3bfe50b91b46a12ea553590a inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a4bb366d29801b507f1885e2315ec8d inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="a4a4bb366d29801b507f1885e2315ec8d"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetID</b> () const</td></tr>
+<tr class="separator:a4a4bb366d29801b507f1885e2315ec8d inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8be819acbe49c797df82c0a4674fd9a4 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memItemLeft" align="right" valign="top"><a id="a8be819acbe49c797df82c0a4674fd9a4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>LinkResource</b> (<a class="el" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetMgr::AssetReference</a> *asset)</td></tr>
 <tr class="separator:a8be819acbe49c797df82c0a4674fd9a4 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,6 +248,354 @@ template&lt;class T &gt; </td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d3/d82/_s_frame_buffer_8h_source.html#l00028">28</a> of file <a class="el" href="../../d3/d82/_s_frame_buffer_8h_source.html">SFrameBuffer.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af9fbbc09f34f7c7a3aa1082ca14fd6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9fbbc09f34f7c7a3aa1082ca14fd6bc">&#9670;&nbsp;</a></span>BlitFrameBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SFrameBuffer::BlitFrameBuffer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BlitType&#160;</td>
+          <td class="paramname"><em>type</em> = <code>IN_ORDER</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Safely blit the framebuffer. Each framebuffer must be in BufferType::MULTI state, and all buffers must be in the form of <a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>. For blit techniques that are not suitable for that condition, it is faster to use glBlitFramebuffer. </p><dl class="section note"><dt>Note</dt><dd>The format of the framebuffer should be organized in the following order:<ul>
+<li>[0] = Color Buffer</li>
+<li>[1] = Depth Buffer</li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>The framebuffer to merge. </td></tr>
+    <tr><td class="paramname">type</td><td>Determine the order in which they will be merged. Default is IN_ORDER. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00235">235</a> of file <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html">SFrameBuffer.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                                                                         {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">if</span> (m_mainColorBuffer == <span class="keyword">nullptr</span> || m_depthBuffer == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        Exterminate();</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#acfd2973abfff56cd09340ab8cb61f468">GenerateFramebuffer</a>(PLANE, m_width, m_height);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a388b0f896edc74d97301fee06252a912">GenerateTexturebuffer</a>(RENDER, GL_RGB);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a388b0f896edc74d97301fee06252a912">GenerateTexturebuffer</a>(DEPTH, GL_DEPTH_COMPONENT);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#aa7012f555bbffa76fdb7a9eb705f6036">RasterizeFramebuffer</a>();</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a>* a;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a>* b;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">if</span> (type == REVERSE) {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        a = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        b = &amp;dst;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        a = &amp;dst;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        b = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; aColorTexture = a-&gt;m_mainColorBuffer-&gt;texture;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; bColorTexture = b-&gt;m_mainColorBuffer-&gt;texture;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; aDepthTexture = a-&gt;m_depthBuffer-&gt;texture;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; bDepthTexture = b-&gt;m_depthBuffer-&gt;texture;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">if</span> (m_blitObject.handle == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        m_blitObject.handle = SResource::Create&lt;GLProgramHandle&gt;(Settings::GetDefaultBlitBufferShaderID());</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        m_blitObject.aColor = m_blitObject.handle-&gt;UniformLocation(<span class="stringliteral">&quot;a.color&quot;</span>)-&gt;id;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        m_blitObject.bColor = m_blitObject.handle-&gt;UniformLocation(<span class="stringliteral">&quot;b.color&quot;</span>)-&gt;id;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        m_blitObject.aDepth = m_blitObject.handle-&gt;UniformLocation(<span class="stringliteral">&quot;a.depth&quot;</span>)-&gt;id;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        m_blitObject.bDepth = m_blitObject.handle-&gt;UniformLocation(<span class="stringliteral">&quot;b.depth&quot;</span>)-&gt;id;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    AttachFrameBuffer();</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    glViewport(0, 0, m_width, m_height);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    glUseProgram(m_blitObject.handle-&gt;Program);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    aColorTexture-&gt;Bind(m_blitObject.aColor, 0);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    bColorTexture-&gt;Bind(m_blitObject.bColor, 1);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    aDepthTexture-&gt;Bind(m_blitObject.aDepth, 2);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    bDepthTexture-&gt;Bind(m_blitObject.bDepth, 3);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    ShaderUtil::BindAttributeToPlane();</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">CSE::SFrameBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d82/_s_frame_buffer_8h_source.html#l00028">SFrameBuffer.h:28</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_a388b0f896edc74d97301fee06252a912"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a388b0f896edc74d97301fee06252a912">CSE::SFrameBuffer::GenerateTexturebuffer</a></div><div class="ttdeci">STexture * GenerateTexturebuffer(BufferType type, int channel, int level=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00138">SFrameBuffer.cpp:138</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_aa7012f555bbffa76fdb7a9eb705f6036"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#aa7012f555bbffa76fdb7a9eb705f6036">CSE::SFrameBuffer::RasterizeFramebuffer</a></div><div class="ttdeci">void RasterizeFramebuffer()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00169">SFrameBuffer.cpp:169</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_acfd2973abfff56cd09340ab8cb61f468"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#acfd2973abfff56cd09340ab8cb61f468">CSE::SFrameBuffer::GenerateFramebuffer</a></div><div class="ttdeci">void GenerateFramebuffer(BufferDimension dimension, int width, int height)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00104">SFrameBuffer.cpp:104</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00104">GenerateFramebuffer()</a>, <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00138">GenerateTexturebuffer()</a>, and <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00169">RasterizeFramebuffer()</a>.</p>
+
+</div>
+</div>
+<a id="acfd2973abfff56cd09340ab8cb61f468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfd2973abfff56cd09340ab8cb61f468">&#9670;&nbsp;</a></span>GenerateFramebuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SFrameBuffer::GenerateFramebuffer </td>
+          <td>(</td>
+          <td class="paramtype">BufferDimension&#160;</td>
+          <td class="paramname"><em>dimension</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This is the first function called when creating a framebuffer. You specify the dimensions of the framebuffer through that function. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dimension</td><td>Sets the dimensions of the framebuffer. The default is SFrameBuffer::PLANE. </td></tr>
+    <tr><td class="paramname">width</td><td>Write the width of the render buffer. </td></tr>
+    <tr><td class="paramname">height</td><td>Writes the height of the render buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00104">104</a> of file <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html">SFrameBuffer.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                                                                       {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    m_dimension = dimension;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    m_width = width;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    m_height = height;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    glGenFramebuffers(1, &amp;m_fbo);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    glBindFramebuffer(GL_FRAMEBUFFER, m_fbo);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00235">BlitFrameBuffer()</a>.</p>
+
+</div>
+</div>
+<a id="a9d53b0b3d3f4f5ead4abdf62592a2afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d53b0b3d3f4f5ead4abdf62592a2afc">&#9670;&nbsp;</a></span>GenerateRenderbuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int SFrameBuffer::GenerateRenderbuffer </td>
+          <td>(</td>
+          <td class="paramtype">BufferType&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>internalFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a render buffer in a non-texture format. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Specifies the type of buffer to create. The default is RENDER. </td></tr>
+    <tr><td class="paramname">internalFormat</td><td>Sets the internal format for the render buffer. Format details can be found at <a href="https://www.khronos.org/registry/OpenGL-Refpages/es3.0/html/glTexImage2D.xhtml">this link</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the ID value of the created render buffer. If creation fails, 0 is returned. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00113">113</a> of file <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html">SFrameBuffer.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                                                                   {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">if</span>(m_dimension == CUBE) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keyword">auto</span> buffer = <span class="keyword">new</span> BufferObject();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    buffer-&gt;type = type;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    buffer-&gt;format = internalFormat;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    glGenRenderbuffers(1, &amp;buffer-&gt;renderbufferId);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    glBindRenderbuffer(GL_RENDERBUFFER, buffer-&gt;renderbufferId);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    glRenderbufferStorage(GL_RENDERBUFFER, GenerateInternalFormat(internalFormat), m_width, m_height);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    glBindFramebuffer(GL_FRAMEBUFFER, m_fbo);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GenerateAttachmentType(type, <span class="keyword">false</span>), GL_RENDERBUFFER, buffer-&gt;renderbufferId);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">if</span>(type == RENDER) {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">if</span>(m_mainColorBuffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            m_mainColorBuffer = buffer;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(m_depthBuffer == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        m_depthBuffer = buffer;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    m_buffers.push_back(buffer);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">return</span> buffer-&gt;renderbufferId;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a388b0f896edc74d97301fee06252a912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388b0f896edc74d97301fee06252a912">&#9670;&nbsp;</a></span>GenerateTexturebuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a> * SFrameBuffer::GenerateTexturebuffer </td>
+          <td>(</td>
+          <td class="paramtype">BufferType&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a render buffer in texture format. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Specifies the type of buffer to create. The default is RENDER. </td></tr>
+    <tr><td class="paramname">channel</td><td>Sets the channel format for the render buffer. Format details can be found at <a href="https://www.khronos.org/registry/OpenGL-Refpages/es3.0/html/glTexImage2D.xhtml">this link</a>. </td></tr>
+    <tr><td class="paramname">level</td><td>Sets the texture mipmap level. Default is 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the <a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a> of the created render texture buffer. If creation fails, nullptr is returned. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00138">138</a> of file <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html">SFrameBuffer.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                                                                                     {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">auto</span> buffer = <span class="keyword">new</span> BufferObject();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    buffer-&gt;type = type;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    buffer-&gt;format = channel;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    buffer-&gt;level = (short)level;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    buffer-&gt;texture = <span class="keyword">new</span> <a class="code" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>(<span class="keyword">static_cast&lt;</span>STexture::Type<span class="keyword">&gt;</span>(m_dimension));</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    buffer-&gt;texture-&gt;InitTexture(m_width, m_height, channel, GenerateInternalFormat(channel), GenerateInternalType(channel));</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> texId = buffer-&gt;texture-&gt;GetTextureID();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">//    if(level &gt; 0)</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    glBindFramebuffer(GL_FRAMEBUFFER, m_fbo);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">if</span>(m_dimension == PLANE)  {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        glFramebufferTexture2D(GL_FRAMEBUFFER, GenerateAttachmentType(type), GL_TEXTURE_2D, texId, level);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="comment">// TODO: 큐브맵 텍스쳐 바인딩 설정 필요</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        GenerateAttachmentType(buffer-&gt;type, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span>(type == RENDER) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">if</span>(m_mainColorBuffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            m_mainColorBuffer = buffer;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(m_depthBuffer == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        m_depthBuffer = buffer;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    m_buffers.push_back(buffer);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">return</span> buffer-&gt;texture;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_texture_html"><div class="ttname"><a href="../../da/df0/class_c_s_e_1_1_s_texture.html">CSE::STexture</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d33/_s_texture_8h_source.html#l00014">STexture.h:14</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00235">BlitFrameBuffer()</a>, and <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00169">RasterizeFramebuffer()</a>.</p>
+
+</div>
+</div>
+<a id="a155d7ff0019dbd186e726c05d6483cf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a155d7ff0019dbd186e726c05d6483cf9">&#9670;&nbsp;</a></span>GetDepthTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* CSE::SFrameBuffer::GetDepthTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the texture assigned to the framebuffer as depth. </p><dl class="section return"><dt>Returns</dt><dd>if the corresponding index is an invalid texture type, nullptr is returned. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d82/_s_frame_buffer_8h_source.html#l00143">143</a> of file <a class="el" href="../../d3/d82/_s_frame_buffer_8h_source.html">SFrameBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                                          {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="keywordflow">if</span>(m_depthBuffer == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">return</span> m_depthBuffer-&gt;texture;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7ed0006b34a2e326455e1bbd7da49c1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed0006b34a2e326455e1bbd7da49c1a">&#9670;&nbsp;</a></span>GetMainColorTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* CSE::SFrameBuffer::GetMainColorTexture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the texture assigned to the framebuffer as GL_COLOR_ATTACHMENT0. </p><dl class="section return"><dt>Returns</dt><dd>if the corresponding index is an invalid texture type, nullptr is returned. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d82/_s_frame_buffer_8h_source.html#l00134">134</a> of file <a class="el" href="../../d3/d82/_s_frame_buffer_8h_source.html">SFrameBuffer.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                                              {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">if</span>(m_mainColorBuffer == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">return</span> m_mainColorBuffer-&gt;texture;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a09e4ddd32ee8725074cf1f9c23dc4a8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a09e4ddd32ee8725074cf1f9c23dc4a8e">&#9670;&nbsp;</a></span>GetRenderbufferID()</h2>
 
@@ -263,18 +619,55 @@ template&lt;class T &gt; </td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>if the corresponding index is an invalid buffer ID, 0 is returned. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00209">209</a> of file <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html">SFrameBuffer.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                                                            {</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">if</span>(index &lt; 0 || index &gt; m_buffers.size() - 1) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keyword">auto</span> <span class="keywordtype">id</span> = m_buffers[index]-&gt;renderbufferId;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">return</span> id;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00367">367</a> of file <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html">SFrameBuffer.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                                                            {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">if</span>(index &lt; 0 || index &gt; m_buffers.size() - 1) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keyword">auto</span> <span class="keywordtype">id</span> = m_buffers[index]-&gt;renderbufferId;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordflow">return</span> id;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2383b5b425094d34992b0ad8d6c0c9fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2383b5b425094d34992b0ad8d6c0c9fb">&#9670;&nbsp;</a></span>GetTexture() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a> * SFrameBuffer::GetTexture </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get textures that exist in the framebuffer. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>texture id in framebuffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>if the corresponding index is an invalid texture type, nullptr is returned. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00356">356</a> of file <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html">SFrameBuffer.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                                                       {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; buffer : m_buffers) {</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; texture = buffer-&gt;texture;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordflow">if</span>(texture == <span class="keyword">nullptr</span>) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        std::string bufferId = texture-&gt;GetID();</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keywordflow">if</span>(bufferId == <span class="keywordtype">id</span>) <span class="keywordflow">return</span> texture;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <a id="adfa04c3f63d140edba2f8c73507a3873"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfa04c3f63d140edba2f8c73507a3873">&#9670;&nbsp;</a></span>GetTexture()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa04c3f63d140edba2f8c73507a3873">&#9670;&nbsp;</a></span>GetTexture() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -296,14 +689,57 @@ template&lt;class T &gt; </td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>if the corresponding index is an invalid texture type, nullptr is returned. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00202">202</a> of file <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html">SFrameBuffer.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                                                  {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">if</span>(index &lt; 0 || index &gt; m_buffers.size() - 1) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keyword">auto</span> texture = m_buffers[index]-&gt;texture;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> texture;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00349">349</a> of file <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html">SFrameBuffer.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                                                  {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordflow">if</span>(index &lt; 0 || index &gt; m_buffers.size() - 1) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keyword">auto</span> texture = m_buffers[index]-&gt;texture;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">return</span> texture;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;}</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="aa7012f555bbffa76fdb7a9eb705f6036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7012f555bbffa76fdb7a9eb705f6036">&#9670;&nbsp;</a></span>RasterizeFramebuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SFrameBuffer::RasterizeFramebuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create all the render buffers to allocate to the framebuffer and proceed with rasterization. You can use the framebuffer after calling the function. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00169">169</a> of file <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html">SFrameBuffer.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                                        {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    glBindFramebuffer(GL_FRAMEBUFFER, m_fbo);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    m_buffers.reserve(m_buffers.size());</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">// tell OpenGL which color attachments we&#39;ll use (of this framebuffer) for rendering</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">if</span>(m_colorAttachmentSize &gt; 1) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        std::vector&lt;unsigned int&gt; attachments;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        attachments.reserve(m_colorAttachmentSize);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m_colorAttachmentSize; ++i) {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            attachments.push_back(GL_COLOR_ATTACHMENT0 + i);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        glDrawBuffers(m_colorAttachmentSize, &amp;attachments[0]);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">if</span>(m_bufferStatus == COLOR_ONLY) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a388b0f896edc74d97301fee06252a912">GenerateTexturebuffer</a>(SFrameBuffer::DEPTH, GL_DEPTH_COMPONENT);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        m_bufferStatus = MULTI;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00138">GenerateTexturebuffer()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00235">BlitFrameBuffer()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -316,7 +752,7 @@ template&lt;class T &gt; </td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a></li>
-    <li class="footer">Generated on Tue Feb 1 2022 00:43:26 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Feb 1 2022 17:58:04 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

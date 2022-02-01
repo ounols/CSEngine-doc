@@ -153,30 +153,35 @@ $(document).ready(function(){initNavTree('dc/deb/_x_m_l_8h_source.html','../../'
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>&amp; getChild(<span class="keyword">const</span> <span class="keywordtype">char</span>* name) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d8/dc3/class_x_attrib.html">XAttrib</a>&amp; getAttribute(<span class="keyword">const</span> <span class="keywordtype">char</span>* name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">bool</span> hasChild(<span class="keyword">const</span> <span class="keywordtype">char</span>* name) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>&amp; getNodeByAttribute(<span class="keyword">const</span> <span class="keywordtype">char</span>* node_name, <span class="keyword">const</span> <span class="keywordtype">char</span>* attrib_name, <span class="keyword">const</span> <span class="keywordtype">char</span>* attrib_value) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../de/d3a/class_x_f_i_l_e.html">   72</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a> {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">//    FILE* file; // the file being read</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::string file;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">int</span> file_index = 0;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> read(std::string&amp; buffer);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a>(){}</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str); <span class="comment">// read the file into the node heirchy</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>* getRoot();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>* loadBuffer(std::string buffer);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    ~<a class="code" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a>();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d8/dc3/class_x_attrib.html">XAttrib</a>&amp; getAttribute(<span class="keyword">const</span> <span class="keywordtype">char</span>* name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">bool</span> hasAttribute(<span class="keyword">const</span> <span class="keywordtype">char</span>* name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>&amp; getNodeByAttribute(<span class="keyword">const</span> <span class="keywordtype">char</span>* node_name, <span class="keyword">const</span> <span class="keywordtype">char</span>* attrib_name, <span class="keyword">const</span> <span class="keywordtype">char</span>* attrib_value) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">bool</span> hasNodeByAttribute(<span class="keyword">const</span> <span class="keywordtype">char</span>* node_name, <span class="keyword">const</span> <span class="keywordtype">char</span>* attrib_name, <span class="keyword">const</span> <span class="keywordtype">char</span>* attrib_value) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="../../de/d3a/class_x_f_i_l_e.html">   77</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a> {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">//    FILE* file; // the file being read</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::string file;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">int</span> file_index = 0;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span> read(std::string&amp; buffer);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a>(){}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str); <span class="comment">// read the file into the node heirchy</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>* getRoot();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../dd/d83/class_x_node.html">XNode</a>* loadBuffer(std::string buffer);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    ~<a class="code" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
 <div class="ttc" id="aclass_x_attrib_html"><div class="ttname"><a href="../../d8/dc3/class_x_attrib.html">XAttrib</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/_x_m_l_8h_source.html#l00029">XML.h:29</a></div></div>
-<div class="ttc" id="aclass_x_f_i_l_e_html"><div class="ttname"><a href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/_x_m_l_8h_source.html#l00072">XML.h:72</a></div></div>
+<div class="ttc" id="aclass_x_f_i_l_e_html"><div class="ttname"><a href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/_x_m_l_8h_source.html#l00077">XML.h:77</a></div></div>
 <div class="ttc" id="aclass_x_node_html"><div class="ttname"><a href="../../dd/d83/class_x_node.html">XNode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/_x_m_l_8h_source.html#l00043">XML.h:43</a></div></div>
 <div class="ttc" id="aclass_x_value_html"><div class="ttname"><a href="../../d2/dcc/class_x_value.html">XValue</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/_x_m_l_8h_source.html#l00014">XML.h:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -185,7 +190,7 @@ $(document).ready(function(){initNavTree('dc/deb/_x_m_l_8h_source.html','../../'
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><a class="el" href="../../dir_05df2928d52705236faf027df5262a05.html">Loader</a></li><li class="navelem"><a class="el" href="../../dir_33b49832b5423cab2ec9adf0678b4a99.html">XML</a></li><li class="navelem"><b>XML.h</b></li>
-    <li class="footer">Generated on Tue Feb 1 2022 00:43:26 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Feb 1 2022 17:58:03 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
