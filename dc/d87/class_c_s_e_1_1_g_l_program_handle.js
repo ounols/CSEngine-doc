@@ -1,28 +1,4 @@
 var class_c_s_e_1_1_g_l_program_handle =
 [
-    [ "Element", "da/d85/struct_c_s_e_1_1_g_l_program_handle_1_1_element.html", "da/d85/struct_c_s_e_1_1_g_l_program_handle_1_1_element" ],
-    [ "GLElementList", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#abf879b74be63f6c02a9525a5902701d9", null ],
-    [ "GLProgramHandle", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#ac0ee07e795a83cbd796d7a040e368468", null ],
-    [ "~GLProgramHandle", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#afbe8d7f171632e8adf6bef2a9c97b638", null ],
-    [ "AttributeLocation", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a1cab2df3595c1f1c79f7ac5714592cc5", null ],
-    [ "Exterminate", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a641fea9032433371a75936770e938a57", null ],
-    [ "GetAttributesList", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a5d05afd9e23eae69bb28ae10299cd896", null ],
-    [ "GetUniformsList", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#aaa647ac956fb9d24cb793d85acc852dd", null ],
-    [ "Init", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a11b59b8951d918cb292bd52d60450481", null ],
-    [ "SaveShader", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a5b000c96de5c09aac4044822c6151cdd", null ],
-    [ "SetAttributesList", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a9550b46e37bb54d321ce81ecdff109dc", null ],
-    [ "SetAttribVec3", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a496c367d5776745db4230f333b28ecf4", null ],
-    [ "SetAttribVec4", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#afdbb157209f42f1a3a4561e287dd31e3", null ],
-    [ "SetProgram", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#ad0ece4de08ec6782df94e81887267b64", null ],
-    [ "SetUniformFloat", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a2c72f45471b3d9e97f9c8e882b38d9c8", null ],
-    [ "SetUniformInt", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a78866b71fa80e0007d15a3ca315d504d", null ],
-    [ "SetUniformMat3", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a0e5367023fae9f8d906d543824808823", null ],
-    [ "SetUniformMat4", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a75392d1ee10c85ec74c8b38adc68da8c", null ],
-    [ "SetUniformsList", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a8b5a5f86c2ff2d23c01803968cab4352", null ],
-    [ "UniformLocation", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a2352d2762bfdd5cd5f55835039008cdd", null ],
-    [ "Attributes", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a36e188192dba6f41b7a072aa9f2c1346", null ],
-    [ "AttributesList", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a398d758af1c5344f2510d9f6b701fef4", null ],
-    [ "Program", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#ab5116db5dc883ddf99411ba91247d942", null ],
-    [ "Uniforms", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#a90111d113a810f21a7ba32d419eb30dd", null ],
-    [ "UniformsList", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html#ad9d852d91f758c92e6c0a36c9786614b", null ]
+    [ "Element", "da/d85/struct_c_s_e_1_1_g_l_program_handle_1_1_element.html", null ]
 ];

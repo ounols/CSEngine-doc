@@ -67,11 +67,13 @@ var hierarchy =
     [ "CSE::SGBuffer", "d0/dc0/class_c_s_e_1_1_s_g_buffer.html", null ],
     [ "CSE::ShaderUtil", "df/d5e/class_c_s_e_1_1_shader_util.html", null ],
     [ "CSE::SIContainer", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
-      [ "CSE::SContainer< Sqrat::Object * >", "d5/d1e/class_c_s_e_1_1_s_container.html", [
-        [ "CSE::ScriptMgr", "d0/dc6/class_c_s_e_1_1_script_mgr.html", null ]
-      ] ],
       [ "CSE::SContainer< CameraComponent * >", "d5/d1e/class_c_s_e_1_1_s_container.html", [
         [ "CSE::CameraMgr", "d8/df8/class_c_s_e_1_1_camera_mgr.html", null ]
+      ] ],
+      [ "CSE::SContainer< SGameObject * >", "d5/d1e/class_c_s_e_1_1_s_container.html", [
+        [ "CSE::GameObjectContainer", "d4/d4a/class_c_s_e_1_1_game_object_container.html", [
+          [ "CSE::GameObjectMgr", "d5/db0/class_c_s_e_1_1_game_object_mgr.html", null ]
+        ] ]
       ] ],
       [ "CSE::SContainer< LightComponent * >", "d5/d1e/class_c_s_e_1_1_s_container.html", [
         [ "CSE::LightMgr", "d9/d1d/class_c_s_e_1_1_light_mgr.html", null ]
@@ -81,10 +83,8 @@ var hierarchy =
           [ "CSE::MemoryMgr", "d6/d40/class_c_s_e_1_1_memory_mgr.html", null ]
         ] ]
       ] ],
-      [ "CSE::SContainer< SGameObject * >", "d5/d1e/class_c_s_e_1_1_s_container.html", [
-        [ "CSE::GameObjectContainer", "d4/d4a/class_c_s_e_1_1_game_object_container.html", [
-          [ "CSE::GameObjectMgr", "d5/db0/class_c_s_e_1_1_game_object_mgr.html", null ]
-        ] ]
+      [ "CSE::SContainer< Sqrat::Object * >", "d5/d1e/class_c_s_e_1_1_s_container.html", [
+        [ "CSE::ScriptMgr", "d0/dc6/class_c_s_e_1_1_script_mgr.html", null ]
       ] ],
       [ "CSE::SContainer< T >", "d5/d1e/class_c_s_e_1_1_s_container.html", null ]
     ] ],
