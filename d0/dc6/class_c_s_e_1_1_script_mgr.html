@@ -170,11 +170,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d96/_script_mgr_8cpp_source.html#l00066">66</a> of file <a class="el" href="../../dd/d96/_script_mgr_8cpp_source.html">ScriptMgr.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                      {</div>
-<div class="line"><span class="lineno">   67</span>    ReleaseSqratObject();</div>
-<div class="line"><span class="lineno">   68</span>    sq_close(DefaultVM::Get());</div>
-<div class="line"><span class="lineno">   69</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d96/_script_mgr_8cpp_source.html#l00054">54</a> of file <a class="el" href="../../dd/d96/_script_mgr_8cpp_source.html">ScriptMgr.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                      {</div>
+<div class="line"><span class="lineno">   55</span>    ReleaseSqratObject();</div>
+<div class="line"><span class="lineno">   56</span>    sq_close(DefaultVM::Get());</div>
+<div class="line"><span class="lineno">   57</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -204,20 +204,20 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="../../dc/d25/class_c_s_e_1_1_core_base.html">CSE::CoreBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d96/_script_mgr_8cpp_source.html#l00072">72</a> of file <a class="el" href="../../dd/d96/_script_mgr_8cpp_source.html">ScriptMgr.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                     {</div>
-<div class="line"><span class="lineno">   73</span>    HSQUIRRELVM vm;</div>
-<div class="line"><span class="lineno">   74</span><span class="comment">//      Sqrat::SqratVM vm = Sqrat::SqratVM();</span></div>
-<div class="line"><span class="lineno">   75</span>    vm = sq_open(1024);</div>
-<div class="line"><span class="lineno">   76</span>    Sqrat::DefaultVM::Set(vm);</div>
-<div class="line"><span class="lineno">   77</span><span class="comment">//      Sqrat::DefaultVM::Set(vm.GetVM());</span></div>
-<div class="line"><span class="lineno">   78</span>    sq_pushroottable(vm);</div>
-<div class="line"><span class="lineno">   79</span>    sqstd_register_mathlib(vm);</div>
-<div class="line"><span class="lineno">   80</span>    sq_pop(vm, 1);</div>
-<div class="line"><span class="lineno">   81</span>    <span class="comment">//SquirrelVM::Init();</span></div>
-<div class="line"><span class="lineno">   82</span>    DefineClasses();</div>
-<div class="line"><span class="lineno">   83</span>    ReadScriptList();</div>
-<div class="line"><span class="lineno">   84</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d96/_script_mgr_8cpp_source.html#l00060">60</a> of file <a class="el" href="../../dd/d96/_script_mgr_8cpp_source.html">ScriptMgr.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>                     {</div>
+<div class="line"><span class="lineno">   61</span>    HSQUIRRELVM vm;</div>
+<div class="line"><span class="lineno">   62</span><span class="comment">//      Sqrat::SqratVM vm = Sqrat::SqratVM();</span></div>
+<div class="line"><span class="lineno">   63</span>    vm = sq_open(1024);</div>
+<div class="line"><span class="lineno">   64</span>    Sqrat::DefaultVM::Set(vm);</div>
+<div class="line"><span class="lineno">   65</span><span class="comment">//      Sqrat::DefaultVM::Set(vm.GetVM());</span></div>
+<div class="line"><span class="lineno">   66</span>    sq_pushroottable(vm);</div>
+<div class="line"><span class="lineno">   67</span>    sqstd_register_mathlib(vm);</div>
+<div class="line"><span class="lineno">   68</span>    sq_pop(vm, 1);</div>
+<div class="line"><span class="lineno">   69</span>    <span class="comment">//SquirrelVM::Init();</span></div>
+<div class="line"><span class="lineno">   70</span>    DefineClasses();</div>
+<div class="line"><span class="lineno">   71</span>    ReadScriptList();</div>
+<div class="line"><span class="lineno">   72</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -245,42 +245,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d96/_script_mgr_8cpp_source.html#l00087">87</a> of file <a class="el" href="../../dd/d96/_script_mgr_8cpp_source.html">ScriptMgr.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>                                                      {</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>    HSQUIRRELVM vm = DefaultVM::Get();</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>    <span class="comment">//register script</span></div>
-<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span> (!script.empty()) {</div>
-<div class="line"><span class="lineno">   93</span>        Script compiledScript;</div>
-<div class="line"><span class="lineno">   94</span>        compiledScript.CompileString(script);</div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (Sqrat::Error::Occurred(vm)) {</div>
-<div class="line"><span class="lineno">   96</span><span class="preprocessor">#ifdef WIN32</span></div>
-<div class="line"><span class="lineno">   97</span>            OutputDebugString(_SC(<span class="stringliteral">&quot;Compile Failed: &quot;</span>));</div>
-<div class="line"><span class="lineno">   98</span>            OutputDebugString(Error::Message(vm).c_str());</div>
-<div class="line"><span class="lineno">   99</span><span class="preprocessor">#elif __ANDROID__</span></div>
-<div class="line"><span class="lineno">  100</span>            LOGE(<span class="stringliteral">&quot;Compile Failed : %s&quot;</span>, Error::Message(vm).c_str());</div>
-<div class="line"><span class="lineno">  101</span><span class="preprocessor">#elif __linux__</span></div>
-<div class="line"><span class="lineno">  102</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Compile Failed : &quot;</span> &lt;&lt; Error::Message(vm) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  103</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>        compiledScript.Run();</div>
-<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">if</span> (Sqrat::Error::Occurred(vm)) {</div>
-<div class="line"><span class="lineno">  108</span><span class="preprocessor">#ifdef WIN32</span></div>
-<div class="line"><span class="lineno">  109</span>            OutputDebugString(_SC(<span class="stringliteral">&quot;Run Failed: &quot;</span>));</div>
-<div class="line"><span class="lineno">  110</span>            OutputDebugString(Error::Message(vm).c_str());</div>
-<div class="line"><span class="lineno">  111</span><span class="preprocessor">#elif __ANDROID__</span></div>
-<div class="line"><span class="lineno">  112</span>            LOGE(<span class="stringliteral">&quot;Run Failed : %s&quot;</span>, Error::Message(vm).c_str());</div>
-<div class="line"><span class="lineno">  113</span><span class="preprocessor">#elif __linux__</span></div>
-<div class="line"><span class="lineno">  114</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Run Failed : &quot;</span> &lt;&lt; Error::Message(vm) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  115</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  116</span>        }</div>
-<div class="line"><span class="lineno">  117</span> </div>
-<div class="line"><span class="lineno">  118</span>        compiledScript.Release();</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d96/_script_mgr_8cpp_source.html#l00075">75</a> of file <a class="el" href="../../dd/d96/_script_mgr_8cpp_source.html">ScriptMgr.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>                                                      {</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>    HSQUIRRELVM vm = DefaultVM::Get();</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    <span class="comment">//register script</span></div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">if</span> (!script.empty()) {</div>
+<div class="line"><span class="lineno">   81</span>        Script compiledScript;</div>
+<div class="line"><span class="lineno">   82</span>        compiledScript.CompileString(script);</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (Sqrat::Error::Occurred(vm)) {</div>
+<div class="line"><span class="lineno">   84</span>            SafeLog::Log((_SC(<span class="stringliteral">&quot;Compile Failed: &quot;</span>) + Error::Message(vm)).c_str());</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>        compiledScript.Run();</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">if</span> (Sqrat::Error::Occurred(vm)) {</div>
+<div class="line"><span class="lineno">   89</span>            SafeLog::Log((_SC(<span class="stringliteral">&quot;Run Failed: &quot;</span>) + Error::Message(vm)).c_str());</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>        compiledScript.Release();</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -294,7 +280,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../d0/dc6/class_c_s_e_1_1_script_mgr.html">ScriptMgr</a></li>
-    <li class="footer">Generated on Mon Aug 8 2022 01:11:00 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">Generated on Mon Aug 15 2022 01:17:24 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
