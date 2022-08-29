@@ -344,69 +344,71 @@ $(document).ready(function(){initNavTree('d0/da6/_shader_util_8cpp_source.html',
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">if</span>(position &lt; 0) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    glBindBuffer(GL_ARRAY_BUFFER, meshId.m_vertexBuffer);</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    glEnableVertexAttribArray(position);</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    glVertexAttribPointer(position, 3, GL_FLOAT, GL_FALSE, stride, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordflow">if</span>(normal &gt;= 0) {</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        glEnableVertexAttribArray(normal);</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        glVertexAttribPointer(normal, 3, GL_FLOAT, GL_FALSE, stride, offset);</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    }</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    offset = (GLvoid*)(<span class="keyword">sizeof</span>(<a class="code hl_class" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>) * 2);</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordflow">if</span>(tex &gt;= 0) {</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        glEnableVertexAttribArray(tex);</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        glVertexAttribPointer(tex, 2, GL_FLOAT, GL_FALSE, stride, offset);</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    }</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    offset = (GLvoid*)(<span class="keyword">sizeof</span>(<a class="code hl_class" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>) * 2 + <span class="keyword">sizeof</span>(<a class="code hl_class" href="../../d6/d75/class_c_s_e_1_1_vector2.html">vec2</a>));</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordflow">if</span>(weight &gt;= 0) {</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        glEnableVertexAttribArray(weight);</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        glVertexAttribPointer(weight, 3, GL_FLOAT, GL_FALSE, stride, offset);</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    }</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    offset = (GLvoid*)(<span class="keyword">sizeof</span>(<a class="code hl_class" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>) * 3 + <span class="keyword">sizeof</span>(<a class="code hl_class" href="../../d6/d75/class_c_s_e_1_1_vector2.html">vec2</a>));</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keywordflow">if</span>(jointId &gt;= 0) {</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        glEnableVertexAttribArray(jointId);</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        glVertexAttribPointer(jointId, 3, GL_FLOAT, GL_FALSE, stride, offset);</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    }</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keywordflow">if</span> (meshId.m_indexSize &lt; 0) {</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                glDrawArrays(GL_TRIANGLES, 0, meshId.m_vertexSize);</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        }</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, meshId.m_indexBuffer);</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                glDrawElements(GL_TRIANGLES, meshId.m_indexSize * 3, GL_UNSIGNED_SHORT, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        }</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    glDisableVertexAttribArray(position);</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keywordflow">if</span>(normal &gt;= 0)     glDisableVertexAttribArray(normal);</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keywordflow">if</span>(tex &gt;= 0)        glDisableVertexAttribArray(tex);</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keywordflow">if</span>(weight &gt;= 0)     glDisableVertexAttribArray(weight);</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keywordflow">if</span>(jointId &gt;= 0)    glDisableVertexAttribArray(jointId);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>}</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="keywordtype">void</span> ShaderUtil::BindAttributeToPlane() {</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        SEnvironmentMgr::RenderPlaneVAO();</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>}</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="keywordtype">void</span> ShaderUtil::BindSkinningDataToShader(<span class="keyword">const</span> <a class="code hl_class" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>&amp; handle, <span class="keyword">const</span> <a class="code hl_struct" href="../../dd/daa/struct_c_s_e_1_1_g_l_mesh_i_d.html">GLMeshID</a>&amp; meshId,</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                                          <span class="keyword">const</span> std::vector&lt;mat4&gt;&amp; jointMatrix) {</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        <span class="keywordflow">if</span> (!meshId.m_hasJoint || jointMatrix.empty()) {</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                glUniform1i(handle.Uniforms.SkinningMode, 0);</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        }</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        std::vector&lt;float&gt; result;</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <span class="comment">//    result.reserve(jointMatrix.size() * 16 + 1);</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">mat4</a>&amp; matrix : jointMatrix) {</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                <span class="keyword">const</span> <span class="keyword">auto</span>* pointer = matrix.Pointer();</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 16; ++i, ++pointer) {</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                        result.push_back(*(pointer));</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                }</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        }</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        glUniformMatrix4fv(handle.Uniforms.JointMatrix, Settings::GetMaxJoints(), GL_FALSE, &amp;result[0]);</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        glUniform1i(handle.Uniforms.SkinningMode, 1);</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>}</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    glBindVertexArray(meshId.m_vertexArray);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    glBindBuffer(GL_ARRAY_BUFFER, meshId.m_vertexBuffer);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    glEnableVertexAttribArray(position);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    glVertexAttribPointer(position, 3, GL_FLOAT, GL_FALSE, stride, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keywordflow">if</span>(normal &gt;= 0) {</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        glEnableVertexAttribArray(normal);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        glVertexAttribPointer(normal, 3, GL_FLOAT, GL_FALSE, stride, offset);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    offset = (GLvoid*)(<span class="keyword">sizeof</span>(<a class="code hl_class" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>) * 2);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keywordflow">if</span>(tex &gt;= 0) {</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        glEnableVertexAttribArray(tex);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        glVertexAttribPointer(tex, 2, GL_FLOAT, GL_FALSE, stride, offset);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    offset = (GLvoid*)(<span class="keyword">sizeof</span>(<a class="code hl_class" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>) * 2 + <span class="keyword">sizeof</span>(<a class="code hl_class" href="../../d6/d75/class_c_s_e_1_1_vector2.html">vec2</a>));</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordflow">if</span>(weight &gt;= 0) {</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        glEnableVertexAttribArray(weight);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        glVertexAttribPointer(weight, 3, GL_FLOAT, GL_FALSE, stride, offset);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    }</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    offset = (GLvoid*)(<span class="keyword">sizeof</span>(<a class="code hl_class" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>) * 3 + <span class="keyword">sizeof</span>(<a class="code hl_class" href="../../d6/d75/class_c_s_e_1_1_vector2.html">vec2</a>));</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keywordflow">if</span>(jointId &gt;= 0) {</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        glEnableVertexAttribArray(jointId);</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        glVertexAttribPointer(jointId, 3, GL_FLOAT, GL_FALSE, stride, offset);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    }</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keywordflow">if</span> (meshId.m_indexSize &lt; 0) {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                glDrawArrays(GL_TRIANGLES, 0, meshId.m_vertexSize);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        }</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, meshId.m_indexBuffer);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                glDrawElements(GL_TRIANGLES, meshId.m_indexSize * 3, GL_UNSIGNED_SHORT, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        }</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    glDisableVertexAttribArray(position);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keywordflow">if</span>(normal &gt;= 0)     glDisableVertexAttribArray(normal);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keywordflow">if</span>(tex &gt;= 0)        glDisableVertexAttribArray(tex);</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keywordflow">if</span>(weight &gt;= 0)     glDisableVertexAttribArray(weight);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keywordflow">if</span>(jointId &gt;= 0)    glDisableVertexAttribArray(jointId);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    glBindVertexArray(0);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>}</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="keywordtype">void</span> ShaderUtil::BindAttributeToPlane() {</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        SEnvironmentMgr::RenderPlaneVAO();</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>}</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="keywordtype">void</span> ShaderUtil::BindSkinningDataToShader(<span class="keyword">const</span> <a class="code hl_class" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a>&amp; handle, <span class="keyword">const</span> <a class="code hl_struct" href="../../dd/daa/struct_c_s_e_1_1_g_l_mesh_i_d.html">GLMeshID</a>&amp; meshId,</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                                          <span class="keyword">const</span> std::vector&lt;mat4&gt;&amp; jointMatrix) {</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="keywordflow">if</span> (!meshId.m_hasJoint || jointMatrix.empty()) {</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                glUniform1i(handle.Uniforms.SkinningMode, 0);</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        }</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        std::vector&lt;float&gt; result;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        <span class="comment">//    result.reserve(jointMatrix.size() * 16 + 1);</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">mat4</a>&amp; matrix : jointMatrix) {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                <span class="keyword">const</span> <span class="keyword">auto</span>* pointer = matrix.Pointer();</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 16; ++i, ++pointer) {</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                        result.push_back(*(pointer));</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                }</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        }</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        glUniformMatrix4fv(handle.Uniforms.JointMatrix, Settings::GetMaxJoints(), GL_FALSE, &amp;result[0]);</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        glUniform1i(handle.Uniforms.SkinningMode, 1);</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_g_l_program_handle_html"><div class="ttname"><a href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">CSE::GLProgramHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00045">GLProgramHandle.h:45</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_matrix4_html"><div class="ttname"><a href="../../d2/de6/class_c_s_e_1_1_matrix4.html">CSE::Matrix4&lt; float &gt;</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_vector2_html"><div class="ttname"><a href="../../d6/d75/class_c_s_e_1_1_vector2.html">CSE::Vector2&lt; float &gt;</a></div></div>
@@ -418,7 +420,7 @@ $(document).ready(function(){initNavTree('d0/da6/_shader_util_8cpp_source.html',
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><a class="el" href="../../dir_e33838bd04c8f4b6287e9b76abda5f0f.html">Render</a></li><li class="navelem"><b>ShaderUtil.cpp</b></li>
-    <li class="footer">Generated on Mon Aug 22 2022 01:13:55 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">Generated on Mon Aug 29 2022 01:27:27 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
