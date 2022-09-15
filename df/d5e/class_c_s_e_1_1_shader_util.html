@@ -111,6 +111,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a4c3d6027b27984ee16c53f760b0eb803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab62aa8e25d5fabcb7a341cf7a4df205b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d5e/class_c_s_e_1_1_shader_util.html#ab62aa8e25d5fabcb7a341cf7a4df205b">BindAttributeToPlane</a> ()</td></tr>
 <tr class="separator:ab62aa8e25d5fabcb7a341cf7a4df205b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd968346f7dca08cbd19b3499c941ec5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d5e/class_c_s_e_1_1_shader_util.html#afd968346f7dca08cbd19b3499c941ec5">BindAttributeToCubeMap</a> ()</td></tr>
+<tr class="separator:afd968346f7dca08cbd19b3499c941ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6f7651020bc2033d098d1cb1dca3910"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d5e/class_c_s_e_1_1_shader_util.html#af6f7651020bc2033d098d1cb1dca3910">BindSkinningDataToShader</a> (const <a class="el" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a> &amp;handle, const <a class="el" href="../../dd/daa/struct_c_s_e_1_1_g_l_mesh_i_d.html">GLMeshID</a> &amp;meshId, const std::vector&lt; <a class="el" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">mat4</a> &gt; &amp;jointMatrix)</td></tr>
 <tr class="separator:af6f7651020bc2033d098d1cb1dca3910"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -118,6 +120,36 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="../../d1/daf/_shader_util_8h_source.html#l00012">12</a> of file <a class="el" href="../../d1/daf/_shader_util_8h_source.html">ShaderUtil.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afd968346f7dca08cbd19b3499c941ec5" name="afd968346f7dca08cbd19b3499c941ec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd968346f7dca08cbd19b3499c941ec5">&#9670;&nbsp;</a></span>BindAttributeToCubeMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShaderUtil::BindAttributeToCubeMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/da6/_shader_util_8cpp_source.html#l00304">304</a> of file <a class="el" href="../../d0/da6/_shader_util_8cpp_source.html">ShaderUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  304</span>                                        {</div>
+<div class="line"><span class="lineno">  305</span>    SEnvironmentMgr::RenderCubeVAO();</div>
+<div class="line"><span class="lineno">  306</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ab62aa8e25d5fabcb7a341cf7a4df205b" name="ab62aa8e25d5fabcb7a341cf7a4df205b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab62aa8e25d5fabcb7a341cf7a4df205b">&#9670;&nbsp;</a></span>BindAttributeToPlane()</h2>
 
@@ -349,25 +381,25 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/da6/_shader_util_8cpp_source.html#l00304">304</a> of file <a class="el" href="../../d0/da6/_shader_util_8cpp_source.html">ShaderUtil.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  305</span>                                                                              {</div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">if</span> (!meshId.m_hasJoint || jointMatrix.empty()) {</div>
-<div class="line"><span class="lineno">  307</span>                glUniform1i(handle.Uniforms.SkinningMode, 0);</div>
-<div class="line"><span class="lineno">  308</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  309</span>        }</div>
-<div class="line"><span class="lineno">  310</span> </div>
-<div class="line"><span class="lineno">  311</span>        std::vector&lt;float&gt; result;</div>
-<div class="line"><span class="lineno">  312</span>        <span class="comment">//    result.reserve(jointMatrix.size() * 16 + 1);</span></div>
-<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">mat4</a>&amp; matrix : jointMatrix) {</div>
-<div class="line"><span class="lineno">  314</span>                <span class="keyword">const</span> <span class="keyword">auto</span>* pointer = matrix.Pointer();</div>
-<div class="line"><span class="lineno">  315</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 16; ++i, ++pointer) {</div>
-<div class="line"><span class="lineno">  316</span>                        result.push_back(*(pointer));</div>
-<div class="line"><span class="lineno">  317</span>                }</div>
-<div class="line"><span class="lineno">  318</span>        }</div>
-<div class="line"><span class="lineno">  319</span> </div>
-<div class="line"><span class="lineno">  320</span>        glUniformMatrix4fv(handle.Uniforms.JointMatrix, Settings::GetMaxJoints(), GL_FALSE, &amp;result[0]);</div>
-<div class="line"><span class="lineno">  321</span>        glUniform1i(handle.Uniforms.SkinningMode, 1);</div>
-<div class="line"><span class="lineno">  322</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/da6/_shader_util_8cpp_source.html#l00308">308</a> of file <a class="el" href="../../d0/da6/_shader_util_8cpp_source.html">ShaderUtil.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  309</span>                                                                              {</div>
+<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">if</span> (!meshId.m_hasJoint || jointMatrix.empty()) {</div>
+<div class="line"><span class="lineno">  311</span>                glUniform1i(handle.Uniforms.SkinningMode, 0);</div>
+<div class="line"><span class="lineno">  312</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  313</span>        }</div>
+<div class="line"><span class="lineno">  314</span> </div>
+<div class="line"><span class="lineno">  315</span>        std::vector&lt;float&gt; result;</div>
+<div class="line"><span class="lineno">  316</span>        <span class="comment">//    result.reserve(jointMatrix.size() * 16 + 1);</span></div>
+<div class="line"><span class="lineno">  317</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">mat4</a>&amp; matrix : jointMatrix) {</div>
+<div class="line"><span class="lineno">  318</span>                <span class="keyword">const</span> <span class="keyword">auto</span>* pointer = matrix.Pointer();</div>
+<div class="line"><span class="lineno">  319</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 16; ++i, ++pointer) {</div>
+<div class="line"><span class="lineno">  320</span>                        result.push_back(*(pointer));</div>
+<div class="line"><span class="lineno">  321</span>                }</div>
+<div class="line"><span class="lineno">  322</span>        }</div>
+<div class="line"><span class="lineno">  323</span> </div>
+<div class="line"><span class="lineno">  324</span>        glUniformMatrix4fv(handle.Uniforms.JointMatrix, Settings::GetMaxJoints(), GL_FALSE, &amp;result[0]);</div>
+<div class="line"><span class="lineno">  325</span>        glUniform1i(handle.Uniforms.SkinningMode, 1);</div>
+<div class="line"><span class="lineno">  326</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -815,7 +847,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../df/d5e/class_c_s_e_1_1_shader_util.html">ShaderUtil</a></li>
-    <li class="footer">Generated on Thu Sep 15 2022 01:27:21 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">Generated on Thu Sep 15 2022 17:39:36 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

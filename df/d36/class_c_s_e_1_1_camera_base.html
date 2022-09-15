@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('df/d36/class_c_s_e_1_1_camera_base.htm
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../d4/d28/class_c_s_e_1_1_camera_base-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">CSE::CameraBase Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
@@ -101,6 +102,14 @@ Inheritance diagram for CSE::CameraBase:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ab7f73c1429f376f0659b440c0ab47afa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>BackgroundType</b> { <b>NONE</b> = 0
+, <b>SOLID</b> = 1
+, <b>SKYBOX</b> = 2
+ }</td></tr>
+<tr class="separator:ab7f73c1429f376f0659b440c0ab47afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b19e1868a93415c2879e933fa3405cb"><td class="memItemLeft" align="right" valign="top"><a id="a7b19e1868a93415c2879e933fa3405cb" name="a7b19e1868a93415c2879e933fa3405cb"></a>
@@ -109,11 +118,67 @@ virtual <a class="el" href="../../d3/d00/struct_c_s_e_1_1_camera_matrix_struct.h
 <tr class="memitem:aa41b204abecacbbd258db74fabc82098"><td class="memItemLeft" align="right" valign="top"><a id="aa41b204abecacbbd258db74fabc82098" name="aa41b204abecacbbd258db74fabc82098"></a>
 virtual <a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetFrameBuffer</b> () const =0</td></tr>
 <tr class="separator:aa41b204abecacbbd258db74fabc82098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ecdec35b43ceaaa9b104e4c7cac2bdc"><td class="memItemLeft" align="right" valign="top">virtual BackgroundType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d36/class_c_s_e_1_1_camera_base.html#a9ecdec35b43ceaaa9b104e4c7cac2bdc">GetBackgroundType</a> ()</td></tr>
+<tr class="separator:a9ecdec35b43ceaaa9b104e4c7cac2bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d2f82e51870ed9ff0184af7da08d5f8"><td class="memItemLeft" align="right" valign="top"><a id="a4d2f82e51870ed9ff0184af7da08d5f8" name="a4d2f82e51870ed9ff0184af7da08d5f8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderBackground</b> () const =0</td></tr>
+<tr class="separator:a4d2f82e51870ed9ff0184af7da08d5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="../../db/db8/_camera_base_8h_source.html#l00008">8</a> of file <a class="el" href="../../db/db8/_camera_base_8h_source.html">CameraBase.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ab7f73c1429f376f0659b440c0ab47afa" name="ab7f73c1429f376f0659b440c0ab47afa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7f73c1429f376f0659b440c0ab47afa">&#9670;&nbsp;</a></span>BackgroundType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum CSE::CameraBase::BackgroundType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/db8/_camera_base_8h_source.html#l00010">10</a> of file <a class="el" href="../../db/db8/_camera_base_8h_source.html">CameraBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>                            {</div>
+<div class="line"><span class="lineno">   11</span>            NONE = 0, SOLID = 1, SKYBOX = 2</div>
+<div class="line"><span class="lineno">   12</span>        };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9ecdec35b43ceaaa9b104e4c7cac2bdc" name="a9ecdec35b43ceaaa9b104e4c7cac2bdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ecdec35b43ceaaa9b104e4c7cac2bdc">&#9670;&nbsp;</a></span>GetBackgroundType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual BackgroundType CSE::CameraBase::GetBackgroundType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../db/db8/_camera_base_8h_source.html#l00019">19</a> of file <a class="el" href="../../db/db8/_camera_base_8h_source.html">CameraBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>                                                   {</div>
+<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">return</span> SOLID;</div>
+<div class="line"><span class="lineno">   21</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>Util/Render/<a class="el" href="../../db/db8/_camera_base_8h_source.html">CameraBase.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -122,7 +187,7 @@ virtual <a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SF
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../df/d36/class_c_s_e_1_1_camera_base.html">CameraBase</a></li>
-    <li class="footer">Generated on Thu Sep 15 2022 01:27:21 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">Generated on Thu Sep 15 2022 17:39:35 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

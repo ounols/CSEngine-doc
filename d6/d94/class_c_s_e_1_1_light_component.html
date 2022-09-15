@@ -114,6 +114,12 @@ Public Types</h2></td></tr>
 , <b>SPOT</b> = 3
  }</td></tr>
 <tr class="separator:a5063cc8738729a39f2d2378941f74090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_class_c_s_e_1_1_camera_base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_c_s_e_1_1_camera_base')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../df/d36/class_c_s_e_1_1_camera_base.html">CSE::CameraBase</a></td></tr>
+<tr class="memitem:ab7f73c1429f376f0659b440c0ab47afa inherit pub_types_class_c_s_e_1_1_camera_base"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>BackgroundType</b> { <b>NONE</b> = 0
+, <b>SOLID</b> = 1
+, <b>SKYBOX</b> = 2
+ }</td></tr>
+<tr class="separator:ab7f73c1429f376f0659b440c0ab47afa inherit pub_types_class_c_s_e_1_1_camera_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -165,6 +171,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acc10ad8aed6a4cdb49b935cb3c3c8bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a519a59e4c73320420790f0358e66e5d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d94/class_c_s_e_1_1_light_component.html#a519a59e4c73320420790f0358e66e5d8">BindShadow</a> (const <a class="el" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">GLProgramHandle</a> &amp;handle, int handleIndex, int index) const</td></tr>
 <tr class="separator:a519a59e4c73320420790f0358e66e5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb03752c60a6b42d7f7561a8b41b13e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d94/class_c_s_e_1_1_light_component.html#abb03752c60a6b42d7f7561a8b41b13e5">RenderBackground</a> () const override</td></tr>
+<tr class="separator:abb03752c60a6b42d7f7561a8b41b13e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_s_e_1_1_s_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_s_e_1_1_s_component')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../db/d1a/class_c_s_e_1_1_s_component.html">CSE::SComponent</a></td></tr>
 <tr class="memitem:acedd2c1d2aaf28e1c0183e45a8f5cd62 inherit pub_methods_class_c_s_e_1_1_s_component"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d1a/class_c_s_e_1_1_s_component.html#acedd2c1d2aaf28e1c0183e45a8f5cd62">SComponent</a> (std::string classType)</td></tr>
 <tr class="separator:acedd2c1d2aaf28e1c0183e45a8f5cd62 inherit pub_methods_class_c_s_e_1_1_s_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -225,12 +233,18 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetValue</b> 
 <tr class="memitem:acff772fffa103a76f8b78c84a5702254"><td class="memItemLeft" align="right" valign="top"><a id="acff772fffa103a76f8b78c84a5702254" name="acff772fffa103a76f8b78c84a5702254"></a>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>PrintValue</b> () const =0</td></tr>
 <tr class="separator:acff772fffa103a76f8b78c84a5702254"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b19e1868a93415c2879e933fa3405cb"><td class="memItemLeft" align="right" valign="top"><a id="a7b19e1868a93415c2879e933fa3405cb" name="a7b19e1868a93415c2879e933fa3405cb"></a>
+<tr class="inherit_header pub_methods_class_c_s_e_1_1_camera_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_s_e_1_1_camera_base')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../df/d36/class_c_s_e_1_1_camera_base.html">CSE::CameraBase</a></td></tr>
+<tr class="memitem:a7b19e1868a93415c2879e933fa3405cb inherit pub_methods_class_c_s_e_1_1_camera_base"><td class="memItemLeft" align="right" valign="top"><a id="a7b19e1868a93415c2879e933fa3405cb" name="a7b19e1868a93415c2879e933fa3405cb"></a>
 virtual <a class="el" href="../../d3/d00/struct_c_s_e_1_1_camera_matrix_struct.html">CameraMatrixStruct</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetCameraMatrixStruct</b> () const =0</td></tr>
-<tr class="separator:a7b19e1868a93415c2879e933fa3405cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa41b204abecacbbd258db74fabc82098"><td class="memItemLeft" align="right" valign="top"><a id="aa41b204abecacbbd258db74fabc82098" name="aa41b204abecacbbd258db74fabc82098"></a>
+<tr class="separator:a7b19e1868a93415c2879e933fa3405cb inherit pub_methods_class_c_s_e_1_1_camera_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa41b204abecacbbd258db74fabc82098 inherit pub_methods_class_c_s_e_1_1_camera_base"><td class="memItemLeft" align="right" valign="top"><a id="aa41b204abecacbbd258db74fabc82098" name="aa41b204abecacbbd258db74fabc82098"></a>
 virtual <a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">SFrameBuffer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetFrameBuffer</b> () const =0</td></tr>
-<tr class="separator:aa41b204abecacbbd258db74fabc82098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:aa41b204abecacbbd258db74fabc82098 inherit pub_methods_class_c_s_e_1_1_camera_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ecdec35b43ceaaa9b104e4c7cac2bdc inherit pub_methods_class_c_s_e_1_1_camera_base"><td class="memItemLeft" align="right" valign="top">virtual BackgroundType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d36/class_c_s_e_1_1_camera_base.html#a9ecdec35b43ceaaa9b104e4c7cac2bdc">GetBackgroundType</a> ()</td></tr>
+<tr class="separator:a9ecdec35b43ceaaa9b104e4c7cac2bdc inherit pub_methods_class_c_s_e_1_1_camera_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d2f82e51870ed9ff0184af7da08d5f8 inherit pub_methods_class_c_s_e_1_1_camera_base"><td class="memItemLeft" align="right" valign="top"><a id="a4d2f82e51870ed9ff0184af7da08d5f8" name="a4d2f82e51870ed9ff0184af7da08d5f8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderBackground</b> () const =0</td></tr>
+<tr class="separator:a4d2f82e51870ed9ff0184af7da08d5f8 inherit pub_methods_class_c_s_e_1_1_camera_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -697,6 +711,36 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="abb03752c60a6b42d7f7561a8b41b13e5" name="abb03752c60a6b42d7f7561a8b41b13e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb03752c60a6b42d7f7561a8b41b13e5">&#9670;&nbsp;</a></span>RenderBackground()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSE::LightComponent::RenderBackground </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="../../df/d36/class_c_s_e_1_1_camera_base.html">CSE::CameraBase</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/da3/_light_component_8h_source.html#l00078">78</a> of file <a class="el" href="../../d2/da3/_light_component_8h_source.html">LightComponent.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>{};</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a1e84e4488f49c431af961bf9d4f42c59" name="a1e84e4488f49c431af961bf9d4f42c59"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e84e4488f49c431af961bf9d4f42c59">&#9670;&nbsp;</a></span>SetAttenuationFactor() <span class="overload">[1/2]</span></h2>
 
@@ -1038,7 +1082,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/da3/_light_component_8h_source.html#l00083">83</a> of file <a class="el" href="../../d2/da3/_light_component_8h_source.html">LightComponent.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/da3/_light_component_8h_source.html#l00085">85</a> of file <a class="el" href="../../d2/da3/_light_component_8h_source.html">LightComponent.h</a>.</p>
 
 </div>
 </div>
@@ -1052,7 +1096,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../d6/d94/class_c_s_e_1_1_light_component.html">LightComponent</a></li>
-    <li class="footer">Generated on Thu Sep 15 2022 01:27:21 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">Generated on Thu Sep 15 2022 17:39:35 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
