@@ -640,36 +640,36 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d45/_matrix_8h_source.html#l00600">600</a> of file <a class="el" href="../../d0/d45/_matrix_8h_source.html">Matrix.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  602</span>                                                       {</div>
-<div class="line"><span class="lineno">  603</span>            Vector3&lt;T&gt; z = (eye - target).Normalized();</div>
-<div class="line"><span class="lineno">  604</span>            Vector3&lt;T&gt; x = up.Cross(z).Normalized();</div>
-<div class="line"><span class="lineno">  605</span>            Vector3&lt;T&gt; y = z.Cross(x).Normalized();</div>
-<div class="line"><span class="lineno">  606</span> </div>
-<div class="line"><span class="lineno">  607</span>            Matrix4&lt;T&gt; m;</div>
-<div class="line"><span class="lineno">  608</span> </div>
-<div class="line"><span class="lineno">  609</span>            m.MAT4_XX = x.x;</div>
-<div class="line"><span class="lineno">  610</span>            m.MAT4_XY = x.y;</div>
-<div class="line"><span class="lineno">  611</span>            m.MAT4_XZ = x.z;</div>
-<div class="line"><span class="lineno">  612</span>            m.MAT4_XW = 0;</div>
-<div class="line"><span class="lineno">  613</span>            m.MAT4_YX = y.x;</div>
-<div class="line"><span class="lineno">  614</span>            m.MAT4_YY = y.y;</div>
-<div class="line"><span class="lineno">  615</span>            m.MAT4_YZ = y.z;</div>
-<div class="line"><span class="lineno">  616</span>            m.MAT4_YW = 0;</div>
-<div class="line"><span class="lineno">  617</span>            m.MAT4_ZX = z.x;</div>
-<div class="line"><span class="lineno">  618</span>            m.MAT4_ZY = z.y;</div>
-<div class="line"><span class="lineno">  619</span>            m.MAT4_ZZ = z.z;</div>
-<div class="line"><span class="lineno">  620</span>            m.MAT4_ZW = 0;</div>
-<div class="line"><span class="lineno">  621</span>            m.MAT4_WX = 0;</div>
-<div class="line"><span class="lineno">  622</span>            m.MAT4_WY = 0;</div>
-<div class="line"><span class="lineno">  623</span>            m.MAT4_WZ = 0;</div>
-<div class="line"><span class="lineno">  624</span>            m.MAT4_WW = 1;</div>
-<div class="line"><span class="lineno">  625</span> </div>
-<div class="line"><span class="lineno">  626</span>            Vector4&lt;T&gt; eyePrime = m * Vector4&lt;T&gt;(-eye, 1);</div>
-<div class="line"><span class="lineno">  627</span>            m = m.Transposed();</div>
-<div class="line"><span class="lineno">  628</span>            m.w = eyePrime;</div>
-<div class="line"><span class="lineno">  629</span>            <span class="keywordflow">return</span> m;</div>
-<div class="line"><span class="lineno">  630</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/d45/_matrix_8h_source.html#l00596">596</a> of file <a class="el" href="../../d0/d45/_matrix_8h_source.html">Matrix.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  598</span>                                                       {</div>
+<div class="line"><span class="lineno">  599</span>            Vector3&lt;T&gt; z = (eye - target).Normalized();</div>
+<div class="line"><span class="lineno">  600</span>            Vector3&lt;T&gt; x = up.Cross(z).Normalized();</div>
+<div class="line"><span class="lineno">  601</span>            Vector3&lt;T&gt; y = z.Cross(x).Normalized();</div>
+<div class="line"><span class="lineno">  602</span> </div>
+<div class="line"><span class="lineno">  603</span>            Matrix4&lt;T&gt; m;</div>
+<div class="line"><span class="lineno">  604</span> </div>
+<div class="line"><span class="lineno">  605</span>            m.MAT4_XX = x.x;</div>
+<div class="line"><span class="lineno">  606</span>            m.MAT4_XY = x.y;</div>
+<div class="line"><span class="lineno">  607</span>            m.MAT4_XZ = x.z;</div>
+<div class="line"><span class="lineno">  608</span>            m.MAT4_XW = 0;</div>
+<div class="line"><span class="lineno">  609</span>            m.MAT4_YX = y.x;</div>
+<div class="line"><span class="lineno">  610</span>            m.MAT4_YY = y.y;</div>
+<div class="line"><span class="lineno">  611</span>            m.MAT4_YZ = y.z;</div>
+<div class="line"><span class="lineno">  612</span>            m.MAT4_YW = 0;</div>
+<div class="line"><span class="lineno">  613</span>            m.MAT4_ZX = z.x;</div>
+<div class="line"><span class="lineno">  614</span>            m.MAT4_ZY = z.y;</div>
+<div class="line"><span class="lineno">  615</span>            m.MAT4_ZZ = z.z;</div>
+<div class="line"><span class="lineno">  616</span>            m.MAT4_ZW = 0;</div>
+<div class="line"><span class="lineno">  617</span>            m.MAT4_WX = 0;</div>
+<div class="line"><span class="lineno">  618</span>            m.MAT4_WY = 0;</div>
+<div class="line"><span class="lineno">  619</span>            m.MAT4_WZ = 0;</div>
+<div class="line"><span class="lineno">  620</span>            m.MAT4_WW = 1;</div>
+<div class="line"><span class="lineno">  621</span> </div>
+<div class="line"><span class="lineno">  622</span>            Vector4&lt;T&gt; eyePrime = m * Vector4&lt;T&gt;(-eye, 1);</div>
+<div class="line"><span class="lineno">  623</span>            m = m.Transposed();</div>
+<div class="line"><span class="lineno">  624</span>            m.w = eyePrime;</div>
+<div class="line"><span class="lineno">  625</span>            <span class="keywordflow">return</span> m;</div>
+<div class="line"><span class="lineno">  626</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -855,25 +855,25 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d45/_matrix_8h_source.html#l00581">581</a> of file <a class="el" href="../../d0/d45/_matrix_8h_source.html">Matrix.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  581</span>                                                                                {</div>
-<div class="line"><span class="lineno">  582</span>            Matrix4 m;</div>
+<p class="definition">Definition at line <a class="el" href="../../d0/d45/_matrix_8h_source.html#l00577">577</a> of file <a class="el" href="../../d0/d45/_matrix_8h_source.html">Matrix.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  577</span>                                                                                {</div>
+<div class="line"><span class="lineno">  578</span>            Matrix4 m;</div>
+<div class="line"><span class="lineno">  579</span> </div>
+<div class="line"><span class="lineno">  580</span>            T xDiff = xMax - xMin;</div>
+<div class="line"><span class="lineno">  581</span>            T yDiff = yMax - yMin;</div>
+<div class="line"><span class="lineno">  582</span>            T zDiff = zMax - zMin;</div>
 <div class="line"><span class="lineno">  583</span> </div>
-<div class="line"><span class="lineno">  584</span>            T xDiff = xMax - xMin;</div>
-<div class="line"><span class="lineno">  585</span>            T yDiff = yMax - yMin;</div>
-<div class="line"><span class="lineno">  586</span>            T zDiff = zMax - zMin;</div>
+<div class="line"><span class="lineno">  584</span>            m.MAT4_XX = 2.0f / xDiff;</div>
+<div class="line"><span class="lineno">  585</span>            m.MAT4_YY = 2.0f / yDiff;</div>
+<div class="line"><span class="lineno">  586</span>            m.MAT4_ZZ = -2.0f / zDiff;</div>
 <div class="line"><span class="lineno">  587</span> </div>
-<div class="line"><span class="lineno">  588</span>            m.MAT4_XX = 2.0f / xDiff;</div>
-<div class="line"><span class="lineno">  589</span>            m.MAT4_YY = 2.0f / yDiff;</div>
-<div class="line"><span class="lineno">  590</span>            m.MAT4_ZZ = -2.0f / zDiff;</div>
-<div class="line"><span class="lineno">  591</span> </div>
-<div class="line"><span class="lineno">  592</span>            m.MAT4_WX = -(xMax + xMin) / xDiff;</div>
-<div class="line"><span class="lineno">  593</span>            m.MAT4_WY = -(yMax + yMin) / yDiff;</div>
-<div class="line"><span class="lineno">  594</span>            m.MAT4_WZ = -(zMax + zMin) / zDiff;</div>
-<div class="line"><span class="lineno">  595</span>            m.MAT4_WW = 1.0f;</div>
-<div class="line"><span class="lineno">  596</span> </div>
-<div class="line"><span class="lineno">  597</span>            <span class="keywordflow">return</span> m;</div>
-<div class="line"><span class="lineno">  598</span>        }</div>
+<div class="line"><span class="lineno">  588</span>            m.MAT4_WX = -(xMax + xMin) / xDiff;</div>
+<div class="line"><span class="lineno">  589</span>            m.MAT4_WY = -(yMax + yMin) / yDiff;</div>
+<div class="line"><span class="lineno">  590</span>            m.MAT4_WZ = -(zMax + zMin) / zDiff;</div>
+<div class="line"><span class="lineno">  591</span>            m.MAT4_WW = 1.0f;</div>
+<div class="line"><span class="lineno">  592</span> </div>
+<div class="line"><span class="lineno">  593</span>            <span class="keywordflow">return</span> m;</div>
+<div class="line"><span class="lineno">  594</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -928,28 +928,24 @@ template&lt;typename T &gt; </div>
 <p class="definition">Definition at line <a class="el" href="../../d0/d45/_matrix_8h_source.html#l00556">556</a> of file <a class="el" href="../../d0/d45/_matrix_8h_source.html">Matrix.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  556</span>                                                                         {</div>
 <div class="line"><span class="lineno">  557</span>            Matrix4 m;</div>
-<div class="line"><span class="lineno">  558</span>            T sine, cosine, cotangent, deltaZ;</div>
-<div class="line"><span class="lineno">  559</span>            T radians = (T) (fovy / 2.0f * Pi / 180.0f);</div>
-<div class="line"><span class="lineno">  560</span> </div>
-<div class="line"><span class="lineno">  561</span>            deltaZ = (T) (tFar - tNear);</div>
-<div class="line"><span class="lineno">  562</span>            sine = (T) sin(radians);</div>
-<div class="line"><span class="lineno">  563</span>            cosine = (T) cos(radians);</div>
-<div class="line"><span class="lineno">  564</span> </div>
-<div class="line"><span class="lineno">  565</span>            <span class="keywordflow">if</span> ((deltaZ == 0.0f) || (sine == 0.0f) || (aspect == 0.0f)) {</div>
-<div class="line"><span class="lineno">  566</span>                <span class="keywordflow">return</span> m;</div>
-<div class="line"><span class="lineno">  567</span>            }</div>
-<div class="line"><span class="lineno">  568</span> </div>
-<div class="line"><span class="lineno">  569</span>            cotangent = (T) (cosine / sine);</div>
-<div class="line"><span class="lineno">  570</span> </div>
-<div class="line"><span class="lineno">  571</span>            m.MAT4_XX = cotangent / aspect;</div>
-<div class="line"><span class="lineno">  572</span>            m.MAT4_YY = cotangent;</div>
-<div class="line"><span class="lineno">  573</span>            m.MAT4_ZZ = -(tFar + tNear) / deltaZ;</div>
-<div class="line"><span class="lineno">  574</span>            m.MAT4_ZW = -1.0f;</div>
-<div class="line"><span class="lineno">  575</span>            m.MAT4_WZ = -2.0f * tNear * tFar / deltaZ;</div>
-<div class="line"><span class="lineno">  576</span>            m.MAT4_WW = 0.0f;</div>
-<div class="line"><span class="lineno">  577</span> </div>
-<div class="line"><span class="lineno">  578</span>            <span class="keywordflow">return</span> m;</div>
-<div class="line"><span class="lineno">  579</span>        }</div>
+<div class="line"><span class="lineno">  558</span>            <span class="comment">// radians = (fovy / 2 * Pi / 180)</span></div>
+<div class="line"><span class="lineno">  559</span>            T radians = (T) (fovy * 0.008726644f);</div>
+<div class="line"><span class="lineno">  560</span>            T deltaZ = (T) (tFar - tNear);</div>
+<div class="line"><span class="lineno">  561</span>            <span class="comment">// ref : https://twitter.com/SebAaltonen/status/1571792776802570240?s=20&amp;t=XOYhRlj4BYe_1j8YP3LJJQ</span></div>
+<div class="line"><span class="lineno">  562</span>            T h = 1.0f / tan(radians);</div>
+<div class="line"><span class="lineno">  563</span>            T w = h / aspect;</div>
+<div class="line"><span class="lineno">  564</span>            T a = -tNear / deltaZ;</div>
+<div class="line"><span class="lineno">  565</span>            T b = (tNear * tFar) / deltaZ;</div>
+<div class="line"><span class="lineno">  566</span> </div>
+<div class="line"><span class="lineno">  567</span>            m.MAT4_XX = w;</div>
+<div class="line"><span class="lineno">  568</span>            m.MAT4_YY = h;</div>
+<div class="line"><span class="lineno">  569</span>            m.MAT4_ZZ = -a;</div>
+<div class="line"><span class="lineno">  570</span>            m.MAT4_ZW = -1.0f;</div>
+<div class="line"><span class="lineno">  571</span>            m.MAT4_WZ = -b;</div>
+<div class="line"><span class="lineno">  572</span>            m.MAT4_WW = 0.0f;</div>
+<div class="line"><span class="lineno">  573</span> </div>
+<div class="line"><span class="lineno">  574</span>            <span class="keywordflow">return</span> m;</div>
+<div class="line"><span class="lineno">  575</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1502,7 +1498,7 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">Matrix4</a></li>
-    <li class="footer">Generated on Sat Oct 15 2022 01:28:27 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">Generated on Sat Oct 22 2022 01:27:33 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
