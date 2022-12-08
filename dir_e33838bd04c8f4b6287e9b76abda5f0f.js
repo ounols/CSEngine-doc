@@ -17,6 +17,8 @@ var dir_e33838bd04c8f4b6287e9b76abda5f0f =
     [ "SkyboxUtil.h", "d6/d44/_skybox_util_8h_source.html", null ],
     [ "SMaterial.cpp", "da/d99/_s_material_8cpp_source.html", null ],
     [ "SMaterial.h", "d9/d71/_s_material_8h_source.html", null ],
+    [ "SRenderGroup.cpp", "d0/dfa/_s_render_group_8cpp_source.html", null ],
+    [ "SRenderGroup.h", "d6/d65/_s_render_group_8h_source.html", null ],
     [ "STexture.cpp", "dd/d06/_s_texture_8cpp_source.html", null ],
     [ "STexture.h", "d0/d33/_s_texture_8h_source.html", null ]
 ];
