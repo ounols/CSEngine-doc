@@ -177,14 +177,14 @@ $(document).ready(function(){initNavTree('d1/dc9/_animator_component_8cpp_source
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">auto</span> allFrames = m_currentAnimation-&gt;GetKeyFrames();</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_class" href="../../d8/d1d/class_c_s_e_1_1_key_frame.html">KeyFrame</a>* previousFrame = allFrames.front();</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_class" href="../../d8/d1d/class_c_s_e_1_1_key_frame.html">KeyFrame</a>* nextFrame = allFrames.front();</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    allFrames.pop_front();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; frame : allFrames) {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        nextFrame = frame;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// 첫 번째 키 프레임을 제외한 나머지 키 프레임만을 순회합니다.</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = std::next(allFrames.begin()); it != allFrames.end(); ++it) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        nextFrame = *it;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">if</span> (nextFrame-&gt;GetTimeStamp() &gt; m_animationTime) {</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        previousFrame = frame;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        previousFrame = nextFrame;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    std::vector&lt;KeyFrame*&gt; result;</div>
@@ -202,16 +202,16 @@ $(document).ready(function(){initNavTree('d1/dc9/_animator_component_8cpp_source
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>std::vector&lt;mat4&gt; AnimatorComponent::InterpolatePoses(<a class="code hl_class" href="../../d8/d1d/class_c_s_e_1_1_key_frame.html">KeyFrame</a>* previousFrame, <a class="code hl_class" href="../../d8/d1d/class_c_s_e_1_1_key_frame.html">KeyFrame</a>* nextFrame, <span class="keywordtype">float</span> t) {</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; jointKeyFrames_prev = previousFrame-&gt;GetJointKeyFrames();</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; jointKeyFrames_next = nextFrame-&gt;GetJointKeyFrames();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; jointKeyFrames_next = nextFrame-&gt;GetJointKeyFrames();</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">const</span> <span class="keyword">auto</span> jointSize = jointKeyFrames_prev.size();</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    std::vector&lt;mat4&gt; currentPose;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    currentPose.resize(jointSize);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    currentPose.reserve(jointSize);</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> i = 0; i &lt; jointSize; ++i) {</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; prevTransform = jointKeyFrames_prev[i];</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; nextTransform = jointKeyFrames_next[i];</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <a class="code hl_class" href="../../d8/d37/class_c_s_e_1_1_joint_transform.html">JointTransform</a>&amp;&amp; currentTransform = JointTransform::Interpolate(t, *prevTransform, *nextTransform);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        currentPose[i] = std::move(currentTransform).GetLocalMatrix();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        currentPose.emplace_back(std::move(currentTransform).GetLocalMatrix());</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">return</span> currentPose;</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
@@ -275,7 +275,7 @@ $(document).ready(function(){initNavTree('d1/dc9/_animator_component_8cpp_source
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_e2995b532e4735c0240376112d6b0bb7.html">Component</a></li><li class="navelem"><a class="el" href="../../dir_93294a00d7377d42f425f4af6dd95ab0.html">Animation</a></li><li class="navelem"><b>AnimatorComponent.cpp</b></li>
-    <li class="footer">Generated on Thu Dec 8 2022 00:58:59 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Sun Dec 11 2022 01:32:25 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

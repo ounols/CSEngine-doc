@@ -349,54 +349,51 @@ $(document).ready(function(){initNavTree('d5/d42/_camera_component_8cpp_source.h
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>}</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="keywordtype">void</span> CameraComponent::RenderBackground()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">switch</span> (m_backgroundType) {</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        <span class="keywordflow">case</span> NONE:</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <span class="keywordflow">case</span> SOLID:</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            glClearColor(m_backgroundColor.x, m_backgroundColor.y, m_backgroundColor.z, 1.0f);</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keywordflow">case</span> SKYBOX:</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; mapStruct = m_backgroundMap;</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            <span class="keywordflow">if</span> (mapStruct-&gt;map == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            glUseProgram(globalSkyboxHandle-&gt;Program);</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            globalSkyboxHandle-&gt;SetUniformMat4(<span class="stringliteral">&quot;PROJECTION_MATRIX&quot;</span>, m_projectionMatrix);</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            <span class="keyword">auto</span> viewMatrix = <a class="code hl_class" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">mat4</a>(m_cameraMatrix.ToMat3());</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            globalSkyboxHandle-&gt;SetUniformMat4(<span class="stringliteral">&quot;VIEW_MATRIX&quot;</span>, viewMatrix);</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            mapStruct-&gt;map-&gt;Bind(mapStruct-&gt;mapId, 0);</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            glDisable(GL_CULL_FACE);</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            glDisable(GL_DEPTH_TEST);</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            ShaderUtil::BindAttributeToCubeMap();</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            glEnable(GL_DEPTH_TEST);</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            glEnable(GL_CULL_FACE);</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    }</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>}</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="keywordtype">void</span> CameraComponent::SetBackgroundSkybox(<a class="code hl_class" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* skyboxTexture) {</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordflow">if</span> (skyboxTexture == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        skyboxTexture = SResource::Get&lt;STexture&gt;(<span class="stringliteral">&quot;envCubemap.textureCubeMap&quot;</span>);</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    }</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keywordflow">if</span> (m_backgroundMap == <span class="keyword">nullptr</span>) m_backgroundMap = <span class="keyword">new</span> BackgroundMapStruct();</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    m_backgroundMap-&gt;map = skyboxTexture;</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    m_backgroundMap-&gt;mapId = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">short</span><span class="keyword">&gt;</span>(globalSkyboxHandle-&gt;UniformLocation(<span class="stringliteral">&quot;ENV_MAP&quot;</span>)-&gt;id);</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    m_backgroundMap-&gt;viewId = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">short</span><span class="keyword">&gt;</span>(globalSkyboxHandle-&gt;UniformLocation(<span class="stringliteral">&quot;VIEW_MATRIX&quot;</span>)-&gt;id);</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    m_backgroundMap-&gt;projectionId = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">short</span><span class="keyword">&gt;</span>(globalSkyboxHandle-&gt;UniformLocation(</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            <span class="stringliteral">&quot;PROJECTION_MATRIX&quot;</span>)-&gt;id);</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>}</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="keywordtype">void</span> CameraComponent::SetBackgroundColor(<a class="code hl_class" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>&amp;&amp; color) {</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    m_backgroundColor = color;</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>}</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="keywordtype">void</span> CameraComponent::SetBackgroundType(CameraBase::BackgroundType type) {</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    m_backgroundType = type;</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>}</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordflow">switch</span> (m_backgroundType) {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <span class="keywordflow">case</span> SOLID:</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            glClearColor(m_backgroundColor.x, m_backgroundColor.y, m_backgroundColor.z, 1.0f);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keywordflow">case</span> SKYBOX:</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; mapStruct = m_backgroundMap;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            <span class="keywordflow">if</span> (mapStruct-&gt;map == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            glUseProgram(globalSkyboxHandle-&gt;Program);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            globalSkyboxHandle-&gt;SetUniformMat4(<span class="stringliteral">&quot;PROJECTION_MATRIX&quot;</span>, m_projectionMatrix);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            <span class="keyword">auto</span> viewMatrix = <a class="code hl_class" href="../../d2/de6/class_c_s_e_1_1_matrix4.html">mat4</a>(m_cameraMatrix.ToMat3());</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            globalSkyboxHandle-&gt;SetUniformMat4(<span class="stringliteral">&quot;VIEW_MATRIX&quot;</span>, viewMatrix);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            mapStruct-&gt;map-&gt;Bind(mapStruct-&gt;mapId, 0);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            glDisable(GL_CULL_FACE);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            glDisable(GL_DEPTH_TEST);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            ShaderUtil::BindAttributeToCubeMap();</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            glEnable(GL_DEPTH_TEST);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            glEnable(GL_CULL_FACE);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    }</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>}</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="keywordtype">void</span> CameraComponent::SetBackgroundSkybox(<a class="code hl_class" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>* skyboxTexture) {</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="keywordflow">if</span> (skyboxTexture == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        skyboxTexture = SResource::Get&lt;STexture&gt;(<span class="stringliteral">&quot;envCubemap.textureCubeMap&quot;</span>);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    }</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordflow">if</span> (m_backgroundMap == <span class="keyword">nullptr</span>) m_backgroundMap = <span class="keyword">new</span> BackgroundMapStruct();</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    m_backgroundMap-&gt;map = skyboxTexture;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    m_backgroundMap-&gt;mapId = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">short</span><span class="keyword">&gt;</span>(globalSkyboxHandle-&gt;UniformLocation(<span class="stringliteral">&quot;ENV_MAP&quot;</span>)-&gt;id);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    m_backgroundMap-&gt;viewId = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">short</span><span class="keyword">&gt;</span>(globalSkyboxHandle-&gt;UniformLocation(<span class="stringliteral">&quot;VIEW_MATRIX&quot;</span>)-&gt;id);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    m_backgroundMap-&gt;projectionId = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">short</span><span class="keyword">&gt;</span>(globalSkyboxHandle-&gt;UniformLocation(</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            <span class="stringliteral">&quot;PROJECTION_MATRIX&quot;</span>)-&gt;id);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>}</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="keywordtype">void</span> CameraComponent::SetBackgroundColor(<a class="code hl_class" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>&amp;&amp; color) {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    m_backgroundColor = color;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>}</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="keywordtype">void</span> CameraComponent::SetBackgroundType(CameraBase::BackgroundType type) {</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    m_backgroundType = type;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_camera_component_html"><div class="ttname"><a href="../../d4/da2/class_c_s_e_1_1_camera_component.html">CSE::CameraComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd2/_camera_component_8h_source.html#l00030">CameraComponent.h:30</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_camera_mgr_html"><div class="ttname"><a href="../../d8/df8/class_c_s_e_1_1_camera_mgr.html">CSE::CameraMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d73/_camera_mgr_8h_source.html#l00011">CameraMgr.h:11</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_g_l_program_handle_html"><div class="ttname"><a href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">CSE::GLProgramHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00050">GLProgramHandle.h:50</a></div></div>
@@ -414,7 +411,7 @@ $(document).ready(function(){initNavTree('d5/d42/_camera_component_8cpp_source.h
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_e2995b532e4735c0240376112d6b0bb7.html">Component</a></li><li class="navelem"><b>CameraComponent.cpp</b></li>
-    <li class="footer">Generated on Thu Dec 8 2022 00:58:59 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Sun Dec 11 2022 01:32:25 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

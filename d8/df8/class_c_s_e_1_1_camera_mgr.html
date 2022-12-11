@@ -139,8 +139,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a65d558d25d03cd30a7fa7a3c64ce171a inherit pub_methods_class_c_s_e_1_1_s_container"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d1e/class_c_s_e_1_1_s_container.html#a65d558d25d03cd30a7fa7a3c64ce171a">getSize</a> () const</td></tr>
 <tr class="separator:a65d558d25d03cd30a7fa7a3c64ce171a inherit pub_methods_class_c_s_e_1_1_s_container"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_s_e_1_1_core_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_s_e_1_1_core_base')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/d25/class_c_s_e_1_1_core_base.html">CSE::CoreBase</a></td></tr>
-<tr class="memitem:a352bedf6e66053a60a283867eac5fa58 inherit pub_methods_class_c_s_e_1_1_core_base"><td class="memItemLeft" align="right" valign="top"><a id="a352bedf6e66053a60a283867eac5fa58" name="a352bedf6e66053a60a283867eac5fa58"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> ()=0</td></tr>
+<tr class="memitem:a352bedf6e66053a60a283867eac5fa58 inherit pub_methods_class_c_s_e_1_1_core_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/class_c_s_e_1_1_core_base.html#a352bedf6e66053a60a283867eac5fa58">Init</a> ()=0</td></tr>
 <tr class="separator:a352bedf6e66053a60a283867eac5fa58 inherit pub_methods_class_c_s_e_1_1_core_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afde90036a8ce57b8faf0652bdc9a6c12 inherit pub_methods_class_c_s_e_1_1_core_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d25/class_c_s_e_1_1_core_base.html#afde90036a8ce57b8faf0652bdc9a6c12">Update</a> (float elapsedTime)</td></tr>
 <tr class="separator:afde90036a8ce57b8faf0652bdc9a6c12 inherit pub_methods_class_c_s_e_1_1_core_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -316,8 +315,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   16</span>    std::string cubemap_vert = CSE::AssetMgr::LoadAssetFile(CSE::AssetsPath() + <span class="stringliteral">&quot;Shader/PBR/IBL/cubemap.vert&quot;</span>);</div>
 <div class="line"><span class="lineno">   17</span>    std::string cubemap_frag = CSE::AssetMgr::LoadAssetFile(CSE::AssetsPath() + <span class="stringliteral">&quot;Shader/PBR/IBL/cubemap.frag&quot;</span>);</div>
 <div class="line"><span class="lineno">   18</span> </div>
-<div class="line"><span class="lineno">   19</span>    m_skyboxProgram = ShaderUtil::CreateProgramHandle(cubemap_vert.c_str(), cubemap_frag.c_str());</div>
+<div class="line"><span class="lineno">   19</span>    m_skyboxProgram = <a class="code hl_function" href="../../df/d5e/class_c_s_e_1_1_shader_util.html#a0f8d1f99ade9402754ab2e202171ba12">ShaderUtil::CreateProgramHandle</a>(cubemap_vert.c_str(), cubemap_frag.c_str());</div>
 <div class="line"><span class="lineno">   20</span>}</div>
+<div class="ttc" id="aclass_c_s_e_1_1_shader_util_html_a0f8d1f99ade9402754ab2e202171ba12"><div class="ttname"><a href="../../df/d5e/class_c_s_e_1_1_shader_util.html#a0f8d1f99ade9402754ab2e202171ba12">CSE::ShaderUtil::CreateProgramHandle</a></div><div class="ttdeci">static GLProgramHandle * CreateProgramHandle(const GLchar *vertexSource, const GLchar *fragmentSource, GLProgramHandle *handle=nullptr)</div><div class="ttdoc">Creates a program handle.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da6/_shader_util_8cpp_source.html#l00024">ShaderUtil.cpp:24</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -362,7 +362,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../d8/df8/class_c_s_e_1_1_camera_mgr.html">CameraMgr</a></li>
-    <li class="footer">Generated on Thu Dec 8 2022 00:59:00 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Sun Dec 11 2022 01:32:26 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

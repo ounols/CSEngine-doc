@@ -153,7 +153,7 @@ $(document).ready(function(){initNavTree('da/d99/_s_material_8cpp_source.html','
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> SMaterial::AttachElement()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        m_textureLayout = m_lightMgr-&gt;GetShadowCount();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        m_textureLayout = m_lightMgr-&gt;<a class="code hl_function" href="../../d9/d1d/class_c_s_e_1_1_light_mgr.html#a25044bf2ce18a6159ab19b6122c1ebcb">GetShadowCount</a>();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; element_pair : m_elements) {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; element = element_pair.second;</div>
@@ -178,7 +178,7 @@ $(document).ready(function(){initNavTree('da/d99/_s_material_8cpp_source.html','
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">void</span> SMaterial::SetAttribute(<span class="keyword">const</span> <a class="code hl_struct" href="../../dd/daa/struct_c_s_e_1_1_g_l_mesh_i_d.html">GLMeshID</a>&amp; meshId)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        ShaderUtil::BindAttributeToShader(*m_handle, meshId);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_function" href="../../df/d5e/class_c_s_e_1_1_shader_util.html#a4c3d6027b27984ee16c53f760b0eb803">ShaderUtil::BindAttributeToShader</a>(*m_handle, meshId);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keywordtype">void</span> SMaterial::SetInt(<span class="keyword">const</span> std::string&amp; name, <span class="keywordtype">int</span> value) {</div>
@@ -410,13 +410,15 @@ $(document).ready(function(){initNavTree('da/d99/_s_material_8cpp_source.html','
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <span class="keywordflow">return</span> material;</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_g_l_program_handle_html"><div class="ttname"><a href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">CSE::GLProgramHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00050">GLProgramHandle.h:50</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_light_mgr_html"><div class="ttname"><a href="../../d9/d1d/class_c_s_e_1_1_light_mgr.html">CSE::LightMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d40/_light_mgr_8h_source.html#l00013">LightMgr.h:13</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_light_mgr_html"><div class="ttname"><a href="../../d9/d1d/class_c_s_e_1_1_light_mgr.html">CSE::LightMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d40/_light_mgr_8h_source.html#l00017">LightMgr.h:17</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_light_mgr_html_a25044bf2ce18a6159ab19b6122c1ebcb"><div class="ttname"><a href="../../d9/d1d/class_c_s_e_1_1_light_mgr.html#a25044bf2ce18a6159ab19b6122c1ebcb">CSE::LightMgr::GetShadowCount</a></div><div class="ttdeci">int GetShadowCount() const</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d40/_light_mgr_8h_source.html#l00056">LightMgr.h:56</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_matrix2_html"><div class="ttname"><a href="../../df/dbf/class_c_s_e_1_1_matrix2.html">CSE::Matrix2</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d45/_matrix_8h_source.html#l00009">Matrix.h:9</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_matrix3_html"><div class="ttname"><a href="../../df/d4c/class_c_s_e_1_1_matrix3.html">CSE::Matrix3</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d45/_matrix_8h_source.html#l00036">Matrix.h:36</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_matrix4_html"><div class="ttname"><a href="../../d2/de6/class_c_s_e_1_1_matrix4.html">CSE::Matrix4&lt; float &gt;</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_material_html"><div class="ttname"><a href="../../de/d51/class_c_s_e_1_1_s_material.html">CSE::SMaterial</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d71/_s_material_8h_source.html#l00015">SMaterial.h:15</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_resource_html"><div class="ttname"><a href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1f/_s_resource_8h_source.html#l00014">SResource.h:14</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_texture_html"><div class="ttname"><a href="../../da/df0/class_c_s_e_1_1_s_texture.html">CSE::STexture</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d33/_s_texture_8h_source.html#l00014">STexture.h:14</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_shader_util_html_a4c3d6027b27984ee16c53f760b0eb803"><div class="ttname"><a href="../../df/d5e/class_c_s_e_1_1_shader_util.html#a4c3d6027b27984ee16c53f760b0eb803">CSE::ShaderUtil::BindAttributeToShader</a></div><div class="ttdeci">static void BindAttributeToShader(const GLProgramHandle &amp;handle, const GLMeshID &amp;meshId)</div><div class="ttdoc">Binds the attributes to the shader.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da6/_shader_util_8cpp_source.html#l00267">ShaderUtil.cpp:267</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_vector2_html"><div class="ttname"><a href="../../d6/d75/class_c_s_e_1_1_vector2.html">CSE::Vector2&lt; float &gt;</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_vector3_html"><div class="ttname"><a href="../../d2/d4a/class_c_s_e_1_1_vector3.html">CSE::Vector3&lt; float &gt;</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_vector4_html"><div class="ttname"><a href="../../d6/d26/class_c_s_e_1_1_vector4.html">CSE::Vector4&lt; float &gt;</a></div></div>
@@ -430,7 +432,7 @@ $(document).ready(function(){initNavTree('da/d99/_s_material_8cpp_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><a class="el" href="../../dir_e33838bd04c8f4b6287e9b76abda5f0f.html">Render</a></li><li class="navelem"><b>SMaterial.cpp</b></li>
-    <li class="footer">Generated on Thu Dec 8 2022 00:59:00 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Sun Dec 11 2022 01:32:25 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>
