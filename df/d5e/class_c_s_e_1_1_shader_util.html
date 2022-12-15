@@ -510,11 +510,9 @@ Static Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  327</span>        std::copy(matrix.Pointer(), matrix.Pointer() + 16, std::back_inserter(result));</div>
 <div class="line"><span class="lineno">  328</span>    }</div>
 <div class="line"><span class="lineno">  329</span> </div>
-<div class="line"><span class="lineno">  330</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; jointMatrix.size(); ++i) {</div>
-<div class="line"><span class="lineno">  331</span>        glUniformMatrix4fv(handle.Uniforms.JointMatrix + i, 1, GL_FALSE, &amp;result[i * 16]);</div>
-<div class="line"><span class="lineno">  332</span>    }</div>
-<div class="line"><span class="lineno">  333</span>    glUniform1i(handle.Uniforms.SkinningMode, 1);</div>
-<div class="line"><span class="lineno">  334</span>}</div>
+<div class="line"><span class="lineno">  330</span>    glUniformMatrix4fv(handle.Uniforms.JointMatrix, Settings::GetMaxJoints(), GL_FALSE, &amp;result[0]);</div>
+<div class="line"><span class="lineno">  331</span>    glUniform1i(handle.Uniforms.SkinningMode, 1);</div>
+<div class="line"><span class="lineno">  332</span>}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_matrix4_html"><div class="ttname"><a href="../../d2/de6/class_c_s_e_1_1_matrix4.html">CSE::Matrix4&lt; float &gt;</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1053,7 +1051,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../df/d5e/class_c_s_e_1_1_shader_util.html">ShaderUtil</a></li>
-    <li class="footer">Generated on Sun Dec 11 2022 01:32:26 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Thu Dec 15 2022 01:01:40 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

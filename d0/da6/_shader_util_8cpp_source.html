@@ -423,11 +423,9 @@ $(document).ready(function(){initNavTree('d0/da6/_shader_util_8cpp_source.html',
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        std::copy(matrix.Pointer(), matrix.Pointer() + 16, std::back_inserter(result));</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    }</div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; jointMatrix.size(); ++i) {</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        glUniformMatrix4fv(handle.Uniforms.JointMatrix + i, 1, GL_FALSE, &amp;result[i * 16]);</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    }</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    glUniform1i(handle.Uniforms.SkinningMode, 1);</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>}</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    glUniformMatrix4fv(handle.Uniforms.JointMatrix, Settings::GetMaxJoints(), GL_FALSE, &amp;result[0]);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    glUniform1i(handle.Uniforms.SkinningMode, 1);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_g_l_program_handle_html"><div class="ttname"><a href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html">CSE::GLProgramHandle</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1f/_g_l_program_handle_8h_source.html#l00050">GLProgramHandle.h:50</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_matrix4_html"><div class="ttname"><a href="../../d2/de6/class_c_s_e_1_1_matrix4.html">CSE::Matrix4&lt; float &gt;</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_shader_util_html_a04f93ec7485b8cc97709d0073cf7de00"><div class="ttname"><a href="../../df/d5e/class_c_s_e_1_1_shader_util.html#a04f93ec7485b8cc97709d0073cf7de00">CSE::ShaderUtil::BindVariables</a></div><div class="ttdeci">static void BindVariables(GLProgramHandle *handle)</div><div class="ttdoc">Binds variables to the shader.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/da6/_shader_util_8cpp_source.html#l00186">ShaderUtil.cpp:186</a></div></div>
@@ -449,7 +447,7 @@ $(document).ready(function(){initNavTree('d0/da6/_shader_util_8cpp_source.html',
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><a class="el" href="../../dir_e33838bd04c8f4b6287e9b76abda5f0f.html">Render</a></li><li class="navelem"><b>ShaderUtil.cpp</b></li>
-    <li class="footer">Generated on Sun Dec 11 2022 01:32:25 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Thu Dec 15 2022 01:01:40 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>
