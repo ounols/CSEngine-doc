@@ -66,27 +66,41 @@ var hierarchy =
     [ "CSE::Settings", "d9/da6/class_c_s_e_1_1_settings.html", null ],
     [ "CSE::SGBuffer", "d0/dc0/class_c_s_e_1_1_s_g_buffer.html", null ],
     [ "CSE::ShaderUtil", "df/d5e/class_c_s_e_1_1_shader_util.html", null ],
-    [ "CSE::SIContainer", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
-      [ "CSE::SContainer< CameraComponent * >", "d5/d1e/class_c_s_e_1_1_s_container.html", [
-        [ "CSE::CameraMgr", "d8/df8/class_c_s_e_1_1_camera_mgr.html", null ]
-      ] ],
-      [ "CSE::SContainer< SGameObject * >", "d5/d1e/class_c_s_e_1_1_s_container.html", [
+    [ "CSE::SIContainer< S, T, M >", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
+      [ "CSE::SContainerHash< SGameObject * >", "df/d67/class_c_s_e_1_1_s_container_hash.html", [
         [ "CSE::GameObjectContainer", "d4/d4a/class_c_s_e_1_1_game_object_container.html", [
           [ "CSE::GameObjectMgr", "d5/db0/class_c_s_e_1_1_game_object_mgr.html", null ]
         ] ]
       ] ],
-      [ "CSE::SContainer< LightComponent * >", "d5/d1e/class_c_s_e_1_1_s_container.html", [
+      [ "CSE::SContainerHash< SResource * >", "df/d67/class_c_s_e_1_1_s_container_hash.html", [
+        [ "CSE::ResMgr", "de/db3/class_c_s_e_1_1_res_mgr.html", null ]
+      ] ],
+      [ "CSE::SContainerList< CameraComponent * >", "d5/d45/class_c_s_e_1_1_s_container_list.html", [
+        [ "CSE::CameraMgr", "d8/df8/class_c_s_e_1_1_camera_mgr.html", null ]
+      ] ],
+      [ "CSE::SContainerList< LightComponent * >", "d5/d45/class_c_s_e_1_1_s_container_list.html", [
         [ "CSE::LightMgr", "d9/d1d/class_c_s_e_1_1_light_mgr.html", null ]
       ] ],
-      [ "CSE::SContainer< SObject * >", "d5/d1e/class_c_s_e_1_1_s_container.html", [
+      [ "CSE::SContainerList< SObject * >", "d5/d45/class_c_s_e_1_1_s_container_list.html", [
         [ "CSE::MemoryContainer", "dd/dd8/class_c_s_e_1_1_memory_container.html", [
           [ "CSE::MemoryMgr", "d6/d40/class_c_s_e_1_1_memory_mgr.html", null ]
         ] ]
       ] ],
-      [ "CSE::SContainer< Sqrat::Object * >", "d5/d1e/class_c_s_e_1_1_s_container.html", [
+      [ "CSE::SContainerList< Sqrat::Object * >", "d5/d45/class_c_s_e_1_1_s_container_list.html", [
         [ "CSE::ScriptMgr", "d0/dc6/class_c_s_e_1_1_script_mgr.html", null ]
-      ] ],
-      [ "CSE::SContainer< T >", "d5/d1e/class_c_s_e_1_1_s_container.html", null ]
+      ] ]
+    ] ],
+    [ "CSE::SIContainer< std::list< CameraComponent * >, CameraComponent *, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", null ],
+    [ "CSE::SIContainer< std::list< LightComponent * >, LightComponent *, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", null ],
+    [ "CSE::SIContainer< std::list< SObject * >, SObject *, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", null ],
+    [ "CSE::SIContainer< std::list< Sqrat::Object * >, Sqrat::Object *, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", null ],
+    [ "CSE::SIContainer< std::list< T >, T, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
+      [ "CSE::SContainerList< T >", "d5/d45/class_c_s_e_1_1_s_container_list.html", null ]
+    ] ],
+    [ "CSE::SIContainer< std::unordered_map< std::string, SGameObject * >, SGameObject *, std::string >", "da/d1f/class_c_s_e_1_1_s_i_container.html", null ],
+    [ "CSE::SIContainer< std::unordered_map< std::string, SResource * >, SResource *, std::string >", "da/d1f/class_c_s_e_1_1_s_i_container.html", null ],
+    [ "CSE::SIContainer< std::unordered_map< std::string, T >, T, std::string >", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
+      [ "CSE::SContainerHash< T >", "df/d67/class_c_s_e_1_1_s_container_hash.html", null ]
     ] ],
     [ "CSE::SIRender", "d5/de6/class_c_s_e_1_1_s_i_render.html", [
       [ "CSE::RenderComponent", "df/d04/class_c_s_e_1_1_render_component.html", null ]
@@ -108,7 +122,9 @@ var hierarchy =
     [ "CSE::SkinningData", "dd/dfe/class_c_s_e_1_1_skinning_data.html", null ],
     [ "CSE::SObject", "d8/d5e/class_c_s_e_1_1_s_object.html", [
       [ "CSE::SComponent", "db/d1a/class_c_s_e_1_1_s_component.html", null ],
-      [ "CSE::SGameObject", "dc/d47/class_c_s_e_1_1_s_game_object.html", null ],
+      [ "CSE::SGameObject", "dc/d47/class_c_s_e_1_1_s_game_object.html", [
+        [ "CSE::SGameObjectFromSPrefab", "d1/df2/class_c_s_e_1_1_s_game_object_from_s_prefab.html", null ]
+      ] ],
       [ "CSE::SResource", "dd/d6c/class_c_s_e_1_1_s_resource.html", [
         [ "CSE::Animation", "d4/d91/class_c_s_e_1_1_animation.html", null ],
         [ "CSE::GLProgramHandle", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html", null ],
@@ -119,6 +135,7 @@ var hierarchy =
         [ "CSE::SMaterial", "de/d51/class_c_s_e_1_1_s_material.html", null ],
         [ "CSE::SPrefab", "d9/db4/class_c_s_e_1_1_s_prefab.html", null ],
         [ "CSE::SScriptObject", "d5/d00/class_c_s_e_1_1_s_script_object.html", null ],
+        [ "CSE::SShaderGroup", "dd/dfc/class_c_s_e_1_1_s_shader_group.html", null ],
         [ "CSE::STexture", "da/df0/class_c_s_e_1_1_s_texture.html", null ],
         [ "CSE::Skeleton", "de/dd3/class_c_s_e_1_1_skeleton.html", null ]
       ] ],

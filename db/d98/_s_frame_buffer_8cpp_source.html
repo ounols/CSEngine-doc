@@ -146,7 +146,7 @@ $(document).ready(function(){initNavTree('db/d98/_s_frame_buffer_8cpp_source.htm
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> <a class="code hl_class" href="../../dd/d83/class_x_node.html">XNode</a>* root = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        root = <a class="code hl_class" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a>(asset-&gt;path.c_str()).getRoot();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        root = <a class="code hl_class" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a>(asset-&gt;name_path.c_str()).getRoot();</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">catch</span> (<span class="keywordtype">int</span> e) {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        SAFE_DELETE(root);</div>
@@ -181,7 +181,7 @@ $(document).ready(function(){initNavTree('db/d98/_s_frame_buffer_8cpp_source.htm
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; texture = <a class="code hl_function" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a388b0f896edc74d97301fee06252a912">GenerateTexturebuffer</a>(type, format);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; textureName = <span class="stringliteral">&quot;?Texture&quot;</span> + std::to_string(index);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                texture-&gt;SetName(GetName() + textureName);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                texture-&gt;SetID(GetID() + textureName);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                texture-&gt;SetAbsoluteID(GetHash() + textureName);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                <a class="code hl_function" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a9d53b0b3d3f4f5ead4abdf62592a2afc">GenerateRenderbuffer</a>(type, format);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            }</div>
@@ -452,7 +452,7 @@ $(document).ready(function(){initNavTree('db/d98/_s_frame_buffer_8cpp_source.htm
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; texture = buffer-&gt;texture;</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        <span class="keywordflow">if</span> (texture == <span class="keyword">nullptr</span>) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        std::string bufferId = texture-&gt;GetID();</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        std::string bufferId = texture-&gt;GetHash();</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        <span class="keywordflow">if</span> (bufferId == <span class="keywordtype">id</span>) <span class="keywordflow">return</span> texture;</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    }</div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
@@ -464,8 +464,8 @@ $(document).ready(function(){initNavTree('db/d98/_s_frame_buffer_8cpp_source.htm
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <span class="keyword">auto</span> <span class="keywordtype">id</span> = m_buffers[index]-&gt;renderbufferId;</div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keywordflow">return</span> id;</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>}</div>
-<div class="ttc" id="aclass_c_s_e_1_1_res_mgr_html"><div class="ttname"><a href="../../de/db3/class_c_s_e_1_1_res_mgr.html">CSE::ResMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/_res_mgr_8h_source.html#l00022">ResMgr.h:22</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">CSE::SFrameBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d82/_s_frame_buffer_8h_source.html#l00030">SFrameBuffer.h:30</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_res_mgr_html"><div class="ttname"><a href="../../de/db3/class_c_s_e_1_1_res_mgr.html">CSE::ResMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/_res_mgr_8h_source.html#l00024">ResMgr.h:24</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html">CSE::SFrameBuffer</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d82/_s_frame_buffer_8h_source.html#l00031">SFrameBuffer.h:31</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_a09e4ddd32ee8725074cf1f9c23dc4a8e"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a09e4ddd32ee8725074cf1f9c23dc4a8e">CSE::SFrameBuffer::GetRenderbufferID</a></div><div class="ttdeci">unsigned int GetRenderbufferID(int index) const</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00365">SFrameBuffer.cpp:365</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_a388b0f896edc74d97301fee06252a912"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a388b0f896edc74d97301fee06252a912">CSE::SFrameBuffer::GenerateTexturebuffer</a></div><div class="ttdeci">STexture * GenerateTexturebuffer(BufferType type, int channel, int level=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00138">SFrameBuffer.cpp:138</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_frame_buffer_html_a9d53b0b3d3f4f5ead4abdf62592a2afc"><div class="ttname"><a href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a9d53b0b3d3f4f5ead4abdf62592a2afc">CSE::SFrameBuffer::GenerateRenderbuffer</a></div><div class="ttdeci">unsigned int GenerateRenderbuffer(BufferType type, int internalFormat)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d98/_s_frame_buffer_8cpp_source.html#l00113">SFrameBuffer.cpp:113</a></div></div>
@@ -476,14 +476,14 @@ $(document).ready(function(){initNavTree('db/d98/_s_frame_buffer_8cpp_source.htm
 <div class="ttc" id="aclass_c_s_e_1_1_s_texture_html"><div class="ttname"><a href="../../da/df0/class_c_s_e_1_1_s_texture.html">CSE::STexture</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d33/_s_texture_8h_source.html#l00014">STexture.h:14</a></div></div>
 <div class="ttc" id="aclass_x_f_i_l_e_html"><div class="ttname"><a href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/_x_m_l_8h_source.html#l00077">XML.h:77</a></div></div>
 <div class="ttc" id="aclass_x_node_html"><div class="ttname"><a href="../../dd/d83/class_x_node.html">XNode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/_x_m_l_8h_source.html#l00043">XML.h:43</a></div></div>
-<div class="ttc" id="astruct_c_s_e_1_1_asset_mgr_1_1_asset_reference_html"><div class="ttname"><a href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">CSE::AssetMgr::AssetReference</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de4/_asset_mgr_8h_source.html#l00024">AssetMgr.h:24</a></div></div>
+<div class="ttc" id="astruct_c_s_e_1_1_asset_mgr_1_1_asset_reference_html"><div class="ttname"><a href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">CSE::AssetMgr::AssetReference</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/de4/_asset_mgr_8h_source.html#l00025">AssetMgr.h:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><a class="el" href="../../dir_e33838bd04c8f4b6287e9b76abda5f0f.html">Render</a></li><li class="navelem"><b>SFrameBuffer.cpp</b></li>
-    <li class="footer">Generated on Wed Feb 8 2023 01:01:08 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Wed Feb 15 2023 01:02:41 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

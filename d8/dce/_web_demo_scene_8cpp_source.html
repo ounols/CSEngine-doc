@@ -119,34 +119,36 @@ $(document).ready(function(){initNavTree('d8/dce/_web_demo_scene_8cpp_source.htm
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    ab-&gt;GetComponent&lt;<a class="code hl_class" href="../../d5/d5b/class_c_s_e_1_1_custom_component.html">CustomComponent</a>&gt;()-&gt;SetClassName(<span class="stringliteral">&quot;Stormtrooper.script&quot;</span>);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">auto</span> camera = <span class="keyword">new</span> <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>(<span class="stringliteral">&quot;camera&quot;</span>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    camera-&gt;CreateComponent&lt;<a class="code hl_class" href="../../d4/da2/class_c_s_e_1_1_camera_component.html">CameraComponent</a>&gt;();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; camera_comp = camera-&gt;CreateComponent&lt;<a class="code hl_class" href="../../d4/da2/class_c_s_e_1_1_camera_component.html">CameraComponent</a>&gt;();</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    camera-&gt;GetTransform()-&gt;m_position = <a class="code hl_class" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>{0, 0, 1.2f };</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>* direction = <span class="keyword">new</span> <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    direction-&gt;SetParent(root);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    direction-&gt;SetName(<span class="stringliteral">&quot;directional&quot;</span>);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    direction-&gt;GetTransform()-&gt;m_position = <a class="code hl_class" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>{ 0.f, 0.5f, 0.f };</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    direction-&gt;CreateComponent&lt;<a class="code hl_class" href="../../d6/d94/class_c_s_e_1_1_light_component.html">LightComponent</a>&gt;();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    direction-&gt;GetComponent&lt;<a class="code hl_class" href="../../d6/d94/class_c_s_e_1_1_light_component.html">LightComponent</a>&gt;()-&gt;SetSunrising(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    direction-&gt;GetComponent&lt;<a class="code hl_class" href="../../d6/d94/class_c_s_e_1_1_light_component.html">LightComponent</a>&gt;()-&gt;SetLightType(LightComponent::DIRECTIONAL);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    direction-&gt;GetComponent&lt;<a class="code hl_class" href="../../d6/d94/class_c_s_e_1_1_light_component.html">LightComponent</a>&gt;()-&gt;SetDirection(<a class="code hl_class" href="../../d6/d26/class_c_s_e_1_1_vector4.html">vec4</a>{ 0.0f, 1.0f, 1, 0 });</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    direction-&gt;GetComponent&lt;<a class="code hl_class" href="../../d6/d94/class_c_s_e_1_1_light_component.html">LightComponent</a>&gt;()-&gt;SetShadow(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">//    auto a_cam = camera-&gt;GetComponent&lt;CameraComponent&gt;();</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">//    a_cam-&gt;SetTarget(ab);</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> WebDemoScene::Tick(<span class="keywordtype">float</span> elapsedTime) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    camera_comp-&gt;SetBackgroundSkybox();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    camera_comp-&gt;SetBackgroundType(CameraBase::SKYBOX);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>* direction = <span class="keyword">new</span> <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    direction-&gt;SetParent(root);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    direction-&gt;SetName(<span class="stringliteral">&quot;directional&quot;</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    direction-&gt;GetTransform()-&gt;m_position = <a class="code hl_class" href="../../d2/d4a/class_c_s_e_1_1_vector3.html">vec3</a>{ 0.f, 0.5f, 0.f };</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    direction-&gt;CreateComponent&lt;<a class="code hl_class" href="../../d6/d94/class_c_s_e_1_1_light_component.html">LightComponent</a>&gt;();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    direction-&gt;GetComponent&lt;<a class="code hl_class" href="../../d6/d94/class_c_s_e_1_1_light_component.html">LightComponent</a>&gt;()-&gt;SetSunrising(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    direction-&gt;GetComponent&lt;<a class="code hl_class" href="../../d6/d94/class_c_s_e_1_1_light_component.html">LightComponent</a>&gt;()-&gt;SetLightType(LightComponent::DIRECTIONAL);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    direction-&gt;GetComponent&lt;<a class="code hl_class" href="../../d6/d94/class_c_s_e_1_1_light_component.html">LightComponent</a>&gt;()-&gt;SetDirection(<a class="code hl_class" href="../../d6/d26/class_c_s_e_1_1_vector4.html">vec4</a>{ 0.0f, 1.0f, 1, 0 });</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    direction-&gt;GetComponent&lt;<a class="code hl_class" href="../../d6/d94/class_c_s_e_1_1_light_component.html">LightComponent</a>&gt;()-&gt;SetShadow(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">//    auto a_cam = camera-&gt;GetComponent&lt;CameraComponent&gt;();</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">//    a_cam-&gt;SetTarget(ab);</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> WebDemoScene::Tick(<span class="keywordtype">float</span> elapsedTime) {</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">void</span> WebDemoScene::Destroy() {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">void</span> WebDemoScene::Destroy() {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_camera_component_html"><div class="ttname"><a href="../../d4/da2/class_c_s_e_1_1_camera_component.html">CSE::CameraComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dd2/_camera_component_8h_source.html#l00030">CameraComponent.h:30</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_custom_component_html"><div class="ttname"><a href="../../d5/d5b/class_c_s_e_1_1_custom_component.html">CSE::CustomComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../da/d04/_custom_component_8h_source.html#l00011">CustomComponent.h:11</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_light_component_html"><div class="ttname"><a href="../../d6/d94/class_c_s_e_1_1_light_component.html">CSE::LightComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da3/_light_component_8h_source.html#l00013">LightComponent.h:13</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_game_object_html"><div class="ttname"><a href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">CSE::SGameObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d05/_s_game_object_8h_source.html#l00016">SGameObject.h:16</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_game_object_html"><div class="ttname"><a href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">CSE::SGameObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d05/_s_game_object_8h_source.html#l00017">SGameObject.h:17</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_prefab_html"><div class="ttname"><a href="../../d9/db4/class_c_s_e_1_1_s_prefab.html">CSE::SPrefab</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1e/_s_prefab_8h_source.html#l00011">SPrefab.h:11</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_vector3_html"><div class="ttname"><a href="../../d2/d4a/class_c_s_e_1_1_vector3.html">CSE::Vector3&lt; float &gt;</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_vector4_html"><div class="ttname"><a href="../../d6/d26/class_c_s_e_1_1_vector4.html">CSE::Vector4&lt; float &gt;</a></div></div>
@@ -156,7 +158,7 @@ $(document).ready(function(){initNavTree('d8/dce/_web_demo_scene_8cpp_source.htm
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_8f7f72226bf217e57890a767dfa82dfa.html">Sample</a></li><li class="navelem"><b>WebDemoScene.cpp</b></li>
-    <li class="footer">Generated on Wed Feb 8 2023 01:01:07 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Wed Feb 15 2023 01:02:41 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

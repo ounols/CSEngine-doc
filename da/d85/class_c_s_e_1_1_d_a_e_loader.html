@@ -188,12 +188,12 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html#l00015">15</a> of file <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html">DAELoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                                                  {</div>
-<div class="line"><span class="lineno">   16</span>    <span class="keywordflow">if</span> (type == NOTHING) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   17</span> </div>
-<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">if</span> (isLoad) Load(path, type);</div>
-<div class="line"><span class="lineno">   19</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html#l00016">16</a> of file <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html">DAELoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>                                                                  {</div>
+<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">if</span> (type == NOTHING) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   18</span> </div>
+<div class="line"><span class="lineno">   19</span>    <span class="keywordflow">if</span> (isLoad) Load(path, type);</div>
+<div class="line"><span class="lineno">   20</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -212,10 +212,10 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html#l00021">21</a> of file <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html">DAELoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                      {</div>
-<div class="line"><span class="lineno">   22</span>    Exterminate();</div>
-<div class="line"><span class="lineno">   23</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html#l00022">22</a> of file <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html">DAELoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>                      {</div>
+<div class="line"><span class="lineno">   23</span>    Exterminate();</div>
+<div class="line"><span class="lineno">   24</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -246,57 +246,58 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html#l00518">518</a> of file <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html">DAELoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  518</span>                                                                        {</div>
-<div class="line"><span class="lineno">  519</span>    <span class="keywordflow">if</span> (prefab == <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno">  520</span>        prefab = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/db4/class_c_s_e_1_1_s_prefab.html">SPrefab</a>();</div>
-<div class="line"><span class="lineno">  521</span>    <span class="keyword">auto</span>* root = <span class="keyword">new</span> <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>(m_name);</div>
-<div class="line"><span class="lineno">  522</span>    prefab-&gt;SetGameObject(root);</div>
-<div class="line"><span class="lineno">  523</span> </div>
-<div class="line"><span class="lineno">  524</span>    <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>* joint_root = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  525</span> </div>
-<div class="line"><span class="lineno">  526</span>    <span class="keywordflow">if</span> (m_isSkinning) {</div>
-<div class="line"><span class="lineno">  527</span>        joint_root = <span class="keyword">new</span> <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>(<span class="stringliteral">&quot;Armature&quot;</span>);</div>
-<div class="line"><span class="lineno">  528</span>        root-&gt;AddChild(joint_root);</div>
-<div class="line"><span class="lineno">  529</span>        DAEConvertSGameObject::CreateJoints(joint_root, m_skeletonData-&gt;getHeadJoint());</div>
-<div class="line"><span class="lineno">  530</span>    }</div>
-<div class="line"><span class="lineno">  531</span> </div>
-<div class="line"><span class="lineno">  532</span>    <a class="code hl_class" href="../../d8/dfb/class_c_s_e_1_1_joint_component.html">JointComponent</a>* joint_root_component = m_isSkinning ? joint_root-&gt;GetChildren().front()-&gt;GetComponent&lt;<a class="code hl_class" href="../../d8/dfb/class_c_s_e_1_1_joint_component.html">JointComponent</a>&gt;() : <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  533</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : m_meshList) {</div>
-<div class="line"><span class="lineno">  534</span>        <span class="keyword">auto</span>* mesh_root = <span class="keyword">new</span> <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>(mesh-&gt;meshName);</div>
-<div class="line"><span class="lineno">  535</span>        root-&gt;AddChild(mesh_root);</div>
-<div class="line"><span class="lineno">  536</span>        <a class="code hl_class" href="../../d8/dbb/class_c_s_e_1_1_drawable_static_mesh_component.html">DrawableStaticMeshComponent</a>* mesh_component = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  537</span> </div>
-<div class="line"><span class="lineno">  538</span>        <span class="keywordflow">if</span> (m_isSkinning) {</div>
-<div class="line"><span class="lineno">  539</span>            mesh_component = mesh_root-&gt;CreateComponent&lt;<a class="code hl_class" href="../../d3/d75/class_c_s_e_1_1_drawable_skinned_mesh_component.html">DrawableSkinnedMeshComponent</a>&gt;();</div>
-<div class="line"><span class="lineno">  540</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  541</span>            mesh_component = mesh_root-&gt;CreateComponent&lt;<a class="code hl_class" href="../../d8/dbb/class_c_s_e_1_1_drawable_static_mesh_component.html">DrawableStaticMeshComponent</a>&gt;();</div>
-<div class="line"><span class="lineno">  542</span>        }</div>
-<div class="line"><span class="lineno">  543</span> </div>
-<div class="line"><span class="lineno">  544</span>        mesh_component-&gt;SetMesh(*mesh-&gt;meshSurface);</div>
-<div class="line"><span class="lineno">  545</span> </div>
-<div class="line"><span class="lineno">  546</span>        <span class="keywordflow">if</span> (m_isSkinning)</div>
-<div class="line"><span class="lineno">  547</span>            <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d3/d75/class_c_s_e_1_1_drawable_skinned_mesh_component.html">DrawableSkinnedMeshComponent</a>*<span class="keyword">&gt;</span>(mesh_component)-&gt;SetRootJoint(</div>
-<div class="line"><span class="lineno">  548</span>                    joint_root_component-&gt;GetGameObject(),</div>
-<div class="line"><span class="lineno">  549</span>                    m_skeletonData-&gt;getJointCount());</div>
-<div class="line"><span class="lineno">  550</span> </div>
-<div class="line"><span class="lineno">  551</span>        <span class="keyword">auto</span> renderComponent = mesh_root-&gt;CreateComponent&lt;<a class="code hl_class" href="../../df/d04/class_c_s_e_1_1_render_component.html">RenderComponent</a>&gt;();</div>
-<div class="line"><span class="lineno">  552</span><span class="comment">//    mesh_root-&gt;GetComponent&lt;RenderComponent&gt;()-&gt;SetShaderHandle(&quot;PBR.shader&quot;);</span></div>
-<div class="line"><span class="lineno">  553</span>    }</div>
-<div class="line"><span class="lineno">  554</span> </div>
-<div class="line"><span class="lineno">  555</span>    <span class="keywordflow">if</span> (m_isSkinning) {</div>
-<div class="line"><span class="lineno">  556</span>        <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>* animationObj = DAEConvertSGameObject::CreateAnimation(root, joint_root_component,</div>
-<div class="line"><span class="lineno">  557</span>                                                                           m_animationLoader-&gt;GetAnimation(),</div>
-<div class="line"><span class="lineno">  558</span>                                                                           m_name, animation);</div>
-<div class="line"><span class="lineno">  559</span>    }</div>
-<div class="line"><span class="lineno">  560</span> </div>
-<div class="line"><span class="lineno">  561</span>    <span class="keywordflow">return</span> prefab;</div>
-<div class="line"><span class="lineno">  562</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html#l00519">519</a> of file <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html">DAELoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  519</span>                                                                        {</div>
+<div class="line"><span class="lineno">  520</span>    <span class="keywordflow">if</span> (prefab == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  521</span>        prefab = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/db4/class_c_s_e_1_1_s_prefab.html">SPrefab</a>();</div>
+<div class="line"><span class="lineno">  522</span>    <span class="keyword">auto</span>* root = <span class="keyword">new</span> <a class="code hl_class" href="../../d1/df2/class_c_s_e_1_1_s_game_object_from_s_prefab.html">SGameObjectFromSPrefab</a>(m_name);</div>
+<div class="line"><span class="lineno">  523</span>    prefab-&gt;SetGameObject(root);</div>
+<div class="line"><span class="lineno">  524</span> </div>
+<div class="line"><span class="lineno">  525</span>    <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>* joint_root = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  526</span> </div>
+<div class="line"><span class="lineno">  527</span>    <span class="keywordflow">if</span> (m_isSkinning) {</div>
+<div class="line"><span class="lineno">  528</span>        joint_root = <span class="keyword">new</span> <a class="code hl_class" href="../../d1/df2/class_c_s_e_1_1_s_game_object_from_s_prefab.html">SGameObjectFromSPrefab</a>(<span class="stringliteral">&quot;Armature&quot;</span>);</div>
+<div class="line"><span class="lineno">  529</span>        root-&gt;AddChild(joint_root);</div>
+<div class="line"><span class="lineno">  530</span>        DAEConvertSGameObject::CreateJoints(joint_root, m_skeletonData-&gt;getHeadJoint());</div>
+<div class="line"><span class="lineno">  531</span>    }</div>
+<div class="line"><span class="lineno">  532</span> </div>
+<div class="line"><span class="lineno">  533</span>    <a class="code hl_class" href="../../d8/dfb/class_c_s_e_1_1_joint_component.html">JointComponent</a>* joint_root_component = m_isSkinning ? joint_root-&gt;GetChildren().front()-&gt;GetComponent&lt;<a class="code hl_class" href="../../d8/dfb/class_c_s_e_1_1_joint_component.html">JointComponent</a>&gt;() : <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  534</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : m_meshList) {</div>
+<div class="line"><span class="lineno">  535</span>        <span class="keyword">auto</span>* mesh_root = <span class="keyword">new</span> <a class="code hl_class" href="../../d1/df2/class_c_s_e_1_1_s_game_object_from_s_prefab.html">SGameObjectFromSPrefab</a>(mesh-&gt;meshName);</div>
+<div class="line"><span class="lineno">  536</span>        root-&gt;AddChild(mesh_root);</div>
+<div class="line"><span class="lineno">  537</span>        <a class="code hl_class" href="../../d8/dbb/class_c_s_e_1_1_drawable_static_mesh_component.html">DrawableStaticMeshComponent</a>* mesh_component = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  538</span> </div>
+<div class="line"><span class="lineno">  539</span>        <span class="keywordflow">if</span> (m_isSkinning) {</div>
+<div class="line"><span class="lineno">  540</span>            mesh_component = mesh_root-&gt;CreateComponent&lt;<a class="code hl_class" href="../../d3/d75/class_c_s_e_1_1_drawable_skinned_mesh_component.html">DrawableSkinnedMeshComponent</a>&gt;();</div>
+<div class="line"><span class="lineno">  541</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  542</span>            mesh_component = mesh_root-&gt;CreateComponent&lt;<a class="code hl_class" href="../../d8/dbb/class_c_s_e_1_1_drawable_static_mesh_component.html">DrawableStaticMeshComponent</a>&gt;();</div>
+<div class="line"><span class="lineno">  543</span>        }</div>
+<div class="line"><span class="lineno">  544</span> </div>
+<div class="line"><span class="lineno">  545</span>        mesh_component-&gt;SetMesh(*mesh-&gt;meshSurface);</div>
+<div class="line"><span class="lineno">  546</span> </div>
+<div class="line"><span class="lineno">  547</span>        <span class="keywordflow">if</span> (m_isSkinning)</div>
+<div class="line"><span class="lineno">  548</span>            <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../d3/d75/class_c_s_e_1_1_drawable_skinned_mesh_component.html">DrawableSkinnedMeshComponent</a>*<span class="keyword">&gt;</span>(mesh_component)-&gt;SetRootJoint(</div>
+<div class="line"><span class="lineno">  549</span>                    joint_root_component-&gt;GetGameObject(),</div>
+<div class="line"><span class="lineno">  550</span>                    m_skeletonData-&gt;getJointCount());</div>
+<div class="line"><span class="lineno">  551</span> </div>
+<div class="line"><span class="lineno">  552</span>        <span class="keyword">auto</span> renderComponent = mesh_root-&gt;CreateComponent&lt;<a class="code hl_class" href="../../df/d04/class_c_s_e_1_1_render_component.html">RenderComponent</a>&gt;();</div>
+<div class="line"><span class="lineno">  553</span><span class="comment">//    mesh_root-&gt;GetComponent&lt;RenderComponent&gt;()-&gt;SetShaderHandle(&quot;PBR.shader&quot;);</span></div>
+<div class="line"><span class="lineno">  554</span>    }</div>
+<div class="line"><span class="lineno">  555</span> </div>
+<div class="line"><span class="lineno">  556</span>    <span class="keywordflow">if</span> (m_isSkinning) {</div>
+<div class="line"><span class="lineno">  557</span>        <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>* animationObj = DAEConvertSGameObject::CreateAnimation(root, joint_root_component,</div>
+<div class="line"><span class="lineno">  558</span>                                                                           m_animationLoader-&gt;GetAnimation(),</div>
+<div class="line"><span class="lineno">  559</span>                                                                           m_name, animation);</div>
+<div class="line"><span class="lineno">  560</span>    }</div>
+<div class="line"><span class="lineno">  561</span> </div>
+<div class="line"><span class="lineno">  562</span>    <span class="keywordflow">return</span> prefab;</div>
+<div class="line"><span class="lineno">  563</span>}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_drawable_skinned_mesh_component_html"><div class="ttname"><a href="../../d3/d75/class_c_s_e_1_1_drawable_skinned_mesh_component.html">CSE::DrawableSkinnedMeshComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d0d/_drawable_skinned_mesh_component_8h_source.html#l00008">DrawableSkinnedMeshComponent.h:8</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_drawable_static_mesh_component_html"><div class="ttname"><a href="../../d8/dbb/class_c_s_e_1_1_drawable_static_mesh_component.html">CSE::DrawableStaticMeshComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dd5/_drawable_static_mesh_component_8h_source.html#l00008">DrawableStaticMeshComponent.h:8</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_joint_component_html"><div class="ttname"><a href="../../d8/dfb/class_c_s_e_1_1_joint_component.html">CSE::JointComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/ddd/_joint_component_8h_source.html#l00008">JointComponent.h:8</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_render_component_html"><div class="ttname"><a href="../../df/d04/class_c_s_e_1_1_render_component.html">CSE::RenderComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d61/_render_component_8h_source.html#l00015">RenderComponent.h:15</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_game_object_html"><div class="ttname"><a href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">CSE::SGameObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d05/_s_game_object_8h_source.html#l00016">SGameObject.h:16</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_game_object_from_s_prefab_html"><div class="ttname"><a href="../../d1/df2/class_c_s_e_1_1_s_game_object_from_s_prefab.html">CSE::SGameObjectFromSPrefab</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dee/_s_game_object_from_s_prefab_8h_source.html#l00009">SGameObjectFromSPrefab.h:9</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_game_object_html"><div class="ttname"><a href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">CSE::SGameObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d05/_s_game_object_8h_source.html#l00017">SGameObject.h:17</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_prefab_html"><div class="ttname"><a href="../../d9/db4/class_c_s_e_1_1_s_prefab.html">CSE::SPrefab</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d1e/_s_prefab_8h_source.html#l00011">SPrefab.h:11</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -353,37 +354,37 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html#l00564">564</a> of file <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html">DAELoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  565</span>                                                    {</div>
-<div class="line"><span class="lineno">  566</span>    <span class="keyword">auto</span>* loader = <span class="keyword">new</span> <a class="code hl_class" href="../../da/d85/class_c_s_e_1_1_d_a_e_loader.html">DAELoader</a>(path, AUTO, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  567</span>    <span class="keyword">auto</span> asset = CORE-&gt;GetCore(<a class="code hl_class" href="../../de/db3/class_c_s_e_1_1_res_mgr.html">ResMgr</a>)-&gt;GetAssetReference(path);</div>
-<div class="line"><span class="lineno">  568</span>    <span class="keywordflow">if</span> (asset == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  569</span>        SAFE_DELETE(loader);</div>
-<div class="line"><span class="lineno">  570</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  571</span>    }</div>
-<div class="line"><span class="lineno">  572</span>    std::string prefab_id = asset-&gt;id;</div>
-<div class="line"><span class="lineno">  573</span> </div>
-<div class="line"><span class="lineno">  574</span>    loader-&gt;m_resource_id = asset-&gt;id;</div>
-<div class="line"><span class="lineno">  575</span>    loader-&gt;m_skeletonData = skeleton;</div>
-<div class="line"><span class="lineno">  576</span> </div>
-<div class="line"><span class="lineno">  577</span>    <span class="keywordflow">if</span> (loader-&gt;m_skeletonData == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  578</span>        loader-&gt;m_skeletonData = <span class="keyword">new</span> <a class="code hl_class" href="../../de/dd3/class_c_s_e_1_1_skeleton.html">Skeleton</a>();</div>
-<div class="line"><span class="lineno">  579</span>    }</div>
-<div class="line"><span class="lineno">  580</span> </div>
-<div class="line"><span class="lineno">  581</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; meshData = loader-&gt;m_meshList;</div>
-<div class="line"><span class="lineno">  582</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : meshData) {</div>
-<div class="line"><span class="lineno">  583</span>        mesh-&gt;meshSurface-&gt;LinkResource(prefab_id + <span class="stringliteral">&quot;.&quot;</span> + mesh-&gt;meshName +<span class="stringliteral">&quot;?mesh&quot;</span>);</div>
-<div class="line"><span class="lineno">  584</span>    }</div>
-<div class="line"><span class="lineno">  585</span>    loader-&gt;m_skeletonData-&gt;LinkResource(prefab_id + <span class="stringliteral">&quot;?skeleton&quot;</span>);</div>
-<div class="line"><span class="lineno">  586</span> </div>
-<div class="line"><span class="lineno">  587</span>    loader-&gt;Load(path, AUTO);</div>
-<div class="line"><span class="lineno">  588</span>    prefab = loader-&gt;GeneratePrefab(animation, prefab);</div>
-<div class="line"><span class="lineno">  589</span> </div>
-<div class="line"><span class="lineno">  590</span>    SAFE_DELETE(loader);</div>
-<div class="line"><span class="lineno">  591</span>    <span class="keywordflow">return</span> prefab;</div>
-<div class="line"><span class="lineno">  592</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html#l00565">565</a> of file <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html">DAELoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  566</span>                                                    {</div>
+<div class="line"><span class="lineno">  567</span>    <span class="keyword">auto</span>* loader = <span class="keyword">new</span> <a class="code hl_class" href="../../da/d85/class_c_s_e_1_1_d_a_e_loader.html">DAELoader</a>(path, AUTO, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  568</span>    <span class="keyword">auto</span> asset = CORE-&gt;GetCore(<a class="code hl_class" href="../../de/db3/class_c_s_e_1_1_res_mgr.html">ResMgr</a>)-&gt;GetAssetReference(path);</div>
+<div class="line"><span class="lineno">  569</span>    <span class="keywordflow">if</span> (asset == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  570</span>        SAFE_DELETE(loader);</div>
+<div class="line"><span class="lineno">  571</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  572</span>    }</div>
+<div class="line"><span class="lineno">  573</span>    std::string prefab_id = asset-&gt;id;</div>
+<div class="line"><span class="lineno">  574</span> </div>
+<div class="line"><span class="lineno">  575</span>    loader-&gt;m_resource_id = asset-&gt;id;</div>
+<div class="line"><span class="lineno">  576</span>    loader-&gt;m_skeletonData = skeleton;</div>
+<div class="line"><span class="lineno">  577</span> </div>
+<div class="line"><span class="lineno">  578</span>    <span class="keywordflow">if</span> (loader-&gt;m_skeletonData == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  579</span>        loader-&gt;m_skeletonData = <span class="keyword">new</span> <a class="code hl_class" href="../../de/dd3/class_c_s_e_1_1_skeleton.html">Skeleton</a>();</div>
+<div class="line"><span class="lineno">  580</span>    }</div>
+<div class="line"><span class="lineno">  581</span> </div>
+<div class="line"><span class="lineno">  582</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; meshData = loader-&gt;m_meshList;</div>
+<div class="line"><span class="lineno">  583</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; mesh : meshData) {</div>
+<div class="line"><span class="lineno">  584</span>        mesh-&gt;meshSurface-&gt;LinkResource(prefab_id + <span class="stringliteral">&quot;.&quot;</span> + mesh-&gt;meshName +<span class="stringliteral">&quot;?mesh&quot;</span>);</div>
+<div class="line"><span class="lineno">  585</span>    }</div>
+<div class="line"><span class="lineno">  586</span>    loader-&gt;m_skeletonData-&gt;LinkResource(prefab_id + <span class="stringliteral">&quot;?skeleton&quot;</span>);</div>
+<div class="line"><span class="lineno">  587</span> </div>
+<div class="line"><span class="lineno">  588</span>    loader-&gt;Load(path, AUTO);</div>
+<div class="line"><span class="lineno">  589</span>    prefab = loader-&gt;GeneratePrefab(animation, prefab);</div>
+<div class="line"><span class="lineno">  590</span> </div>
+<div class="line"><span class="lineno">  591</span>    SAFE_DELETE(loader);</div>
+<div class="line"><span class="lineno">  592</span>    <span class="keywordflow">return</span> prefab;</div>
+<div class="line"><span class="lineno">  593</span>}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_d_a_e_loader_html"><div class="ttname"><a href="../../da/d85/class_c_s_e_1_1_d_a_e_loader.html">CSE::DAELoader</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dd1/_d_a_e_loader_8h_source.html#l00018">DAELoader.h:18</a></div></div>
-<div class="ttc" id="aclass_c_s_e_1_1_res_mgr_html"><div class="ttname"><a href="../../de/db3/class_c_s_e_1_1_res_mgr.html">CSE::ResMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/_res_mgr_8h_source.html#l00022">ResMgr.h:22</a></div></div>
+<div class="ttc" id="aclass_c_s_e_1_1_res_mgr_html"><div class="ttname"><a href="../../de/db3/class_c_s_e_1_1_res_mgr.html">CSE::ResMgr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d25/_res_mgr_8h_source.html#l00024">ResMgr.h:24</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_skeleton_html"><div class="ttname"><a href="../../de/dd3/class_c_s_e_1_1_skeleton.html">CSE::Skeleton</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d28/_skeleton_8h_source.html#l00012">Skeleton.h:12</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -444,77 +445,77 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html#l00025">25</a> of file <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html">DAELoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>                                                     {</div>
-<div class="line"><span class="lineno">   26</span>    {</div>
-<div class="line"><span class="lineno">   27</span>        std::string path_str = path;</div>
-<div class="line"><span class="lineno">   28</span>        std::size_t index = path_str.rfind(<span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">if</span> (index == std::string::npos) {</div>
-<div class="line"><span class="lineno">   30</span>            index = path_str.rfind(<span class="charliteral">&#39;\\&#39;</span>);</div>
-<div class="line"><span class="lineno">   31</span>        }</div>
-<div class="line"><span class="lineno">   32</span>        std::size_t name_index = path_str.rfind(<span class="charliteral">&#39;.&#39;</span>);</div>
-<div class="line"><span class="lineno">   33</span> </div>
-<div class="line"><span class="lineno">   34</span>        m_name = path_str.substr(index + 1, name_index - index - 1);</div>
-<div class="line"><span class="lineno">   35</span>    }</div>
-<div class="line"><span class="lineno">   36</span> </div>
-<div class="line"><span class="lineno">   37</span>    m_root = <a class="code hl_class" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a>(path).getRoot();</div>
-<div class="line"><span class="lineno">   38</span>    <a class="code hl_class" href="../../dd/d83/class_x_node.html">XNode</a> collada = m_root-&gt;getChild(<span class="stringliteral">&quot;COLLADA&quot;</span>);</div>
-<div class="line"><span class="lineno">   39</span> </div>
-<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">if</span> (type == LOAD_TYPE::MESH || type == LOAD_TYPE::ALL || type == LOAD_TYPE::AUTO) {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">   42</span>            <span class="keywordtype">bool</span> safe_result;</div>
-<div class="line"><span class="lineno">   43</span>            <span class="keywordflow">if</span>(collada.hasChild(<span class="stringliteral">&quot;library_controllers&quot;</span>) &amp;&amp; collada.hasChild(<span class="stringliteral">&quot;library_visual_scenes&quot;</span>)) {</div>
-<div class="line"><span class="lineno">   44</span>                safe_result = LoadSkin(collada.getChild(<span class="stringliteral">&quot;library_controllers&quot;</span>));</div>
-<div class="line"><span class="lineno">   45</span>                safe_result &amp;= LoadSkeleton(collada.getChild(<span class="stringliteral">&quot;library_visual_scenes&quot;</span>));</div>
-<div class="line"><span class="lineno">   46</span>            }</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   48</span>                safe_result = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   49</span>            m_isSkinning = safe_result;</div>
-<div class="line"><span class="lineno">   50</span>        } <span class="keywordflow">catch</span> (<span class="keywordtype">int</span> error) {</div>
-<div class="line"><span class="lineno">   51</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;passing skinning...\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   52</span>            m_isSkinning = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span>(collada.hasChild(<span class="stringliteral">&quot;library_images&quot;</span>))</div>
-<div class="line"><span class="lineno">   57</span>                LoadTexturePath(collada.getChild(<span class="stringliteral">&quot;library_images&quot;</span>));</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   59</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;passing texture...\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   60</span>        } <span class="keywordflow">catch</span> (<span class="keywordtype">int</span> error) {</div>
-<div class="line"><span class="lineno">   61</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;passing texture...\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   62</span>        }</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">   65</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; geometryData = collada.getChild(<span class="stringliteral">&quot;library_geometries&quot;</span>).children;</div>
-<div class="line"><span class="lineno">   66</span>            m_meshList.reserve(geometryData.size());</div>
-<div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; geometry : geometryData) {</div>
-<div class="line"><span class="lineno">   69</span>                <span class="keyword">auto</span> meshData = <span class="keyword">new</span> DAEMeshData();</div>
-<div class="line"><span class="lineno">   70</span>                meshData-&gt;meshName = geometry.getAttribute(<span class="stringliteral">&quot;id&quot;</span>).value;</div>
-<div class="line"><span class="lineno">   71</span>                LoadGeometry(geometry, meshData);</div>
-<div class="line"><span class="lineno">   72</span>                m_meshList.push_back(meshData);</div>
-<div class="line"><span class="lineno">   73</span>            }</div>
-<div class="line"><span class="lineno">   74</span>        } <span class="keywordflow">catch</span> (<span class="keywordtype">int</span> error) {</div>
-<div class="line"><span class="lineno">   75</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;passing geometry...\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   76</span>        }</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">if</span> (type == ANIMATION || type == ALL || type == AUTO) {</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordtype">bool</span> safe_exception;</div>
-<div class="line"><span class="lineno">   81</span>            m_animationLoader = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d62/class_c_s_e_1_1_d_a_e_animation_loader.html">DAEAnimationLoader</a>();</div>
-<div class="line"><span class="lineno">   82</span>            safe_exception = m_animationLoader-&gt;Load(path, m_name);</div>
-<div class="line"><span class="lineno">   83</span><span class="preprocessor">#ifdef __EMSCRIPTEN__</span></div>
-<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">if</span>(!safe_exception) {</div>
-<div class="line"><span class="lineno">   85</span>                SAFE_DELETE(m_animationLoader);</div>
-<div class="line"><span class="lineno">   86</span>            }</div>
-<div class="line"><span class="lineno">   87</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   88</span>        } <span class="keywordflow">catch</span> (<span class="keywordtype">int</span> error) {</div>
-<div class="line"><span class="lineno">   89</span>            SAFE_DELETE(m_animationLoader);</div>
-<div class="line"><span class="lineno">   90</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;passing Animation...\n&quot;</span>;</div>
-<div class="line"><span class="lineno">   91</span>        }</div>
-<div class="line"><span class="lineno">   92</span>    }</div>
-<div class="line"><span class="lineno">   93</span><span class="comment">//    LoadTexture(texture_path);</span></div>
-<div class="line"><span class="lineno">   94</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html#l00026">26</a> of file <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html">DAELoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                     {</div>
+<div class="line"><span class="lineno">   27</span>    {</div>
+<div class="line"><span class="lineno">   28</span>        std::string path_str = path;</div>
+<div class="line"><span class="lineno">   29</span>        std::size_t index = path_str.rfind(<span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordflow">if</span> (index == std::string::npos) {</div>
+<div class="line"><span class="lineno">   31</span>            index = path_str.rfind(<span class="charliteral">&#39;\\&#39;</span>);</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>        std::size_t name_index = path_str.rfind(<span class="charliteral">&#39;.&#39;</span>);</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>        m_name = path_str.substr(index + 1, name_index - index - 1);</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>    m_root = <a class="code hl_class" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a>(path).getRoot();</div>
+<div class="line"><span class="lineno">   39</span>    <a class="code hl_class" href="../../dd/d83/class_x_node.html">XNode</a> collada = m_root-&gt;getChild(<span class="stringliteral">&quot;COLLADA&quot;</span>);</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">if</span> (type == LOAD_TYPE::MESH || type == LOAD_TYPE::ALL || type == LOAD_TYPE::AUTO) {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keywordtype">bool</span> safe_result;</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keywordflow">if</span>(collada.hasChild(<span class="stringliteral">&quot;library_controllers&quot;</span>) &amp;&amp; collada.hasChild(<span class="stringliteral">&quot;library_visual_scenes&quot;</span>)) {</div>
+<div class="line"><span class="lineno">   45</span>                safe_result = LoadSkin(collada.getChild(<span class="stringliteral">&quot;library_controllers&quot;</span>));</div>
+<div class="line"><span class="lineno">   46</span>                safe_result &amp;= LoadSkeleton(collada.getChild(<span class="stringliteral">&quot;library_visual_scenes&quot;</span>));</div>
+<div class="line"><span class="lineno">   47</span>            }</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   49</span>                safe_result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   50</span>            m_isSkinning = safe_result;</div>
+<div class="line"><span class="lineno">   51</span>        } <span class="keywordflow">catch</span> (<span class="keywordtype">int</span> error) {</div>
+<div class="line"><span class="lineno">   52</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;passing skinning...\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   53</span>            m_isSkinning = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   54</span>        }</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   57</span>            <span class="keywordflow">if</span>(collada.hasChild(<span class="stringliteral">&quot;library_images&quot;</span>))</div>
+<div class="line"><span class="lineno">   58</span>                LoadTexturePath(collada.getChild(<span class="stringliteral">&quot;library_images&quot;</span>));</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   60</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;passing texture...\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   61</span>        } <span class="keywordflow">catch</span> (<span class="keywordtype">int</span> error) {</div>
+<div class="line"><span class="lineno">   62</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;passing texture...\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; geometryData = collada.getChild(<span class="stringliteral">&quot;library_geometries&quot;</span>).children;</div>
+<div class="line"><span class="lineno">   67</span>            m_meshList.reserve(geometryData.size());</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; geometry : geometryData) {</div>
+<div class="line"><span class="lineno">   70</span>                <span class="keyword">auto</span> meshData = <span class="keyword">new</span> DAEMeshData();</div>
+<div class="line"><span class="lineno">   71</span>                meshData-&gt;meshName = geometry.getAttribute(<span class="stringliteral">&quot;id&quot;</span>).value;</div>
+<div class="line"><span class="lineno">   72</span>                LoadGeometry(geometry, meshData);</div>
+<div class="line"><span class="lineno">   73</span>                m_meshList.push_back(meshData);</div>
+<div class="line"><span class="lineno">   74</span>            }</div>
+<div class="line"><span class="lineno">   75</span>        } <span class="keywordflow">catch</span> (<span class="keywordtype">int</span> error) {</div>
+<div class="line"><span class="lineno">   76</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;passing geometry...\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   77</span>        }</div>
+<div class="line"><span class="lineno">   78</span>    }</div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">if</span> (type == ANIMATION || type == ALL || type == AUTO) {</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   81</span>            <span class="keywordtype">bool</span> safe_exception;</div>
+<div class="line"><span class="lineno">   82</span>            m_animationLoader = <span class="keyword">new</span> <a class="code hl_class" href="../../d9/d62/class_c_s_e_1_1_d_a_e_animation_loader.html">DAEAnimationLoader</a>();</div>
+<div class="line"><span class="lineno">   83</span>            safe_exception = m_animationLoader-&gt;Load(path, m_name);</div>
+<div class="line"><span class="lineno">   84</span><span class="preprocessor">#ifdef __EMSCRIPTEN__</span></div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">if</span>(!safe_exception) {</div>
+<div class="line"><span class="lineno">   86</span>                SAFE_DELETE(m_animationLoader);</div>
+<div class="line"><span class="lineno">   87</span>            }</div>
+<div class="line"><span class="lineno">   88</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   89</span>        } <span class="keywordflow">catch</span> (<span class="keywordtype">int</span> error) {</div>
+<div class="line"><span class="lineno">   90</span>            SAFE_DELETE(m_animationLoader);</div>
+<div class="line"><span class="lineno">   91</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;passing Animation...\n&quot;</span>;</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="line"><span class="lineno">   94</span><span class="comment">//    LoadTexture(texture_path);</span></div>
+<div class="line"><span class="lineno">   95</span>}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_d_a_e_animation_loader_html"><div class="ttname"><a href="../../d9/d62/class_c_s_e_1_1_d_a_e_animation_loader.html">CSE::DAEAnimationLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d73/_d_a_e_animation_loader_8h_source.html#l00045">DAEAnimationLoader.h:45</a></div></div>
 <div class="ttc" id="aclass_x_f_i_l_e_html"><div class="ttname"><a href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/_x_m_l_8h_source.html#l00077">XML.h:77</a></div></div>
 <div class="ttc" id="aclass_x_node_html"><div class="ttname"><a href="../../dd/d83/class_x_node.html">XNode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/deb/_x_m_l_8h_source.html#l00043">XML.h:43</a></div></div>
@@ -537,13 +538,13 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html#l00097">97</a> of file <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html">DAELoader.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                                                               {</div>
-<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">if</span> (asset == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>    <span class="keyword">auto</span>* texture = SResource::Create&lt;STexture&gt;(asset);</div>
-<div class="line"><span class="lineno">  101</span>    m_texture_name = texture-&gt;GetName();</div>
-<div class="line"><span class="lineno">  102</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html#l00098">98</a> of file <a class="el" href="../../d9/dd8/_d_a_e_loader_8cpp_source.html">DAELoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   98</span>                                                               {</div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">if</span> (asset == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>    <span class="keyword">auto</span>* texture = SResource::Create&lt;STexture&gt;(asset);</div>
+<div class="line"><span class="lineno">  102</span>    m_texture_name = texture-&gt;GetName();</div>
+<div class="line"><span class="lineno">  103</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -557,7 +558,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../da/d85/class_c_s_e_1_1_d_a_e_loader.html">DAELoader</a></li>
-    <li class="footer">Generated on Wed Feb 8 2023 01:01:08 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Wed Feb 15 2023 01:02:42 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

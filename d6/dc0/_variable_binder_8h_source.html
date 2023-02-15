@@ -124,26 +124,45 @@ $(document).ready(function(){initNavTree('d6/dc0/_variable_binder_8h_source.html
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define PRINT_END(type) result += std::string(&quot;&lt;/&quot;</span>) + (type) + &quot;&gt;\n&quot;; return result</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define PRINT_VALUE(variable, ...) {std::stringstream temp;\</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">result += std::string(&quot;&lt;value name=\&quot;&quot;</span>) + #variable + &quot;\&quot;&gt;&quot; + appandAll(temp, __VA_ARGS__) + &quot;&lt;/value&gt;\n&quot;;}</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define PRINT_VALUE_MAT4(variable) {\</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">mat4 m = variable;\</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">PRINT_VALUE(variable, m.x.x, &#39; &#39;, m.x.y, &#39; &#39;, m.x.z, &#39; &#39;, m.x.w, &#39; &#39;,\</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">m.y.x, &#39; &#39;, m.y.y, &#39; &#39;, m.y.z, &#39; &#39;, m.y.w, &#39; &#39;,\</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">m.z.x, &#39; &#39;, m.z.y, &#39; &#39;, m.z.z, &#39; &#39;, m.z.w, &#39; &#39;,\</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">m.w.x, &#39; &#39;, m.w.y, &#39; &#39;, m.w.z, &#39; &#39;, m.w.w);}</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#define PRINT_VALUE_VEC3(variable) {\</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">vec3 v = variable;\</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">PRINT_VALUE(variable, v.x, &#39; &#39;, v.y, &#39; &#39;, v.z);}</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#define SET_VEC3(variable) vec3 vec = vec3();\</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">vec.Set(std::stof(value[0]), std::stof(value[1]), std::stof(value[2]));\</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">variable = vec3(vec);</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#define SET_MAT4(variable) mat4 mat = mat4();\</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">mat.x.Set(std::stof(value[0]), std::stof(value[1]), std::stof(value[2]), std::stof(value[3]));\</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">mat.y.Set(std::stof(value[4]), std::stof(value[5]), std::stof(value[6]), std::stof(value[7]));\</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">mat.z.Set(std::stof(value[8]), std::stof(value[9]), std::stof(value[10]), std::stof(value[11]));\</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">mat.w.Set(std::stof(value[12]), std::stof(value[13]), std::stof(value[14]), std::stof(value[15]));\</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">variable = mat4(mat);</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define PRINT_VALUE_SPREFAB_REF(variable) {const auto&amp; obj = variable-&gt;GetGameObject();\</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">const auto&amp; ref = dynamic_cast&lt;SGameObjectFromSPrefab*&gt;(variable-&gt;GetGameObject());\</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">std::stringstream temp;\</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">result += std::string(&quot;&lt;value name=\&quot;&quot;</span>) + #variable + &quot;\&quot; ref=\&quot;&quot; + \</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>(ref == nullptr ? &quot;0&quot; : &quot;1&quot;) + &quot;\&quot;&gt;&quot; +\</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>appandAll(temp, (ref == nullptr ? obj-&gt;GetID(variable) : ref-&gt;GetRefID(variable))) + &quot;&lt;/value&gt;\n&quot;;\</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define PRINT_VALUE_MAT4(variable) {\</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">mat4 m = variable;\</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">PRINT_VALUE(variable, m.x.x, &#39; &#39;, m.x.y, &#39; &#39;, m.x.z, &#39; &#39;, m.x.w, &#39; &#39;,\</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">m.y.x, &#39; &#39;, m.y.y, &#39; &#39;, m.y.z, &#39; &#39;, m.y.w, &#39; &#39;,\</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">m.z.x, &#39; &#39;, m.z.y, &#39; &#39;, m.z.z, &#39; &#39;, m.z.w, &#39; &#39;,\</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">m.w.x, &#39; &#39;, m.w.y, &#39; &#39;, m.w.z, &#39; &#39;, m.w.w);}</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#define PRINT_VALUE_VEC3(variable) {\</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">vec3 v = variable;\</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">PRINT_VALUE(variable, v.x, &#39; &#39;, v.y, &#39; &#39;, v.z);}</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#define PRINT_VALUE_VEC4(variable) {\</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">vec4 v = variable;\</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">PRINT_VALUE(variable, v.x, &#39; &#39;, v.y, &#39; &#39;, v.z, &#39; &#39;, v.w);}</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#define SET_VEC3(variable) {vec3 vec = vec3();\</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">vec.Set(std::stof(value[0]), std::stof(value[1]), std::stof(value[2]));\</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">variable = std::move(vec);}</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define SET_VEC4(variable) {vec4 vec = vec4();\</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">vec.Set(std::stof(value[0]), std::stof(value[1]), std::stof(value[2]), std::stof(value[3]));\</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">variable = std::move(vec);}</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define SET_MAT4(variable) {mat4 mat = mat4();\</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">mat.x.Set(std::stof(value[0]), std::stof(value[1]), std::stof(value[2]), std::stof(value[3]));\</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">mat.y.Set(std::stof(value[4]), std::stof(value[5]), std::stof(value[6]), std::stof(value[7]));\</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">mat.z.Set(std::stof(value[8]), std::stof(value[9]), std::stof(value[10]), std::stof(value[11]));\</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">mat.w.Set(std::stof(value[12]), std::stof(value[13]), std::stof(value[14]), std::stof(value[15]));\</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">variable = std::move(mat);}</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#define SET_SPREFAB_REF(variable, component) {\</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">const auto&amp; ref = dynamic_cast&lt;SGameObjectFromSPrefab*&gt;(variable-&gt;GetGameObject()); \</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">const auto&amp; obj = variable-&gt;GetGameObject();\</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">if (ref != nullptr) variable = ref-&gt;GetComponentByRefHash&lt;component&gt;(value[0]);\</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">else variable = obj-&gt;GetComponentByHash&lt;component&gt;(value[0]);\</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">}</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="ttc" id="aclass_c_s_e_1_1_variable_binder_html"><div class="ttname"><a href="../../d3/dee/class_c_s_e_1_1_variable_binder.html">CSE::VariableBinder</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc0/_variable_binder_8h_source.html#l00012">VariableBinder.h:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -151,7 +170,7 @@ $(document).ready(function(){initNavTree('d6/dc0/_variable_binder_8h_source.html
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d4f7a754e06480f800a6fab4b04999ce.html">Util</a></li><li class="navelem"><b>VariableBinder.h</b></li>
-    <li class="footer">Generated on Wed Feb 8 2023 01:01:08 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Wed Feb 15 2023 01:02:42 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

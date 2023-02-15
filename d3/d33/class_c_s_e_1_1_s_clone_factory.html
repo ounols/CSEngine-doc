@@ -143,20 +143,20 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d65/_s_clone_factory_8cpp_source.html#l00023">23</a> of file <a class="el" href="../../d3/d65/_s_clone_factory_8cpp_source.html">SCloneFactory.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>                                                                           {</div>
-<div class="line"><span class="lineno">   24</span>    <span class="keywordflow">if</span>(parent == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">   25</span>        <a class="code hl_class" href="../../dd/d4d/class_c_s_e_1_1_scene.html">Scene</a>* currentScene = CORE-&gt;GetCore(<a class="code hl_class" href="../../d6/d0a/class_c_s_e_1_1_scene_mgr.html">SceneMgr</a>)-&gt;GetCurrentScene();</div>
-<div class="line"><span class="lineno">   26</span>        <span class="keywordflow">if</span>(!<span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../da/d8a/class_c_s_e_1_1_s_scene.html">SScene</a>*<span class="keyword">&gt;</span>(currentScene)) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">   27</span> </div>
-<div class="line"><span class="lineno">   28</span>        parent = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="../../da/d8a/class_c_s_e_1_1_s_scene.html">SScene</a>*<span class="keyword">&gt;</span>(currentScene)-&gt;GetRoot();</div>
-<div class="line"><span class="lineno">   29</span>    }</div>
-<div class="line"><span class="lineno">   30</span> </div>
-<div class="line"><span class="lineno">   31</span>    <a class="code hl_class" href="../../db/d1a/class_c_s_e_1_1_s_component.html">SComponent</a>* clone_component = component-&gt;Clone(parent);</div>
-<div class="line"><span class="lineno">   32</span>    clone_component-&gt;CopyReference(component, std::map&lt;SGameObject*, SGameObject*&gt;(), std::map&lt;SComponent*, SComponent*&gt;());</div>
-<div class="line"><span class="lineno">   33</span> </div>
-<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">return</span> clone_component;</div>
-<div class="line"><span class="lineno">   35</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d3/d65/_s_clone_factory_8cpp_source.html#l00024">24</a> of file <a class="el" href="../../d3/d65/_s_clone_factory_8cpp_source.html">SCloneFactory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>                                                                           {</div>
+<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">if</span>(parent == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   26</span>        <a class="code hl_class" href="../../dd/d4d/class_c_s_e_1_1_scene.html">Scene</a>* currentScene = CORE-&gt;GetCore(<a class="code hl_class" href="../../d6/d0a/class_c_s_e_1_1_scene_mgr.html">SceneMgr</a>)-&gt;GetCurrentScene();</div>
+<div class="line"><span class="lineno">   27</span>        <span class="keywordflow">if</span>(!<span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../da/d8a/class_c_s_e_1_1_s_scene.html">SScene</a>*<span class="keyword">&gt;</span>(currentScene)) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>        parent = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="../../da/d8a/class_c_s_e_1_1_s_scene.html">SScene</a>*<span class="keyword">&gt;</span>(currentScene)-&gt;GetRoot();</div>
+<div class="line"><span class="lineno">   30</span>    }</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span>    <a class="code hl_class" href="../../db/d1a/class_c_s_e_1_1_s_component.html">SComponent</a>* clone_component = component-&gt;Clone(parent);</div>
+<div class="line"><span class="lineno">   33</span>    clone_component-&gt;CopyReference(component, std::map&lt;SGameObject*, SGameObject*&gt;(), std::map&lt;SComponent*, SComponent*&gt;());</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">return</span> clone_component;</div>
+<div class="line"><span class="lineno">   36</span>}</div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_component_html"><div class="ttname"><a href="../../db/d1a/class_c_s_e_1_1_s_component.html">CSE::SComponent</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d37/_s_component_8h_source.html#l00017">SComponent.h:17</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_s_scene_html"><div class="ttname"><a href="../../da/d8a/class_c_s_e_1_1_s_scene.html">CSE::SScene</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d2f/_s_scene_8h_source.html#l00012">SScene.h:12</a></div></div>
 <div class="ttc" id="aclass_c_s_e_1_1_scene_html"><div class="ttname"><a href="../../dd/d4d/class_c_s_e_1_1_scene.html">CSE::Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d56/_scene_8h_source.html#l00007">Scene.h:7</a></div></div>
@@ -198,32 +198,32 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d3/d65/_s_clone_factory_8cpp_source.html#l00037">37</a> of file <a class="el" href="../../d3/d65/_s_clone_factory_8cpp_source.html">SCloneFactory.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                                                          {</div>
-<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">if</span>(parent == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">   39</span>        <a class="code hl_class" href="../../dd/d4d/class_c_s_e_1_1_scene.html">Scene</a>* currentScene = CORE-&gt;GetCore(<a class="code hl_class" href="../../d6/d0a/class_c_s_e_1_1_scene_mgr.html">SceneMgr</a>)-&gt;GetCurrentScene();</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span>(!<span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../da/d8a/class_c_s_e_1_1_s_scene.html">SScene</a>*<span class="keyword">&gt;</span>(currentScene)) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">   41</span> </div>
-<div class="line"><span class="lineno">   42</span>        parent = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="../../da/d8a/class_c_s_e_1_1_s_scene.html">SScene</a>*<span class="keyword">&gt;</span>(currentScene)-&gt;GetRoot();</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
-<div class="line"><span class="lineno">   44</span> </div>
+<p class="definition">Definition at line <a class="el" href="../../d3/d65/_s_clone_factory_8cpp_source.html#l00038">38</a> of file <a class="el" href="../../d3/d65/_s_clone_factory_8cpp_source.html">SCloneFactory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                                          {</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">if</span>(parent == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   40</span>        <a class="code hl_class" href="../../dd/d4d/class_c_s_e_1_1_scene.html">Scene</a>* currentScene = CORE-&gt;GetCore(<a class="code hl_class" href="../../d6/d0a/class_c_s_e_1_1_scene_mgr.html">SceneMgr</a>)-&gt;GetCurrentScene();</div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">if</span>(!<span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="../../da/d8a/class_c_s_e_1_1_s_scene.html">SScene</a>*<span class="keyword">&gt;</span>(currentScene)) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>        parent = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="../../da/d8a/class_c_s_e_1_1_s_scene.html">SScene</a>*<span class="keyword">&gt;</span>(currentScene)-&gt;GetRoot();</div>
+<div class="line"><span class="lineno">   44</span>    }</div>
 <div class="line"><span class="lineno">   45</span> </div>
-<div class="line"><span class="lineno">   46</span>    std::map&lt;SComponent*, SComponent*&gt; clone_component;</div>
-<div class="line"><span class="lineno">   47</span>    std::map&lt;SGameObject*, SGameObject*&gt; clone_object;</div>
-<div class="line"><span class="lineno">   48</span> </div>
-<div class="line"><span class="lineno">   49</span>    CloningObjects(<span class="keywordtype">object</span>, clone_component, clone_object, parent);</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>    <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>* cloneObject_root = clone_object[object];</div>
-<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    std::map&lt;SComponent*, SComponent*&gt; clone_component;</div>
+<div class="line"><span class="lineno">   48</span>    std::map&lt;SGameObject*, SGameObject*&gt; clone_object;</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>    CloningObjects(<span class="keywordtype">object</span>, clone_component, clone_object, parent);</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>    <a class="code hl_class" href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">SGameObject</a>* cloneObject_root = clone_object[object];</div>
 <div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; component_pair : clone_component) {</div>
-<div class="line"><span class="lineno">   55</span>        <a class="code hl_class" href="../../db/d1a/class_c_s_e_1_1_s_component.html">SComponent</a>* component = component_pair.second;</div>
-<div class="line"><span class="lineno">   56</span>        component-&gt;CopyReference(component_pair.first, clone_object, clone_component);</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">return</span> cloneObject_root;</div>
-<div class="line"><span class="lineno">   60</span>}</div>
-<div class="ttc" id="aclass_c_s_e_1_1_s_game_object_html"><div class="ttname"><a href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">CSE::SGameObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d05/_s_game_object_8h_source.html#l00016">SGameObject.h:16</a></div></div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; component_pair : clone_component) {</div>
+<div class="line"><span class="lineno">   56</span>        <a class="code hl_class" href="../../db/d1a/class_c_s_e_1_1_s_component.html">SComponent</a>* component = component_pair.second;</div>
+<div class="line"><span class="lineno">   57</span>        component-&gt;CopyReference(component_pair.first, clone_object, clone_component);</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">return</span> cloneObject_root;</div>
+<div class="line"><span class="lineno">   61</span>}</div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_game_object_html"><div class="ttname"><a href="../../dc/d47/class_c_s_e_1_1_s_game_object.html">CSE::SGameObject</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d05/_s_game_object_8h_source.html#l00017">SGameObject.h:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -237,7 +237,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../d3/d33/class_c_s_e_1_1_s_clone_factory.html">SCloneFactory</a></li>
-    <li class="footer">Generated on Wed Feb 8 2023 01:01:08 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Wed Feb 15 2023 01:02:42 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>
