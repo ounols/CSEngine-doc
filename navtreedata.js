@@ -28,13 +28,13 @@ var NAVTREE =
     [ "Welcome to the CSEngine documentation", "index.html#autotoc_md5", [
       [ "💡 Programming and Scripting Reference", "index.html#autotoc_md6", null ]
     ] ],
-    [ "C++ API Reference", "db/d2f/md_csengine_docs_docs_cpp_api.html", [
-      [ "Components", "db/d2f/md_csengine_docs_docs_cpp_api.html#autotoc_md1", null ],
-      [ "Managers", "db/d2f/md_csengine_docs_docs_cpp_api.html#autotoc_md2", null ],
-      [ "Objects", "db/d2f/md_csengine_docs_docs_cpp_api.html#autotoc_md3", null ],
-      [ "Resources", "db/d2f/md_csengine_docs_docs_cpp_api.html#autotoc_md4", null ]
+    [ "C++ API Reference", "dd/de4/md_csengine__docs_2docs_2cpp-api.html", [
+      [ "Components", "dd/de4/md_csengine__docs_2docs_2cpp-api.html#autotoc_md1", null ],
+      [ "Managers", "dd/de4/md_csengine__docs_2docs_2cpp-api.html#autotoc_md2", null ],
+      [ "Objects", "dd/de4/md_csengine__docs_2docs_2cpp-api.html#autotoc_md3", null ],
+      [ "Resources", "dd/de4/md_csengine__docs_2docs_2cpp-api.html#autotoc_md4", null ]
     ] ],
-    [ "Modules", "modules.html", "modules" ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

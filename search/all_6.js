@@ -12,7 +12,7 @@ var searchData=
   ['getmaincolortexture_9',['GetMainColorTexture',['../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a38a163164fc74d3e7c0eb239551518ac',1,'CSE::SFrameBuffer']]],
   ['getrenderbufferid_10',['GetRenderbufferID',['../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a09e4ddd32ee8725074cf1f9c23dc4a8e',1,'CSE::SFrameBuffer']]],
   ['getshadowcount_11',['GetShadowCount',['../d9/d1d/class_c_s_e_1_1_light_mgr.html#a25044bf2ce18a6159ab19b6122c1ebcb',1,'CSE::LightMgr']]],
-  ['gettexture_12',['GetTexture',['../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#adfa04c3f63d140edba2f8c73507a3873',1,'CSE::SFrameBuffer::GetTexture(int index) const'],['../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a2383b5b425094d34992b0ad8d6c0c9fb',1,'CSE::SFrameBuffer::GetTexture(const char *id) const']]],
+  ['gettexture_12',['gettexture',['../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#adfa04c3f63d140edba2f8c73507a3873',1,'CSE::SFrameBuffer::GetTexture(int index) const'],['../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#a2383b5b425094d34992b0ad8d6c0c9fb',1,'CSE::SFrameBuffer::GetTexture(const char *id) const']]],
   ['getwidth_13',['GetWidth',['../d4/daa/class_c_s_e_1_1_render_mgr.html#a1229a6b2988c433f03d11a4fb94f46dc',1,'CSE::RenderMgr']]],
   ['glattributehandles_14',['GLAttributeHandles',['../d8/d67/struct_c_s_e_1_1_g_l_attribute_handles.html',1,'CSE']]],
   ['glmeshid_15',['GLMeshID',['../dd/daa/struct_c_s_e_1_1_g_l_mesh_i_d.html',1,'CSE']]],
