@@ -66,39 +66,44 @@ var hierarchy =
     [ "CSE::Settings", "d9/da6/class_c_s_e_1_1_settings.html", null ],
     [ "CSE::SGBuffer", "d0/dc0/class_c_s_e_1_1_s_g_buffer.html", null ],
     [ "CSE::ShaderUtil", "df/d5e/class_c_s_e_1_1_shader_util.html", null ],
-    [ "CSE::SIContainer< S, T, M >", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
-      [ "CSE::SContainerHash< SGameObject * >", "df/d67/class_c_s_e_1_1_s_container_hash.html", [
-        [ "CSE::GameObjectContainer", "d4/d4a/class_c_s_e_1_1_game_object_container.html", [
-          [ "CSE::GameObjectMgr", "d5/db0/class_c_s_e_1_1_game_object_mgr.html", null ]
-        ] ]
-      ] ],
-      [ "CSE::SContainerHash< SResource * >", "df/d67/class_c_s_e_1_1_s_container_hash.html", [
-        [ "CSE::ResMgr", "de/db3/class_c_s_e_1_1_res_mgr.html", null ]
-      ] ],
+    [ "CSE::SIContainer< S, T, M >", "da/d1f/class_c_s_e_1_1_s_i_container.html", null ],
+    [ "CSE::SIContainer< std::list< CameraComponent * >, CameraComponent *, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
       [ "CSE::SContainerList< CameraComponent * >", "d5/d45/class_c_s_e_1_1_s_container_list.html", [
         [ "CSE::CameraMgr", "d8/df8/class_c_s_e_1_1_camera_mgr.html", null ]
-      ] ],
+      ] ]
+    ] ],
+    [ "CSE::SIContainer< std::list< LightComponent * >, LightComponent *, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
       [ "CSE::SContainerList< LightComponent * >", "d5/d45/class_c_s_e_1_1_s_container_list.html", [
         [ "CSE::LightMgr", "d9/d1d/class_c_s_e_1_1_light_mgr.html", null ]
-      ] ],
+      ] ]
+    ] ],
+    [ "CSE::SIContainer< std::list< SObject * >, SObject *, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
       [ "CSE::SContainerList< SObject * >", "d5/d45/class_c_s_e_1_1_s_container_list.html", [
         [ "CSE::MemoryContainer", "dd/dd8/class_c_s_e_1_1_memory_container.html", [
           [ "CSE::MemoryMgr", "d6/d40/class_c_s_e_1_1_memory_mgr.html", null ]
         ] ]
-      ] ],
+      ] ]
+    ] ],
+    [ "CSE::SIContainer< std::list< Sqrat::Object * >, Sqrat::Object *, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
       [ "CSE::SContainerList< Sqrat::Object * >", "d5/d45/class_c_s_e_1_1_s_container_list.html", [
         [ "CSE::ScriptMgr", "d0/dc6/class_c_s_e_1_1_script_mgr.html", null ]
       ] ]
     ] ],
-    [ "CSE::SIContainer< std::list< CameraComponent * >, CameraComponent *, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", null ],
-    [ "CSE::SIContainer< std::list< LightComponent * >, LightComponent *, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", null ],
-    [ "CSE::SIContainer< std::list< SObject * >, SObject *, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", null ],
-    [ "CSE::SIContainer< std::list< Sqrat::Object * >, Sqrat::Object *, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", null ],
     [ "CSE::SIContainer< std::list< T >, T, int >", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
       [ "CSE::SContainerList< T >", "d5/d45/class_c_s_e_1_1_s_container_list.html", null ]
     ] ],
-    [ "CSE::SIContainer< std::unordered_map< std::string, SGameObject * >, SGameObject *, std::string >", "da/d1f/class_c_s_e_1_1_s_i_container.html", null ],
-    [ "CSE::SIContainer< std::unordered_map< std::string, SResource * >, SResource *, std::string >", "da/d1f/class_c_s_e_1_1_s_i_container.html", null ],
+    [ "CSE::SIContainer< std::unordered_map< std::string, SGameObject * >, SGameObject *, std::string >", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
+      [ "CSE::SContainerHash< SGameObject * >", "df/d67/class_c_s_e_1_1_s_container_hash.html", [
+        [ "CSE::GameObjectContainer", "d4/d4a/class_c_s_e_1_1_game_object_container.html", [
+          [ "CSE::GameObjectMgr", "d5/db0/class_c_s_e_1_1_game_object_mgr.html", null ]
+        ] ]
+      ] ]
+    ] ],
+    [ "CSE::SIContainer< std::unordered_map< std::string, SResource * >, SResource *, std::string >", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
+      [ "CSE::SContainerHash< SResource * >", "df/d67/class_c_s_e_1_1_s_container_hash.html", [
+        [ "CSE::ResMgr", "de/db3/class_c_s_e_1_1_res_mgr.html", null ]
+      ] ]
+    ] ],
     [ "CSE::SIContainer< std::unordered_map< std::string, T >, T, std::string >", "da/d1f/class_c_s_e_1_1_s_i_container.html", [
       [ "CSE::SContainerHash< T >", "df/d67/class_c_s_e_1_1_s_container_hash.html", null ]
     ] ],
