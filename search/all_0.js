@@ -8,6 +8,6 @@ var searchData=
   ['api_20reference_5',['C++ API Reference',['../dd/de4/md_csengine__docs_2docs_2cpp-api.html',1,'']]],
   ['assetmgr_6',['AssetMgr',['../db/d3d/class_c_s_e_1_1_asset_mgr.html',1,'CSE']]],
   ['assetreference_7',['AssetReference',['../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html',1,'CSE::AssetMgr']]],
-  ['attachlightmaptoshader_8',['AttachLightMapToShader',['../d9/d1d/class_c_s_e_1_1_light_mgr.html#a3afc1545360db64030466cddbaa5b738',1,'CSE::LightMgr']]],
-  ['attachlighttoshader_9',['AttachLightToShader',['../d9/d1d/class_c_s_e_1_1_light_mgr.html#a7152bbd87f8bfda2e9c19f47a27118a8',1,'CSE::LightMgr']]]
+  ['attachlightmaptoshader_8',['AttachLightMapToShader',['../d9/d1d/class_c_s_e_1_1_light_mgr.html#acd28e2cc96c47c568f7d4f57601f13e7',1,'CSE::LightMgr']]],
+  ['attachlighttoshader_9',['AttachLightToShader',['../d9/d1d/class_c_s_e_1_1_light_mgr.html#af176c629f25fa71318b4952cf2829ff3',1,'CSE::LightMgr']]]
 ];

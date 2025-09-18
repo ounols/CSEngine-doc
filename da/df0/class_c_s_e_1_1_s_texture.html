@@ -114,8 +114,10 @@ Inheritance diagram for CSE::STexture:</div>
  <div class="center">
   <img src="../../da/df0/class_c_s_e_1_1_s_texture.png" usemap="#CSE::STexture_map" alt=""/>
   <map id="CSE::STexture_map" name="CSE::STexture_map">
-<area href="../../dd/d6c/class_c_s_e_1_1_s_resource.html" alt="CSE::SResource" shape="rect" coords="0,56,105,80"/>
-<area href="../../d8/d5e/class_c_s_e_1_1_s_object.html" alt="CSE::SObject" shape="rect" coords="0,0,105,24"/>
+<area href="../../dd/d6c/class_c_s_e_1_1_s_resource.html" alt="CSE::SResource" shape="rect" coords="146,56,282,80"/>
+<area href="../../d8/d5e/class_c_s_e_1_1_s_object.html" alt="CSE::SObject" shape="rect" coords="0,0,136,24"/>
+<area href="../../d3/dee/class_c_s_e_1_1_variable_binder.html" alt="CSE::VariableBinder" shape="rect" coords="146,0,282,24"/>
+<area href="../../de/d2f/class_c_s_e_1_1_reflection_object.html" alt="CSE::ReflectionObject" shape="rect" coords="292,0,428,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -123,13 +125,17 @@ Inheritance diagram for CSE::STexture:</div>
 Public Types</h2></td></tr>
 <tr class="memitem:a82314f7296644df5de214662547ebb1c" id="r_a82314f7296644df5de214662547ebb1c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> { <b>TEX_2D</b> = 0
 , <b>TEX_CUBE</b> = 1
+, <b>TEX_3D</b> = 2
  }</td></tr>
 <tr class="separator:a82314f7296644df5de214662547ebb1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a152a7b6aa09a59a2ff916d7c7247f4d7" id="r_a152a7b6aa09a59a2ff916d7c7247f4d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a152a7b6aa09a59a2ff916d7c7247f4d7">STexture</a> (Type type)</td></tr>
-<tr class="separator:a152a7b6aa09a59a2ff916d7c7247f4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d844774726c0d93a9600f385d02b9ed" id="r_a6d844774726c0d93a9600f385d02b9ed"><td class="memItemLeft" align="right" valign="top"><a id="a6d844774726c0d93a9600f385d02b9ed" name="a6d844774726c0d93a9600f385d02b9ed"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RESOURCE_DEFINE_CONSTRUCTOR</b> (<a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a>)</td></tr>
+<tr class="separator:a6d844774726c0d93a9600f385d02b9ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683dbcfe9eb37b405715855259b59254" id="r_a683dbcfe9eb37b405715855259b59254"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a683dbcfe9eb37b405715855259b59254">STexture</a> (Type type)</td></tr>
+<tr class="separator:a683dbcfe9eb37b405715855259b59254"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62cb5b7ef90fb8b6d6159e3dc88f1941" id="r_a62cb5b7ef90fb8b6d6159e3dc88f1941"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62cb5b7ef90fb8b6d6159e3dc88f1941">LoadFile</a> (const char *path)</td></tr>
 <tr class="separator:a62cb5b7ef90fb8b6d6159e3dc88f1941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9564f746d16932e786c973b64397ad74" id="r_a9564f746d16932e786c973b64397ad74"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9564f746d16932e786c973b64397ad74">LoadFromMemory</a> (const unsigned char *rawData, int length)</td></tr>
@@ -162,15 +168,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0dbc58106a0ff99f3a41b2a518f5a9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf59ce18d0b2b73ee9c35e7648b4e7e1" id="r_abf59ce18d0b2b73ee9c35e7648b4e7e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf59ce18d0b2b73ee9c35e7648b4e7e1">SetType</a> (Type type)</td></tr>
 <tr class="separator:abf59ce18d0b2b73ee9c35e7648b4e7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a268723bbf9afc9ac6fdf5175e4063d3f" id="r_a268723bbf9afc9ac6fdf5175e4063d3f"><td class="memItemLeft" align="right" valign="top"><a id="a268723bbf9afc9ac6fdf5175e4063d3f" name="a268723bbf9afc9ac6fdf5175e4063d3f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getMWidth</b> () const</td></tr>
-<tr class="separator:a268723bbf9afc9ac6fdf5175e4063d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a749b435c7fb3858433fb8e10fcae699f" id="r_a749b435c7fb3858433fb8e10fcae699f"><td class="memItemLeft" align="right" valign="top"><a id="a749b435c7fb3858433fb8e10fcae699f" name="a749b435c7fb3858433fb8e10fcae699f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getMHeight</b> () const</td></tr>
-<tr class="separator:a749b435c7fb3858433fb8e10fcae699f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6a1bd45a5ed9486d3528447ebe5ee36" id="r_ab6a1bd45a5ed9486d3528447ebe5ee36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6a1bd45a5ed9486d3528447ebe5ee36">SetValue</a> (std::string name_str, Arguments value) override</td></tr>
+<tr class="separator:ab6a1bd45a5ed9486d3528447ebe5ee36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1da69c4ca2ebb42efac246d2f868fa2f" id="r_a1da69c4ca2ebb42efac246d2f868fa2f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1da69c4ca2ebb42efac246d2f868fa2f">PrintValue</a> () const override</td></tr>
+<tr class="separator:a1da69c4ca2ebb42efac246d2f868fa2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_s_e_1_1_s_resource"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_c_s_e_1_1_s_resource')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></td></tr>
-<tr class="memitem:aebfb7cbabcd045e67c8a7fce225d4f99 inherit pub_methods_class_c_s_e_1_1_s_resource" id="r_aebfb7cbabcd045e67c8a7fce225d4f99"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html#aebfb7cbabcd045e67c8a7fce225d4f99">SResource</a> (bool isRegister)</td></tr>
-<tr class="separator:aebfb7cbabcd045e67c8a7fce225d4f99 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f57f5ffaf8f5fd73d45e4468487902 inherit pub_methods_class_c_s_e_1_1_s_resource" id="r_ad5f57f5ffaf8f5fd73d45e4468487902"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html#ad5f57f5ffaf8f5fd73d45e4468487902">SResource</a> (std::string classType)</td></tr>
+<tr class="separator:ad5f57f5ffaf8f5fd73d45e4468487902 inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6a6e214aa0ea1937301f0458e69751d inherit pub_methods_class_c_s_e_1_1_s_resource" id="r_ae6a6e214aa0ea1937301f0458e69751d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html#ae6a6e214aa0ea1937301f0458e69751d">SResource</a> (const <a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">SResource</a> *resource, bool isRegister)</td></tr>
 <tr class="separator:ae6a6e214aa0ea1937301f0458e69751d inherit pub_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab66b050ce215a6ccc332661964a3b14d inherit pub_methods_class_c_s_e_1_1_s_resource" id="r_ab66b050ce215a6ccc332661964a3b14d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html#ab66b050ce215a6ccc332661964a3b14d">SetName</a> (std::string name)</td></tr>
@@ -196,12 +200,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getMHeight</b> () cons
 <tr class="separator:a164a1c9551773e7caad8c79eff19fc56 inherit pub_methods_class_c_s_e_1_1_s_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79597091d81bc144cfc7d6be4ff7e173 inherit pub_methods_class_c_s_e_1_1_s_object" id="r_a79597091d81bc144cfc7d6be4ff7e173"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d5e/class_c_s_e_1_1_s_object.html#a79597091d81bc144cfc7d6be4ff7e173">Destroy</a> ()</td></tr>
 <tr class="separator:a79597091d81bc144cfc7d6be4ff7e173 inherit pub_methods_class_c_s_e_1_1_s_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68e90e273de3920f22e77b3948bb7ca8 inherit pub_methods_class_c_s_e_1_1_s_object" id="r_a68e90e273de3920f22e77b3948bb7ca8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d5e/class_c_s_e_1_1_s_object.html#a68e90e273de3920f22e77b3948bb7ca8">__FORCE_DESTROY__</a> ()</td></tr>
-<tr class="separator:a68e90e273de3920f22e77b3948bb7ca8 inherit pub_methods_class_c_s_e_1_1_s_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8e25bf9d75a0e4ade6a57551e905d69 inherit pub_methods_class_c_s_e_1_1_s_object" id="r_ae8e25bf9d75a0e4ade6a57551e905d69"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d5e/class_c_s_e_1_1_s_object.html#ae8e25bf9d75a0e4ade6a57551e905d69">GenerateMeta</a> ()</td></tr>
-<tr class="separator:ae8e25bf9d75a0e4ade6a57551e905d69 inherit pub_methods_class_c_s_e_1_1_s_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a778d0e8b75a5423c2238d399ad3bcfd8 inherit pub_methods_class_c_s_e_1_1_s_object" id="r_a778d0e8b75a5423c2238d399ad3bcfd8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d5e/class_c_s_e_1_1_s_object.html#a778d0e8b75a5423c2238d399ad3bcfd8">GetHash</a> () const</td></tr>
 <tr class="separator:a778d0e8b75a5423c2238d399ad3bcfd8 inherit pub_methods_class_c_s_e_1_1_s_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_c_s_e_1_1_variable_binder"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_c_s_e_1_1_variable_binder')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d3/dee/class_c_s_e_1_1_variable_binder.html">CSE::VariableBinder</a></td></tr>
+<tr class="inherit_header pub_methods_class_c_s_e_1_1_reflection_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_c_s_e_1_1_reflection_object')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/d2f/class_c_s_e_1_1_reflection_object.html">CSE::ReflectionObject</a></td></tr>
+<tr class="memitem:ad26d676de507713faf1cec2008710949 inherit pub_methods_class_c_s_e_1_1_reflection_object" id="r_ad26d676de507713faf1cec2008710949"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_c_s_e_1_1_reflection_object.html#ad26d676de507713faf1cec2008710949">ReflectionObject</a> (std::string type)</td></tr>
+<tr class="separator:ad26d676de507713faf1cec2008710949 inherit pub_methods_class_c_s_e_1_1_reflection_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00dbb9df3d444ee842648d48d931b93b inherit pub_methods_class_c_s_e_1_1_reflection_object" id="r_a00dbb9df3d444ee842648d48d931b93b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_c_s_e_1_1_reflection_object.html#a00dbb9df3d444ee842648d48d931b93b">SetClassType</a> (std::string type)</td></tr>
+<tr class="separator:a00dbb9df3d444ee842648d48d931b93b inherit pub_methods_class_c_s_e_1_1_reflection_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a116925019944b5a43aaa245e8b2113ab inherit pub_methods_class_c_s_e_1_1_reflection_object" id="r_a116925019944b5a43aaa245e8b2113ab"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_c_s_e_1_1_reflection_object.html#a116925019944b5a43aaa245e8b2113ab">GetClassType</a> () const</td></tr>
+<tr class="separator:a116925019944b5a43aaa245e8b2113ab inherit pub_methods_class_c_s_e_1_1_reflection_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a351156a4026f7d4a28918d8583e0a6d8 inherit pub_methods_class_c_s_e_1_1_reflection_object" id="r_a351156a4026f7d4a28918d8583e0a6d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_c_s_e_1_1_reflection_object.html#a351156a4026f7d4a28918d8583e0a6d8">IsSameClass</a> (const char *classType) const</td></tr>
+<tr class="separator:a351156a4026f7d4a28918d8583e0a6d8 inherit pub_methods_class_c_s_e_1_1_reflection_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -211,18 +221,28 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a1927902c3d4df23b8d97197c29aeae5c inherit pub_static_methods_class_c_s_e_1_1_s_resource" id="r_a1927902c3d4df23b8d97197c29aeae5c"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a1927902c3d4df23b8d97197c29aeae5c inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplItemLeft" align="right" valign="top">static T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html#a1927902c3d4df23b8d97197c29aeae5c">Create</a> (const std::string &amp;name)</td></tr>
 <tr class="separator:a1927902c3d4df23b8d97197c29aeae5c inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df104fef1a8d9dccbddd1a3cca87de6 inherit pub_static_methods_class_c_s_e_1_1_s_resource" id="r_a9df104fef1a8d9dccbddd1a3cca87de6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">SResource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html#a9df104fef1a8d9dccbddd1a3cca87de6">Create</a> (const std::string &amp;name, const std::string &amp;classType)</td></tr>
+<tr class="separator:a9df104fef1a8d9dccbddd1a3cca87de6 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac3a9268938cc876914b7ed29801e832 inherit pub_static_methods_class_c_s_e_1_1_s_resource" id="r_aac3a9268938cc876914b7ed29801e832"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:aac3a9268938cc876914b7ed29801e832 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplItemLeft" align="right" valign="top">static T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html#aac3a9268938cc876914b7ed29801e832">Create</a> (const <a class="el" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetMgr::AssetReference</a> *asset)</td></tr>
 <tr class="separator:aac3a9268938cc876914b7ed29801e832 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1dc6d126a118e74b8f0f691e7f74b3d inherit pub_static_methods_class_c_s_e_1_1_s_resource" id="r_aa1dc6d126a118e74b8f0f691e7f74b3d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">SResource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html#aa1dc6d126a118e74b8f0f691e7f74b3d">Create</a> (const <a class="el" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetMgr::AssetReference</a> *asset, const std::string &amp;classType)</td></tr>
+<tr class="separator:aa1dc6d126a118e74b8f0f691e7f74b3d inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d45633f6e1f39d387573ba1e1bc7266 inherit pub_static_methods_class_c_s_e_1_1_s_resource" id="r_a9d45633f6e1f39d387573ba1e1bc7266"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a9d45633f6e1f39d387573ba1e1bc7266 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memTemplItemLeft" align="right" valign="top">static T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html#a9d45633f6e1f39d387573ba1e1bc7266">Get</a> (std::string name)</td></tr>
 <tr class="separator:a9d45633f6e1f39d387573ba1e1bc7266 inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7908ac07f7338e8bb3a74657de312ae inherit pub_static_methods_class_c_s_e_1_1_s_resource" id="r_ad7908ac07f7338e8bb3a74657de312ae"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">SResource</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html#ad7908ac07f7338e8bb3a74657de312ae">Get</a> (std::string &amp;name)</td></tr>
+<tr class="separator:ad7908ac07f7338e8bb3a74657de312ae inherit pub_static_methods_class_c_s_e_1_1_s_resource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_class_c_s_e_1_1_reflection_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_class_c_s_e_1_1_reflection_object')"><img src="../../closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="../../de/d2f/class_c_s_e_1_1_reflection_object.html">CSE::ReflectionObject</a></td></tr>
+<tr class="memitem:a9abbf0909ac85710dfe6cba1d51f65e5 inherit pub_static_methods_class_c_s_e_1_1_reflection_object" id="r_a9abbf0909ac85710dfe6cba1d51f65e5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../de/d2f/class_c_s_e_1_1_reflection_object.html">ReflectionObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_c_s_e_1_1_reflection_object.html#a9abbf0909ac85710dfe6cba1d51f65e5">NewObject</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a9abbf0909ac85710dfe6cba1d51f65e5 inherit pub_static_methods_class_c_s_e_1_1_reflection_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab14fe1d1b93e167fc0536856568ac503" id="r_ab14fe1d1b93e167fc0536856568ac503"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab14fe1d1b93e167fc0536856568ac503">Init</a> (const <a class="el" href="../../d7/d60/struct_c_s_e_1_1_asset_mgr_1_1_asset_reference.html">AssetMgr::AssetReference</a> *asset) override</td></tr>
 <tr class="separator:ab14fe1d1b93e167fc0536856568ac503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_c_s_e_1_1_s_resource"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_c_s_e_1_1_s_resource')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></td></tr>
+<tr class="inherit_header pro_methods_class_c_s_e_1_1_variable_binder"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_c_s_e_1_1_variable_binder')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d3/dee/class_c_s_e_1_1_variable_binder.html">CSE::VariableBinder</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -234,6 +254,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ac6f8e60405d51e96c207d644624bc201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb33ab7f57f0dfa3bb12cab2e8121b3f" id="r_aeb33ab7f57f0dfa3bb12cab2e8121b3f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb33ab7f57f0dfa3bb12cab2e8121b3f">m_height</a> = 0</td></tr>
 <tr class="separator:aeb33ab7f57f0dfa3bb12cab2e8121b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bd96e53e1a62c042b188f4233cc62d4" id="r_a8bd96e53e1a62c042b188f4233cc62d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bd96e53e1a62c042b188f4233cc62d4">m_depth</a> = 0</td></tr>
+<tr class="separator:a8bd96e53e1a62c042b188f4233cc62d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade9041c108bbbc8368bd9c5f8825f192" id="r_ade9041c108bbbc8368bd9c5f8825f192"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade9041c108bbbc8368bd9c5f8825f192">m_channels</a> = 0</td></tr>
 <tr class="separator:ade9041c108bbbc8368bd9c5f8825f192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac537b2426614f9c5b0c6703dc806eb49" id="r_ac537b2426614f9c5b0c6703dc806eb49"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac537b2426614f9c5b0c6703dc806eb49">m_internalFormat</a> = 0</td></tr>
@@ -245,6 +267,15 @@ Protected Attributes</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_c_s_e_1_1_s_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_c_s_e_1_1_s_object')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d8/d5e/class_c_s_e_1_1_s_object.html">CSE::SObject</a></td></tr>
 <tr class="memitem:a71ac6ade4543f9df75f0a6df3861fbc7 inherit pro_attribs_class_c_s_e_1_1_s_object" id="r_a71ac6ade4543f9df75f0a6df3861fbc7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d5e/class_c_s_e_1_1_s_object.html#a71ac6ade4543f9df75f0a6df3861fbc7">m_hash</a></td></tr>
 <tr class="separator:a71ac6ade4543f9df75f0a6df3861fbc7 inherit pro_attribs_class_c_s_e_1_1_s_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_c_s_e_1_1_reflection_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_c_s_e_1_1_reflection_object')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../de/d2f/class_c_s_e_1_1_reflection_object.html">CSE::ReflectionObject</a></td></tr>
+<tr class="memitem:a65372d537a1b1ab2419b623ed40466d8 inherit pro_attribs_class_c_s_e_1_1_reflection_object" id="r_a65372d537a1b1ab2419b623ed40466d8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_c_s_e_1_1_reflection_object.html#a65372d537a1b1ab2419b623ed40466d8">m_class</a></td></tr>
+<tr class="separator:a65372d537a1b1ab2419b623ed40466d8 inherit pro_attribs_class_c_s_e_1_1_reflection_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_types_class_c_s_e_1_1_variable_binder"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_types_class_c_s_e_1_1_variable_binder')"><img src="../../closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="../../d3/dee/class_c_s_e_1_1_variable_binder.html">CSE::VariableBinder</a></td></tr>
+<tr class="memitem:a0b6307d7b0e01d7800eb2c96b2fd56fa inherit pro_types_class_c_s_e_1_1_variable_binder" id="r_a0b6307d7b0e01d7800eb2c96b2fd56fa"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dee/class_c_s_e_1_1_variable_binder.html#a0b6307d7b0e01d7800eb2c96b2fd56fa">Arguments</a></td></tr>
+<tr class="separator:a0b6307d7b0e01d7800eb2c96b2fd56fa inherit pro_types_class_c_s_e_1_1_variable_binder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -264,39 +295,14 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/d33/_s_texture_8h_source.html#l00016">16</a> of file <a class="el" href="../../d0/d33/_s_texture_8h_source.html">STexture.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   16</span>                  {</div>
-<div class="line"><span class="lineno">   17</span>            TEX_2D = 0, TEX_CUBE = 1</div>
+<div class="line"><span class="lineno">   17</span>            TEX_2D = 0, TEX_CUBE = 1, TEX_3D = 2</div>
 <div class="line"><span class="lineno">   18</span>        };</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a23523ce3125beafa0557a112637bee92" name="a23523ce3125beafa0557a112637bee92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23523ce3125beafa0557a112637bee92">&#9670;&#160;</a></span>STexture() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">STexture::STexture </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00015">15</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                   {</div>
-<div class="line"><span class="lineno">   16</span>    SetUndestroyable(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">if</span>(m_emptyTextureId == 0) {</div>
-<div class="line"><span class="lineno">   18</span>        LoadEmpty();</div>
-<div class="line"><span class="lineno">   19</span>    }</div>
-<div class="line"><span class="lineno">   20</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a152a7b6aa09a59a2ff916d7c7247f4d7" name="a152a7b6aa09a59a2ff916d7c7247f4d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a152a7b6aa09a59a2ff916d7c7247f4d7">&#9670;&#160;</a></span>STexture() <span class="overload">[2/2]</span></h2>
+<a id="a683dbcfe9eb37b405715855259b59254" name="a683dbcfe9eb37b405715855259b59254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a683dbcfe9eb37b405715855259b59254">&#9670;&#160;</a></span>STexture()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,7 +311,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">STexture::STexture </td>
+          <td class="memname">CSE::STexture::STexture </td>
           <td>(</td>
           <td class="paramtype">STexture::Type</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
           <td></td>
@@ -318,11 +324,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00022">22</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                    {</div>
-<div class="line"><span class="lineno">   23</span>    SetUndestroyable(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   24</span>    SetType(type);</div>
-<div class="line"><span class="lineno">   25</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00025">25</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>                                       : <a class="code hl_class" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">SResource</a>(<span class="stringliteral">&quot;STexture&quot;</span>) {</div>
+<div class="line"><span class="lineno">   26</span>    SetUndestroyable(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   27</span>    SetType(type);</div>
+<div class="line"><span class="lineno">   28</span>}</div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_resource_html"><div class="ttname"><a href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a></div><div class="ttdef"><b>Definition</b> <a href="../../d4/d1f/_s_resource_8h_source.html#l00017">SResource.h:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -354,17 +361,17 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00110">110</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                              {</div>
-<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">if</span> (m_texId == 0) {</div>
-<div class="line"><span class="lineno">  112</span>        BindEmpty(location, layout, m_type);</div>
-<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  114</span>    }</div>
-<div class="line"><span class="lineno">  115</span>    glUniform1i(location, layout);</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>    glActiveTexture(GL_TEXTURE0 + layout);</div>
-<div class="line"><span class="lineno">  118</span>    glBindTexture(m_targetGL, m_texId);</div>
-<div class="line"><span class="lineno">  119</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00130">130</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>                                              {</div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">if</span> (m_texId == 0) {</div>
+<div class="line"><span class="lineno">  132</span>        BindEmpty(location, layout, m_type);</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+<div class="line"><span class="lineno">  135</span>    glUniform1i(location, layout);</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>    glActiveTexture(GL_TEXTURE0 + layout);</div>
+<div class="line"><span class="lineno">  138</span>    glBindTexture(m_targetGL, m_texId);</div>
+<div class="line"><span class="lineno">  139</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -400,13 +407,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00193">193</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  193</span>                                                                      {</div>
-<div class="line"><span class="lineno">  194</span>    glUniform1i(location, layout);</div>
-<div class="line"><span class="lineno">  195</span> </div>
-<div class="line"><span class="lineno">  196</span>    glActiveTexture(GL_TEXTURE0 + layout);</div>
-<div class="line"><span class="lineno">  197</span>    glBindTexture(GetTypeToTargetGL(type), m_emptyTextureId);</div>
-<div class="line"><span class="lineno">  198</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00253">253</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  253</span>                                                                      {</div>
+<div class="line"><span class="lineno">  254</span>    glUniform1i(location, layout);</div>
+<div class="line"><span class="lineno">  255</span> </div>
+<div class="line"><span class="lineno">  256</span>    glActiveTexture(GL_TEXTURE0 + layout);</div>
+<div class="line"><span class="lineno">  257</span>    glBindTexture(GetTypeToTargetGL(type), m_emptyTextureId);</div>
+<div class="line"><span class="lineno">  258</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -435,10 +442,10 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="../../d8/d5e/class_c_s_e_1_1_s_object.html">CSE::SObject</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00106">106</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                           {</div>
-<div class="line"><span class="lineno">  107</span>    Release();</div>
-<div class="line"><span class="lineno">  108</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00126">126</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>                           {</div>
+<div class="line"><span class="lineno">  127</span>    Release();</div>
+<div class="line"><span class="lineno">  128</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -457,11 +464,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00179">179</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>                                    {</div>
-<div class="line"><span class="lineno">  180</span>    glBindTexture(m_targetGL, m_texId);</div>
-<div class="line"><span class="lineno">  181</span>    glGenerateMipmap(m_targetGL);</div>
-<div class="line"><span class="lineno">  182</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00239">239</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  239</span>                                    {</div>
+<div class="line"><span class="lineno">  240</span>    glBindTexture(m_targetGL, m_texId);</div>
+<div class="line"><span class="lineno">  241</span>    glGenerateMipmap(m_targetGL);</div>
+<div class="line"><span class="lineno">  242</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -510,10 +517,10 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00184">184</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>                                     {</div>
-<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">return</span> m_type;</div>
-<div class="line"><span class="lineno">  186</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00244">244</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  244</span>                                     {</div>
+<div class="line"><span class="lineno">  245</span>    <span class="keywordflow">return</span> m_type;</div>
+<div class="line"><span class="lineno">  246</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -542,12 +549,49 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="../../dd/d6c/class_c_s_e_1_1_s_resource.html">CSE::SResource</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00173">173</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  173</span>                                                       {</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keyword">const</span> std::string img_str = CSE::AssetMgr::LoadAssetFile(asset-&gt;name_path);</div>
-<div class="line"><span class="lineno">  175</span> </div>
-<div class="line"><span class="lineno">  176</span>    LoadFromMemory(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(img_str.c_str()), img_str.length());</div>
-<div class="line"><span class="lineno">  177</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00198">198</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  198</span>                                                       {</div>
+<div class="line"><span class="lineno">  199</span>        <span class="keyword">const</span> std::string img_str = CSE::AssetMgr::LoadAssetFile(asset-&gt;name_path);</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>    std::string hashRaw = AssetMgr::LoadAssetFile(asset-&gt;name_path + <span class="stringliteral">&quot;.meta&quot;</span>);</div>
+<div class="line"><span class="lineno">  202</span>    <span class="keywordflow">if</span>(!hashRaw.empty()) {</div>
+<div class="line"><span class="lineno">  203</span>        <span class="keyword">const</span> <a class="code hl_class" href="../../dd/d83/class_x_node.html">XNode</a>* root = <a class="code hl_class" href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a>().loadBuffer(hashRaw);</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; hashData = root-&gt;getNode(<span class="stringliteral">&quot;hash-data&quot;</span>);</div>
+<div class="line"><span class="lineno">  205</span>        std::string hash = hashData.getAttribute(<span class="stringliteral">&quot;hash&quot;</span>).value;</div>
+<div class="line"><span class="lineno">  206</span>        SetHash(hash);</div>
+<div class="line"><span class="lineno">  207</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; hashChildren = hashData.children;</div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">if</span>(hashData.children.size() &lt;= 0) {</div>
+<div class="line"><span class="lineno">  210</span>            hashRaw = <span class="stringliteral">&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot;?&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">  211</span>                      <span class="stringliteral">&quot;&lt;CSEMETA version=\&quot;1.0.0\&quot;&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">  212</span>                      <span class="stringliteral">&quot;&lt;hash-data hash=\&quot;&quot;</span> + m_hash + <span class="stringliteral">&quot;\&quot;&gt;\n&quot;</span></div>
+<div class="line"><span class="lineno">  213</span>                      + <span class="stringliteral">&quot;&lt;tex type=\&quot;&quot;</span> + std::to_string(TEX_2D) + <span class="stringliteral">&quot;\&quot; depth=\&quot;&quot;</span> + std::to_string(m_depth) + <span class="stringliteral">&quot;\&quot;&gt;&lt;/tex&gt;&quot;</span> +</div>
+<div class="line"><span class="lineno">  214</span>                      <span class="stringliteral">&quot;\n&lt;/hash-data&gt;\n&lt;/CSEMETA&gt;&quot;</span>;</div>
+<div class="line"><span class="lineno">  215</span>            <span class="keywordflow">if</span> (!Settings::IsAssetsPacked())</div>
+<div class="line"><span class="lineno">  216</span>                SaveTxtFile(asset-&gt;name_path + <span class="stringliteral">&quot;.meta&quot;</span>, hashRaw);</div>
+<div class="line"><span class="lineno">  217</span>        }</div>
+<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  219</span>            <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; child : hashChildren) {</div>
+<div class="line"><span class="lineno">  220</span>                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; type_str = child.getAttribute(<span class="stringliteral">&quot;type&quot;</span>).value;</div>
+<div class="line"><span class="lineno">  221</span>                <span class="keywordflow">if</span>(!type_str.empty())</div>
+<div class="line"><span class="lineno">  222</span>                    SetType(<span class="keyword">static_cast&lt;</span>Type<span class="keyword">&gt;</span>(std::stoi(type_str)));</div>
+<div class="line"><span class="lineno">  223</span>                <span class="keywordflow">if</span>(m_type == TEX_3D) {</div>
+<div class="line"><span class="lineno">  224</span>                    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; depth_str = child.getAttribute(<span class="stringliteral">&quot;depth&quot;</span>).value;</div>
+<div class="line"><span class="lineno">  225</span>                    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; width_str = child.getAttribute(<span class="stringliteral">&quot;width&quot;</span>).value;</div>
+<div class="line"><span class="lineno">  226</span>                    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; height_str = child.getAttribute(<span class="stringliteral">&quot;height&quot;</span>).value;</div>
+<div class="line"><span class="lineno">  227</span>                    m_depth = std::stoi(depth_str);</div>
+<div class="line"><span class="lineno">  228</span>                    m_width = std::stoi(width_str);</div>
+<div class="line"><span class="lineno">  229</span>                    m_height = std::stoi(height_str);</div>
+<div class="line"><span class="lineno">  230</span>                }</div>
+<div class="line"><span class="lineno">  231</span>            }</div>
+<div class="line"><span class="lineno">  232</span>        }</div>
+<div class="line"><span class="lineno">  233</span>        SAFE_DELETE(root);</div>
+<div class="line"><span class="lineno">  234</span>    }</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>    LoadFromMemory(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(img_str.c_str()), img_str.length());</div>
+<div class="line"><span class="lineno">  237</span>}</div>
+<div class="ttc" id="aclass_x_f_i_l_e_html"><div class="ttname"><a href="../../de/d3a/class_x_f_i_l_e.html">XFILE</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/deb/_x_m_l_8h_source.html#l00077">XML.h:77</a></div></div>
+<div class="ttc" id="aclass_x_node_html"><div class="ttname"><a href="../../dd/d83/class_x_node.html">XNode</a></div><div class="ttdef"><b>Definition</b> <a href="../../dc/deb/_x_m_l_8h_source.html#l00043">XML.h:43</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -593,41 +637,46 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00121">121</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  121</span>                                                                                             {</div>
-<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">if</span> (m_texId != 0) {</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>    m_width = width;</div>
-<div class="line"><span class="lineno">  127</span>    m_height = height;</div>
-<div class="line"><span class="lineno">  128</span>    m_channels = channel;</div>
-<div class="line"><span class="lineno">  129</span>    m_internalFormat = internalFormat;</div>
-<div class="line"><span class="lineno">  130</span>    m_glType = glType;</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>    glGenTextures(1, &amp;m_texId);</div>
-<div class="line"><span class="lineno">  133</span>    glBindTexture(m_targetGL, m_texId);</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">switch</span> (m_type) {</div>
-<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">case</span> TEX_CUBE:</div>
-<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">for</span> (GLuint i = 0; i &lt; 6; ++i) {</div>
-<div class="line"><span class="lineno">  138</span>                glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, m_internalFormat, m_width, m_height, 0, m_channels,</div>
-<div class="line"><span class="lineno">  139</span>                             m_glType, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  140</span>            }</div>
-<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">case</span> TEX_2D:</div>
-<div class="line"><span class="lineno">  144</span>            glTexImage2D(m_targetGL, 0, m_internalFormat, m_width, m_height, 0, m_channels, m_glType, <span class="keyword">nullptr</span>);</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
-<div class="line"><span class="lineno">  146</span> </div>
-<div class="line"><span class="lineno">  147</span>    glTexParameteri(m_targetGL, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</div>
-<div class="line"><span class="lineno">  148</span>    glTexParameteri(m_targetGL, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);</div>
-<div class="line"><span class="lineno">  149</span>    glTexParameteri(m_targetGL, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);</div>
-<div class="line"><span class="lineno">  150</span>    glTexParameteri(m_targetGL, GL_TEXTURE_MIN_FILTER, GL_LINEAR);</div>
-<div class="line"><span class="lineno">  151</span>    glTexParameteri(m_targetGL, GL_TEXTURE_MAG_FILTER, GL_LINEAR);</div>
-<div class="line"><span class="lineno">  152</span> </div>
-<div class="line"><span class="lineno">  153</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  154</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00141">141</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                                                             {</div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">if</span> (m_texId != 0) {</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>    m_width = width;</div>
+<div class="line"><span class="lineno">  147</span>    m_height = height;</div>
+<div class="line"><span class="lineno">  148</span>    m_channels = channel;</div>
+<div class="line"><span class="lineno">  149</span>    m_internalFormat = internalFormat;</div>
+<div class="line"><span class="lineno">  150</span>    m_glType = glType;</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>    glGenTextures(1, &amp;m_texId);</div>
+<div class="line"><span class="lineno">  153</span>    glBindTexture(m_targetGL, m_texId);</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>    <span class="keywordflow">switch</span> (m_type) {</div>
+<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">case</span> TEX_CUBE:</div>
+<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">for</span> (GLuint i = 0; i &lt; 6; ++i) {</div>
+<div class="line"><span class="lineno">  158</span>                glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, m_internalFormat, m_width, m_height, 0, m_channels,</div>
+<div class="line"><span class="lineno">  159</span>                             m_glType, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  160</span>            }</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>        <span class="keywordflow">case</span> TEX_2D:</div>
+<div class="line"><span class="lineno">  164</span>            glTexImage2D(m_targetGL, 0, m_internalFormat, m_width, m_height, 0, m_channels, m_glType, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">case</span> TEX_3D:</div>
+<div class="line"><span class="lineno">  168</span>            glTexImage3D(m_targetGL, 0, m_internalFormat, m_width, m_height, m_depth, 0, m_channels, m_glType, <span class="keyword">nullptr</span>);</div>
+<div class="line"><span class="lineno">  169</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  170</span>    }</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>    glTexParameteri(m_targetGL, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</div>
+<div class="line"><span class="lineno">  173</span>    glTexParameteri(m_targetGL, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);</div>
+<div class="line"><span class="lineno">  174</span>    glTexParameteri(m_targetGL, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);</div>
+<div class="line"><span class="lineno">  175</span>    glTexParameteri(m_targetGL, GL_TEXTURE_MIN_FILTER, GL_LINEAR);</div>
+<div class="line"><span class="lineno">  176</span>    glTexParameteri(m_targetGL, GL_TEXTURE_MAG_FILTER, GL_LINEAR);</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  179</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -665,13 +714,13 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00156">156</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>                                                                                                   {</div>
-<div class="line"><span class="lineno">  157</span>    <span class="keyword">auto</span> result = InitTexture(width, height, channel, internalFormat, glType);</div>
-<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">if</span>(!result) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  159</span>    glTexParameteri(m_targetGL, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);</div>
-<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  161</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00181">181</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  181</span>                                                                                                   {</div>
+<div class="line"><span class="lineno">  182</span>    <span class="keyword">auto</span> result = InitTexture(width, height, channel, internalFormat, glType);</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">if</span>(!result) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  184</span>    glTexParameteri(m_targetGL, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);</div>
+<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  186</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -698,40 +747,51 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00044">44</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                       {</div>
-<div class="line"><span class="lineno">   45</span> </div>
-<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">if</span> (m_texId != 0) {</div>
-<div class="line"><span class="lineno">   47</span>        stbi_image_free(data);</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   49</span>    }</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>    glGenTextures(1, &amp;m_texId);</div>
-<div class="line"><span class="lineno">   52</span>    glBindTexture(m_targetGL, m_texId);</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>    m_internalFormat = GL_RGB;</div>
-<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">switch</span> (m_channels) {</div>
-<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno">   57</span>            m_internalFormat = GL_R8;</div>
-<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno">   60</span>            m_internalFormat = GL_RG;</div>
-<div class="line"><span class="lineno">   61</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">case</span> 4:</div>
-<div class="line"><span class="lineno">   63</span>            m_internalFormat = GL_RGBA;</div>
-<div class="line"><span class="lineno">   64</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   65</span>    }</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>    glTexImage2D(m_targetGL, 0, m_internalFormat, m_width, m_height, 0, m_internalFormat, m_glType, data);</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>    glTexParameteri(m_targetGL, GL_TEXTURE_WRAP_S, GL_REPEAT);</div>
-<div class="line"><span class="lineno">   70</span>    glTexParameteri(m_targetGL, GL_TEXTURE_WRAP_T, GL_REPEAT);</div>
-<div class="line"><span class="lineno">   71</span>    glTexParameteri(m_targetGL, GL_TEXTURE_MIN_FILTER, GL_LINEAR);</div>
-<div class="line"><span class="lineno">   72</span>    glTexParameteri(m_targetGL, GL_TEXTURE_MAG_FILTER, GL_LINEAR);</div>
-<div class="line"><span class="lineno">   73</span> </div>
-<div class="line"><span class="lineno">   74</span>    stbi_image_free(data);</div>
-<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   76</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00053">53</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>                                       {</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">if</span> (m_texId != 0) {</div>
+<div class="line"><span class="lineno">   56</span>        stbi_image_free(data);</div>
+<div class="line"><span class="lineno">   57</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   58</span>    }</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    glGenTextures(1, &amp;m_texId);</div>
+<div class="line"><span class="lineno">   61</span>    glBindTexture(m_targetGL, m_texId);</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    m_internalFormat = GL_RGB;</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">switch</span> (m_channels) {</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno">   66</span>            m_internalFormat = GL_R8;</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno">   69</span>            m_internalFormat = GL_RG;</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno">   72</span>            m_internalFormat = GL_RGBA;</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">switch</span> (m_type) {</div>
+<div class="line"><span class="lineno">   77</span>        <span class="keywordflow">case</span> TEX_2D:</div>
+<div class="line"><span class="lineno">   78</span>            glTexImage2D(m_targetGL, 0, m_internalFormat, m_width, m_height, 0, m_internalFormat, m_glType, data);</div>
+<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">case</span> TEX_CUBE:</div>
+<div class="line"><span class="lineno">   81</span>            glTexImage2D(m_targetGL, 0, m_internalFormat, m_width, m_height, 0, m_internalFormat, m_glType, data);</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">case</span> TEX_3D:</div>
+<div class="line"><span class="lineno">   84</span>            glTexImage3D(m_targetGL, 0, m_internalFormat, m_width, m_height, m_depth, 0, m_internalFormat, m_glType, data);</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    glTexParameteri(m_targetGL, GL_TEXTURE_WRAP_S, GL_REPEAT);</div>
+<div class="line"><span class="lineno">   89</span>    glTexParameteri(m_targetGL, GL_TEXTURE_WRAP_T, GL_REPEAT);</div>
+<div class="line"><span class="lineno">   90</span>    glTexParameteri(m_targetGL, GL_TEXTURE_WRAP_R, GL_REPEAT);</div>
+<div class="line"><span class="lineno">   91</span>    glTexParameteri(m_targetGL, GL_TEXTURE_MIN_FILTER, GL_LINEAR);</div>
+<div class="line"><span class="lineno">   92</span>    glTexParameteri(m_targetGL, GL_TEXTURE_MAG_FILTER, GL_LINEAR);</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>    stbi_image_free(data);</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   96</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -750,16 +810,16 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00029">29</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                        {</div>
-<div class="line"><span class="lineno">   30</span> </div>
-<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">if</span> (m_texId != 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   32</span> </div>
-<div class="line"><span class="lineno">   33</span><span class="comment">//    m_name = path;</span></div>
-<div class="line"><span class="lineno">   34</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data = stbi_load(path, &amp;m_width, &amp;m_height, &amp;m_channels, 0);</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00032">32</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>                                        {</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">if</span> (m_texId != 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   35</span> </div>
-<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">return</span> Load(data);</div>
-<div class="line"><span class="lineno">   37</span>}</div>
+<div class="line"><span class="lineno">   36</span><span class="comment">//    m_name = path;</span></div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data = stbi_load(path, &amp;m_width, &amp;m_height, &amp;m_channels, 0);</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordflow">return</span> Load(data);</div>
+<div class="line"><span class="lineno">   40</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -782,11 +842,49 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                                      {</div>
-<div class="line"><span class="lineno">   40</span>    <span class="keyword">auto</span> data = stbi_load_from_memory(rawData, length, &amp;m_width, &amp;m_height, &amp;m_channels, 0);</div>
-<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">return</span> Load(data);</div>
-<div class="line"><span class="lineno">   42</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00042">42</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                                                                      {</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data;</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">if</span>(m_type == TEX_3D) {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordtype">int</span> w, h;</div>
+<div class="line"><span class="lineno">   46</span>        data = stbi_load_from_memory(rawData, length, &amp;w, &amp;h, &amp;m_channels, 0);</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   49</span>        data = stbi_load_from_memory(rawData, length, &amp;m_width, &amp;m_height, &amp;m_channels, 0);</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">return</span> Load(data);</div>
+<div class="line"><span class="lineno">   51</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1da69c4ca2ebb42efac246d2f868fa2f" name="a1da69c4ca2ebb42efac246d2f868fa2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1da69c4ca2ebb42efac246d2f868fa2f">&#9670;&#160;</a></span>PrintValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string STexture::PrintValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="../../d3/dee/class_c_s_e_1_1_variable_binder.html">CSE::VariableBinder</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00276">276</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  276</span>                                     {</div>
+<div class="line"><span class="lineno">  277</span>    <span class="keywordflow">return</span> {};</div>
+<div class="line"><span class="lineno">  278</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -805,13 +903,13 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00099">99</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   99</span>                       {</div>
-<div class="line"><span class="lineno">  100</span>    glDeleteTextures(1, &amp;m_texId);</div>
-<div class="line"><span class="lineno">  101</span>    m_texId = 0;</div>
-<div class="line"><span class="lineno">  102</span>    m_height = 0;</div>
-<div class="line"><span class="lineno">  103</span>    m_width = 0;</div>
-<div class="line"><span class="lineno">  104</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00119">119</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>                       {</div>
+<div class="line"><span class="lineno">  120</span>    glDeleteTextures(1, &amp;m_texId);</div>
+<div class="line"><span class="lineno">  121</span>    m_texId = 0;</div>
+<div class="line"><span class="lineno">  122</span>    m_height = 0;</div>
+<div class="line"><span class="lineno">  123</span>    m_width = 0;</div>
+<div class="line"><span class="lineno">  124</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -830,11 +928,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00094">94</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   94</span>                                         {</div>
-<div class="line"><span class="lineno">   95</span>    Release();</div>
-<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">return</span> Load(data);</div>
-<div class="line"><span class="lineno">   97</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00114">114</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>                                         {</div>
+<div class="line"><span class="lineno">  115</span>    Release();</div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">return</span> Load(data);</div>
+<div class="line"><span class="lineno">  117</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -853,11 +951,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00089">89</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>                                          {</div>
-<div class="line"><span class="lineno">   90</span>    Release();</div>
-<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">return</span> LoadFile(path);</div>
-<div class="line"><span class="lineno">   92</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00109">109</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>                                          {</div>
+<div class="line"><span class="lineno">  110</span>    Release();</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">return</span> LoadFile(path);</div>
+<div class="line"><span class="lineno">  112</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -888,11 +986,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00168">168</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  168</span>                                                                {</div>
-<div class="line"><span class="lineno">  169</span>    glBindTexture(GL_TEXTURE_2D, m_texId);</div>
-<div class="line"><span class="lineno">  170</span>    glTexParameterfv(GL_TEXTURE_2D, targetName, value);</div>
-<div class="line"><span class="lineno">  171</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00193">193</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  193</span>                                                                {</div>
+<div class="line"><span class="lineno">  194</span>    glBindTexture(m_targetGL, m_texId);</div>
+<div class="line"><span class="lineno">  195</span>    glTexParameterfv(m_targetGL, targetName, value);</div>
+<div class="line"><span class="lineno">  196</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -923,11 +1021,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00163">163</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  163</span>                                                            {</div>
-<div class="line"><span class="lineno">  164</span>    glBindTexture(GL_TEXTURE_2D, m_texId);</div>
-<div class="line"><span class="lineno">  165</span>    glTexParameteri(GL_TEXTURE_2D, targetName, value);</div>
-<div class="line"><span class="lineno">  166</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00188">188</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  188</span>                                                            {</div>
+<div class="line"><span class="lineno">  189</span>    glBindTexture(m_targetGL, m_texId);</div>
+<div class="line"><span class="lineno">  190</span>    glTexParameteri(m_targetGL, targetName, value);</div>
+<div class="line"><span class="lineno">  191</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -946,11 +1044,53 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00188">188</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>                                        {</div>
-<div class="line"><span class="lineno">  189</span>    m_type = type;</div>
-<div class="line"><span class="lineno">  190</span>    m_targetGL = GetTypeToTargetGL(type);</div>
-<div class="line"><span class="lineno">  191</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00248">248</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  248</span>                                        {</div>
+<div class="line"><span class="lineno">  249</span>    m_type = type;</div>
+<div class="line"><span class="lineno">  250</span>    m_targetGL = GetTypeToTargetGL(type);</div>
+<div class="line"><span class="lineno">  251</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab6a1bd45a5ed9486d3528447ebe5ee36" name="ab6a1bd45a5ed9486d3528447ebe5ee36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6a1bd45a5ed9486d3528447ebe5ee36">&#9670;&#160;</a></span>SetValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void STexture::SetValue </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name_str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Arguments</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Used to get serialized values. All classes that inherit from <a class="el" href="../../d3/dee/class_c_s_e_1_1_variable_binder.html">VariableBinder</a> will unconditionally call this function first during initialization. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name_str</td><td>Name of values </td></tr>
+    <tr><td class="paramname">value</td><td>Serialized values </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="../../d3/dee/class_c_s_e_1_1_variable_binder.html#a4b7e778a8c118b44af96654c70768234">CSE::VariableBinder</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html#l00273">273</a> of file <a class="el" href="../../dd/d06/_s_texture_8cpp_source.html">STexture.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  273</span>                                                                         {</div>
+<div class="line"><span class="lineno">  274</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -966,6 +1106,30 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int CSE::STexture::m_channels = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d33/_s_texture_8h_source.html#l00081">81</a> of file <a class="el" href="../../d0/d33/_s_texture_8h_source.html">STexture.h</a>.</p>
+
+</div>
+</div>
+<a id="a8bd96e53e1a62c042b188f4233cc62d4" name="a8bd96e53e1a62c042b188f4233cc62d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd96e53e1a62c042b188f4233cc62d4">&#9670;&#160;</a></span>m_depth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CSE::STexture::m_depth = 0</td>
         </tr>
       </table>
   </td>
@@ -999,7 +1163,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d33/_s_texture_8h_source.html#l00082">82</a> of file <a class="el" href="../../d0/d33/_s_texture_8h_source.html">STexture.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d33/_s_texture_8h_source.html#l00083">83</a> of file <a class="el" href="../../d0/d33/_s_texture_8h_source.html">STexture.h</a>.</p>
 
 </div>
 </div>
@@ -1047,7 +1211,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d33/_s_texture_8h_source.html#l00081">81</a> of file <a class="el" href="../../d0/d33/_s_texture_8h_source.html">STexture.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d33/_s_texture_8h_source.html#l00082">82</a> of file <a class="el" href="../../d0/d33/_s_texture_8h_source.html">STexture.h</a>.</p>
 
 </div>
 </div>
@@ -1095,7 +1259,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d33/_s_texture_8h_source.html#l00084">84</a> of file <a class="el" href="../../d0/d33/_s_texture_8h_source.html">STexture.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d33/_s_texture_8h_source.html#l00085">85</a> of file <a class="el" href="../../d0/d33/_s_texture_8h_source.html">STexture.h</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1321,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html">STexture</a></li>
-    <li class="footer">Generated on Mon Sep 15 2025 01:15:11 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Thu Sep 18 2025 14:35:38 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

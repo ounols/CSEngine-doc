@@ -112,6 +112,7 @@ Inheritance diagram for CSE::VariableBinder:</div>
   <img src="../../d3/dee/class_c_s_e_1_1_variable_binder.png" usemap="#CSE::VariableBinder_map" alt=""/>
   <map id="CSE::VariableBinder_map" name="CSE::VariableBinder_map">
 <area href="../../db/d1a/class_c_s_e_1_1_s_component.html" alt="CSE::SComponent" shape="rect" coords="0,56,222,80"/>
+<area href="../../dd/d6c/class_c_s_e_1_1_s_resource.html" alt="CSE::SResource" shape="rect" coords="464,56,686,80"/>
 <area href="../../d0/d79/class_c_s_e_1_1_animator_component.html" alt="CSE::AnimatorComponent" shape="rect" coords="232,112,454,136"/>
 <area href="../../d4/da2/class_c_s_e_1_1_camera_component.html" alt="CSE::CameraComponent" shape="rect" coords="232,168,454,192"/>
 <area href="../../d5/d5b/class_c_s_e_1_1_custom_component.html" alt="CSE::CustomComponent" shape="rect" coords="232,224,454,248"/>
@@ -120,13 +121,22 @@ Inheritance diagram for CSE::VariableBinder:</div>
 <area href="../../d6/d94/class_c_s_e_1_1_light_component.html" alt="CSE::LightComponent" shape="rect" coords="232,392,454,416"/>
 <area href="../../df/d04/class_c_s_e_1_1_render_component.html" alt="CSE::RenderComponent" shape="rect" coords="232,448,454,472"/>
 <area href="../../d1/ddc/class_c_s_e_1_1_transform_component.html" alt="CSE::TransformComponent" shape="rect" coords="232,504,454,528"/>
+<area href="../../d4/d91/class_c_s_e_1_1_animation.html" alt="CSE::Animation" shape="rect" coords="696,112,918,136"/>
+<area href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html" alt="CSE::GLProgramHandle" shape="rect" coords="696,168,918,192"/>
+<area href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html" alt="CSE::SFrameBuffer" shape="rect" coords="696,224,918,248"/>
+<area href="../../d3/d91/class_c_s_e_1_1_s_i_surface.html" alt="CSE::SISurface" shape="rect" coords="696,280,918,304"/>
+<area href="../../de/d51/class_c_s_e_1_1_s_material.html" alt="CSE::SMaterial" shape="rect" coords="696,336,918,360"/>
+<area href="../../d9/db4/class_c_s_e_1_1_s_prefab.html" alt="CSE::SPrefab" shape="rect" coords="696,392,918,416"/>
+<area href="../../d5/d00/class_c_s_e_1_1_s_script_object.html" alt="CSE::SScriptObject" shape="rect" coords="696,448,918,472"/>
+<area href="../../dd/dfc/class_c_s_e_1_1_s_shader_group.html" alt="CSE::SShaderGroup" shape="rect" coords="696,504,918,528"/>
+<area href="../../da/df0/class_c_s_e_1_1_s_texture.html" alt="CSE::STexture" shape="rect" coords="696,560,918,584"/>
+<area href="../../de/dd3/class_c_s_e_1_1_skeleton.html" alt="CSE::Skeleton" shape="rect" coords="696,616,918,640"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4b7e778a8c118b44af96654c70768234" id="r_a4b7e778a8c118b44af96654c70768234"><td class="memItemLeft" align="right" valign="top"><a id="a4b7e778a8c118b44af96654c70768234" name="a4b7e778a8c118b44af96654c70768234"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetValue</b> (std::string name_str, Arguments value)=0</td></tr>
+<tr class="memitem:a4b7e778a8c118b44af96654c70768234" id="r_a4b7e778a8c118b44af96654c70768234"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b7e778a8c118b44af96654c70768234">SetValue</a> (std::string name_str, Arguments value)=0</td></tr>
 <tr class="separator:a4b7e778a8c118b44af96654c70768234"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acff772fffa103a76f8b78c84a5702254" id="r_acff772fffa103a76f8b78c84a5702254"><td class="memItemLeft" align="right" valign="top"><a id="acff772fffa103a76f8b78c84a5702254" name="acff772fffa103a76f8b78c84a5702254"></a>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>PrintValue</b> () const =0</td></tr>
@@ -165,6 +175,45 @@ Protected Types</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4b7e778a8c118b44af96654c70768234" name="a4b7e778a8c118b44af96654c70768234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7e778a8c118b44af96654c70768234">&#9670;&#160;</a></span>SetValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void CSE::VariableBinder::SetValue </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name_str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Arguments</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Used to get serialized values. All classes that inherit from <a class="el" href="../../d3/dee/class_c_s_e_1_1_variable_binder.html">VariableBinder</a> will unconditionally call this function first during initialization. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name_str</td><td>Name of values </td></tr>
+    <tr><td class="paramname">value</td><td>Serialized values </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="../../d4/d91/class_c_s_e_1_1_animation.html#a0318723482c6043d05413377f79f70b3">CSE::Animation</a>, <a class="el" href="../../d0/d79/class_c_s_e_1_1_animator_component.html#ac0686e4a64b8e1b7ac67c7bdb2abc74e">CSE::AnimatorComponent</a>, <a class="el" href="../../d4/da2/class_c_s_e_1_1_camera_component.html#a1a285761e615da4fb0bb23698d5fce46">CSE::CameraComponent</a>, <a class="el" href="../../d5/d5b/class_c_s_e_1_1_custom_component.html#a627de165ff62fc92d0624c3540e1a60b">CSE::CustomComponent</a>, <a class="el" href="../../dc/d87/class_c_s_e_1_1_g_l_program_handle.html#ae1e8a34c9755b4523ef2bac23ae3cdab">CSE::GLProgramHandle</a>, <a class="el" href="../../d8/dfb/class_c_s_e_1_1_joint_component.html#a0b3efaceaab7112e2e0d9610789ca819">CSE::JointComponent</a>, <a class="el" href="../../d6/d94/class_c_s_e_1_1_light_component.html#a27a5b82b08a744220667465cbd8ec200">CSE::LightComponent</a>, <a class="el" href="../../dc/d94/class_c_s_e_1_1_mesh_surface.html#a89b1926db6daca518d8c387f4455a70e">CSE::MeshSurface</a>, <a class="el" href="../../df/d04/class_c_s_e_1_1_render_component.html#a02b8e4d3adece3f97c264d161a258c15">CSE::RenderComponent</a>, <a class="el" href="../../db/d1a/class_c_s_e_1_1_s_component.html#a7b63b4dd8e9227e791d42984762f1c50">CSE::SComponent</a>, <a class="el" href="../../d1/d4d/class_c_s_e_1_1_s_frame_buffer.html#ac5c698b41890d012bf770f1de98386bc">CSE::SFrameBuffer</a>, <a class="el" href="../../de/dd3/class_c_s_e_1_1_skeleton.html#a44b519440c9dcc51eb58e04ffdacffa3">CSE::Skeleton</a>, <a class="el" href="../../de/d51/class_c_s_e_1_1_s_material.html#acf9ce7f61974ce5dadcaa854443a9d52">CSE::SMaterial</a>, <a class="el" href="../../d9/db4/class_c_s_e_1_1_s_prefab.html#aefd900a79d8a7604ea33c1010e91191d">CSE::SPrefab</a>, <a class="el" href="../../d5/d00/class_c_s_e_1_1_s_script_object.html#a68c9d29cc5a8e90497bd4620f7032697">CSE::SScriptObject</a>, <a class="el" href="../../dd/dfc/class_c_s_e_1_1_s_shader_group.html#ad6509b283e18b0a4886c36b280f90e54">CSE::SShaderGroup</a>, <a class="el" href="../../da/df0/class_c_s_e_1_1_s_texture.html#ab6a1bd45a5ed9486d3528447ebe5ee36">CSE::STexture</a>, and <a class="el" href="../../d1/ddc/class_c_s_e_1_1_transform_component.html#ac0d4358e3e583dce0e8d56e9106a270c">CSE::TransformComponent</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Util/<a class="el" href="../../d6/dc0/_variable_binder_8h_source.html">VariableBinder.h</a></li>
 </ul>
@@ -174,7 +223,7 @@ Protected Types</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../d3/dee/class_c_s_e_1_1_variable_binder.html">VariableBinder</a></li>
-    <li class="footer">Generated on Mon Sep 15 2025 01:15:11 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Thu Sep 18 2025 14:35:38 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

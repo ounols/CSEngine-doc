@@ -1,5 +1,6 @@
 var searchData=
 [
   ['element_0',['Element',['../da/d85/struct_c_s_e_1_1_g_l_program_handle_1_1_element.html',1,'CSE::GLProgramHandle']]],
-  ['enginecore_1',['EngineCore',['../dd/d93/class_c_s_e_1_1_engine_core.html',1,'CSE']]]
+  ['enginecore_1',['EngineCore',['../dd/d93/class_c_s_e_1_1_engine_core.html',1,'CSE']]],
+  ['enginecoreinstance_2',['EngineCoreInstance',['../d6/db6/class_c_s_e_1_1_engine_core_instance.html',1,'CSE']]]
 ];

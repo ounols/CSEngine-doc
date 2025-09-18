@@ -122,6 +122,7 @@ Public Types</h2></td></tr>
 <tr class="memitem:a398414ceedd54411c219184badf344ce" id="r_a398414ceedd54411c219184badf344ce"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>RenderGroupMode</b> { <b>FORWARD</b> = 0
 , <b>DEFERRED</b> = 1
 , <b>DEPTH_ONLY</b> = 2
+, <b>SDF</b> = 3
  }</td></tr>
 <tr class="separator:a398414ceedd54411c219184badf344ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -145,6 +146,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:afe40929307b9798112913e6eb525b472"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae551cfdbfa8b4a2ba39c23d89d2e306a" id="r_ae551cfdbfa8b4a2ba39c23d89d2e306a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dcd/class_c_s_e_1_1_s_render_group.html">SRenderGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae551cfdbfa8b4a2ba39c23d89d2e306a">m_depthOnlyRenderGroup</a> = nullptr</td></tr>
 <tr class="separator:ae551cfdbfa8b4a2ba39c23d89d2e306a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab0808cb8e998e07eed1c63bd6c33c95" id="r_aab0808cb8e998e07eed1c63bd6c33c95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dcd/class_c_s_e_1_1_s_render_group.html">SRenderGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab0808cb8e998e07eed1c63bd6c33c95">m_sdfRenderGroup</a> = nullptr</td></tr>
+<tr class="separator:aab0808cb8e998e07eed1c63bd6c33c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd535dad19a1d1c40af99701c07d8455" id="r_abd535dad19a1d1c40af99701c07d8455"><td class="memItemLeft" align="right" valign="top">unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd535dad19a1d1c40af99701c07d8455">m_width</a> = nullptr</td></tr>
 <tr class="separator:abd535dad19a1d1c40af99701c07d8455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a794f85430df686fd7d8ee6531b575633" id="r_a794f85430df686fd7d8ee6531b575633"><td class="memItemLeft" align="right" valign="top">unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a794f85430df686fd7d8ee6531b575633">m_height</a> = nullptr</td></tr>
@@ -171,7 +174,8 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   17</span>            FORWARD = 0,</div>
 <div class="line"><span class="lineno">   18</span>            DEFERRED = 1,</div>
 <div class="line"><span class="lineno">   19</span>            DEPTH_ONLY = 2,</div>
-<div class="line"><span class="lineno">   20</span>        };</div>
+<div class="line"><span class="lineno">   20</span>            SDF = 3,</div>
+<div class="line"><span class="lineno">   21</span>        };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -191,8 +195,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/df0/_render_container_8cpp_source.html#l00008">8</a> of file <a class="el" href="../../d8/df0/_render_container_8cpp_source.html">RenderContainer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    8</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="../../d8/df0/_render_container_8cpp_source.html#l00009">9</a> of file <a class="el" href="../../d8/df0/_render_container_8cpp_source.html">RenderContainer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    9</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -211,8 +215,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/df0/_render_container_8cpp_source.html#l00011">11</a> of file <a class="el" href="../../d8/df0/_render_container_8cpp_source.html">RenderContainer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>{}</div>
+<p class="definition">Definition at line <a class="el" href="../../d8/df0/_render_container_8cpp_source.html#l00012">12</a> of file <a class="el" href="../../d8/df0/_render_container_8cpp_source.html">RenderContainer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -242,15 +246,29 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d4/daa/class_c_s_e_1_1_render_mgr.html#a510adf0e7d2e416ba328af5441bfcd6d">CSE::RenderMgr</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d8/df0/_render_container_8cpp_source.html#l00041">41</a> of file <a class="el" href="../../d8/df0/_render_container_8cpp_source.html">RenderContainer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                  {</div>
-<div class="line"><span class="lineno">   42</span>    m_forwardRenderGroup-&gt;Exterminate();</div>
-<div class="line"><span class="lineno">   43</span>    SAFE_DELETE(m_forwardRenderGroup);</div>
-<div class="line"><span class="lineno">   44</span>    m_deferredRenderGroup-&gt;Exterminate();</div>
-<div class="line"><span class="lineno">   45</span>    SAFE_DELETE(m_deferredRenderGroup);</div>
-<div class="line"><span class="lineno">   46</span>    m_depthOnlyRenderGroup-&gt;Exterminate();</div>
-<div class="line"><span class="lineno">   47</span>    SAFE_DELETE(m_depthOnlyRenderGroup);</div>
-<div class="line"><span class="lineno">   48</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d8/df0/_render_container_8cpp_source.html#l00072">72</a> of file <a class="el" href="../../d8/df0/_render_container_8cpp_source.html">RenderContainer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                                  {</div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">if</span> (m_forwardRenderGroup != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   74</span>        m_forwardRenderGroup-&gt;Exterminate();</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keyword">delete</span> m_forwardRenderGroup;</div>
+<div class="line"><span class="lineno">   76</span>        m_forwardRenderGroup = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">if</span> (m_deferredRenderGroup != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   79</span>        m_deferredRenderGroup-&gt;Exterminate();</div>
+<div class="line"><span class="lineno">   80</span>        <span class="keyword">delete</span> m_deferredRenderGroup;</div>
+<div class="line"><span class="lineno">   81</span>        m_deferredRenderGroup = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">if</span> (m_depthOnlyRenderGroup != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   84</span>        m_depthOnlyRenderGroup-&gt;Exterminate();</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keyword">delete</span> m_depthOnlyRenderGroup;</div>
+<div class="line"><span class="lineno">   86</span>        m_depthOnlyRenderGroup = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
+<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">if</span> (m_sdfRenderGroup != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">   89</span>        m_sdfRenderGroup-&gt;Exterminate();</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keyword">delete</span> m_sdfRenderGroup;</div>
+<div class="line"><span class="lineno">   91</span>        m_sdfRenderGroup = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="line"><span class="lineno">   93</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -273,20 +291,36 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/df0/_render_container_8cpp_source.html#l00013">13</a> of file <a class="el" href="../../d8/df0/_render_container_8cpp_source.html">RenderContainer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>                                                                          {</div>
-<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">switch</span> (groupMode) {</div>
-<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">case</span> FORWARD:</div>
-<div class="line"><span class="lineno">   16</span>            m_forwardRenderGroup-&gt;RegisterObject(<span class="keywordtype">object</span>);</div>
-<div class="line"><span class="lineno">   17</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">case</span> DEFERRED:</div>
-<div class="line"><span class="lineno">   19</span>            m_deferredRenderGroup-&gt;RegisterObject(<span class="keywordtype">object</span>);</div>
-<div class="line"><span class="lineno">   20</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">case</span> DEPTH_ONLY:</div>
-<div class="line"><span class="lineno">   22</span>            m_depthOnlyRenderGroup-&gt;RegisterObject(<span class="keywordtype">object</span>);</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   24</span>    }</div>
-<div class="line"><span class="lineno">   25</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d8/df0/_render_container_8cpp_source.html#l00014">14</a> of file <a class="el" href="../../d8/df0/_render_container_8cpp_source.html">RenderContainer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   14</span>                                                                          {</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordflow">switch</span> (groupMode) {</div>
+<div class="line"><span class="lineno">   16</span>        <span class="keywordflow">case</span> FORWARD: {</div>
+<div class="line"><span class="lineno">   17</span>            <a class="code hl_class" href="../../d2/dcd/class_c_s_e_1_1_s_render_group.html">SRenderGroup</a>* group = m_forwardRenderGroup;</div>
+<div class="line"><span class="lineno">   18</span><span class="preprocessor">#ifndef CSE_SETTINGS_RENDER_FORWARD_SUPPORT</span></div>
+<div class="line"><span class="lineno">   19</span>            group = m_deferredRenderGroup;</div>
+<div class="line"><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   21</span>            group-&gt;RegisterObject(<span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
+<div class="line"><span class="lineno">   24</span>        <span class="keywordflow">case</span> DEFERRED: {</div>
+<div class="line"><span class="lineno">   25</span>            <a class="code hl_class" href="../../d2/dcd/class_c_s_e_1_1_s_render_group.html">SRenderGroup</a>* group = m_deferredRenderGroup;</div>
+<div class="line"><span class="lineno">   26</span><span class="preprocessor">#ifndef CSE_SETTINGS_RENDER_DEFERRED_SUPPORT</span></div>
+<div class="line"><span class="lineno">   27</span>            group = m_forwardRenderGroup;</div>
+<div class="line"><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   29</span>            group-&gt;RegisterObject(<span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   30</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">case</span> DEPTH_ONLY:</div>
+<div class="line"><span class="lineno">   33</span>            m_depthOnlyRenderGroup-&gt;RegisterObject(<span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   35</span><span class="preprocessor">#ifdef CSE_SETTINGS_RENDER_SDFGI_SUPPORT</span></div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">case</span> SDF:</div>
+<div class="line"><span class="lineno">   37</span>            m_sdfRenderGroup-&gt;RegisterObject(<span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="line"><span class="lineno">   41</span>}</div>
+<div class="ttc" id="aclass_c_s_e_1_1_s_render_group_html"><div class="ttname"><a href="../../d2/dcd/class_c_s_e_1_1_s_render_group.html">CSE::SRenderGroup</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d65/_s_render_group_8h_source.html#l00007">SRenderGroup.h:7</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -309,20 +343,35 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d8/df0/_render_container_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d8/df0/_render_container_8cpp_source.html">RenderContainer.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                                                                       {</div>
-<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">switch</span> (groupFlag) {</div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordflow">case</span> FORWARD:</div>
-<div class="line"><span class="lineno">   30</span>            m_forwardRenderGroup-&gt;RemoveObjects(<span class="keywordtype">object</span>);</div>
-<div class="line"><span class="lineno">   31</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">case</span> DEFERRED:</div>
-<div class="line"><span class="lineno">   33</span>            m_deferredRenderGroup-&gt;RemoveObjects(<span class="keywordtype">object</span>);</div>
-<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordflow">case</span> DEPTH_ONLY:</div>
-<div class="line"><span class="lineno">   36</span>            m_depthOnlyRenderGroup-&gt;RegisterObject(<span class="keywordtype">object</span>);</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-<div class="line"><span class="lineno">   39</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d8/df0/_render_container_8cpp_source.html#l00043">43</a> of file <a class="el" href="../../d8/df0/_render_container_8cpp_source.html">RenderContainer.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>                                                                                       {</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">switch</span> (groupFlag) {</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keywordflow">case</span> FORWARD: {</div>
+<div class="line"><span class="lineno">   46</span>            <a class="code hl_class" href="../../d2/dcd/class_c_s_e_1_1_s_render_group.html">SRenderGroup</a>* group = m_forwardRenderGroup;</div>
+<div class="line"><span class="lineno">   47</span><span class="preprocessor">#ifndef CSE_SETTINGS_RENDER_FORWARD_SUPPORT</span></div>
+<div class="line"><span class="lineno">   48</span>            group = m_deferredRenderGroup;</div>
+<div class="line"><span class="lineno">   49</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   50</span>            group-&gt;RemoveObjects(<span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">case</span> DEFERRED: {</div>
+<div class="line"><span class="lineno">   54</span>            <a class="code hl_class" href="../../d2/dcd/class_c_s_e_1_1_s_render_group.html">SRenderGroup</a>* group = m_deferredRenderGroup;</div>
+<div class="line"><span class="lineno">   55</span><span class="preprocessor">#ifndef CSE_SETTINGS_RENDER_DEFERRED_SUPPORT</span></div>
+<div class="line"><span class="lineno">   56</span>            group = m_forwardRenderGroup;</div>
+<div class="line"><span class="lineno">   57</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   58</span>            group-&gt;RemoveObjects(<span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   60</span>        }</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">case</span> DEPTH_ONLY:</div>
+<div class="line"><span class="lineno">   62</span>            m_depthOnlyRenderGroup-&gt;RemoveObjects(<span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   64</span><span class="preprocessor">#ifdef CSE_SETTINGS_RENDER_SDFGI_SUPPORT</span></div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">case</span> SDF:</div>
+<div class="line"><span class="lineno">   66</span>            m_sdfRenderGroup-&gt;RemoveObjects(<span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   68</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="line"><span class="lineno">   70</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -347,7 +396,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/da3/_render_container_8h_source.html#l00035">35</a> of file <a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/da3/_render_container_8h_source.html#l00036">36</a> of file <a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a>.</p>
 
 </div>
 </div>
@@ -371,7 +420,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/da3/_render_container_8h_source.html#l00036">36</a> of file <a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/da3/_render_container_8h_source.html#l00037">37</a> of file <a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a>.</p>
 
 </div>
 </div>
@@ -395,7 +444,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/da3/_render_container_8h_source.html#l00034">34</a> of file <a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/da3/_render_container_8h_source.html#l00035">35</a> of file <a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a>.</p>
 
 </div>
 </div>
@@ -419,7 +468,31 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/da3/_render_container_8h_source.html#l00039">39</a> of file <a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/da3/_render_container_8h_source.html#l00041">41</a> of file <a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a>.</p>
+
+</div>
+</div>
+<a id="aab0808cb8e998e07eed1c63bd6c33c95" name="aab0808cb8e998e07eed1c63bd6c33c95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab0808cb8e998e07eed1c63bd6c33c95">&#9670;&#160;</a></span>m_sdfRenderGroup</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/dcd/class_c_s_e_1_1_s_render_group.html">SRenderGroup</a>* CSE::RenderContainer::m_sdfRenderGroup = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../dc/da3/_render_container_8h_source.html#l00038">38</a> of file <a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a>.</p>
 
 </div>
 </div>
@@ -443,7 +516,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/da3/_render_container_8h_source.html#l00038">38</a> of file <a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/da3/_render_container_8h_source.html#l00040">40</a> of file <a class="el" href="../../dc/da3/_render_container_8h_source.html">RenderContainer.h</a>.</p>
 
 </div>
 </div>
@@ -457,7 +530,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>CSE</b></li><li class="navelem"><a class="el" href="../../d8/df9/class_c_s_e_1_1_render_container.html">RenderContainer</a></li>
-    <li class="footer">Generated on Mon Sep 15 2025 01:15:11 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Thu Sep 18 2025 14:35:38 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

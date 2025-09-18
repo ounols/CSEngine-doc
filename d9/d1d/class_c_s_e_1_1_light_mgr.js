@@ -2,8 +2,8 @@ var class_c_s_e_1_1_light_mgr =
 [
     [ "LightMgr", "d9/d1d/class_c_s_e_1_1_light_mgr.html#a565a19f54b111fb4af64070d95426eab", null ],
     [ "~LightMgr", "d9/d1d/class_c_s_e_1_1_light_mgr.html#a75cfcc19ae5e3ffc581a490891a7b94f", null ],
-    [ "AttachLightMapToShader", "d9/d1d/class_c_s_e_1_1_light_mgr.html#a3afc1545360db64030466cddbaa5b738", null ],
-    [ "AttachLightToShader", "d9/d1d/class_c_s_e_1_1_light_mgr.html#a7152bbd87f8bfda2e9c19f47a27118a8", null ],
+    [ "AttachLightMapToShader", "d9/d1d/class_c_s_e_1_1_light_mgr.html#acd28e2cc96c47c568f7d4f57601f13e7", null ],
+    [ "AttachLightToShader", "d9/d1d/class_c_s_e_1_1_light_mgr.html#af176c629f25fa71318b4952cf2829ff3", null ],
     [ "GetLightMapCount", "d9/d1d/class_c_s_e_1_1_light_mgr.html#a8c7fe66c03f78f01c547f6a092000cbf", null ],
     [ "GetShadowCount", "d9/d1d/class_c_s_e_1_1_light_mgr.html#a25044bf2ce18a6159ab19b6122c1ebcb", null ],
     [ "Init", "d9/d1d/class_c_s_e_1_1_light_mgr.html#a11c059eacd34b6a35eb245160213af14", null ],

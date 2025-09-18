@@ -137,23 +137,25 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d7/db3/_safe_log_8cpp_source.html#l00017">17</a> of file <a class="el" href="../../d7/db3/_safe_log_8cpp_source.html">SafeLog.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>                                 {</div>
-<div class="line"><span class="lineno">   18</span> </div>
-<div class="line"><span class="lineno">   19</span><span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><span class="lineno">   20</span>        OutputDebugStringA(log);</div>
-<div class="line"><span class="lineno">   21</span>    puts(log);</div>
-<div class="line"><span class="lineno">   22</span><span class="preprocessor">#elif __ANDROID__</span></div>
-<div class="line"><span class="lineno">   23</span>        LOGE(log, 0);</div>
-<div class="line"><span class="lineno">   24</span><span class="preprocessor">#elif __linux__</span></div>
-<div class="line"><span class="lineno">   25</span>        puts(log);</div>
-<div class="line"><span class="lineno">   26</span><span class="preprocessor">#elif __EMSCRIPTEN__</span></div>
-<div class="line"><span class="lineno">   27</span>    puts(log);</div>
-<div class="line"><span class="lineno">   28</span><span class="preprocessor">#elif __APPLE_CC__</span></div>
-<div class="line"><span class="lineno">   29</span>    puts(log);</div>
-<div class="line"><span class="lineno">   30</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   31</span>        </div>
-<div class="line"><span class="lineno">   32</span>}</div>
+<p class="definition">Definition at line <a class="el" href="../../d7/db3/_safe_log_8cpp_source.html#l00024">24</a> of file <a class="el" href="../../d7/db3/_safe_log_8cpp_source.html">SafeLog.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>                                 {</div>
+<div class="line"><span class="lineno">   25</span><span class="preprocessor">#ifdef __CSE_EDITOR__</span></div>
+<div class="line"><span class="lineno">   26</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; editorCore = CSEditor::EEngineCore::getEditorInstance();</div>
+<div class="line"><span class="lineno">   27</span>    <span class="keywordflow">if</span>(editorCore-&gt;IsReady()) editorCore-&gt;AddLog(log);</div>
+<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">else</span> puts(log);</div>
+<div class="line"><span class="lineno">   29</span><span class="preprocessor">#elif _WIN32</span></div>
+<div class="line"><span class="lineno">   30</span>    OutputDebugStringA(log);</div>
+<div class="line"><span class="lineno">   31</span>    puts(log);</div>
+<div class="line"><span class="lineno">   32</span><span class="preprocessor">#elif __ANDROID__</span></div>
+<div class="line"><span class="lineno">   33</span>    LOGE(log, 0);</div>
+<div class="line"><span class="lineno">   34</span><span class="preprocessor">#elif __linux__</span></div>
+<div class="line"><span class="lineno">   35</span>    puts(log);</div>
+<div class="line"><span class="lineno">   36</span><span class="preprocessor">#elif __EMSCRIPTEN__</span></div>
+<div class="line"><span class="lineno">   37</span>    puts(log);</div>
+<div class="line"><span class="lineno">   38</span><span class="preprocessor">#elif __APPLE_CC__</span></div>
+<div class="line"><span class="lineno">   39</span>    puts(log);</div>
+<div class="line"><span class="lineno">   40</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   41</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -167,7 +169,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../df/d46/class_safe_log.html">SafeLog</a></li>
-    <li class="footer">Generated on Mon Sep 15 2025 01:15:11 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+    <li class="footer">Generated on Thu Sep 18 2025 14:35:38 for CSEngine by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>
 </body>

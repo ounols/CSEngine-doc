@@ -16,6 +16,7 @@ var dir_d4f7a754e06480f800a6fab4b04999ce =
     [ "MoreMath.h", "d7/dbc/_more_math_8h_source.html", null ],
     [ "MoreString.h", "d8/ded/_more_string_8h_source.html", null ],
     [ "Quaternion.h", "df/d7d/_quaternion_8h_source.html", null ],
+    [ "ResourceDef.h", "de/d36/_resource_def_8h_source.html", null ],
     [ "SafeLog.cpp", "d7/db3/_safe_log_8cpp_source.html", null ],
     [ "SafeLog.h", "d6/d55/_safe_log_8h_source.html", null ],
     [ "ScriptDef.h", "d6/d48/_script_def_8h_source.html", null ],

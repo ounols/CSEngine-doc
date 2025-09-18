@@ -1,5 +1,6 @@
 var dir_05df2928d52705236faf027df5262a05 =
 [
+    [ "3DTEX", "dir_fe1d13273f9feac2879695f3070c52fa.html", "dir_fe1d13273f9feac2879695f3070c52fa" ],
     [ "DAE", "dir_69af17f82e4848f8cafb0e90ae3d4b3b.html", "dir_69af17f82e4848f8cafb0e90ae3d4b3b" ],
     [ "SCENE", "dir_2b26555e3428ffa9a29116b119ee240e.html", "dir_2b26555e3428ffa9a29116b119ee240e" ],
     [ "STB", "dir_1659c1bbb0f992e93fed82c52a6e6fc3.html", "dir_1659c1bbb0f992e93fed82c52a6e6fc3" ],

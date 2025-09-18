@@ -9,5 +9,7 @@ var dir_d4789d6ed2441f92606f64f375b88da9 =
     [ "RenderContainer.cpp", "d8/df0/_render_container_8cpp_source.html", null ],
     [ "RenderContainer.h", "dc/da3/_render_container_8h_source.html", null ],
     [ "RenderMgr.cpp", "d7/d39/_render_mgr_8cpp_source.html", null ],
-    [ "RenderMgr.h", "d9/df6/_render_mgr_8h_source.html", null ]
+    [ "RenderMgr.h", "d9/df6/_render_mgr_8h_source.html", null ],
+    [ "SdfRenderGroup.cpp", "d4/d74/_sdf_render_group_8cpp_source.html", null ],
+    [ "SdfRenderGroup.h", "da/d5e/_sdf_render_group_8h_source.html", null ]
 ];

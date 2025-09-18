@@ -17,6 +17,7 @@ var hierarchy =
       [ "CSE::LightMgr", "d9/d1d/class_c_s_e_1_1_light_mgr.html", null ],
       [ "CSE::MemoryMgr", "d6/d40/class_c_s_e_1_1_memory_mgr.html", null ],
       [ "CSE::OGLMgr", "df/d34/class_c_s_e_1_1_o_g_l_mgr.html", null ],
+      [ "CSE::ReflectionMgr", "d0/d74/class_c_s_e_1_1_reflection_mgr.html", null ],
       [ "CSE::RenderMgr", "d4/daa/class_c_s_e_1_1_render_mgr.html", null ],
       [ "CSE::ResMgr", "de/db3/class_c_s_e_1_1_res_mgr.html", null ],
       [ "CSE::SceneMgr", "d6/d0a/class_c_s_e_1_1_scene_mgr.html", null ],
@@ -28,8 +29,11 @@ var hierarchy =
     [ "CSE::DAEAnimationLoader", "d9/d62/class_c_s_e_1_1_d_a_e_animation_loader.html", null ],
     [ "CSE::DAEConvertSGameObject", "d9/dd6/class_c_s_e_1_1_d_a_e_convert_s_game_object.html", null ],
     [ "CSE::DAELoader", "da/d85/class_c_s_e_1_1_d_a_e_loader.html", null ],
+    [ "CSE::ReflectionMgr::DefineWrapper", "d2/d0d/class_c_s_e_1_1_reflection_mgr_1_1_define_wrapper.html", null ],
     [ "CSE::GLProgramHandle::Element", "da/d85/struct_c_s_e_1_1_g_l_program_handle_1_1_element.html", null ],
-    [ "CSE::EngineCore", "dd/d93/class_c_s_e_1_1_engine_core.html", null ],
+    [ "CSE::EngineCoreInstance", "d6/db6/class_c_s_e_1_1_engine_core_instance.html", [
+      [ "CSE::EngineCore", "dd/d93/class_c_s_e_1_1_engine_core.html", null ]
+    ] ],
     [ "CSE::GLAttributeHandles", "d8/d67/struct_c_s_e_1_1_g_l_attribute_handles.html", null ],
     [ "CSE::GLMeshID", "dd/daa/struct_c_s_e_1_1_g_l_mesh_i_d.html", null ],
     [ "CSE::GLUniformHandles", "d5/d0c/struct_c_s_e_1_1_g_l_uniform_handles.html", null ],
@@ -53,6 +57,35 @@ var hierarchy =
     [ "mz_zip_writer_add_state", "d9/d4c/structmz__zip__writer__add__state.html", null ],
     [ "CSE::QuaternionT< T >", "d2/dec/struct_c_s_e_1_1_quaternion_t.html", null ],
     [ "CSE::QuaternionT< float >", "d2/dec/struct_c_s_e_1_1_quaternion_t.html", null ],
+    [ "CSE::ReflectionObject", "de/d2f/class_c_s_e_1_1_reflection_object.html", [
+      [ "CSE::SComponent", "db/d1a/class_c_s_e_1_1_s_component.html", [
+        [ "CSE::AnimatorComponent", "d0/d79/class_c_s_e_1_1_animator_component.html", null ],
+        [ "CSE::CameraComponent", "d4/da2/class_c_s_e_1_1_camera_component.html", null ],
+        [ "CSE::CustomComponent", "d5/d5b/class_c_s_e_1_1_custom_component.html", null ],
+        [ "CSE::DrawableStaticMeshComponent", "d8/dbb/class_c_s_e_1_1_drawable_static_mesh_component.html", [
+          [ "CSE::DrawableSkinnedMeshComponent", "d3/d75/class_c_s_e_1_1_drawable_skinned_mesh_component.html", null ]
+        ] ],
+        [ "CSE::JointComponent", "d8/dfb/class_c_s_e_1_1_joint_component.html", null ],
+        [ "CSE::LightComponent", "d6/d94/class_c_s_e_1_1_light_component.html", null ],
+        [ "CSE::RenderComponent", "df/d04/class_c_s_e_1_1_render_component.html", null ],
+        [ "CSE::TransformComponent", "d1/ddc/class_c_s_e_1_1_transform_component.html", null ]
+      ] ],
+      [ "CSE::SResource", "dd/d6c/class_c_s_e_1_1_s_resource.html", [
+        [ "CSE::Animation", "d4/d91/class_c_s_e_1_1_animation.html", null ],
+        [ "CSE::GLProgramHandle", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html", null ],
+        [ "CSE::SFrameBuffer", "d1/d4d/class_c_s_e_1_1_s_frame_buffer.html", null ],
+        [ "CSE::SISurface", "d3/d91/class_c_s_e_1_1_s_i_surface.html", [
+          [ "CSE::MeshSurface", "dc/d94/class_c_s_e_1_1_mesh_surface.html", null ]
+        ] ],
+        [ "CSE::SMaterial", "de/d51/class_c_s_e_1_1_s_material.html", null ],
+        [ "CSE::SPrefab", "d9/db4/class_c_s_e_1_1_s_prefab.html", null ],
+        [ "CSE::SScriptObject", "d5/d00/class_c_s_e_1_1_s_script_object.html", null ],
+        [ "CSE::SShaderGroup", "dd/dfc/class_c_s_e_1_1_s_shader_group.html", null ],
+        [ "CSE::STexture", "da/df0/class_c_s_e_1_1_s_texture.html", null ],
+        [ "CSE::Skeleton", "de/dd3/class_c_s_e_1_1_skeleton.html", null ]
+      ] ]
+    ] ],
+    [ "CSE::ReflectionRef< T >", "de/d29/class_c_s_e_1_1_reflection_ref.html", null ],
     [ "CSE::RenderContainer", "d8/df9/class_c_s_e_1_1_render_container.html", [
       [ "CSE::RenderMgr", "d4/daa/class_c_s_e_1_1_render_mgr.html", null ]
     ] ],
@@ -111,18 +144,7 @@ var hierarchy =
       [ "CSE::RenderComponent", "df/d04/class_c_s_e_1_1_render_component.html", null ]
     ] ],
     [ "CSE::SISComponent", "d8/d81/class_c_s_e_1_1_s_i_s_component.html", [
-      [ "CSE::SComponent", "db/d1a/class_c_s_e_1_1_s_component.html", [
-        [ "CSE::AnimatorComponent", "d0/d79/class_c_s_e_1_1_animator_component.html", null ],
-        [ "CSE::CameraComponent", "d4/da2/class_c_s_e_1_1_camera_component.html", null ],
-        [ "CSE::CustomComponent", "d5/d5b/class_c_s_e_1_1_custom_component.html", null ],
-        [ "CSE::DrawableStaticMeshComponent", "d8/dbb/class_c_s_e_1_1_drawable_static_mesh_component.html", [
-          [ "CSE::DrawableSkinnedMeshComponent", "d3/d75/class_c_s_e_1_1_drawable_skinned_mesh_component.html", null ]
-        ] ],
-        [ "CSE::JointComponent", "d8/dfb/class_c_s_e_1_1_joint_component.html", null ],
-        [ "CSE::LightComponent", "d6/d94/class_c_s_e_1_1_light_component.html", null ],
-        [ "CSE::RenderComponent", "df/d04/class_c_s_e_1_1_render_component.html", null ],
-        [ "CSE::TransformComponent", "d1/ddc/class_c_s_e_1_1_transform_component.html", null ]
-      ] ]
+      [ "CSE::SComponent", "db/d1a/class_c_s_e_1_1_s_component.html", null ]
     ] ],
     [ "CSE::SkinningData", "dd/dfe/class_c_s_e_1_1_skinning_data.html", null ],
     [ "CSE::SObject", "d8/d5e/class_c_s_e_1_1_s_object.html", [
@@ -130,20 +152,7 @@ var hierarchy =
       [ "CSE::SGameObject", "dc/d47/class_c_s_e_1_1_s_game_object.html", [
         [ "CSE::SGameObjectFromSPrefab", "d1/df2/class_c_s_e_1_1_s_game_object_from_s_prefab.html", null ]
       ] ],
-      [ "CSE::SResource", "dd/d6c/class_c_s_e_1_1_s_resource.html", [
-        [ "CSE::Animation", "d4/d91/class_c_s_e_1_1_animation.html", null ],
-        [ "CSE::GLProgramHandle", "dc/d87/class_c_s_e_1_1_g_l_program_handle.html", null ],
-        [ "CSE::SFrameBuffer", "d1/d4d/class_c_s_e_1_1_s_frame_buffer.html", null ],
-        [ "CSE::SISurface", "d3/d91/class_c_s_e_1_1_s_i_surface.html", [
-          [ "CSE::MeshSurface", "dc/d94/class_c_s_e_1_1_mesh_surface.html", null ]
-        ] ],
-        [ "CSE::SMaterial", "de/d51/class_c_s_e_1_1_s_material.html", null ],
-        [ "CSE::SPrefab", "d9/db4/class_c_s_e_1_1_s_prefab.html", null ],
-        [ "CSE::SScriptObject", "d5/d00/class_c_s_e_1_1_s_script_object.html", null ],
-        [ "CSE::SShaderGroup", "dd/dfc/class_c_s_e_1_1_s_shader_group.html", null ],
-        [ "CSE::STexture", "da/df0/class_c_s_e_1_1_s_texture.html", null ],
-        [ "CSE::Skeleton", "de/dd3/class_c_s_e_1_1_skeleton.html", null ]
-      ] ],
+      [ "CSE::SResource", "dd/d6c/class_c_s_e_1_1_s_resource.html", null ],
       [ "CSE::Scene", "dd/d4d/class_c_s_e_1_1_scene.html", [
         [ "CSE::SScene", "da/d8a/class_c_s_e_1_1_s_scene.html", null ],
         [ "FirstDemoScene", "df/d0c/class_first_demo_scene.html", null ],
@@ -153,7 +162,8 @@ var hierarchy =
     [ "CSE::SRenderGroup", "d2/dcd/class_c_s_e_1_1_s_render_group.html", [
       [ "CSE::DeferredRenderGroup", "d0/d62/class_c_s_e_1_1_deferred_render_group.html", null ],
       [ "CSE::DepthOnlyRenderGroup", "d8/d8e/class_c_s_e_1_1_depth_only_render_group.html", null ],
-      [ "CSE::ForwardRenderGroup", "d4/d26/class_c_s_e_1_1_forward_render_group.html", null ]
+      [ "CSE::ForwardRenderGroup", "d4/d26/class_c_s_e_1_1_forward_render_group.html", null ],
+      [ "CSE::SdfRenderGroup", "de/df4/class_c_s_e_1_1_sdf_render_group.html", null ]
     ] ],
     [ "CSE::SSceneLoader", "d5/def/class_c_s_e_1_1_s_scene_loader.html", null ],
     [ "stbi_io_callbacks", "da/d02/structstbi__io__callbacks.html", null ],
@@ -169,7 +179,8 @@ var hierarchy =
       [ "CSE::TransformComponent", "d1/ddc/class_c_s_e_1_1_transform_component.html", null ]
     ] ],
     [ "CSE::VariableBinder", "d3/dee/class_c_s_e_1_1_variable_binder.html", [
-      [ "CSE::SComponent", "db/d1a/class_c_s_e_1_1_s_component.html", null ]
+      [ "CSE::SComponent", "db/d1a/class_c_s_e_1_1_s_component.html", null ],
+      [ "CSE::SResource", "dd/d6c/class_c_s_e_1_1_s_resource.html", null ]
     ] ],
     [ "CSE::Vector2< T >", "d6/d75/class_c_s_e_1_1_vector2.html", null ],
     [ "CSE::Vector2< float >", "d6/d75/class_c_s_e_1_1_vector2.html", null ],
@@ -179,6 +190,7 @@ var hierarchy =
     [ "CSE::Vector4< float >", "d6/d26/class_c_s_e_1_1_vector4.html", null ],
     [ "CSE::Vertex", "d8/d3a/class_c_s_e_1_1_vertex.html", null ],
     [ "CSE::VertexSkinData", "df/d0d/class_c_s_e_1_1_vertex_skin_data.html", null ],
+    [ "CSE::VolumeTextureGenerator", "dd/d37/class_c_s_e_1_1_volume_texture_generator.html", null ],
     [ "XAttrib", "d8/dc3/class_x_attrib.html", null ],
     [ "XFILE", "de/d3a/class_x_f_i_l_e.html", null ],
     [ "CSE::XMLParser", "d2/d2e/class_c_s_e_1_1_x_m_l_parser.html", null ],
